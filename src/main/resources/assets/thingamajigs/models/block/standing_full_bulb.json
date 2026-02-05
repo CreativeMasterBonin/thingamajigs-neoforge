@@ -1,0 +1,8 @@
+{
+  "parent": "thingamajigs:bases/standing_torch",
+  "textures": {
+    "0": "thingamajigs:block/torches/filled_bulb",
+    "missing": "thingamajigs:block/torches/filled_bulb",
+    "particle": "thingamajigs:block/torches/filled_bulb"
+  }
+}

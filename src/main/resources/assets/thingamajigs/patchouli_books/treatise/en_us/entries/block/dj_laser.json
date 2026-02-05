@@ -1,0 +1,67 @@
+{
+    "name": "DJ Laser Light",
+    "icon": "thingamajigs:dj_laser_light",
+    "category": "thingamajigs:block",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "The DJ Laser Light Block creates visible beams that fire out from the center of the block(ish). It's quite nice looking even against particles and water. Maybe perhaps some fancy shaders will make it look better (or worse)!"
+        },
+        {
+            "type": "patchouli:image",
+            "images": ["thingamajigs:textures/gui/lsrlt.png"],
+            "title": "The Laser Beam Itself",
+            "border": false
+        },
+        {
+            "type": "patchouli:text",
+            "text": "The DJ Laser was created a while ago. Since it's introduction to music concerts and more, its been a hit. Not so much for phone camera users. Thingamajigs doesn't guarantee phone safety either."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "The laser ui is on the next page. It shows a bit of what it has to offer."
+        },
+        {
+            "type": "patchouli:image",
+            "images": ["thingamajigs:textures/gui/lasertut.png"],
+            "title": "Settings UI",
+            "border": false
+        },
+        {
+            "type": "patchouli:text",
+            "text": "The top left buttons control the 'height' of the laser. HOsc and VOsc control 'horizontal and vertical oscillation' of the laser, respectively."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "HMulti and VMulti effect speed of HOsc and VOsc. Set these too high for flickering."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "The top right buttons control the size (radius) of the laser. They have an upper and lower limit."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "HOff and VOff offset the angle at which the laser is oscillating. If not oscillating, it is just the angle the laser is at."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "The 'X' in the top right corner can be used to close the screen if 'ESC' doesn't work."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Finally, the color section. There is a text box here with an arrow next to it."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "You can use HEX values here to specify any laser color you want. DO NOT input INVALID values OR characters! Valid chars: [abcdef0123456789]"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Click the arrow to update the laser's color, which will save to the world when the world is closed."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Click the 'Reset Color...' button below the text box to reset the color to white. Click the 'Clear' button to reset the text box so you can input a new value if you made a mistake."
+        }
+    ]
+}

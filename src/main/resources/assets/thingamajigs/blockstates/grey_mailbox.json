@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:custom/grey_mailbox",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:custom/grey_mailbox"
+    },
+    "facing=south": {
+      "model": "thingamajigs:custom/grey_mailbox",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:custom/grey_mailbox",
+      "y": 270
+    }
+  }
+}

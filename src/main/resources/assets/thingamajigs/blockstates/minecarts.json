@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/minecarts",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/minecarts"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/minecarts",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/minecarts",
+      "y": 270
+    }
+  }
+}

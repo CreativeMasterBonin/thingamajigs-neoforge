@@ -1,0 +1,7 @@
+{
+  "parent": "thingamajigs:custom/recycle_bin",
+  "textures": {
+    "1": "minecraft:block/sculk_sensor_bottom",
+    "3": "minecraft:block/sculk_sensor_top"
+  }
+}

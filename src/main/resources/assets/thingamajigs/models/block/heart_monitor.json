@@ -1,0 +1,7 @@
+{
+  "parent": "thingamajigs:custom/heart_monitor",
+  "render_type": "cutout",
+  "textures": {
+    "particle": "minecraft:block/black_concrete"
+  }
+}

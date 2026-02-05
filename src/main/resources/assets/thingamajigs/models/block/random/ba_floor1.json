@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "thingamajigs:block/bowling_alley_floor_base"
+  }
+}

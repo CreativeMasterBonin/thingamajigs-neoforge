@@ -1,0 +1,20 @@
+{
+	"credit": "Made with Blockbench",
+	"render_type": "cutout",
+	"elements": [
+		{
+			"name": "tabletop",
+			"from": [0, 14, 0],
+			"to": [16, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 15, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 2], "texture": "#tabletop"},
+				"east": {"uv": [0, 0, 16, 2], "texture": "#tabletop"},
+				"south": {"uv": [0, 0, 16, 2], "texture": "#tabletop"},
+				"west": {"uv": [0, 0, 16, 2], "texture": "#tabletop"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#tabletop"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#tabletop"}
+			}
+		}
+	]
+}

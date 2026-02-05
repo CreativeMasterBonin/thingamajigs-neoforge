@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/vhs_collection",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/vhs_collection"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/vhs_collection",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/vhs_collection",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/road_barrier_closed",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/road_barrier_closed"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/road_barrier_closed",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/road_barrier_closed",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "thingamajigs:bases/traffic_signal",
+  "textures": {
+    "signal": "thingamajigs:block/traffic_signals/crosswalk_signal/person_greentored_ani",
+    "cover": "minecraft:block/blast_furnace_side",
+    "particle": "minecraft:block/blast_furnace_side"
+  }
+}

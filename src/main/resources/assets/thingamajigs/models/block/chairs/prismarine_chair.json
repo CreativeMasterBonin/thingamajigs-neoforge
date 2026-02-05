@@ -1,0 +1,8 @@
+{
+  "parent": "thingamajigs:bases/base_chair",
+  "render_type": "cutout",
+  "textures": {
+    "chair": "minecraft:block/prismarine_bricks",
+    "seat": "minecraft:block/prismarine"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "render_type": "cutout",
+  "textures": {
+    "all": "thingamajigs:block/stone/chiseled_panel_darkened_stone_bricks"
+  }
+}
+

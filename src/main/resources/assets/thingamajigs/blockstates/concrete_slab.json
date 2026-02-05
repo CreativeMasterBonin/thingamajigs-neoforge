@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "thingamajigs:block/concrete_slab"
+    },
+    "type=double": {
+      "model": "thingamajigs:block/concrete"
+    },
+    "type=top": {
+      "model": "thingamajigs:block/concrete_slab_top"
+    }
+  }
+}

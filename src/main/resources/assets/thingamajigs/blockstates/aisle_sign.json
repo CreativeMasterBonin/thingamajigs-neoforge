@@ -1,0 +1,169 @@
+{
+  "variants": {
+    "facing=east,number=0": {
+      "model": "thingamajigs:block/aisle_sign/all",
+      "y": 90
+    },
+    "facing=north,number=0": {
+      "model": "thingamajigs:block/aisle_sign/all"
+    },
+    "facing=south,number=0": {
+      "model": "thingamajigs:block/aisle_sign/all",
+      "y": 180
+    },
+    "facing=west,number=0": {
+      "model": "thingamajigs:block/aisle_sign/all",
+      "y": 270
+    },
+    "facing=east,number=1": {
+      "model": "thingamajigs:block/aisle_sign/one",
+      "y": 90
+    },
+    "facing=north,number=1": {
+      "model": "thingamajigs:block/aisle_sign/one"
+    },
+    "facing=south,number=1": {
+      "model": "thingamajigs:block/aisle_sign/one",
+      "y": 180
+    },
+    "facing=west,number=1": {
+      "model": "thingamajigs:block/aisle_sign/one",
+      "y": 270
+    },
+    "facing=east,number=2": {
+      "model": "thingamajigs:block/aisle_sign/two",
+      "y": 90
+    },
+    "facing=north,number=2": {
+      "model": "thingamajigs:block/aisle_sign/two"
+    },
+    "facing=south,number=2": {
+      "model": "thingamajigs:block/aisle_sign/two",
+      "y": 180
+    },
+    "facing=west,number=2": {
+      "model": "thingamajigs:block/aisle_sign/two",
+      "y": 270
+    },
+    "facing=east,number=3": {
+      "model": "thingamajigs:block/aisle_sign/three",
+      "y": 90
+    },
+    "facing=north,number=3": {
+      "model": "thingamajigs:block/aisle_sign/three"
+    },
+    "facing=south,number=3": {
+      "model": "thingamajigs:block/aisle_sign/three",
+      "y": 180
+    },
+    "facing=west,number=3": {
+      "model": "thingamajigs:block/aisle_sign/three",
+      "y": 270
+    },
+    "facing=east,number=4": {
+      "model": "thingamajigs:block/aisle_sign/four",
+      "y": 90
+    },
+    "facing=north,number=4": {
+      "model": "thingamajigs:block/aisle_sign/four"
+    },
+    "facing=south,number=4": {
+      "model": "thingamajigs:block/aisle_sign/four",
+      "y": 180
+    },
+    "facing=west,number=4": {
+      "model": "thingamajigs:block/aisle_sign/four",
+      "y": 270
+    },
+    "facing=east,number=5": {
+      "model": "thingamajigs:block/aisle_sign/five",
+      "y": 90
+    },
+    "facing=north,number=5": {
+      "model": "thingamajigs:block/aisle_sign/five"
+    },
+    "facing=south,number=5": {
+      "model": "thingamajigs:block/aisle_sign/five",
+      "y": 180
+    },
+    "facing=west,number=5": {
+      "model": "thingamajigs:block/aisle_sign/five",
+      "y": 270
+    },
+    "facing=east,number=6": {
+      "model": "thingamajigs:block/aisle_sign/six",
+      "y": 90
+    },
+    "facing=north,number=6": {
+      "model": "thingamajigs:block/aisle_sign/six"
+    },
+    "facing=south,number=6": {
+      "model": "thingamajigs:block/aisle_sign/six",
+      "y": 180
+    },
+    "facing=west,number=6": {
+      "model": "thingamajigs:block/aisle_sign/six",
+      "y": 270
+    },
+    "facing=east,number=7": {
+      "model": "thingamajigs:block/aisle_sign/seven",
+      "y": 90
+    },
+    "facing=north,number=7": {
+      "model": "thingamajigs:block/aisle_sign/seven"
+    },
+    "facing=south,number=7": {
+      "model": "thingamajigs:block/aisle_sign/seven",
+      "y": 180
+    },
+    "facing=west,number=7": {
+      "model": "thingamajigs:block/aisle_sign/seven",
+      "y": 270
+    },
+    "facing=east,number=8": {
+      "model": "thingamajigs:block/aisle_sign/eight",
+      "y": 90
+    },
+    "facing=north,number=8": {
+      "model": "thingamajigs:block/aisle_sign/eight"
+    },
+    "facing=south,number=8": {
+      "model": "thingamajigs:block/aisle_sign/eight",
+      "y": 180
+    },
+    "facing=west,number=8": {
+      "model": "thingamajigs:block/aisle_sign/eight",
+      "y": 270
+    },
+    "facing=east,number=9": {
+      "model": "thingamajigs:block/aisle_sign/nine",
+      "y": 90
+    },
+    "facing=north,number=9": {
+      "model": "thingamajigs:block/aisle_sign/nine"
+    },
+    "facing=south,number=9": {
+      "model": "thingamajigs:block/aisle_sign/nine",
+      "y": 180
+    },
+    "facing=west,number=9": {
+      "model": "thingamajigs:block/aisle_sign/nine",
+      "y": 270
+    },
+    "facing=east,number=10": {
+      "model": "thingamajigs:block/aisle_sign/ten",
+      "y": 90
+    },
+    "facing=north,number=10": {
+      "model": "thingamajigs:block/aisle_sign/ten"
+    },
+    "facing=south,number=10": {
+      "model": "thingamajigs:block/aisle_sign/ten",
+      "y": 180
+    },
+    "facing=west,number=10": {
+      "model": "thingamajigs:block/aisle_sign/ten",
+      "y": 270
+    }
+  }
+}

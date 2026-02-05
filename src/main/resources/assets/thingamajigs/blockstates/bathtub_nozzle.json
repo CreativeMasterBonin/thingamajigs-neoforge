@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/bathtub_nozzle",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/bathtub_nozzle"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/bathtub_nozzle",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/bathtub_nozzle",
+      "y": 270
+    }
+  }
+}

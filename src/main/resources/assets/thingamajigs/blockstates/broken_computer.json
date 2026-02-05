@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/broken_computer",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/broken_computer"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/broken_computer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/broken_computer",
+      "y": 270
+    }
+  }
+}

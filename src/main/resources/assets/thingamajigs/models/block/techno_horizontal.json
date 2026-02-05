@@ -1,0 +1,27 @@
+{
+	"credit": "Made By CreativeMasterBonin",
+	"textures": {
+		"0": "thingamajigs:block/animated/techno_block_ani",
+		"1": "thingamajigs:block/animated/techno_pillar_ani",
+		"particle": "thingamajigs:block/animated/techno_block_ani"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#1","cullface":"north"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#1","cullface":"east"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#1","cullface":"south"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#1","cullface":"west"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#0","cullface":"up"},
+				"down": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#0","cullface":"down"}
+			},
+			"neoforge_data": {
+                "block_light": 15,
+                "sky_light": 15
+            }
+		}
+	]
+}

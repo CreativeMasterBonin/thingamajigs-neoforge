@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/symbol_signs/crossing_sign_f",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/symbol_signs/crossing_sign_f"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/symbol_signs/crossing_sign_f",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/symbol_signs/crossing_sign_f",
+      "y": 270
+    }
+  }
+}

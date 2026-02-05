@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:custom/more_modern_pc_monitor",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:custom/more_modern_pc_monitor"
+    },
+    "facing=south": {
+      "model": "thingamajigs:custom/more_modern_pc_monitor",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:custom/more_modern_pc_monitor",
+      "y": 270
+    }
+  }
+}

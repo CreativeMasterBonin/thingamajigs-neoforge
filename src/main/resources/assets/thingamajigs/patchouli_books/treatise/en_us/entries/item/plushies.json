@@ -1,0 +1,16 @@
+{
+    "name": "entry.thingamajigs.plushies",
+    "icon": "thingamajigs:mrpuppy",
+    "category": "thingamajigs:item",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Plushies! They can be cute, reference things, or even speak truth. How many exist? Millions in real life. There aren't millions in Thingamajigs, however enjoy the few that are here for you."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "thingamajigs:teddy_bear",
+            "text": "Plushies can really make some people quite happy. Why not craft some for your homes?"
+        }
+    ]
+}

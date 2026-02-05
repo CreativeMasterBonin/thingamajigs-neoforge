@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/water_course",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/water_course"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/water_course",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/water_course",
+      "y": 270
+    }
+  }
+}

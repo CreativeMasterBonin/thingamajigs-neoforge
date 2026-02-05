@@ -1,0 +1,17 @@
+{
+    "name": "entry.thingamajigs.paintings",
+    "icon": "minecraft:painting",
+    "category": "thingamajigs:decorations",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Paintings have been in the game for a while. Thingamajigs adds a few more for fun. Most of them are either based off of a source of some kind, or are reference or gag."
+        },
+        {
+            "type": "patchouli:image",
+            "images": ["thingamajigs:textures/gui/paintings.png"],
+            "title": "Many Paintings",
+            "border": true
+        }
+    ]
+}

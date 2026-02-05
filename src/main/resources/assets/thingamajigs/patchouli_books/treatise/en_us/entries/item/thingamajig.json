@@ -1,0 +1,16 @@
+{
+    "name": "entry.thingamajigs.thingamajig",
+    "icon": "thingamajigs:thingamajig",
+    "category": "thingamajigs:item",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "The thingamajig is the most crucial part in crafting all the decorations!"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "thingamajigs:thingamajig",
+            "text": "The thingamajig is crafted from various ingredients. It glows and rapidly changes color when fully formed."
+        }
+    ]
+}

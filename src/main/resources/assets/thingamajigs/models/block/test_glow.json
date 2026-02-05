@@ -1,0 +1,88 @@
+{
+	"credit": "Made By CreativeMasterBonin",
+	"render_type": "cutout",
+	"textures": {
+		"0": "minecraft:block/amethyst_block",
+		"1": "minecraft:block/blackstone",
+		"particle": "#0"
+	},
+	"elements": [
+		{
+			"name": "glow",
+			"from": [0, 0, 0],
+			"to": [16, 1, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0.5, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 1], "texture": "#0"},
+				"east": {"uv": [0, 0, 16, 1], "texture": "#0"},
+				"south": {"uv": [0, 0, 16, 1], "texture": "#0"},
+				"west": {"uv": [0, 0, 16, 1], "texture": "#0"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#0"}
+			},
+            "neoforge_data": {
+                "block_light": 15,
+                "sky_light": 15
+            }
+		},
+		{
+			"from": [0, 1, 0],
+			"to": [10, 8, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [5, 4.5, 4.5]},
+			"faces": {
+				"north": {"uv": [0, 0, 10, 7], "texture": "#1"},
+				"west": {"uv": [0, 0, 9, 7], "texture": "#1"},
+				"down": {"uv": [0, 0, 10, 9], "texture": "#1"}
+			}
+		},
+		{
+			"name": "glow_less",
+			"from": [10, 1, 0],
+			"to": [16, 16, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [13, 8.5, 6.5]},
+			"faces": {
+				"north": {"uv": [0, 0, 6, 15], "texture": "#0"},
+				"east": {"uv": [0, 0, 13, 15], "texture": "#0"},
+				"up": {"uv": [0, 0, 6, 13], "texture": "#0"}
+			},
+            "neoforge_data": {
+                "block_light": 7,
+                "sky_light": 7
+            }
+		},
+		{
+			"from": [0, 1, 13],
+			"to": [16, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8.5, 14.5]},
+			"faces": {
+				"east": {"uv": [0, 0, 3, 15], "texture": "#1"},
+				"south": {"uv": [0, 0, 16, 15], "texture": "#1"},
+				"west": {"uv": [0, 0, 3, 15], "texture": "#1"},
+				"up": {"uv": [0, 0, 16, 3], "texture": "#1"}
+			}
+		},
+		{
+			"from": [0, 8, 0],
+			"to": [10, 16, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [5, 12, 6.5]},
+			"faces": {
+				"north": {"uv": [0, 0, 10, 8], "texture": "#1"},
+				"west": {"uv": [0, 0, 13, 8], "texture": "#1"},
+				"up": {"uv": [0, 0, 10, 13], "texture": "#1"}
+			}
+		},
+		{
+			"name": "glow_t",
+			"from": [0, 1, 9],
+			"to": [10, 8, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [5, 4.5, 11]},
+			"faces": {
+				"north": {"uv": [0, 0, 10, 7], "texture": "#0"},
+				"west": {"uv": [0, 0, 4, 7], "texture": "#0"}
+			},
+            "neoforge_data": {
+                "block_light": 2,
+                "sky_light": 2
+            }
+		}
+	]
+}

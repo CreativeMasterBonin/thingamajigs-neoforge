@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/bluey_desktop_computer",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/bluey_desktop_computer"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/bluey_desktop_computer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/bluey_desktop_computer",
+      "y": 270
+    }
+  }
+}

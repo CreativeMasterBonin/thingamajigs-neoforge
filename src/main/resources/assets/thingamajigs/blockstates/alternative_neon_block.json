@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "thingamajigs:block/alternative_neon_block_off"
+    },
+    "lit=true": {
+      "model": "thingamajigs:block/alternative_neon_block"
+    }
+  }
+}

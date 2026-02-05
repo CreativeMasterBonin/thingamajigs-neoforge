@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/red_signal_flash",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/red_signal_flash"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/red_signal_flash",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/red_signal_flash",
+      "y": 270
+    }
+  }
+}

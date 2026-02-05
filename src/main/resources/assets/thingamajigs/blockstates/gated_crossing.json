@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/gated_crossing",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/gated_crossing"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/gated_crossing",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/gated_crossing",
+      "y": 270
+    }
+  }
+}

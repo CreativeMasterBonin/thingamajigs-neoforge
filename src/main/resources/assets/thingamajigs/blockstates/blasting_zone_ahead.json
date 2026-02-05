@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/construction/blasting_zone_ahead",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/construction/blasting_zone_ahead"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/construction/blasting_zone_ahead",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/construction/blasting_zone_ahead",
+      "y": 270
+    }
+  }
+}

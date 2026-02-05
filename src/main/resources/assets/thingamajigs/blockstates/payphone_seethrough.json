@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:custom/payphone_seethru",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:custom/payphone_seethru"
+    },
+    "facing=south": {
+      "model": "thingamajigs:custom/payphone_seethru",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:custom/payphone_seethru",
+      "y": 270
+    }
+  }
+}

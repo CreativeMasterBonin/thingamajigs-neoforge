@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_bottom_right",
+  "render_type": "cutout",
+  "textures": {
+    "bottom": "thingamajigs:block/doors/lockable_door_bottom",
+    "top": "thingamajigs:block/doors/lockable_door_top"
+  }
+}

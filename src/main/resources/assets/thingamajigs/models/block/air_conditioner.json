@@ -1,0 +1,11 @@
+{
+  "parent": "thingamajigs:custom/air_conditioner",
+  "render_type": "cutout",
+  "textures": {
+    "all": "minecraft:block/blast_furnace_side",
+    "particle": "minecraft:block/blast_furnace_side",
+    "0": "minecraft:block/blast_furnace_side",
+    "1": "thingamajigs:block/animated/fan_front_fast",
+    "2": "thingamajigs:block/grate"
+  }
+}

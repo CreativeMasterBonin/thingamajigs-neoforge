@@ -1,0 +1,12 @@
+{
+    "athena:loader": "athena:ctm",
+    "ctm_textures":{
+        "center": "thingamajigs:block/ctm/outlet_ctm/cent",
+        "empty": "thingamajigs:block/ctm/outlet_ctm/empt",
+        "horizontal": "thingamajigs:block/ctm/outlet_ctm/horz",
+        "particle": "thingamajigs:block/factory/outlet",
+        "vertical": "thingamajigs:block/ctm/outlet_ctm/vert"},
+        "variants":{
+            "": {"model":"thingamajigs:block/outlet"}
+    }
+}

@@ -1,0 +1,89 @@
+{
+	"credit": "Made By CreativeMasterBonin",
+	"textures": {
+		"chair": "minecraft:block/stone",
+		"seat": "minecraft:block/cobblestone",
+		"particle": "#chair"
+	},
+	"elements": [
+		{
+			"name": "leg1",
+			"from": [12, 0, 2],
+			"to": [14, 8, 4],
+			"rotation": {"angle": 0, "axis": "y", "origin": [13, 4, 3]},
+			"faces": {
+				"north": {"uv": [7, 8, 9, 16], "texture": "#chair"},
+				"east": {"uv": [7, 8, 9, 16], "texture": "#chair"},
+				"south": {"uv": [7, 8, 9, 16], "texture": "#chair"},
+				"west": {"uv": [7, 8, 9, 16], "texture": "#chair"},
+				"down": {"uv": [14, 14, 16, 16], "texture": "#chair"}
+			}
+		},
+		{
+			"name": "leg2",
+			"from": [2, 0, 2],
+			"to": [4, 8, 4],
+			"rotation": {"angle": 0, "axis": "y", "origin": [3, 4, 3]},
+			"faces": {
+				"north": {"uv": [7, 8, 9, 16], "texture": "#chair"},
+				"east": {"uv": [7, 8, 9, 16], "texture": "#chair"},
+				"south": {"uv": [7, 8, 9, 16], "texture": "#chair"},
+				"west": {"uv": [7, 8, 9, 16], "texture": "#chair"},
+				"down": {"uv": [14, 14, 16, 16], "texture": "#chair"}
+			}
+		},
+		{
+			"name": "leg3",
+			"from": [2, 0, 12],
+			"to": [4, 8, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [3, 4, 13]},
+			"faces": {
+				"north": {"uv": [7, 8, 9, 16], "texture": "#chair"},
+				"east": {"uv": [7, 8, 9, 16], "texture": "#chair"},
+				"south": {"uv": [7, 8, 9, 16], "texture": "#chair"},
+				"west": {"uv": [7, 8, 9, 16], "texture": "#chair"},
+				"down": {"uv": [14, 14, 16, 16], "texture": "#chair"}
+			}
+		},
+		{
+			"name": "leg4",
+			"from": [12, 0, 12],
+			"to": [14, 8, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [13, 4, 13]},
+			"faces": {
+				"north": {"uv": [7, 8, 9, 16], "texture": "#chair"},
+				"east": {"uv": [7, 8, 9, 16], "texture": "#chair"},
+				"south": {"uv": [7, 8, 9, 16], "texture": "#chair"},
+				"west": {"uv": [7, 8, 9, 16], "texture": "#chair"},
+				"down": {"uv": [14, 14, 16, 16], "texture": "#chair"}
+			}
+		},
+		{
+			"name": "seat",
+			"from": [2, 8, 2],
+			"to": [14, 10, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 9, 8]},
+			"faces": {
+				"north": {"uv": [2, 7, 14, 9], "texture": "#seat"},
+				"east": {"uv": [2, 7, 14, 9], "texture": "#seat"},
+				"south": {"uv": [2, 7, 14, 9], "texture": "#seat"},
+				"west": {"uv": [2, 7, 14, 9], "texture": "#seat"},
+				"up": {"uv": [2, 2, 14, 14], "texture": "#seat"},
+				"down": {"uv": [2, 1, 14, 13], "texture": "#seat"}
+			}
+		},
+		{
+			"name": "backrest",
+			"from": [2, 10, 12],
+			"to": [14, 22, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 16, 13]},
+			"faces": {
+				"north": {"uv": [2, 2, 14, 14], "texture": "#chair"},
+				"east": {"uv": [14, 2, 16, 14], "texture": "#chair"},
+				"south": {"uv": [2, 2, 14, 14], "texture": "#chair"},
+				"west": {"uv": [0, 2, 2, 14], "texture": "#chair"},
+				"up": {"uv": [2, 14, 14, 16], "texture": "#chair"}
+			}
+		}
+	]
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "":[
+      {"model":  "thingamajigs:block/potion_bookshelf"},
+      {"model":  "thingamajigs:block/random/potion_bookshelf2"},
+      {"model":  "thingamajigs:block/random/potion_bookshelf3"},
+      {"model":  "thingamajigs:block/random/potion_bookshelf4"}
+    ]
+  }
+}

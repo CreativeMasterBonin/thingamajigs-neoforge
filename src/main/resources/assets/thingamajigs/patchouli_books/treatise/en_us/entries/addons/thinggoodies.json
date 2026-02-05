@@ -1,0 +1,23 @@
+{
+    "name": "entry.thingamajigs.thinggood",
+    "icon": "thingamajigs:fake_fluid_pump",
+    "category": "thingamajigs:addons",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "This mod adds back the Converter, Balloons, Purifying Water and it's many uses, along with some new content such as Purifying Tools and a way to grow ender pearls!"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Along with the old features, Thingamajigs 2 Goodies adds a new chance-based block. It can reward players or trick them greatly. It shouldn't destroy terrain too much if you are unlucky. Also, a fun note, it physically moves; the higher the move count, the better reward you'll get!"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Balance and stability are the focus with this mod, so enjoy the features as they are."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Can be downloaded from the usual websites that Thingamajigs is from."
+        }
+    ]
+}

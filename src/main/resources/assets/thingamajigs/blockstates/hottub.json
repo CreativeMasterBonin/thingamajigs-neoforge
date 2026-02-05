@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:custom/hottub",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:custom/hottub"
+    },
+    "facing=south": {
+      "model": "thingamajigs:custom/hottub",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:custom/hottub",
+      "y": 270
+    }
+  }
+}

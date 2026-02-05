@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/oak_planks",
+    "up": "minecraft:block/oak_planks",
+    "north": "thingamajigs:block/bookshelves/poopshelf",
+    "south": "thingamajigs:block/bookshelves/poopshelf",
+    "east": "thingamajigs:block/bookshelves/poopshelf",
+    "west": "thingamajigs:block/bookshelves/poopshelf",
+    "particle": "#north"
+  }
+}

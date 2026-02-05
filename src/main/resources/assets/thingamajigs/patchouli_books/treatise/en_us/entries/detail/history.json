@@ -1,0 +1,23 @@
+{
+    "name": "entry.thingamajigs.history",
+    "icon": "minecraft:painting",
+    "category": "thingamajigs:detail",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Thingamajigs is a mod that was developed in a time where people did not contact each other enough. However, this also provided plenty of time to develop it in the first place. It gained some popularity, and after a while, was doing fairly well for a small mod."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Then came a dreaded day where the original mod's setup failed and had been corrupted (somehow). To prevent a total loss, a complete rewrite from scratch was done. This was done several times throughout the years to be correct for various versions of MC, including 1.18, 1.19, 1.20.1 and 1.21."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "In the end, the rewrite and addition of some requested features made the mod gain more downloads (somehow). There is a donation link as a way to directly support the authors and even some of those in need. It's players like you that helped the mod out, Thank You!"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Now the focus of today is stability, reliability and performance, along with the old terms such as 'a mod that doesn't die (it still will some day, you know, dead, stuff like that...)'. For now, the mod will focus on these three things along with adding new decorations that most mods ignore or avoid. "
+        }
+    ]
+}

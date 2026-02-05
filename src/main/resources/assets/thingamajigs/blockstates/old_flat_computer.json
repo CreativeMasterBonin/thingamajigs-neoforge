@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:custom/old_flat_computer",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:custom/old_flat_computer"
+    },
+    "facing=south": {
+      "model": "thingamajigs:custom/old_flat_computer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:custom/old_flat_computer",
+      "y": 270
+    }
+  }
+}

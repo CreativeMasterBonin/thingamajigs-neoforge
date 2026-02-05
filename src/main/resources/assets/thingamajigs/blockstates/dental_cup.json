@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/dental_cup",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/dental_cup"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/dental_cup",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/dental_cup",
+      "y": 270
+    }
+  }
+}

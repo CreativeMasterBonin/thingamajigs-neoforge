@@ -1,0 +1,7 @@
+{
+  "parent": "thingamajigs:bases/pole_t",
+  "textures": {
+    "all": "minecraft:block/blast_furnace_top",
+    "particle": "minecraft:block/blast_furnace_top"
+  }
+}

@@ -1,0 +1,35 @@
+{
+	"credit": "Made with Blockbench",
+    "render_type": "cutout",
+	"textures": {
+		"0": "thingamajigs:block/aios/road_barrier",
+        "particle": "thingamajigs:block/aios/road_barrier"
+	},
+	"elements": [
+		{
+			"from": [3, 0, 3],
+			"to": [13, 1, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0.5, 8]},
+			"faces": {
+				"north": {"uv": [14, 14, 15, 15], "texture": "#0", "cullface": "north"},
+				"east": {"uv": [14, 14, 15, 15], "texture": "#0", "cullface": "east"},
+				"south": {"uv": [14, 14, 15, 15], "texture": "#0", "cullface": "south"},
+				"west": {"uv": [14, 14, 15, 15], "texture": "#0", "cullface": "west"},
+				"up": {"uv": [13, 14, 14, 15], "texture": "#0"},
+				"down": {"uv": [14, 15, 15, 16], "texture": "#0", "cullface": "down"}
+			}
+		},
+		{
+			"from": [6, 0, 6],
+			"to": [10, 22, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 11, 8]},
+			"faces": {
+				"north": {"uv": [5, 0, 6, 12], "texture": "#0"},
+				"east": {"uv": [5, 0, 6, 12], "texture": "#0"},
+				"south": {"uv": [5, 0, 6, 12], "texture": "#0"},
+				"west": {"uv": [5, 0, 6, 12], "texture": "#0"},
+				"up": {"uv": [5, 0, 6, 1], "texture": "#0", "cullface": "up"}
+			}
+		}
+	]
+}

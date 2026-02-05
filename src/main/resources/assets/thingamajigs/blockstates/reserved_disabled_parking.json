@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/other_signs/reserved_disabled_parking",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/other_signs/reserved_disabled_parking"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/other_signs/reserved_disabled_parking",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/other_signs/reserved_disabled_parking",
+      "y": 270
+    }
+  }
+}

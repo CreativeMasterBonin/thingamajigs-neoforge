@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/door_blockade",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/door_blockade"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/door_blockade",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/door_blockade",
+      "y": 270
+    }
+  }
+}

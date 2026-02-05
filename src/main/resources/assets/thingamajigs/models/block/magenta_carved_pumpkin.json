@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "thingamajigs:block/pumpkins/magenta_carved_pumpkin",
+    "side": "thingamajigs:block/pumpkins/magenta_pumpkin_side",
+    "top": "thingamajigs:block/pumpkins/magenta_pumpkin_top"
+  }
+}

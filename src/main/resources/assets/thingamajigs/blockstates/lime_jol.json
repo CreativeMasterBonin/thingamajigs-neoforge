@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/pumpkins/lime_jol",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/pumpkins/lime_jol"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/pumpkins/lime_jol",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/pumpkins/lime_jol",
+      "y": 270
+    }
+  }
+}

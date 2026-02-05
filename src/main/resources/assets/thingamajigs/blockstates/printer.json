@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,enabled=false": {
+      "model": "thingamajigs:block/printer",
+      "y": 90
+    },
+    "facing=north,enabled=false": {
+      "model": "thingamajigs:block/printer"
+    },
+    "facing=south,enabled=false": {
+      "model": "thingamajigs:block/printer",
+      "y": 180
+    },
+    "facing=west,enabled=false": {
+      "model": "thingamajigs:block/printer",
+      "y": 270
+    },
+    "facing=east,enabled=true": {
+      "model": "thingamajigs:block/printer_secret",
+      "y": 90
+    },
+    "facing=north,enabled=true": {
+      "model": "thingamajigs:block/printer_secret"
+    },
+    "facing=south,enabled=true": {
+      "model": "thingamajigs:block/printer_secret",
+      "y": 180
+    },
+    "facing=west,enabled=true": {
+      "model": "thingamajigs:block/printer_secret",
+      "y": 270
+    }
+  }
+}

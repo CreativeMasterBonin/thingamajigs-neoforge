@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:custom/server_hard_drive_box",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:custom/server_hard_drive_box"
+    },
+    "facing=south": {
+      "model": "thingamajigs:custom/server_hard_drive_box",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:custom/server_hard_drive_box",
+      "y": 270
+    }
+  }
+}

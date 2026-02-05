@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/cinder_block_small",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/cinder_block_small"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/cinder_block_small",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/cinder_block_small",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,enabled=false": {
+      "model": "thingamajigs:block/wall_tv",
+      "y": 90
+    },
+    "facing=north,enabled=false": {
+      "model": "thingamajigs:block/wall_tv"
+    },
+    "facing=south,enabled=false": {
+      "model": "thingamajigs:block/wall_tv",
+      "y": 180
+    },
+    "facing=west,enabled=false": {
+      "model": "thingamajigs:block/wall_tv",
+      "y": 270
+    },
+    "facing=east,enabled=true": {
+      "model": "thingamajigs:block/wall_tv_down",
+      "y": 90
+    },
+    "facing=north,enabled=true": {
+      "model": "thingamajigs:block/wall_tv_down"
+    },
+    "facing=south,enabled=true": {
+      "model": "thingamajigs:block/wall_tv_down",
+      "y": 180
+    },
+    "facing=west,enabled=true": {
+      "model": "thingamajigs:block/wall_tv_down",
+      "y": 270
+    }
+  }
+}

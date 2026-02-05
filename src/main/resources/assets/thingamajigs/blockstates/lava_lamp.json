@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=0": {
+      "model": "thingamajigs:block/lava_lamps/red_lava_lamp"
+    },
+    "type=1": {
+      "model": "thingamajigs:block/lava_lamps/orange_lava_lamp"
+    },
+    "type=2": {
+      "model": "thingamajigs:block/lava_lamps/yellow_lava_lamp"
+    },
+    "type=3": {
+      "model": "thingamajigs:block/lava_lamps/green_lava_lamp"
+    },
+    "type=4": {
+      "model": "thingamajigs:block/lava_lamps/blue_lava_lamp"
+    },
+    "type=5": {
+      "model": "thingamajigs:block/lava_lamps/purple_lava_lamp"
+    }
+  }
+}

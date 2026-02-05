@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/give_way",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/give_way"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/give_way",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/give_way",
+      "y": 270
+    }
+  }
+}

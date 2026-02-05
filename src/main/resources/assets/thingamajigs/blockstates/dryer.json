@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:custom/home_dryer",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:custom/home_dryer"
+    },
+    "facing=south": {
+      "model": "thingamajigs:custom/home_dryer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:custom/home_dryer",
+      "y": 270
+    }
+  }
+}

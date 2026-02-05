@@ -1,0 +1,67 @@
+{
+  "variants": {
+    "facing=east,type=0": {
+      "model": "thingamajigs:block/steel_hoarding_bottom",
+      "y": 90
+    },
+    "facing=east,type=1": {
+      "model": "thingamajigs:block/steel_hoarding",
+      "y": 90
+    },
+    "facing=east,type=2": {
+      "model": "thingamajigs:block/steel_hoarding",
+      "y": 90
+    },
+    "facing=east,type=3": {
+      "model": "thingamajigs:block/steel_hoarding_bottom",
+      "y": 90
+    },
+
+    "facing=south,type=0": {
+      "model": "thingamajigs:block/steel_hoarding_bottom",
+      "y": 180
+    },
+    "facing=south,type=1": {
+      "model": "thingamajigs:block/steel_hoarding",
+      "y": 180
+    },
+    "facing=south,type=2": {
+      "model": "thingamajigs:block/steel_hoarding",
+      "y": 180
+    },
+    "facing=south,type=3": {
+      "model": "thingamajigs:block/steel_hoarding_bottom",
+      "y": 180
+    },
+
+    "facing=west,type=0": {
+      "model": "thingamajigs:block/steel_hoarding_bottom",
+      "y": 270
+    },
+    "facing=west,type=1": {
+      "model": "thingamajigs:block/steel_hoarding",
+      "y": 270
+    },
+    "facing=west,type=2": {
+      "model": "thingamajigs:block/steel_hoarding",
+      "y": 270
+    },
+    "facing=west,type=3": {
+      "model": "thingamajigs:block/steel_hoarding_bottom",
+      "y": 270
+    },
+
+    "facing=north,type=0": {
+      "model": "thingamajigs:block/steel_hoarding_bottom"
+    },
+    "facing=north,type=1": {
+      "model": "thingamajigs:block/steel_hoarding"
+    },
+    "facing=north,type=2": {
+      "model": "thingamajigs:block/steel_hoarding"
+    },
+    "facing=north,type=3": {
+      "model": "thingamajigs:block/steel_hoarding_bottom"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:custom/theater_seat",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:custom/theater_seat"
+    },
+    "facing=south": {
+      "model": "thingamajigs:custom/theater_seat",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:custom/theater_seat",
+      "y": 270
+    }
+  }
+}

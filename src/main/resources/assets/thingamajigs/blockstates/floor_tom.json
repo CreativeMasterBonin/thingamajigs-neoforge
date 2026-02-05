@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/floor_tom",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/floor_tom"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/floor_tom",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/floor_tom",
+      "y": 270
+    }
+  }
+}

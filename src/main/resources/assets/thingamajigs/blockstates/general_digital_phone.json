@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/general_digital_phone",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/general_digital_phone"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/general_digital_phone",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/general_digital_phone",
+      "y": 270
+    }
+  }
+}

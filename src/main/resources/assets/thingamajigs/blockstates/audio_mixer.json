@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,enabled=false": {
+      "model": "thingamajigs:block/audio_mixer",
+      "y": 90
+    },
+    "facing=north,enabled=false": {
+      "model": "thingamajigs:block/audio_mixer"
+    },
+    "facing=south,enabled=false": {
+      "model": "thingamajigs:block/audio_mixer",
+      "y": 180
+    },
+    "facing=west,enabled=false": {
+      "model": "thingamajigs:block/audio_mixer",
+      "y": 270
+    },
+    "facing=east,enabled=true": {
+      "model": "thingamajigs:block/audio_mixer_on",
+      "y": 90
+    },
+    "facing=north,enabled=true": {
+      "model": "thingamajigs:block/audio_mixer_on"
+    },
+    "facing=south,enabled=true": {
+      "model": "thingamajigs:block/audio_mixer_on",
+      "y": 180
+    },
+    "facing=west,enabled=true": {
+      "model": "thingamajigs:block/audio_mixer_on",
+      "y": 270
+    }
+  }
+}

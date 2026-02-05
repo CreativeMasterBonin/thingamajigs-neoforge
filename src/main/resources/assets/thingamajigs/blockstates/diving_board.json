@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/diving_board",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/diving_board"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/diving_board",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/diving_board",
+      "y": 270
+    }
+  }
+}

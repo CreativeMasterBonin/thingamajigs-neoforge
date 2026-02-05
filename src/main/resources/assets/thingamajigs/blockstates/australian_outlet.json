@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/australian_outlet",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/australian_outlet"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/australian_outlet",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/australian_outlet",
+      "y": 270
+    }
+  }
+}

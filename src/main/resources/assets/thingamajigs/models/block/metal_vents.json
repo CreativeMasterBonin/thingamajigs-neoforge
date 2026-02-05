@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "thingamajigs:block/extra_metal",
+    "up": "thingamajigs:block/factory/vents",
+    "north": "thingamajigs:block/factory/vents_side",
+    "south": "thingamajigs:block/factory/vents_side",
+    "east": "thingamajigs:block/factory/vents_side",
+    "west": "thingamajigs:block/factory/vents_side",
+    "particle": "#up"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "thingamajigs:bases/traffic_signal",
+  "textures": {
+    "signal": "thingamajigs:block/traffic_signals/signal/left_green_to_red",
+    "cover": "minecraft:block/blast_furnace_side",
+    "particle": "minecraft:block/blast_furnace_side"
+  }
+}

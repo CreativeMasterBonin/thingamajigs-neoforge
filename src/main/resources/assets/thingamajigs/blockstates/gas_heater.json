@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/gas_heater",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/gas_heater"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/gas_heater",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/gas_heater",
+      "y": 270
+    }
+  }
+}

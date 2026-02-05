@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/speed_hump_sign",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/speed_hump_sign"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/speed_hump_sign",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/speed_hump_sign",
+      "y": 270
+    }
+  }
+}

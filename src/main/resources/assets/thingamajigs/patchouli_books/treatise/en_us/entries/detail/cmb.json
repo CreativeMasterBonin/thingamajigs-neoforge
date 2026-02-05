@@ -1,0 +1,27 @@
+{
+    "name": "entry.thingamajigs.cmb",
+    "icon": "minecraft:paper",
+    "category": "thingamajigs:detail",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "How do you pronounce CreativeMasterBonin? It's easy. Also don't say the term 'Bonin' as 'BOW-nin', it's piercing sound hurts too much."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Pronounce the following sections of 'Creative': 'cree' as in creepy, 'a' as in hey, 'tive' as in... interactive?. That is how to say Creative."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Pronounce the following sections of 'Master': 'mah' as in mama, 'sss' as in snake, 'ter' as in turn (only say the 'tur' part of turn). That is how to say Master."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Pronounce the following sections of 'Bonin': 'bah' as in tuba, 'nen' as in spoken (only say the 'en' part of spoken with an extra N before 'e', making it sound like a word that has 'i' in it, like the term: 'in')."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Together the name is said as 'cree'-'a'-'tive' 'mah-sss-ter' 'bah-nen'. So, pronounce 'Bonin' as bah-nin or bah-nen. Preferred sound is bah-nin."
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/steve_plushy",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/steve_plushy"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/steve_plushy",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/steve_plushy",
+      "y": 270
+    }
+  }
+}

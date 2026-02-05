@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:custom/robot_security_camera",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:custom/robot_security_camera"
+    },
+    "facing=south": {
+      "model": "thingamajigs:custom/robot_security_camera",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:custom/robot_security_camera",
+      "y": 270
+    }
+  }
+}

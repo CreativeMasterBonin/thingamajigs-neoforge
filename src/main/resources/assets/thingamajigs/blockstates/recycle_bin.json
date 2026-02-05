@@ -1,0 +1,154 @@
+{
+  "variants": {
+    "facing=east,type=0": {
+      "model": "thingamajigs:custom/recycle_bin",
+      "y": 90
+    },
+    "facing=north,type=0": {
+      "model": "thingamajigs:custom/recycle_bin"
+    },
+    "facing=south,type=0": {
+      "model": "thingamajigs:custom/recycle_bin",
+      "y": 180
+    },
+    "facing=west,type=0": {
+      "model": "thingamajigs:custom/recycle_bin",
+      "y": 270
+    },
+    "facing=east,type=1": {
+      "model": "thingamajigs:block/recycle_bins/black_bin",
+      "y": 90
+    },
+    "facing=north,type=1": {
+      "model": "thingamajigs:block/recycle_bins/black_bin"
+    },
+    "facing=south,type=1": {
+      "model": "thingamajigs:block/recycle_bins/black_bin",
+      "y": 180
+    },
+    "facing=west,type=1": {
+      "model": "thingamajigs:block/recycle_bins/black_bin",
+      "y": 270
+    },
+    "facing=east,type=2": {
+      "model": "thingamajigs:block/recycle_bins/yellowblack_bin",
+      "y": 90
+    },
+    "facing=north,type=2": {
+      "model": "thingamajigs:block/recycle_bins/yellowblack_bin"
+    },
+    "facing=south,type=2": {
+      "model": "thingamajigs:block/recycle_bins/yellowblack_bin",
+      "y": 180
+    },
+    "facing=west,type=2": {
+      "model": "thingamajigs:block/recycle_bins/yellowblack_bin",
+      "y": 270
+    },
+    "facing=east,type=3": {
+      "model": "thingamajigs:block/recycle_bins/brown_bin",
+      "y": 90
+    },
+    "facing=north,type=3": {
+      "model": "thingamajigs:block/recycle_bins/brown_bin"
+    },
+    "facing=south,type=3": {
+      "model": "thingamajigs:block/recycle_bins/brown_bin",
+      "y": 180
+    },
+    "facing=west,type=3": {
+      "model": "thingamajigs:block/recycle_bins/brown_bin",
+      "y": 270
+    },
+    "facing=east,type=4": {
+      "model": "thingamajigs:block/recycle_bins/redwhite_bin",
+      "y": 90
+    },
+    "facing=north,type=4": {
+      "model": "thingamajigs:block/recycle_bins/redwhite_bin"
+    },
+    "facing=south,type=4": {
+      "model": "thingamajigs:block/recycle_bins/redwhite_bin",
+      "y": 180
+    },
+    "facing=west,type=4": {
+      "model": "thingamajigs:block/recycle_bins/redwhite_bin",
+      "y": 270
+    },
+    "facing=east,type=5": {
+      "model": "thingamajigs:block/recycle_bins/greenbrown_bin",
+      "y": 90
+    },
+    "facing=north,type=5": {
+      "model": "thingamajigs:block/recycle_bins/greenbrown_bin"
+    },
+    "facing=south,type=5": {
+      "model": "thingamajigs:block/recycle_bins/greenbrown_bin",
+      "y": 180
+    },
+    "facing=west,type=5": {
+      "model": "thingamajigs:block/recycle_bins/greenbrown_bin",
+      "y": 270
+    },
+    "facing=east,type=6": {
+      "model": "thingamajigs:block/recycle_bins/quartz_bin",
+      "y": 90
+    },
+    "facing=north,type=6": {
+      "model": "thingamajigs:block/recycle_bins/quartz_bin"
+    },
+    "facing=south,type=6": {
+      "model": "thingamajigs:block/recycle_bins/quartz_bin",
+      "y": 180
+    },
+    "facing=west,type=6": {
+      "model": "thingamajigs:block/recycle_bins/quartz_bin",
+      "y": 270
+    },
+    "facing=east,type=7": {
+      "model": "thingamajigs:block/recycle_bins/respawning_bin",
+      "y": 90
+    },
+    "facing=north,type=7": {
+      "model": "thingamajigs:block/recycle_bins/respawning_bin"
+    },
+    "facing=south,type=7": {
+      "model": "thingamajigs:block/recycle_bins/respawning_bin",
+      "y": 180
+    },
+    "facing=west,type=7": {
+      "model": "thingamajigs:block/recycle_bins/respawning_bin",
+      "y": 270
+    },
+    "facing=east,type=8": {
+      "model": "thingamajigs:block/recycle_bins/sandy_bin",
+      "y": 90
+    },
+    "facing=north,type=8": {
+      "model": "thingamajigs:block/recycle_bins/sandy_bin"
+    },
+    "facing=south,type=8": {
+      "model": "thingamajigs:block/recycle_bins/sandy_bin",
+      "y": 180
+    },
+    "facing=west,type=8": {
+      "model": "thingamajigs:block/recycle_bins/sandy_bin",
+      "y": 270
+    },
+    "facing=east,type=9": {
+      "model": "thingamajigs:block/recycle_bins/sculk_bin",
+      "y": 90
+    },
+    "facing=north,type=9": {
+      "model": "thingamajigs:block/recycle_bins/sculk_bin"
+    },
+    "facing=south,type=9": {
+      "model": "thingamajigs:block/recycle_bins/sculk_bin",
+      "y": 180
+    },
+    "facing=west,type=9": {
+      "model": "thingamajigs:block/recycle_bins/sculk_bin",
+      "y": 270
+    }
+  }
+}

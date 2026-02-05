@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "":[
+      {"model":  "thingamajigs:block/cracked_sidewalk"},
+      {"model":  "thingamajigs:block/random/cracked_sidewalk2"},
+      {"model":  "thingamajigs:block/random/cracked_sidewalk3"},
+      {"model":  "thingamajigs:block/random/cracked_sidewalk4"}
+    ]
+  }
+}

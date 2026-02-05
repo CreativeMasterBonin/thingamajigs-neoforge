@@ -1,0 +1,36 @@
+{
+	"credit": "Made with Blockbench",
+    "ambientocclusion": false,
+    "render_type": "cutout",
+	"textures": {
+		"0": "thingamajigs:block/teaching_board_filled",
+		"1": "minecraft:block/oak_planks",
+		"particle": "thingamajigs:block/teaching_board_filled"
+	},
+	"elements": [
+		{
+			"from": [8, 0, 15],
+			"to": [24, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [0, 8, 8, 16], "texture": "#0"},
+				"east": {"uv": [0, 0, 0.5, 8], "texture": "#0"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"up": {"uv": [0, 0, 8, 0.5], "texture": "#0"},
+				"down": {"uv": [0, 7.5, 8, 8], "texture": "#0"}
+			}
+		},
+		{
+			"from": [-8, 0, 15],
+			"to": [8, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [8, 8, 16, 16], "texture": "#0"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"west": {"uv": [15.5, 0, 16, 8], "texture": "#0"},
+				"up": {"uv": [8, 0, 16, 0.5], "texture": "#0"},
+				"down": {"uv": [8, 7.5, 16, 8], "texture": "#0"}
+			}
+		}
+	]
+}

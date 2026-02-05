@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/food_dehydrator",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/food_dehydrator"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/food_dehydrator",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/food_dehydrator",
+      "y": 270
+    }
+  }
+}

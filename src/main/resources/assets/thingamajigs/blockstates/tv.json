@@ -1,0 +1,139 @@
+{
+  "variants": {
+    "facing=east,type=0": {
+      "model": "thingamajigs:block/tv",
+      "y": 90
+    },
+    "facing=north,type=0": {
+      "model": "thingamajigs:block/tv"
+    },
+    "facing=south,type=0": {
+      "model": "thingamajigs:block/tv",
+      "y": 180
+    },
+    "facing=west,type=0": {
+      "model": "thingamajigs:block/tv",
+      "y": 270
+    },
+    "facing=east,type=1": {
+      "model": "thingamajigs:block/tv_lines",
+      "y": 90
+    },
+    "facing=north,type=1": {
+      "model": "thingamajigs:block/tv_lines"
+    },
+    "facing=south,type=1": {
+      "model": "thingamajigs:block/tv_lines",
+      "y": 180
+    },
+    "facing=west,type=1": {
+      "model": "thingamajigs:block/tv_lines",
+      "y": 270
+    },
+    "facing=east,type=2": {
+      "model": "thingamajigs:block/tv_fire",
+      "y": 90
+    },
+    "facing=north,type=2": {
+      "model": "thingamajigs:block/tv_fire"
+    },
+    "facing=south,type=2": {
+      "model": "thingamajigs:block/tv_fire",
+      "y": 180
+    },
+    "facing=west,type=2": {
+      "model": "thingamajigs:block/tv_fire",
+      "y": 270
+    },
+    "facing=east,type=3": {
+      "model": "thingamajigs:block/tv_mod",
+      "y": 90
+    },
+    "facing=north,type=3": {
+      "model": "thingamajigs:block/tv_mod"
+    },
+    "facing=south,type=3": {
+      "model": "thingamajigs:block/tv_mod",
+      "y": 180
+    },
+    "facing=west,type=3": {
+      "model": "thingamajigs:block/tv_mod",
+      "y": 270
+    },
+    "facing=east,type=4": {
+      "model": "thingamajigs:block/tv_nether",
+      "y": 90
+    },
+    "facing=north,type=4": {
+      "model": "thingamajigs:block/tv_nether"
+    },
+    "facing=south,type=4": {
+      "model": "thingamajigs:block/tv_nether",
+      "y": 180
+    },
+    "facing=west,type=4": {
+      "model": "thingamajigs:block/tv_nether",
+      "y": 270
+    },
+    "facing=east,type=5": {
+      "model": "thingamajigs:block/tv_bluey",
+      "y": 90
+    },
+    "facing=north,type=5": {
+      "model": "thingamajigs:block/tv_bluey"
+    },
+    "facing=south,type=5": {
+      "model": "thingamajigs:block/tv_bluey",
+      "y": 180
+    },
+    "facing=west,type=5": {
+      "model": "thingamajigs:block/tv_bluey",
+      "y": 270
+    },
+    "facing=east,type=6": {
+      "model": "thingamajigs:block/tv_noise",
+      "y": 90
+    },
+    "facing=north,type=6": {
+      "model": "thingamajigs:block/tv_noise"
+    },
+    "facing=south,type=6": {
+      "model": "thingamajigs:block/tv_noise",
+      "y": 180
+    },
+    "facing=west,type=6": {
+      "model": "thingamajigs:block/tv_noise",
+      "y": 270
+    },
+    "facing=east,type=7": {
+      "model": "thingamajigs:block/tv_random",
+      "y": 90
+    },
+    "facing=north,type=7": {
+      "model": "thingamajigs:block/tv_random"
+    },
+    "facing=south,type=7": {
+      "model": "thingamajigs:block/tv_random",
+      "y": 180
+    },
+    "facing=west,type=7": {
+      "model": "thingamajigs:block/tv_random",
+      "y": 270
+    },
+    "facing=east,type=8": {
+      "model": "thingamajigs:block/tv",
+      "y": 90
+    },
+    "facing=north,type=8": {
+      "model": "thingamajigs:block/tv"
+    },
+    "facing=south,type=8": {
+      "model": "thingamajigs:block/tv",
+      "y": 180
+    },
+    "facing=west,type=8": {
+      "model": "thingamajigs:block/tv",
+      "y": 270
+    }
+  }
+}

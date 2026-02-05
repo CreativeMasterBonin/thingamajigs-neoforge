@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+        "model":  "thingamajigs:block/stone/panel_stone_bricks"
+    }
+  }
+}

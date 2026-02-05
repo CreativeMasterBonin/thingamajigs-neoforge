@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,enabled=false": {
+      "model": "thingamajigs:custom/full_store_freezer",
+      "y": 90
+    },
+    "facing=north,enabled=false": {
+      "model": "thingamajigs:custom/full_store_freezer"
+    },
+    "facing=south,enabled=false": {
+      "model": "thingamajigs:custom/full_store_freezer",
+      "y": 180
+    },
+    "facing=west,enabled=false": {
+      "model": "thingamajigs:custom/full_store_freezer",
+      "y": 270
+    },
+    "facing=east,enabled=true": {
+      "model": "thingamajigs:custom/full_store_freezer_open",
+      "y": 90
+    },
+    "facing=north,enabled=true": {
+      "model": "thingamajigs:custom/full_store_freezer_open"
+    },
+    "facing=south,enabled=true": {
+      "model": "thingamajigs:custom/full_store_freezer_open",
+      "y": 180
+    },
+    "facing=west,enabled=true": {
+      "model": "thingamajigs:custom/full_store_freezer_open",
+      "y": 270
+    }
+  }
+}

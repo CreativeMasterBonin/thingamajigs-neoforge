@@ -1,0 +1,9 @@
+{
+  "parent": "thingamajigs:bases/sign",
+  "textures": {
+    "front": "thingamajigs:block/signs/text_signs/blue_stop_sign",
+    "back": "thingamajigs:block/signs/back/back_octagon",
+    "pole": "minecraft:block/blast_furnace_side",
+    "particle": "minecraft:block/blast_furnace_side"
+  }
+}

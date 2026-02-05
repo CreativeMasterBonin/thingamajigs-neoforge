@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:custom/shopping_cart",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:custom/shopping_cart"
+    },
+    "facing=south": {
+      "model": "thingamajigs:custom/shopping_cart",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:custom/shopping_cart",
+      "y": 270
+    }
+  }
+}

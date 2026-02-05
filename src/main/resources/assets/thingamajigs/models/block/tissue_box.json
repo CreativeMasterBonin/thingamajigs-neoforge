@@ -1,0 +1,44 @@
+{
+	"credit": "Made By CreativeMasterBonin",
+	"textures": {
+		"0": "minecraft:block/white_terracotta",
+		"1": "minecraft:block/white_wool",
+		"2": "minecraft:block/black_concrete",
+		"particle": "#0"
+	},
+	"elements": [
+		{
+			"name": "box",
+			"from": [5, 0, 5],
+			"to": [11, 6, 11],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 3, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 6, 6], "texture": "#0"},
+				"east": {"uv": [0, 0, 6, 6], "texture": "#0"},
+				"south": {"uv": [0, 0, 6, 6], "texture": "#0"},
+				"west": {"uv": [0, 0, 6, 6], "texture": "#0"},
+				"up": {"uv": [0, 0, 6, 6], "texture": "#0"},
+				"down": {"uv": [0, 0, 6, 6], "texture": "#0", "cullface": "down"}
+			}
+		},
+		{
+			"name": "tissue",
+			"from": [6, 6, 8],
+			"to": [10, 9, 8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 7.5, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 4, 3], "texture": "#1"},
+				"south": {"uv": [0, 0, 4, 3], "texture": "#1"}
+			}
+		},
+		{
+			"name": "cutouthole",
+			"from": [6, 6.02, 7.5],
+			"to": [10, 6.02, 8.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 6.02, 8]},
+			"faces": {
+				"up": {"uv": [0, 0, 4, 1], "texture": "#2"}
+			}
+		}
+	]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_rail_raised_sw",
+  "textures": {
+    "rail": "thingamajigs:block/mini_city/tiny_road_straight"
+  }
+}

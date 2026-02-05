@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,on=false": {
+      "model": "thingamajigs:oversized/railroad_crossing_up",
+      "y": 90
+    },
+    "facing=north,on=false": {
+      "model": "thingamajigs:oversized/railroad_crossing_up"
+    },
+    "facing=south,on=false": {
+      "model": "thingamajigs:oversized/railroad_crossing_up",
+      "y": 180
+    },
+    "facing=west,on=false": {
+      "model": "thingamajigs:oversized/railroad_crossing_up",
+      "y": 270
+    },
+    "facing=east,on=true": {
+      "model": "thingamajigs:oversized/railroad_crossing_down",
+      "y": 90
+    },
+    "facing=north,on=true": {
+      "model": "thingamajigs:oversized/railroad_crossing_down"
+    },
+    "facing=south,on=true": {
+      "model": "thingamajigs:oversized/railroad_crossing_down",
+      "y": 180
+    },
+    "facing=west,on=true": {
+      "model": "thingamajigs:oversized/railroad_crossing_down",
+      "y": 270
+    }
+  }
+}

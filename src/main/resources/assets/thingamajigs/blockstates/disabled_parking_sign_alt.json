@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/other_signs/disabled_parking_sign_alt",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/other_signs/disabled_parking_sign_alt"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/other_signs/disabled_parking_sign_alt",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/other_signs/disabled_parking_sign_alt",
+      "y": 270
+    }
+  }
+}

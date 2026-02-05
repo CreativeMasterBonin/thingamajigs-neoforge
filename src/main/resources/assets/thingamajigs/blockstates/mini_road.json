@@ -1,0 +1,40 @@
+{
+  "variants": {
+    "shape=ascending_east": {
+      "model": "thingamajigs:block/mini_city/tiny_road_raised_ne",
+      "y": 90
+    },
+    "shape=ascending_north": {
+      "model": "thingamajigs:block/mini_city/tiny_road_raised_ne"
+    },
+    "shape=ascending_south": {
+      "model": "thingamajigs:block/mini_city/tiny_road_raised_sw"
+    },
+    "shape=ascending_west": {
+      "model": "thingamajigs:block/mini_city/tiny_road_raised_sw",
+      "y": 90
+    },
+    "shape=east_west": {
+      "model": "thingamajigs:block/mini_city/tiny_road",
+      "y": 90
+    },
+    "shape=north_east": {
+      "model": "thingamajigs:block/mini_city/tiny_road_corner",
+      "y": 270
+    },
+    "shape=north_south": {
+      "model": "thingamajigs:block/mini_city/tiny_road"
+    },
+    "shape=north_west": {
+      "model": "thingamajigs:block/mini_city/tiny_road_corner",
+      "y": 180
+    },
+    "shape=south_east": {
+      "model": "thingamajigs:block/mini_city/tiny_road_corner"
+    },
+    "shape=south_west": {
+      "model": "thingamajigs:block/mini_city/tiny_road_corner",
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/string_bass",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/string_bass"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/string_bass",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/string_bass",
+      "y": 270
+    }
+  }
+}

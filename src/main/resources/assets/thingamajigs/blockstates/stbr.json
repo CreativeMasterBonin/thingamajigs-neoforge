@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/symbol_signs/stbr",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/symbol_signs/stbr"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/symbol_signs/stbr",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/symbol_signs/stbr",
+      "y": 270
+    }
+  }
+}

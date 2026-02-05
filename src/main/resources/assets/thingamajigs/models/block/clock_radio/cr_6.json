@@ -1,0 +1,6 @@
+{
+  "parent": "thingamajigs:bases/clock_radio",
+  "textures": {
+      "time": "thingamajigs:block/clock_radio/c_6"
+  }
+}

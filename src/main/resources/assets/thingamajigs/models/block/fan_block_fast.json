@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "minecraft:block/blast_furnace_top",
+    "up": "minecraft:block/blast_furnace_top",
+    "north": "thingamajigs:block/animated/fan_front_fast",
+    "south": "minecraft:block/blast_furnace_side",
+    "east": "minecraft:block/blast_furnace_side",
+    "west": "minecraft:block/blast_furnace_side",
+    "particle": "thingamajigs:block/animated/fan_front_fast"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/oak_lane",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/oak_lane"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/oak_lane",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/oak_lane",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/usb_outlet",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/usb_outlet"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/usb_outlet",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/usb_outlet",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:bases/tl_connector",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:bases/tl_connector"
+    },
+    "facing=south": {
+      "model": "thingamajigs:bases/tl_connector",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:bases/tl_connector",
+      "y": 270
+    }
+  }
+}

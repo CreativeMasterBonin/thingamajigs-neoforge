@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_top_left",
+  "render_type": "translucent",
+  "textures": {
+    "bottom": "thingamajigs:block/doors/inviting_door_bottom",
+    "top": "thingamajigs:block/doors/inviting_door_top"
+  }
+}

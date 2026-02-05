@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:custom/hospital_computer",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:custom/hospital_computer"
+    },
+    "facing=south": {
+      "model": "thingamajigs:custom/hospital_computer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:custom/hospital_computer",
+      "y": 270
+    }
+  }
+}

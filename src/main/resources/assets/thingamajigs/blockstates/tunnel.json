@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/tunnel",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/tunnel"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/tunnel",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/tunnel",
+      "y": 270
+    }
+  }
+}

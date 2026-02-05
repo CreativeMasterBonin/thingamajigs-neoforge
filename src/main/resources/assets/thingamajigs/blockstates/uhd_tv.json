@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:oversized/uhd_tv",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:oversized/uhd_tv"
+    },
+    "facing=south": {
+      "model": "thingamajigs:oversized/uhd_tv",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:oversized/uhd_tv",
+      "y": 270
+    }
+  }
+}

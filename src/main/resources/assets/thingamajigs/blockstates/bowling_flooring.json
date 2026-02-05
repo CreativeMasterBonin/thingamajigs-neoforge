@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "":[
+      {"model":  "thingamajigs:block/random/ba_floor1"},
+      {"model":  "thingamajigs:block/random/ba_floor2"},
+      {"model":  "thingamajigs:block/random/ba_floor3"},
+      {"model":  "thingamajigs:block/random/ba_floor4"},
+      {"model":  "thingamajigs:block/random/ba_floor5"}
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+	"credit": "Made with Blockbench",
+    "render_type": "translucent",
+	"textures": {
+		"1": "thingamajigs:block/aios/blue_soda_machine",
+        "particle": "thingamajigs:block/aios/blue_soda_machine"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 32, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0.5, 0.5, 0.5]},
+			"faces": {
+				"north": {"uv": [0, 0, 8, 16], "texture": "#1", "cullface": "north"},
+				"east": {"uv": [8, 0, 16, 16], "texture": "#1", "cullface": "east"},
+				"south": {"uv": [8, 0, 16, 16], "texture": "#1", "cullface": "south"},
+				"west": {"uv": [8, 0, 16, 16], "texture": "#1", "cullface": "west"},
+				"up": {"uv": [8, 0, 16, 16], "texture": "#1", "cullface": "up"},
+				"down": {"uv": [8, 0, 16, 16], "texture": "#1", "cullface": "down"}
+			}
+		}
+	]
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/const_rca",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/const_rca"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/const_rca",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/const_rca",
+      "y": 270
+    }
+  }
+}

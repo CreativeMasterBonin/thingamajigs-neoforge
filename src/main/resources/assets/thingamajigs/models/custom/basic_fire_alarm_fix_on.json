@@ -1,0 +1,68 @@
+{
+	"credit": "Made with Blockbench",
+    "render_type": "translucent",
+	"textures": {
+		"0": "thingamajigs:block/parts/fire_alarm_back",
+		"1": "thingamajigs:block/parts/fire_alarm_front",
+		"2": "thingamajigs:block/parts/fire_alarm_lightbox",
+		"4": "thingamajigs:block/animated/light_atlas",
+		"5": "thingamajigs:block/parts/yellow_light_cover",
+		"particle": "thingamajigs:block/animated/light_atlas"
+	},
+	"elements": [
+		{
+			"from": [5, 6, 14],
+			"to": [11, 14, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#0", "cullface": "south"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#0"}
+			}
+		},
+		{
+			"from": [5, 7, 13],
+			"to": [11, 13, 14],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#2"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#0"}
+			}
+		},
+		{
+			"from": [5.75, 10.25, 12],
+			"to": [10.25, 12.25, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 16, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#5"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#5"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#5"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#5"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#5"}
+			}
+		},
+		{
+			"from": [6, 8, 12.9],
+			"to": [10, 10, 12.9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 9, 12.9]},
+			"faces": {
+				"north": {"uv": [2, 6, 15, 13], "texture": "#1"}
+			}
+		},
+		{
+			"from": [6, 10.8, 12.5],
+			"to": [10, 11.8, 13],
+			"faces": {
+				"north": {"uv": [3, 3, 4, 4], "texture": "#4"},
+				"east": {"uv": [3, 3, 4, 4], "texture": "#4"},
+				"west": {"uv": [3, 3, 4, 4], "texture": "#4"},
+				"up": {"uv": [3, 3, 4, 4], "texture": "#4"},
+				"down": {"uv": [3, 3, 4, 4], "texture": "#4"}
+			}
+		}
+	]
+}

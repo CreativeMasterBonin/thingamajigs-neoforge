@@ -1,0 +1,8 @@
+{
+  "parent": "thingamajigs:bases/road_barrier",
+  "textures": {
+    "front": "thingamajigs:block/signs/text_signs/road_closed",
+    "back": "thingamajigs:block/signs/back/road_barrier_back",
+    "particle": "thingamajigs:block/aios/road_barrier"
+  }
+}

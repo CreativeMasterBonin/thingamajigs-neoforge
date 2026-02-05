@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/barber_hair_dryer",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/barber_hair_dryer"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/barber_hair_dryer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/barber_hair_dryer",
+      "y": 270
+    }
+  }
+}

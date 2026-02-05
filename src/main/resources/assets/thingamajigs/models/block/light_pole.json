@@ -1,0 +1,8 @@
+{
+  "parent": "thingamajigs:bases/pole_bulb",
+  "textures": {
+    "all": "minecraft:block/blast_furnace_top",
+    "light": "minecraft:block/sea_lantern",
+    "particle": "minecraft:block/blast_furnace_top"
+  }
+}

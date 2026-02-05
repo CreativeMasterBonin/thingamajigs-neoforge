@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/soft_verge",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/soft_verge"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/soft_verge",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/soft_verge",
+      "y": 270
+    }
+  }
+}

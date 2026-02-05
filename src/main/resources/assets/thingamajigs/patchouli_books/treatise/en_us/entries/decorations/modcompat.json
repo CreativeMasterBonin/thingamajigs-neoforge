@@ -1,0 +1,19 @@
+{
+    "name": "Compats",
+    "icon": "minecraft:painting",
+    "category": "thingamajigs:decorations",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Several mods can alter or add functionality to Thingamajigs! The mods include some notable ones, such as Create. Some additional connected visual changes can be applied to modded blocks if Athena is installed. Note that some Thingamajigs addons are required for these features to exist at all."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Create enables some recipes for an addon to this mod, called Thingamajigs 2 Goodies. Note that along with a Create-exclusive recipe, wheat can be exchanged for eggs if Purifying Water is below the Converter. Only when Create and Thingamajigs 2 Goodies is installed do these recipes work."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "The documentation for Thingamajigs goes into more depth about certain 'compat' features, read it for in-depth stuff that would otherwise take up far too many pages in this book."
+        }
+    ]
+}

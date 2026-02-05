@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/chairs/exposed_copper_chair",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/chairs/exposed_copper_chair"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/chairs/exposed_copper_chair",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/chairs/exposed_copper_chair",
+      "y": 270
+    }
+  }
+}

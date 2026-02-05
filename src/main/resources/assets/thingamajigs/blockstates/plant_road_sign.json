@@ -1,0 +1,154 @@
+{
+  "variants": {
+    "facing=east,type=0": {
+      "model": "thingamajigs:block/symbol_signs/prs_one",
+      "y": 90
+    },
+    "facing=north,type=0": {
+      "model": "thingamajigs:block/symbol_signs/prs_one"
+    },
+    "facing=south,type=0": {
+      "model": "thingamajigs:block/symbol_signs/prs_one",
+      "y": 180
+    },
+    "facing=west,type=0": {
+      "model": "thingamajigs:block/symbol_signs/prs_one",
+      "y": 270
+    },
+    "facing=east,type=1": {
+      "model": "thingamajigs:block/symbol_signs/prs_two",
+      "y": 90
+    },
+    "facing=north,type=1": {
+      "model": "thingamajigs:block/symbol_signs/prs_two"
+    },
+    "facing=south,type=1": {
+      "model": "thingamajigs:block/symbol_signs/prs_two",
+      "y": 180
+    },
+    "facing=west,type=1": {
+      "model": "thingamajigs:block/symbol_signs/prs_two",
+      "y": 270
+    },
+    "facing=east,type=2": {
+      "model": "thingamajigs:block/symbol_signs/prs_three",
+      "y": 90
+    },
+    "facing=north,type=2": {
+      "model": "thingamajigs:block/symbol_signs/prs_three"
+    },
+    "facing=south,type=2": {
+      "model": "thingamajigs:block/symbol_signs/prs_three",
+      "y": 180
+    },
+    "facing=west,type=2": {
+      "model": "thingamajigs:block/symbol_signs/prs_three",
+      "y": 270
+    },
+    "facing=east,type=3": {
+      "model": "thingamajigs:block/symbol_signs/prs_four",
+      "y": 90
+    },
+    "facing=north,type=3": {
+      "model": "thingamajigs:block/symbol_signs/prs_four"
+    },
+    "facing=south,type=3": {
+      "model": "thingamajigs:block/symbol_signs/prs_four",
+      "y": 180
+    },
+    "facing=west,type=3": {
+      "model": "thingamajigs:block/symbol_signs/prs_four",
+      "y": 270
+    },
+    "facing=east,type=4": {
+      "model": "thingamajigs:block/symbol_signs/prs_five",
+      "y": 90
+    },
+    "facing=north,type=4": {
+      "model": "thingamajigs:block/symbol_signs/prs_five"
+    },
+    "facing=south,type=4": {
+      "model": "thingamajigs:block/symbol_signs/prs_five",
+      "y": 180
+    },
+    "facing=west,type=4": {
+      "model": "thingamajigs:block/symbol_signs/prs_five",
+      "y": 270
+    },
+    "facing=east,type=5": {
+      "model": "thingamajigs:block/symbol_signs/prs_six",
+      "y": 90
+    },
+    "facing=north,type=5": {
+      "model": "thingamajigs:block/symbol_signs/prs_six"
+    },
+    "facing=south,type=5": {
+      "model": "thingamajigs:block/symbol_signs/prs_six",
+      "y": 180
+    },
+    "facing=west,type=5": {
+      "model": "thingamajigs:block/symbol_signs/prs_six",
+      "y": 270
+    },
+    "facing=east,type=6": {
+      "model": "thingamajigs:block/symbol_signs/prs_seven",
+      "y": 90
+    },
+    "facing=north,type=6": {
+      "model": "thingamajigs:block/symbol_signs/prs_seven"
+    },
+    "facing=south,type=6": {
+      "model": "thingamajigs:block/symbol_signs/prs_seven",
+      "y": 180
+    },
+    "facing=west,type=6": {
+      "model": "thingamajigs:block/symbol_signs/prs_seven",
+      "y": 270
+    },
+    "facing=east,type=7": {
+      "model": "thingamajigs:block/symbol_signs/bars_zc",
+      "y": 90
+    },
+    "facing=north,type=7": {
+      "model": "thingamajigs:block/symbol_signs/bars_zc"
+    },
+    "facing=south,type=7": {
+      "model": "thingamajigs:block/symbol_signs/bars_zc",
+      "y": 180
+    },
+    "facing=west,type=7": {
+      "model": "thingamajigs:block/symbol_signs/bars_zc",
+      "y": 270
+    },
+    "facing=east,type=8": {
+      "model": "thingamajigs:block/symbol_signs/prs_eight",
+      "y": 90
+    },
+    "facing=north,type=8": {
+      "model": "thingamajigs:block/symbol_signs/prs_eight"
+    },
+    "facing=south,type=8": {
+      "model": "thingamajigs:block/symbol_signs/prs_eight",
+      "y": 180
+    },
+    "facing=west,type=8": {
+      "model": "thingamajigs:block/symbol_signs/prs_eight",
+      "y": 270
+    },
+    "facing=east,type=9": {
+      "model": "thingamajigs:block/symbol_signs/bars_zd",
+      "y": 90
+    },
+    "facing=north,type=9": {
+      "model": "thingamajigs:block/symbol_signs/bars_zd"
+    },
+    "facing=south,type=9": {
+      "model": "thingamajigs:block/symbol_signs/bars_zd",
+      "y": 180
+    },
+    "facing=west,type=9": {
+      "model": "thingamajigs:block/symbol_signs/bars_zd",
+      "y": 270
+    }
+  }
+}

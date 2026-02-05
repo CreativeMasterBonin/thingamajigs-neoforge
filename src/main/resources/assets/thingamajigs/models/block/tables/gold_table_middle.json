@@ -1,0 +1,8 @@
+{
+  "parent": "thingamajigs:bases/base_table_middle",
+  "textures": {
+    "tabletop": "minecraft:block/gold_block",
+    "leg": "#tabletop",
+    "particle": "#tabletop"
+  }
+}

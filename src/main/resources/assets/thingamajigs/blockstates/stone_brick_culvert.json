@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/stone_brick_culvert",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/stone_brick_culvert"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/stone_brick_culvert",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/stone_brick_culvert",
+      "y": 270
+    }
+  }
+}

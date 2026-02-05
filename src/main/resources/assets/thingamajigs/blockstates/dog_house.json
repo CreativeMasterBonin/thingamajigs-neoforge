@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:custom/dog_house",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:custom/dog_house"
+    },
+    "facing=south": {
+      "model": "thingamajigs:custom/dog_house",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:custom/dog_house",
+      "y": 270
+    }
+  }
+}

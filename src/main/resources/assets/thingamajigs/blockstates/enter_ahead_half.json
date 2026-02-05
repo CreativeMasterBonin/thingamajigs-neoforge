@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/enter_ahead_half",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/enter_ahead_half"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/enter_ahead_half",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/enter_ahead_half",
+      "y": 270
+    }
+  }
+}

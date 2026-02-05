@@ -1,0 +1,61 @@
+{
+	"credit": "Made by CMB",
+	"render_type": "cutout",
+	"textures": {
+		"0": "minecraft:block/white_concrete",
+		"front": "thingamajigs:block/electric_plugs/grounded_usa",
+		"particle": "#0"
+	},
+	"elements": [
+		{
+			"name": "outlet",
+			"from": [6, 6, 15.5],
+			"to": [10, 12, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 9, 15.75]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"east": {"uv": [0, 0, 1, 16], "texture": "#0"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#0", "cullface": "south"},
+				"west": {"uv": [0, 0, 1, 16], "texture": "#0"},
+				"up": {"uv": [0, 0, 16, 1], "texture": "#0"},
+				"down": {"uv": [0, 15, 16, 16], "texture": "#0"}
+			}
+		},
+		{
+			"name": "plugoutlet",
+			"from": [7.1, 6.7, 15.3],
+			"to": [8.9, 8.5, 15.5],
+			"rotation": {"angle": 0, "axis": "z", "origin": [8, 7.6, 15.4]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#front"},
+				"east": {"uv": [0, 0, 1, 1], "rotation": 180, "texture": "#0"},
+				"west": {"uv": [0, 0, 1, 1], "rotation": 180, "texture": "#0"},
+				"up": {"uv": [0, 0, 1, 1], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [0, 0, 1, 1], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"name": "plugoutlet",
+			"from": [7.1, 9.5, 15.3],
+			"to": [8.9, 11.3, 15.5],
+			"rotation": {"angle": 0, "axis": "z", "origin": [8, 10.4, 15.4]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#front"},
+				"east": {"uv": [0, 0, 1, 1], "rotation": 180, "texture": "#0"},
+				"west": {"uv": [0, 0, 1, 1], "rotation": 180, "texture": "#0"},
+				"up": {"uv": [0, 0, 1, 1], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [0, 0, 1, 1], "rotation": 180, "texture": "#0"}
+			}
+		}
+	],
+	"groups": [
+		0,
+		{
+			"name": "outletinputs",
+			"origin": [8, 10, 15.35],
+			"color": 0,
+			"nbt": "{}",
+			"children": [1, 2]
+		}
+	]
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "thingamajigs:custom/fireworks_display",
+  "render_type": "cutout",
+  "textures": {
+    "0": "thingamajigs:block/aios/fireworks_display_top",
+    "1": "thingamajigs:block/aios/fireworks_display_full",
+    "particle": "minecraft:block/dark_oak_planks"
+  }
+}

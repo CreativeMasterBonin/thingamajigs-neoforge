@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/hotdog_rotator",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/hotdog_rotator"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/hotdog_rotator",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/hotdog_rotator",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "variants": {
+    "facing=east,type=0": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_verydown",
+      "y": 90
+    },
+    "facing=north,type=0": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_verydown"
+    },
+    "facing=south,type=0": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_verydown",
+      "y": 180
+    },
+    "facing=west,type=0": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_verydown",
+      "y": 270
+    },
+    "facing=east,type=1": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_down",
+      "y": 90
+    },
+    "facing=north,type=1": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_down"
+    },
+    "facing=south,type=1": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_down",
+      "y": 180
+    },
+    "facing=west,type=1": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_down",
+      "y": 270
+    },
+    "facing=east,type=2": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_forward",
+      "y": 90
+    },
+    "facing=north,type=2": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_forward"
+    },
+    "facing=south,type=2": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_forward",
+      "y": 180
+    },
+    "facing=west,type=2": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_forward",
+      "y": 270
+    },
+    "facing=east,type=3": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_right",
+      "y": 90
+    },
+    "facing=north,type=3": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_right"
+    },
+    "facing=south,type=3": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_right",
+      "y": 180
+    },
+    "facing=west,type=3": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_right",
+      "y": 270
+    },
+    "facing=east,type=4": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_veryright",
+      "y": 90
+    },
+    "facing=north,type=4": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_veryright"
+    },
+    "facing=south,type=4": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_veryright",
+      "y": 180
+    },
+    "facing=west,type=4": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_veryright",
+      "y": 270
+    },
+    "facing=east,type=5": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_left",
+      "y": 90
+    },
+    "facing=north,type=5": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_left"
+    },
+    "facing=south,type=5": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_left",
+      "y": 180
+    },
+    "facing=west,type=5": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_left",
+      "y": 270
+    },
+    "facing=east,type=6": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_veryleft",
+      "y": 90
+    },
+    "facing=north,type=6": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_veryleft"
+    },
+    "facing=south,type=6": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_veryleft",
+      "y": 180
+    },
+    "facing=west,type=6": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_veryleft",
+      "y": 270
+    },
+    "facing=east,type=7": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_forward",
+      "y": 90
+    },
+    "facing=north,type=7": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_forward"
+    },
+    "facing=south,type=7": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_forward",
+      "y": 180
+    },
+    "facing=west,type=7": {
+      "model": "thingamajigs:block/security_cameras/film_security_camera_forward",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Sitting",
+    "icon": "thingamajigs:quartz_chair",
+    "category": "thingamajigs:decorations",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Thingamajigs offers chairs and couches and stools to sit in. Sitting takes a simple right mouse click to get in and a simple shift key press to get up."
+        },
+        {
+            "type": "patchouli:image",
+            "images": ["thingamajigs:textures/gui/sit.png"],
+            "title": "Sitting Exists!",
+            "border": true
+        }
+    ]
+}

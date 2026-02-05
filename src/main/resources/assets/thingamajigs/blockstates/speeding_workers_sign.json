@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/speeding_workers_sign",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/speeding_workers_sign"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/speeding_workers_sign",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/speeding_workers_sign",
+      "y": 270
+    }
+  }
+}

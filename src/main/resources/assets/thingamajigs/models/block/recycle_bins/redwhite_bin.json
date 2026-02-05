@@ -1,0 +1,7 @@
+{
+  "parent": "thingamajigs:custom/recycle_bin",
+  "textures": {
+    "1": "minecraft:block/white_concrete",
+    "3": "minecraft:block/red_concrete"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/ticket_teller_window",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/ticket_teller_window"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/ticket_teller_window",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/ticket_teller_window",
+      "y": 270
+    }
+  }
+}

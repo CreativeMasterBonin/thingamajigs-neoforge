@@ -1,0 +1,19 @@
+{
+    "name": "entry.thingamajigs.appliance",
+    "icon": "thingamajigs:fridge",
+    "category": "thingamajigs:decorations",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Appliances (in this case, home appliances) are devices which are for the home. They store and keep food, cook food, clean food, grill food, chop food, trick food... oh and they do those things to clothes and other things too (maybe). Don't forget TVs and game consoles!"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "thingamajigs:appliance_component"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "There are also commercial appliances in this mod too. These ones each have a specialized purpose (in this mod, they are purely decoration, and may have chest capabilities)."
+        }
+    ]
+}

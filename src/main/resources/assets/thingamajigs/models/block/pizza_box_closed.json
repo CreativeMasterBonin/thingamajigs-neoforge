@@ -1,0 +1,49 @@
+{
+	"credit": "Made By CreativeMasterBonin",
+    "render_type": "cutout",
+	"textures": {
+		"1": "minecraft:block/calcite",
+		"particle": "minecraft:block/calcite"
+	},
+	"elements": [
+		{
+			"name": "box_bottom",
+			"from": [16, 0, 0],
+			"to": [0, 1, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0.5, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 1], "texture": "#1"},
+				"east": {"uv": [0, 0, 16, 1], "texture": "#1"},
+				"south": {"uv": [0, 0, 16, 1], "texture": "#1"},
+				"west": {"uv": [0, 0, 16, 1], "texture": "#1"},
+				"down": {"uv": [9, 2, 13, 6], "texture": "#1"}
+			}
+		},
+		{
+			"name": "box_top",
+			"from": [0, 1, 0],
+			"to": [16, 2, 16],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 0, 15]},
+			"faces": {
+				"north": {"uv": [0, 1, 16, 2], "texture": "#1"},
+				"east": {"uv": [0, 2, 16, 3], "texture": "#1"},
+				"south": {"uv": [0, 3, 16, 4], "texture": "#1"},
+				"west": {"uv": [0, 4, 16, 5], "texture": "#1"},
+				"up": {"uv": [9, 2, 13, 6], "texture": "#1"}
+			}
+		},
+		{
+			"name": "box_internal",
+			"from": [0, 0, 0],
+			"to": [16, 1, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0.5, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 1], "texture": "#1"},
+				"east": {"uv": [0, 0, 16, 1], "texture": "#1"},
+				"south": {"uv": [0, 0, 16, 1], "texture": "#1"},
+				"west": {"uv": [0, 0, 16, 1], "texture": "#1"},
+				"down": {"uv": [2, 2, 6, 6], "texture": "#1"}
+			}
+		}
+	]
+}

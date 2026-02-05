@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/dead_end",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/dead_end"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/dead_end",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/dead_end",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/old_microwave_transmitter",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/old_microwave_transmitter"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/old_microwave_transmitter",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/old_microwave_transmitter",
+      "y": 270
+    }
+  }
+}

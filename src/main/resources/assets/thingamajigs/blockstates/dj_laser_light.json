@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/dj_laser_light",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/dj_laser_light"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/dj_laser_light",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/dj_laser_light",
+      "y": 270
+    }
+  }
+}

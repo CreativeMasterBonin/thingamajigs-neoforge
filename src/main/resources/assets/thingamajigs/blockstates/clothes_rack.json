@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=east":[{"model": "thingamajigs:block/clothes_rack", "y": 90}, {"model": "thingamajigs:block/clothes_rack_two", "y": 90}],
+    "facing=north":[{"model": "thingamajigs:block/clothes_rack"}, {"model": "thingamajigs:block/clothes_rack_two"}],
+    "facing=south":[{"model": "thingamajigs:block/clothes_rack", "y": 180}, {"model": "thingamajigs:block/clothes_rack_two", "y": 180}],
+    "facing=west":[{"model": "thingamajigs:block/clothes_rack", "y": 270}, {"model": "thingamajigs:block/clothes_rack_two", "y": 270}]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/cattle_grid",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/cattle_grid"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/cattle_grid",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/cattle_grid",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "variants": {
+    "facing=east,type=0": {
+      "model": "thingamajigs:block/road_markings/blue_corner_wide",
+      "y": 90
+    },
+    "facing=north,type=0": {
+      "model": "thingamajigs:block/road_markings/blue_corner_wide"
+    },
+    "facing=south,type=0": {
+      "model": "thingamajigs:block/road_markings/blue_corner_wide",
+      "y": 180
+    },
+    "facing=west,type=0": {
+      "model": "thingamajigs:block/road_markings/blue_corner_wide",
+      "y": 270
+    },
+    "facing=east,type=1": {
+      "model": "thingamajigs:block/road_markings/blue_parking_line",
+      "y": 90
+    },
+    "facing=north,type=1": {
+      "model": "thingamajigs:block/road_markings/blue_parking_line"
+    },
+    "facing=south,type=1": {
+      "model": "thingamajigs:block/road_markings/blue_parking_line",
+      "y": 180
+    },
+    "facing=west,type=1": {
+      "model": "thingamajigs:block/road_markings/blue_parking_line",
+      "y": 270
+    },
+    "facing=east,type=2": {
+      "model": "thingamajigs:block/road_markings/thick_blue_pl",
+      "y": 90
+    },
+    "facing=north,type=2": {
+      "model": "thingamajigs:block/road_markings/thick_blue_pl"
+    },
+    "facing=south,type=2": {
+      "model": "thingamajigs:block/road_markings/thick_blue_pl",
+      "y": 180
+    },
+    "facing=west,type=2": {
+      "model": "thingamajigs:block/road_markings/thick_blue_pl",
+      "y": 270
+    },
+    "facing=east,type=3": {
+      "model": "thingamajigs:block/road_markings/blue_sidewalk_line",
+      "y": 90
+    },
+    "facing=north,type=3": {
+      "model": "thingamajigs:block/road_markings/blue_sidewalk_line"
+    },
+    "facing=south,type=3": {
+      "model": "thingamajigs:block/road_markings/blue_sidewalk_line",
+      "y": 180
+    },
+    "facing=west,type=3": {
+      "model": "thingamajigs:block/road_markings/blue_sidewalk_line",
+      "y": 270
+    },
+    "facing=east,type=4": {
+      "model": "thingamajigs:block/road_markings/blue_dot",
+      "y": 90
+    },
+    "facing=north,type=4": {
+      "model": "thingamajigs:block/road_markings/blue_dot"
+    },
+    "facing=south,type=4": {
+      "model": "thingamajigs:block/road_markings/blue_dot",
+      "y": 180
+    },
+    "facing=west,type=4": {
+      "model": "thingamajigs:block/road_markings/blue_dot",
+      "y": 270
+    },
+    "facing=east,type=5": {
+      "model": "thingamajigs:block/road_markings/blue_disabled",
+      "y": 90
+    },
+    "facing=north,type=5": {
+      "model": "thingamajigs:block/road_markings/blue_disabled"
+    },
+    "facing=south,type=5": {
+      "model": "thingamajigs:block/road_markings/blue_disabled",
+      "y": 180
+    },
+    "facing=west,type=5": {
+      "model": "thingamajigs:block/road_markings/blue_disabled",
+      "y": 270
+    },
+    "facing=east,type=6": {
+      "model": "thingamajigs:block/road_markings/blue_disabled_alt",
+      "y": 90
+    },
+    "facing=north,type=6": {
+      "model": "thingamajigs:block/road_markings/blue_disabled_alt"
+    },
+    "facing=south,type=6": {
+      "model": "thingamajigs:block/road_markings/blue_disabled_alt",
+      "y": 180
+    },
+    "facing=west,type=6": {
+      "model": "thingamajigs:block/road_markings/blue_disabled_alt",
+      "y": 270
+    },
+    "facing=east,type=7": {
+      "model": "thingamajigs:block/road_markings/blue_disabled_alt",
+      "y": 90
+    },
+    "facing=north,type=7": {
+      "model": "thingamajigs:block/road_markings/blue_disabled_alt"
+    },
+    "facing=south,type=7": {
+      "model": "thingamajigs:block/road_markings/blue_disabled_alt",
+      "y": 180
+    },
+    "facing=west,type=7": {
+      "model": "thingamajigs:block/road_markings/blue_disabled_alt",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+	"credit": "Made with Blockbench",
+    "ambientocclusion": false,
+	"textures": {
+		"0": "thingamajigs:block/parts/cycle_empty",
+		"1": "thingamajigs:block/parts/cycle_clear",
+		"2": "thingamajigs:block/parts/cycle_tri",
+		"3": "thingamajigs:block/parts/cycle_wash",
+		"5": "thingamajigs:block/extra_metal",
+        "particle": "thingamajigs:block/extra_metal"
+	},
+	"elements": [
+		{
+			"from": [-8, 0, -1],
+			"to": [24, 16, 0],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0.5, -0.5]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#5", "cullface": "north"},
+				"east": {"uv": [0, 0, 1, 16], "texture": "#5", "cullface": "north"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#5", "cullface": "north"},
+				"west": {"uv": [0, 0, 1, 16], "texture": "#5", "cullface": "west"},
+				"up": {"uv": [0, 0, 16, 1], "texture": "#5", "cullface": "north"},
+				"down": {"uv": [0, 0, 16, 1], "texture": "#5", "cullface": "down"}
+			}
+		},
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"east": {"uv": [0, 0, 16, 16], "texture": "#5", "cullface": "east"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#5", "cullface": "south"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#5", "cullface": "west"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#5", "cullface": "up"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#5", "cullface": "down"}
+			}
+		},
+		{
+			"from": [16, 4, -1.01],
+			"to": [24, 12, -1.01],
+			"rotation": {"angle": 0, "axis": "y", "origin": [24, 12, 6]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#0", "cullface": "north"}
+			}
+		},
+		{
+			"from": [8, 4, -1.01],
+			"to": [16, 12, -1.01],
+			"rotation": {"angle": 0, "axis": "y", "origin": [16, 12, 6]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#2", "cullface": "north"}
+			}
+		},
+		{
+			"from": [0, 4, -1.01],
+			"to": [8, 12, -1.01],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 12, 6]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#3", "cullface": "north"}
+			}
+		},
+		{
+			"from": [-8, 4, -1.01],
+			"to": [0, 12, -1.01],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 12, 6]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#1", "cullface": "west"}
+			}
+		}
+	]
+}

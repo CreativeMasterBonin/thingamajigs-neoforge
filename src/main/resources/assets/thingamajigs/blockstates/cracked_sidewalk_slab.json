@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "thingamajigs:block/slabs/cracked_sidewalk_slab"
+    },
+    "type=double": {
+      "model": "thingamajigs:block/slabs/full_cracked_sidewalk_slab"
+    },
+    "type=top": {
+      "model": "thingamajigs:block/slabs/cracked_sidewalk_slab_top"
+    }
+  }
+}

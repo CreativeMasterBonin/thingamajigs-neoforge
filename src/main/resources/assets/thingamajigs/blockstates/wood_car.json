@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/wood_car",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/wood_car"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/wood_car",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/wood_car",
+      "y": 270
+    }
+  }
+}

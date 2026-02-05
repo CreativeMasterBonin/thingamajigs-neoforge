@@ -1,0 +1,12 @@
+{
+    "athena:loader": "athena:ctm",
+    "ctm_textures":{
+        "center": "thingamajigs:block/ctm/paper_ctm/flower/cent",
+        "empty": "thingamajigs:block/ctm/paper_ctm/flower/empt",
+        "horizontal": "thingamajigs:block/ctm/paper_ctm/flower/horz",
+        "particle": "thingamajigs:block/paper/flower",
+        "vertical": "thingamajigs:block/ctm/paper_ctm/flower/vert"},
+        "variants":{
+            "": {"model":"thingamajigs:block/paper_flower_wall"}
+    }
+}

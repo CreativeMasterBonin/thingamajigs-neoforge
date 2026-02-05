@@ -1,0 +1,7 @@
+{
+  "parent": "thingamajigs:custom/christmas_tree",
+  "render_type": "cutout",
+  "textures": {
+    "particle": "minecraft:block/sweet_berry_bush_stage1"
+  }
+}

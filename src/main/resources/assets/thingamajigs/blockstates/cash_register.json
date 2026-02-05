@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:custom/cash_register",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:custom/cash_register"
+    },
+    "facing=south": {
+      "model": "thingamajigs:custom/cash_register",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:custom/cash_register",
+      "y": 270
+    }
+  }
+}

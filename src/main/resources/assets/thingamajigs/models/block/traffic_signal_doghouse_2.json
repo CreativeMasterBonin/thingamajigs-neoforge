@@ -1,0 +1,8 @@
+{
+  "parent": "thingamajigs:bases/wide_traffic_signal",
+  "textures": {
+    "front": "thingamajigs:block/traffic_signals/doghouse_signal/left_red_to_green",
+    "all": "minecraft:block/blast_furnace_side",
+    "particle": "minecraft:block/blast_furnace_side"
+  }
+}

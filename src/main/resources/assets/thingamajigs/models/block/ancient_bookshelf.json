@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "minecraft:block/ancient_debris_top",
+    "up": "minecraft:block/ancient_debris_top",
+    "north": "thingamajigs:block/bookshelves/ancient_bookshelf",
+    "south": "thingamajigs:block/bookshelves/ancient_bookshelf",
+    "east": "thingamajigs:block/bookshelves/ancient_bookshelf",
+    "west": "thingamajigs:block/bookshelves/ancient_bookshelf",
+    "particle": "#north"
+  }
+}

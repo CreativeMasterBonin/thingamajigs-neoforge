@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=east,type=0": {
+      "model": "thingamajigs:block/arrow_beacon/left_arrow_beacon",
+      "y": 90
+    },
+    "facing=north,type=0": {
+      "model": "thingamajigs:block/arrow_beacon/left_arrow_beacon"
+    },
+    "facing=south,type=0": {
+      "model": "thingamajigs:block/arrow_beacon/left_arrow_beacon",
+      "y": 180
+    },
+    "facing=west,type=0": {
+      "model": "thingamajigs:block/arrow_beacon/left_arrow_beacon",
+      "y": 270
+    },
+    "facing=east,type=1": {
+      "model": "thingamajigs:block/arrow_beacon/right_arrow_beacon",
+      "y": 90
+    },
+    "facing=north,type=1": {
+      "model": "thingamajigs:block/arrow_beacon/right_arrow_beacon"
+    },
+    "facing=south,type=1": {
+      "model": "thingamajigs:block/arrow_beacon/right_arrow_beacon",
+      "y": 180
+    },
+    "facing=west,type=1": {
+      "model": "thingamajigs:block/arrow_beacon/right_arrow_beacon",
+      "y": 270
+    },
+    "facing=east,type=2": {
+      "model": "thingamajigs:block/arrow_beacon/up_arrow_beacon",
+      "y": 90
+    },
+    "facing=north,type=2": {
+      "model": "thingamajigs:block/arrow_beacon/up_arrow_beacon"
+    },
+    "facing=south,type=2": {
+      "model": "thingamajigs:block/arrow_beacon/up_arrow_beacon",
+      "y": 180
+    },
+    "facing=west,type=2": {
+      "model": "thingamajigs:block/arrow_beacon/up_arrow_beacon",
+      "y": 270
+    },
+    "facing=east,type=3": {
+      "model": "thingamajigs:block/arrow_beacon/down_arrow_beacon",
+      "y": 90
+    },
+    "facing=north,type=3": {
+      "model": "thingamajigs:block/arrow_beacon/down_arrow_beacon"
+    },
+    "facing=south,type=3": {
+      "model": "thingamajigs:block/arrow_beacon/down_arrow_beacon",
+      "y": 180
+    },
+    "facing=west,type=3": {
+      "model": "thingamajigs:block/arrow_beacon/down_arrow_beacon",
+      "y": 270
+    }
+  }
+}

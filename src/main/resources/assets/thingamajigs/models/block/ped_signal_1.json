@@ -1,0 +1,9 @@
+{
+  "parent": "thingamajigs:bases/crosswalk_signal_base",
+  "textures": {
+    "front": "thingamajigs:block/traffic_signals/crosswalk_signal/crosswalk_hand",
+    "grate": "thingamajigs:block/giant_grate",
+    "all": "minecraft:block/blast_furnace_side",
+    "particle": "minecraft:block/blast_furnace_side"
+  }
+}

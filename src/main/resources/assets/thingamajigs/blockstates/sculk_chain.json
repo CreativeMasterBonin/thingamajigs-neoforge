@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "thingamajigs:block/sculk_chain",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "thingamajigs:block/sculk_chain"
+    },
+    "axis=z": {
+      "model": "thingamajigs:block/sculk_chain",
+      "x": 90
+    }
+  }
+}

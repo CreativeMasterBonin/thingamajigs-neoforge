@@ -1,0 +1,115 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"render_type": "translucent",
+	"textures": {
+		"0": "minecraft:block/anvil",
+		"1": "minecraft:block/black_concrete",
+		"particle": "#0"
+	},
+	"elements": [
+		{
+			"name": "base",
+			"from": [5, 8, 15],
+			"to": [11, 10, 16],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 9, 15.5]},
+			"faces": {
+				"north": {"uv": [5, 11, 11, 13], "rotation": 180, "texture": "#0"},
+				"east": {"uv": [14, 0, 16, 1], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [4, 2, 10, 4], "texture": "#0", "cullface": "south"},
+				"west": {"uv": [0, 0, 2, 1], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [5, 0, 11, 1], "texture": "#0"},
+				"down": {"uv": [3, 0, 14, 1], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"name": "holder",
+			"from": [7, 9, 13],
+			"to": [9, 12, 15],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 10.5, 14]},
+			"faces": {
+				"east": {"uv": [0, 0, 2, 3], "texture": "#0"},
+				"south": {"uv": [0, 0, 2, 3], "texture": "#0"},
+				"west": {"uv": [0, 0, 2, 3], "texture": "#0"},
+				"up": {"uv": [0, 0, 2, 2], "texture": "#0"},
+				"down": {"uv": [0, 0, 2, 2], "texture": "#0"}
+			}
+		},
+		{
+			"from": [-3, 2, 12],
+			"to": [19, 16, 13],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 9, 12.25]},
+			"faces": {
+				"east": {"uv": [0, 0, 1, 16], "texture": "#0"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"west": {"uv": [0, 0, 1, 16], "texture": "#0"},
+				"up": {"uv": [1, 10, 15, 11], "texture": "#0"},
+				"down": {"uv": [1, 5, 15, 6], "texture": "#0"}
+			}
+		},
+		{
+			"name": "channel",
+			"from": [-2, 3, 12],
+			"to": [18, 15, 12],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 9, 12.25]},
+			"faces": {
+				"north": {"uv": [0, 0, 1, 1], "texture": "#1"}
+			},
+			"neoforge_data": {
+                "block_light": 15,
+                "sky_light": 15
+            }
+		},
+		{
+			"from": [-3, 2, 12],
+			"to": [10, 3, 12],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 9, 12.25]},
+			"faces": {
+				"north": {"uv": [10, 15, 16, 16], "texture": "#0"}
+			}
+		},
+		{
+			"from": [10, 2, 12],
+			"to": [19, 3, 12],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 9, 12.25]},
+			"faces": {
+				"north": {"uv": [10, 15, 16, 16], "texture": "#0"}
+			}
+		},
+		{
+			"from": [18, 3, 12],
+			"to": [19, 15, 12],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 9, 12.25]},
+			"faces": {
+				"north": {"uv": [0, 1, 1, 15], "texture": "#0"}
+			}
+		},
+		{
+			"from": [-3, 3, 12],
+			"to": [-2, 15, 12],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 9, 12.25]},
+			"faces": {
+				"north": {"uv": [15, 1, 16, 15], "texture": "#0"}
+			}
+		},
+		{
+			"from": [-3, 15, 12],
+			"to": [19, 16, 12],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 9, 12.25]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 1], "texture": "#0"}
+			}
+		}
+	],
+	"groups": [
+		0,
+		1,
+		{
+			"name": "screen",
+			"origin": [8, 9, 12.25],
+			"color": 0,
+			"nbt": "{}",
+			"children": [2, 3, 4, 5, 6, 7, 8]
+		}
+	]
+}

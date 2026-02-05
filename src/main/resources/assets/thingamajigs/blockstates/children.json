@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/children",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/children"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/children",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/children",
+      "y": 270
+    }
+  }
+}

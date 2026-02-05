@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/sandstone_culvert",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/sandstone_culvert"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/sandstone_culvert",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/sandstone_culvert",
+      "y": 270
+    }
+  }
+}

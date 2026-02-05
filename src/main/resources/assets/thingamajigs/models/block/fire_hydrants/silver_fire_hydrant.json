@@ -1,0 +1,8 @@
+{
+  "parent": "thingamajigs:bases/base_fire_hydrant",
+  "textures": {
+		"body_color": "minecraft:block/white_concrete",
+		"top_color": "minecraft:block/light_gray_concrete",
+		"ending_color": "minecraft:block/white_concrete_powder"
+	}
+}

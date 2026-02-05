@@ -1,0 +1,27 @@
+{
+	"credit": "Made By CreativeMasterBonin",
+    "render_type": "cutout",
+	"ambientocclusion": false,
+    "display": {
+        "head": {
+          "rotation": [ 0, 0, 0 ],
+          "translation": [ 0, 16, 0],
+          "scale":[ 1.0, 1.0, 1.0 ]
+        }
+    },
+	"textures": {
+		"particle": "thingamajigs:block/triple_lily_pad",
+		"texture": "thingamajigs:block/triple_lily_pad"
+	},
+	"elements": [
+		{
+			"name": "lilypad",
+			"from": [0, 0.25, 0],
+			"to": [16, 0.25, 16],
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "texture": "#texture", "tintindex": 0},
+				"down": {"uv": [0, 16, 16, 0], "texture": "#texture", "tintindex": 0}
+			}
+		}
+	]
+}

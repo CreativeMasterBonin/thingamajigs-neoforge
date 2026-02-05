@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "flipped=true": {
+      "model": "minecraft:block/glass"
+    },
+    "flipped=false": {
+      "model": "minecraft:block/blue_concrete"
+    }
+  }
+}

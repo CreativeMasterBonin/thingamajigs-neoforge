@@ -1,0 +1,6 @@
+{
+  "parent": "thingamajigs:bases/base_emissive_block_with_tint",
+  "textures": {
+    "0": "thingamajigs:block/glow_block/white"
+  }
+}

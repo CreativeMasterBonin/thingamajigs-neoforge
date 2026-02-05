@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:custom/ac_duct_straight",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:custom/ac_duct_straight"
+    },
+    "facing=south": {
+      "model": "thingamajigs:custom/ac_duct_straight",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:custom/ac_duct_straight",
+      "y": 270
+    }
+  }
+}

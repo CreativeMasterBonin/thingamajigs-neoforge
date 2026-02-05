@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/hazards/shock",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/hazards/shock"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/hazards/shock",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/hazards/shock",
+      "y": 270
+    }
+  }
+}

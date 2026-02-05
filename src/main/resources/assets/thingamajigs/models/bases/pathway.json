@@ -1,0 +1,26 @@
+{
+	"credit": "Made with Blockbench",
+    "ambientocclusion": false,
+    "render_type": "cutout",
+    "textures": {
+        "all": "thingamajigs:block/brown_pathway",
+        "particle": "#all"
+    },
+	"elements": [
+		{
+			"name": "path",
+			"from": [0, 0, 0],
+			"to": [16, 1, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0.5, 8]},
+			"color": 0,
+			"faces": {
+				"north": {"uv": [0, 0, 16, 1], "texture": "#all", "cullface": "north"},
+				"east": {"uv": [0, 0, 16, 1], "texture": "#all", "cullface": "east"},
+				"south": {"uv": [0, 0, 16, 1], "texture": "#all", "cullface": "south"},
+				"west": {"uv": [0, 0, 16, 1], "texture": "#all", "cullface": "west"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#all"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#all", "cullface": "down"}
+			}
+		}
+	]
+}

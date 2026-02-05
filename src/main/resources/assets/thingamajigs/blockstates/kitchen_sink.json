@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=east,full=false,open=false": {
+      "model": "thingamajigs:block/kitchen_sink/kitchen_sink_empty",
+      "y": 90
+    },
+    "facing=north,full=false,open=false": {
+      "model": "thingamajigs:block/kitchen_sink/kitchen_sink_empty"
+    },
+    "facing=south,full=false,open=false": {
+      "model": "thingamajigs:block/kitchen_sink/kitchen_sink_empty",
+      "y": 180
+    },
+    "facing=west,full=false,open=false": {
+      "model": "thingamajigs:block/kitchen_sink/kitchen_sink_empty",
+      "y": 270
+    },
+    "facing=east,full=true,open=false": {
+      "model": "thingamajigs:block/kitchen_sink/kitchen_sink_full",
+      "y": 90
+    },
+    "facing=north,full=true,open=false": {
+      "model": "thingamajigs:block/kitchen_sink/kitchen_sink_full"
+    },
+    "facing=south,full=true,open=false": {
+      "model": "thingamajigs:block/kitchen_sink/kitchen_sink_full",
+      "y": 180
+    },
+    "facing=west,full=true,open=false": {
+      "model": "thingamajigs:block/kitchen_sink/kitchen_sink_full",
+      "y": 270
+    },
+    "facing=east,full=false,open=true": {
+      "model": "thingamajigs:block/kitchen_sink/kitchen_sink_open_empty",
+      "y": 90
+    },
+    "facing=north,full=false,open=true": {
+      "model": "thingamajigs:block/kitchen_sink/kitchen_sink_open_empty"
+    },
+    "facing=south,full=false,open=true": {
+      "model": "thingamajigs:block/kitchen_sink/kitchen_sink_open_empty",
+      "y": 180
+    },
+    "facing=west,full=false,open=true": {
+      "model": "thingamajigs:block/kitchen_sink/kitchen_sink_open_empty",
+      "y": 270
+    },
+    "facing=east,full=true,open=true": {
+      "model": "thingamajigs:block/kitchen_sink/kitchen_sink_open_full",
+      "y": 90
+    },
+    "facing=north,full=true,open=true": {
+      "model": "thingamajigs:block/kitchen_sink/kitchen_sink_open_full"
+    },
+    "facing=south,full=true,open=true": {
+      "model": "thingamajigs:block/kitchen_sink/kitchen_sink_open_full",
+      "y": 180
+    },
+    "facing=west,full=true,open=true": {
+      "model": "thingamajigs:block/kitchen_sink/kitchen_sink_open_full",
+      "y": 270
+    }
+  }
+}

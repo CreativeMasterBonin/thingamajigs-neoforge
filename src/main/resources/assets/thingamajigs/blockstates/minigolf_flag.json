@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:custom/minigolf_red_flag",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:custom/minigolf_red_flag"
+    },
+    "facing=south": {
+      "model": "thingamajigs:custom/minigolf_red_flag",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:custom/minigolf_red_flag",
+      "y": 270
+    }
+  }
+}

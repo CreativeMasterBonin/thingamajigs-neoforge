@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/snowman",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/snowman"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/snowman",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/snowman",
+      "y": 270
+    }
+  }
+}

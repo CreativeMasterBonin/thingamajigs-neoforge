@@ -1,0 +1,543 @@
+{
+  "static": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.use_tv",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/tv/static",
+        "stream": false
+      }
+    ]
+  },
+  "horn": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.horn",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/alarms/horn",
+        "stream": false
+      }
+    ]
+  },
+  "code": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.code",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/alarms/code",
+        "stream": false
+      }
+    ]
+  },
+  "beep": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.beep",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/alarms/beep",
+        "stream": false
+      }
+    ]
+  },
+  "old": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.old",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/doorbells/old",
+        "stream": false
+      }
+    ]
+  },
+  "electronic": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.doorbell",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/doorbells/electronic",
+        "stream": false
+      }
+    ]
+  },
+  "metallic": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.doorbell",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/doorbells/metallic",
+        "stream": false
+      }
+    ]
+  },
+  "pluck": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.doorbell",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/doorbells/pluck",
+        "stream": false
+      }
+    ]
+  },
+  "poop": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.poop",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/poop_block/poop",
+        "stream": false
+      }
+    ]
+  },
+  "air": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.air",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/air",
+        "stream": false
+      }
+    ]
+  },
+  "water_noise": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.water_noise",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/water_noise",
+        "stream": false
+      }
+    ]
+  },
+  "poop_break": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.poop_break",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/poop_block/poop_break",
+        "stream": false
+      }
+    ]
+  },
+  "poop_hit": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.poop_hit",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/poop_block/poop_hit",
+        "stream": false
+      }
+    ]
+  },
+  "poop_step": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.poop_step",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/poop_block/poop_step",
+        "stream": false
+      }
+    ]
+  },
+  "mech_bell_one": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.mech_bell_one",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/bells/bluey_mech_one",
+        "stream": false
+      }
+    ]
+  },
+  "mech_bell_two": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.mech_bell_two",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/bells/bluey_mech_two",
+        "stream": false
+      }
+    ]
+  },
+  "large_poop": {
+    "category": "player",
+    "subtitle": "thingamajigs.subtitle.large_poop",
+    "sounds": [
+      {
+        "name": "thingamajigs:item/large_poop",
+        "stream": false
+      }
+    ]
+  },
+  "ebell_one": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.ebell_one",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/bells/ebell_one",
+        "stream": false
+      }
+    ]
+  },
+  "ebell_two": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.ebell_two",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/bells/ebell_two",
+        "stream": false
+      }
+    ]
+  },
+  "mobile_beep": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.mobile_beep",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/mobile_beep",
+        "stream": false
+      }
+    ]
+  },
+  "mobile_zero": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.mobile_beep",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/phone/mobile_zero",
+        "stream": false
+      }
+    ]
+  },
+  "mobile_one": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.mobile_beep",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/phone/mobile_one",
+        "stream": false
+      }
+    ]
+  },
+  "mobile_two": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.mobile_beep",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/phone/mobile_two",
+        "stream": false
+      }
+    ]
+  },
+  "mobile_three": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.mobile_beep",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/phone/mobile_three",
+        "stream": false
+      }
+    ]
+  },
+  "mobile_four": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.mobile_beep",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/phone/mobile_four",
+        "stream": false
+      }
+    ]
+  },
+  "mobile_five": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.mobile_beep",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/phone/mobile_five",
+        "stream": false
+      }
+    ]
+  },
+  "mobile_six": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.mobile_beep",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/phone/mobile_six",
+        "stream": false
+      }
+    ]
+  },
+  "mobile_seven": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.mobile_beep",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/phone/mobile_seven",
+        "stream": false
+      }
+    ]
+  },
+  "mobile_eight": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.mobile_beep",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/phone/mobile_eight",
+        "stream": false
+      }
+    ]
+  },
+  "mobile_nine": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.mobile_beep",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/phone/mobile_nine",
+        "stream": false
+      }
+    ]
+  },
+  "mobile_pound": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.mobile_beep",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/phone/mobile_pound",
+        "stream": false
+      }
+    ]
+  },
+  "mobile_star": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.mobile_beep",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/phone/mobile_star",
+        "stream": false
+      }
+    ]
+  },
+  "pop": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.pop",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/pop",
+        "stream": false
+      }
+    ]
+  },
+  "yodeler": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.yodeler",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/alarms/yodeler",
+        "stream": false
+      }
+    ]
+  },
+  "error": {
+    "category": "player",
+    "subtitle": "thingamajigs.subtitle.error",
+    "sounds": [
+      {
+        "name": "thingamajigs:error",
+        "stream": false
+      }
+    ]
+  },
+  "squeak": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.squeak",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/squeak",
+        "stream": false
+      }
+    ]
+  },
+  "birds_perhaps": {
+    "category": "block",
+    "attenuation_distance": 6,
+    "subtitle": "thingamajigs.subtitle.birds_perhaps",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/numbers/birds_perhaps",
+        "stream": false
+      }
+    ]
+  },
+  "no_service": {
+    "category": "block",
+    "attenuation_distance": 6,
+    "subtitle": "thingamajigs.subtitle.no_service",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/numbers/no_service",
+        "stream": false
+      }
+    ]
+  },
+  "not_a_number": {
+    "category": "block",
+    "attenuation_distance": 6,
+    "subtitle": "thingamajigs.subtitle.not_a_number",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/numbers/not_a_number",
+        "stream": false
+      }
+    ]
+  },
+  "song_maybe": {
+    "category": "block",
+    "attenuation_distance": 6,
+    "subtitle": "thingamajigs.subtitle.song_maybe",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/numbers/song_maybe",
+        "stream": false
+      }
+    ]
+  },
+
+  "kick": {
+    "category": "block",
+    "attenuation_distance": 10,
+    "preload": "true",
+    "subtitle": "thingamajigs.subtitle.instrument.kick",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/instrument/kick",
+        "stream": false
+      }
+    ]
+  },
+  "snare": {
+    "category": "block",
+    "attenuation_distance": 10,
+    "preload": "true",
+    "subtitle": "thingamajigs.subtitle.instrument.snare",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/instrument/snare",
+        "stream": false
+      }
+    ]
+  },
+  "tom": {
+    "category": "block",
+    "attenuation_distance": 10,
+    "preload": "true",
+    "subtitle": "thingamajigs.subtitle.instrument.tom",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/instrument/tom",
+        "stream": false
+      }
+    ]
+  },
+  "floor_tom": {
+    "category": "block",
+    "attenuation_distance": 10,
+    "preload": "true",
+    "subtitle": "thingamajigs.subtitle.instrument.floor_tom",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/instrument/floor_tom",
+        "stream": false
+      }
+    ]
+  },
+  "hihat": {
+    "category": "block",
+    "attenuation_distance": 10,
+    "preload": "true",
+    "subtitle": "thingamajigs.subtitle.instrument.hihat",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/instrument/hihat",
+        "stream": false
+      }
+    ]
+  },
+  "crash": {
+    "category": "block",
+    "attenuation_distance": 10,
+    "preload": "true",
+    "subtitle": "thingamajigs.subtitle.instrument.crash",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/instrument/crash",
+        "stream": false
+      }
+    ]
+  },
+  "conga": {
+    "category": "block",
+    "attenuation_distance": 10,
+    "preload": "true",
+    "subtitle": "thingamajigs.subtitle.instrument.conga",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/instrument/conga",
+        "stream": false
+      }
+    ]
+  },
+  "bongo": {
+    "category": "block",
+    "attenuation_distance": 10,
+    "preload": "true",
+    "subtitle": "thingamajigs.subtitle.instrument.bongo",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/instrument/bongo",
+        "stream": false
+      }
+    ]
+  },
+  "metallic_hit": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.metallic_hit",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/instrument_block/metallic_hit",
+        "stream": false
+      }
+    ]
+  },
+  "natural_hit": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.natural_hit",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/instrument_block/natural_hit",
+        "stream": false
+      }
+    ]
+  },
+  "paper_hit": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.paper_hit",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/instrument_block/paper_hit",
+        "stream": false
+      }
+    ]
+  },
+  "rattle_hit": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.rattle_hit",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/instrument_block/rattle_hit",
+        "stream": false
+      }
+    ]
+  }
+}

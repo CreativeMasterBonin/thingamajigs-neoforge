@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:custom/wifi_hotspot",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:custom/wifi_hotspot"
+    },
+    "facing=south": {
+      "model": "thingamajigs:custom/wifi_hotspot",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:custom/wifi_hotspot",
+      "y": 270
+    }
+  }
+}

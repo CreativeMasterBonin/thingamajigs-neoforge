@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=east,channel=0": {
+      "model": "thingamajigs:block/classic_tv/ct_off",
+      "y": 90
+    },
+    "facing=north,channel=0": {
+      "model": "thingamajigs:block/classic_tv/ct_off"
+    },
+    "facing=south,channel=0": {
+      "model": "thingamajigs:block/classic_tv/ct_off",
+      "y": 180
+    },
+    "facing=west,channel=0": {
+      "model": "thingamajigs:block/classic_tv/ct_off",
+      "y": 270
+    },
+    "facing=east,channel=1": {
+      "model": "thingamajigs:block/classic_tv/ct_static",
+      "y": 90
+    },
+    "facing=north,channel=1": {
+      "model": "thingamajigs:block/classic_tv/ct_static"
+    },
+    "facing=south,channel=1": {
+      "model": "thingamajigs:block/classic_tv/ct_static",
+      "y": 180
+    },
+    "facing=west,channel=1": {
+      "model": "thingamajigs:block/classic_tv/ct_static",
+      "y": 270
+    },
+    "facing=east,channel=2": {
+      "model": "thingamajigs:block/classic_tv/ct_test_pattern",
+      "y": 90
+    },
+    "facing=north,channel=2": {
+      "model": "thingamajigs:block/classic_tv/ct_test_pattern"
+    },
+    "facing=south,channel=2": {
+      "model": "thingamajigs:block/classic_tv/ct_test_pattern",
+      "y": 180
+    },
+    "facing=west,channel=2": {
+      "model": "thingamajigs:block/classic_tv/ct_test_pattern",
+      "y": 270
+    },
+    "facing=east,channel=3": {
+      "model": "thingamajigs:block/classic_tv/ct_show",
+      "y": 90
+    },
+    "facing=north,channel=3": {
+      "model": "thingamajigs:block/classic_tv/ct_show"
+    },
+    "facing=south,channel=3": {
+      "model": "thingamajigs:block/classic_tv/ct_show",
+      "y": 180
+    },
+    "facing=west,channel=3": {
+      "model": "thingamajigs:block/classic_tv/ct_show",
+      "y": 270
+    }
+  }
+}

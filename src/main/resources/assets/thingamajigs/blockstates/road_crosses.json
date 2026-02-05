@@ -1,0 +1,109 @@
+{
+  "variants": {
+    "facing=east,type=0": {
+      "model": "thingamajigs:block/road_crosses/crossroads",
+      "y": 90
+    },
+    "facing=north,type=0": {
+      "model": "thingamajigs:block/road_crosses/crossroads"
+    },
+    "facing=south,type=0": {
+      "model": "thingamajigs:block/road_crosses/crossroads",
+      "y": 180
+    },
+    "facing=west,type=0": {
+      "model": "thingamajigs:block/road_crosses/crossroads",
+      "y": 270
+    },
+    "facing=east,type=1": {
+      "model": "thingamajigs:block/road_crosses/side_left",
+      "y": 90
+    },
+    "facing=north,type=1": {
+      "model": "thingamajigs:block/road_crosses/side_left"
+    },
+    "facing=south,type=1": {
+      "model": "thingamajigs:block/road_crosses/side_left",
+      "y": 180
+    },
+    "facing=west,type=1": {
+      "model": "thingamajigs:block/road_crosses/side_left",
+      "y": 270
+    },
+    "facing=east,type=2": {
+      "model": "thingamajigs:block/road_crosses/side_right",
+      "y": 90
+    },
+    "facing=north,type=2": {
+      "model": "thingamajigs:block/road_crosses/side_right"
+    },
+    "facing=south,type=2": {
+      "model": "thingamajigs:block/road_crosses/side_right",
+      "y": 180
+    },
+    "facing=west,type=2": {
+      "model": "thingamajigs:block/road_crosses/side_right",
+      "y": 270
+    },
+    "facing=east,type=3": {
+      "model": "thingamajigs:block/road_crosses/stag_left",
+      "y": 90
+    },
+    "facing=north,type=3": {
+      "model": "thingamajigs:block/road_crosses/stag_left"
+    },
+    "facing=south,type=3": {
+      "model": "thingamajigs:block/road_crosses/stag_left",
+      "y": 180
+    },
+    "facing=west,type=3": {
+      "model": "thingamajigs:block/road_crosses/stag_left",
+      "y": 270
+    },
+    "facing=east,type=4": {
+      "model": "thingamajigs:block/road_crosses/stag_right",
+      "y": 90
+    },
+    "facing=north,type=4": {
+      "model": "thingamajigs:block/road_crosses/stag_right"
+    },
+    "facing=south,type=4": {
+      "model": "thingamajigs:block/road_crosses/stag_right",
+      "y": 180
+    },
+    "facing=west,type=4": {
+      "model": "thingamajigs:block/road_crosses/stag_right",
+      "y": 270
+    },
+    "facing=east,type=5": {
+      "model": "thingamajigs:block/road_crosses/t_left",
+      "y": 90
+    },
+    "facing=north,type=5": {
+      "model": "thingamajigs:block/road_crosses/t_left"
+    },
+    "facing=south,type=5": {
+      "model": "thingamajigs:block/road_crosses/t_left",
+      "y": 180
+    },
+    "facing=west,type=5": {
+      "model": "thingamajigs:block/road_crosses/t_left",
+      "y": 270
+    },
+    "facing=east,type=6": {
+      "model": "thingamajigs:block/road_crosses/t_right",
+      "y": 90
+    },
+    "facing=north,type=6": {
+      "model": "thingamajigs:block/road_crosses/t_right"
+    },
+    "facing=south,type=6": {
+      "model": "thingamajigs:block/road_crosses/t_right",
+      "y": 180
+    },
+    "facing=west,type=6": {
+      "model": "thingamajigs:block/road_crosses/t_right",
+      "y": 270
+    }
+  }
+}

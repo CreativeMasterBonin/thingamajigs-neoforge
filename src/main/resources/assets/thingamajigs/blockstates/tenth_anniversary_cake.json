@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/tenth_anniversary_cake",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/tenth_anniversary_cake"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/tenth_anniversary_cake",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/tenth_anniversary_cake",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "thingamajigs:block/love_seat_wool"
+  }
+}

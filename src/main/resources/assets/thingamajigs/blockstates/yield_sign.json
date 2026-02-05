@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/yield_sign",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/yield_sign"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/yield_sign",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/yield_sign",
+      "y": 270
+    }
+  }
+}

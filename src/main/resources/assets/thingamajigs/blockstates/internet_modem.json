@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:custom/old_intmodem_vertical",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:custom/old_intmodem_vertical"
+    },
+    "facing=south": {
+      "model": "thingamajigs:custom/old_intmodem_vertical",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:custom/old_intmodem_vertical",
+      "y": 270
+    }
+  }
+}

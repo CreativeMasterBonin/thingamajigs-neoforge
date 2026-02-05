@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=east,type=0": {
+      "model": "thingamajigs:block/other_signs/arrow_one",
+      "y": 90
+    },
+    "facing=north,type=0": {
+      "model": "thingamajigs:block/other_signs/arrow_one"
+    },
+    "facing=south,type=0": {
+      "model": "thingamajigs:block/other_signs/arrow_one",
+      "y": 180
+    },
+    "facing=west,type=0": {
+      "model": "thingamajigs:block/other_signs/arrow_one",
+      "y": 270
+    },
+    "facing=east,type=1": {
+      "model": "thingamajigs:block/other_signs/arrow_two",
+      "y": 90
+    },
+    "facing=north,type=1": {
+      "model": "thingamajigs:block/other_signs/arrow_two"
+    },
+    "facing=south,type=1": {
+      "model": "thingamajigs:block/other_signs/arrow_two",
+      "y": 180
+    },
+    "facing=west,type=1": {
+      "model": "thingamajigs:block/other_signs/arrow_two",
+      "y": 270
+    },
+    "facing=east,type=2": {
+      "model": "thingamajigs:block/other_signs/arrow_three",
+      "y": 90
+    },
+    "facing=north,type=2": {
+      "model": "thingamajigs:block/other_signs/arrow_three"
+    },
+    "facing=south,type=2": {
+      "model": "thingamajigs:block/other_signs/arrow_three",
+      "y": 180
+    },
+    "facing=west,type=2": {
+      "model": "thingamajigs:block/other_signs/arrow_three",
+      "y": 270
+    },
+    "facing=east,type=3": {
+      "model": "thingamajigs:block/other_signs/arrow_three",
+      "y": 90
+    },
+    "facing=north,type=3": {
+      "model": "thingamajigs:block/other_signs/arrow_three"
+    },
+    "facing=south,type=3": {
+      "model": "thingamajigs:block/other_signs/arrow_three",
+      "y": 180
+    },
+    "facing=west,type=3": {
+      "model": "thingamajigs:block/other_signs/arrow_three",
+      "y": 270
+    }
+  }
+}

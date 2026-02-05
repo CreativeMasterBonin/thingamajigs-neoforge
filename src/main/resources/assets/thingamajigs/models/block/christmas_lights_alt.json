@@ -1,0 +1,6 @@
+{
+  "parent": "thingamajigs:bases/flat_wall_plane",
+  "textures": {
+    "all": "thingamajigs:block/animated/christmas_lights_two_ani"
+  }
+}

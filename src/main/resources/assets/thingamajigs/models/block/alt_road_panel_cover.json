@@ -1,0 +1,7 @@
+{
+  "parent": "thingamajigs:bases/road_marking",
+  "textures": {
+    "all": "thingamajigs:block/manhole_trans_whole",
+    "particle": "#all"
+  }
+}

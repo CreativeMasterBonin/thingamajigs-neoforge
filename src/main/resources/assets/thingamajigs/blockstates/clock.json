@@ -1,0 +1,124 @@
+{
+  "variants": {
+    "facing=east,time=0": {
+      "model": "thingamajigs:block/clock/clock_0",
+      "y": 90
+    },
+    "facing=north,time=0": {
+      "model": "thingamajigs:block/clock/clock_0"
+    },
+    "facing=south,time=0": {
+      "model": "thingamajigs:block/clock/clock_0",
+      "y": 180
+    },
+    "facing=west,time=0": {
+      "model": "thingamajigs:block/clock/clock_0",
+      "y": 270
+    },
+    "facing=east,time=1": {
+      "model": "thingamajigs:block/clock/clock_1",
+      "y": 90
+    },
+    "facing=north,time=1": {
+      "model": "thingamajigs:block/clock/clock_1"
+    },
+    "facing=south,time=1": {
+      "model": "thingamajigs:block/clock/clock_1",
+      "y": 180
+    },
+    "facing=west,time=1": {
+      "model": "thingamajigs:block/clock/clock_1",
+      "y": 270
+    },
+    "facing=east,time=2": {
+      "model": "thingamajigs:block/clock/clock_2",
+      "y": 90
+    },
+    "facing=north,time=2": {
+      "model": "thingamajigs:block/clock/clock_2"
+    },
+    "facing=south,time=2": {
+      "model": "thingamajigs:block/clock/clock_2",
+      "y": 180
+    },
+    "facing=west,time=2": {
+      "model": "thingamajigs:block/clock/clock_2",
+      "y": 270
+    },
+    "facing=east,time=3": {
+      "model": "thingamajigs:block/clock/clock_3",
+      "y": 90
+    },
+    "facing=north,time=3": {
+      "model": "thingamajigs:block/clock/clock_3"
+    },
+    "facing=south,time=3": {
+      "model": "thingamajigs:block/clock/clock_3",
+      "y": 180
+    },
+    "facing=west,time=3": {
+      "model": "thingamajigs:block/clock/clock_3",
+      "y": 270
+    },
+    "facing=east,time=4": {
+      "model": "thingamajigs:block/clock/clock_4",
+      "y": 90
+    },
+    "facing=north,time=4": {
+      "model": "thingamajigs:block/clock/clock_4"
+    },
+    "facing=south,time=4": {
+      "model": "thingamajigs:block/clock/clock_4",
+      "y": 180
+    },
+    "facing=west,time=4": {
+      "model": "thingamajigs:block/clock/clock_4",
+      "y": 270
+    },
+    "facing=east,time=5": {
+      "model": "thingamajigs:block/clock/clock_5",
+      "y": 90
+    },
+    "facing=north,time=5": {
+      "model": "thingamajigs:block/clock/clock_5"
+    },
+    "facing=south,time=5": {
+      "model": "thingamajigs:block/clock/clock_5",
+      "y": 180
+    },
+    "facing=west,time=5": {
+      "model": "thingamajigs:block/clock/clock_5",
+      "y": 270
+    },
+    "facing=east,time=6": {
+      "model": "thingamajigs:block/clock/clock_6",
+      "y": 90
+    },
+    "facing=north,time=6": {
+      "model": "thingamajigs:block/clock/clock_6"
+    },
+    "facing=south,time=6": {
+      "model": "thingamajigs:block/clock/clock_6",
+      "y": 180
+    },
+    "facing=west,time=6": {
+      "model": "thingamajigs:block/clock/clock_6",
+      "y": 270
+    },
+    "facing=east,time=7": {
+      "model": "thingamajigs:block/clock/clock_7",
+      "y": 90
+    },
+    "facing=north,time=7": {
+      "model": "thingamajigs:block/clock/clock_7"
+    },
+    "facing=south,time=7": {
+      "model": "thingamajigs:block/clock/clock_7",
+      "y": 180
+    },
+    "facing=west,time=7": {
+      "model": "thingamajigs:block/clock/clock_7",
+      "y": 270
+    }
+  }
+}

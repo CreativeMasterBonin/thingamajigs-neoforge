@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/boxy_console",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/boxy_console"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/boxy_console",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/boxy_console",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/hazards/radio_waves",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/hazards/radio_waves"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/hazards/radio_waves",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/hazards/radio_waves",
+      "y": 270
+    }
+  }
+}

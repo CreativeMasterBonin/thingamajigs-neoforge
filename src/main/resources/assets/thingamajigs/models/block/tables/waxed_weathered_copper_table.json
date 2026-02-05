@@ -1,0 +1,8 @@
+{
+  "parent": "thingamajigs:bases/base_table",
+  "textures": {
+    "tabletop": "minecraft:block/weathered_copper",
+    "leg": "minecraft:block/weathered_cut_copper",
+    "particle": "#tabletop"
+  }
+}

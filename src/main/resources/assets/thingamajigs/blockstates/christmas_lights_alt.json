@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/christmas_lights_alt",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/christmas_lights_alt"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/christmas_lights_alt",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/christmas_lights_alt",
+      "y": 270
+    }
+  }
+}

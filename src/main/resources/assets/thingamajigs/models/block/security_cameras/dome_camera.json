@@ -1,0 +1,50 @@
+{
+	"credit": "Made with Blockbench",
+    "ambientocclusion": false,
+    "render_type": "translucent",
+	"textures": {
+		"0": "thingamajigs:block/aios/security_cameras",
+		"1": "thingamajigs:block/parts/dome_camera_plastic",
+        "particle": "thingamajigs:block/aios/security_cameras"
+	},
+	"elements": [
+		{
+			"from": [5, 14, 5],
+			"to": [11, 16, 11],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 15, 8]},
+			"faces": {
+				"north": {"uv": [4, 0, 9, 5], "texture": "#0"},
+				"east": {"uv": [4, 0, 9, 5], "texture": "#0"},
+				"south": {"uv": [4, 0, 9, 5], "texture": "#0"},
+				"west": {"uv": [4, 0, 9, 5], "texture": "#0"},
+				"up": {"uv": [4, 0, 9, 5], "texture": "#0"},
+				"down": {"uv": [4, 0, 9, 5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [6, 12, 6],
+			"to": [10, 14, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 13, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 4, 2], "texture": "#1"},
+				"east": {"uv": [0, 0, 4, 2], "texture": "#1"},
+				"south": {"uv": [0, 0, 4, 2], "texture": "#1"},
+				"west": {"uv": [0, 0, 4, 2], "texture": "#1"},
+				"down": {"uv": [0, 0, 4, 4], "texture": "#1"}
+			}
+		},
+		{
+			"from": [7.5, 13, 8],
+			"to": [8.5, 14, 11],
+			"rotation": {"angle": -45, "axis": "x", "origin": [8, 13.5, 8.5]},
+			"faces": {
+				"north": {"uv": [0, 0, 3, 3], "texture": "#0"},
+				"east": {"uv": [8, 9, 9, 10], "texture": "#0"},
+				"south": {"uv": [8, 9, 9, 10], "texture": "#0"},
+				"west": {"uv": [8, 9, 9, 10], "texture": "#0"},
+				"up": {"uv": [8, 9, 9, 10], "texture": "#0"},
+				"down": {"uv": [8, 9, 9, 10], "texture": "#0"}
+			}
+		}
+	]
+}

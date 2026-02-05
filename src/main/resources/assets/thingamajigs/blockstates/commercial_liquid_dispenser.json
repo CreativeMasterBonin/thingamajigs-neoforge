@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/commercial_liquid_dispenser",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/commercial_liquid_dispenser"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/commercial_liquid_dispenser",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/commercial_liquid_dispenser",
+      "y": 270
+    }
+  }
+}

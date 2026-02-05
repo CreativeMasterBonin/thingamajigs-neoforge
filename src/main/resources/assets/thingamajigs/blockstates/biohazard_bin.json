@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/biohazard_bin",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/biohazard_bin"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/biohazard_bin",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/biohazard_bin",
+      "y": 270
+    }
+  }
+}

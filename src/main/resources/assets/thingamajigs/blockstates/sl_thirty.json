@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/sl_thirty",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/sl_thirty"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/sl_thirty",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/sl_thirty",
+      "y": 270
+    }
+  }
+}
+
+

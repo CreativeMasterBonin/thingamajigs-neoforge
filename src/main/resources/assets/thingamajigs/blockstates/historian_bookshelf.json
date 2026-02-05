@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "":[
+      {"model":  "thingamajigs:block/historian_bookshelf"},
+      {"model":  "thingamajigs:block/random/historian_bookshelf2"},
+      {"model":  "thingamajigs:block/random/historian_bookshelf3"},
+      {"model":  "thingamajigs:block/random/historian_bookshelf4"}
+    ]
+  }
+}

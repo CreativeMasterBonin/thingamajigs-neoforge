@@ -1,0 +1,6 @@
+{
+  "parent": "thingamajigs:bases/pathway",
+  "textures": {
+    "all": "thingamajigs:block/gray_pathway"
+  }
+}

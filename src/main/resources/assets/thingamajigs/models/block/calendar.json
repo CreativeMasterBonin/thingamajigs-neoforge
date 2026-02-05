@@ -1,0 +1,36 @@
+{
+	"credit": "Made By CreativeMasterBonin",
+	"textures": {
+		"0": "minecraft:block/red_concrete",
+		"1": "thingamajigs:block/parts/calendar",
+		"particle": "#1"
+	},
+	"elements": [
+		{
+			"name": "calendar",
+			"from": [0, 0, 15],
+			"to": [16, 14, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 7, 15.5]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"east": {"uv": [0, 0, 1, 16], "texture": "#1"},
+				"south": {"uv": [0, 2, 1, 7], "texture": "#1", "cullface": "south"},
+				"west": {"uv": [15, 0, 16, 16], "texture": "#1"},
+				"down": {"uv": [0, 0, 16, 1], "texture": "#1", "cullface": "down"}
+			}
+		},
+		{
+			"name": "top",
+			"from": [0, 14, 15],
+			"to": [16, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 15, 15.5]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 2], "texture": "#0"},
+				"east": {"uv": [0, 0, 1, 2], "texture": "#0"},
+				"south": {"uv": [0, 0, 16, 2], "texture": "#0", "cullface": "south"},
+				"west": {"uv": [0, 0, 1, 2], "texture": "#0"},
+				"up": {"uv": [0, 0, 16, 1], "texture": "#0", "cullface": "up"}
+			}
+		}
+	]
+}

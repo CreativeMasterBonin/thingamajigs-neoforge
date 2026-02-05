@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_top_right",
+  "render_type": "translucent",
+  "textures": {
+    "bottom": "thingamajigs:block/doors/metallic_door_bottom",
+    "top": "thingamajigs:block/doors/metallic_door_top"
+  }
+}

@@ -1,0 +1,379 @@
+{
+  "variants": {
+    "facing=east,time=0": {
+      "model": "thingamajigs:block/clock_radio/cr_0",
+      "y": 90
+    },
+    "facing=north,time=0": {
+      "model": "thingamajigs:block/clock_radio/cr_0"
+    },
+    "facing=south,time=0": {
+      "model": "thingamajigs:block/clock_radio/cr_0",
+      "y": 180
+    },
+    "facing=west,time=0": {
+      "model": "thingamajigs:block/clock_radio/cr_0",
+      "y": 270
+    },
+    "facing=east,time=1": {
+      "model": "thingamajigs:block/clock_radio/cr_1",
+      "y": 90
+    },
+    "facing=north,time=1": {
+      "model": "thingamajigs:block/clock_radio/cr_1"
+    },
+    "facing=south,time=1": {
+      "model": "thingamajigs:block/clock_radio/cr_1",
+      "y": 180
+    },
+    "facing=west,time=1": {
+      "model": "thingamajigs:block/clock_radio/cr_1",
+      "y": 270
+    },
+    "facing=east,time=2": {
+      "model": "thingamajigs:block/clock_radio/cr_2",
+      "y": 90
+    },
+    "facing=north,time=2": {
+      "model": "thingamajigs:block/clock_radio/cr_2"
+    },
+    "facing=south,time=2": {
+      "model": "thingamajigs:block/clock_radio/cr_2",
+      "y": 180
+    },
+    "facing=west,time=2": {
+      "model": "thingamajigs:block/clock_radio/cr_2",
+      "y": 270
+    },
+    "facing=east,time=3": {
+      "model": "thingamajigs:block/clock_radio/cr_3",
+      "y": 90
+    },
+    "facing=north,time=3": {
+      "model": "thingamajigs:block/clock_radio/cr_3"
+    },
+    "facing=south,time=3": {
+      "model": "thingamajigs:block/clock_radio/cr_3",
+      "y": 180
+    },
+    "facing=west,time=3": {
+      "model": "thingamajigs:block/clock_radio/cr_3",
+      "y": 270
+    },
+    "facing=east,time=4": {
+      "model": "thingamajigs:block/clock_radio/cr_4",
+      "y": 90
+    },
+    "facing=north,time=4": {
+      "model": "thingamajigs:block/clock_radio/cr_4"
+    },
+    "facing=south,time=4": {
+      "model": "thingamajigs:block/clock_radio/cr_4",
+      "y": 180
+    },
+    "facing=west,time=4": {
+      "model": "thingamajigs:block/clock_radio/cr_4",
+      "y": 270
+    },
+    "facing=east,time=5": {
+      "model": "thingamajigs:block/clock_radio/cr_5",
+      "y": 90
+    },
+    "facing=north,time=5": {
+      "model": "thingamajigs:block/clock_radio/cr_5"
+    },
+    "facing=south,time=5": {
+      "model": "thingamajigs:block/clock_radio/cr_5",
+      "y": 180
+    },
+    "facing=west,time=5": {
+      "model": "thingamajigs:block/clock_radio/cr_5",
+      "y": 270
+    },
+    "facing=east,time=6": {
+      "model": "thingamajigs:block/clock_radio/cr_6",
+      "y": 90
+    },
+    "facing=north,time=6": {
+      "model": "thingamajigs:block/clock_radio/cr_6"
+    },
+    "facing=south,time=6": {
+      "model": "thingamajigs:block/clock_radio/cr_6",
+      "y": 180
+    },
+    "facing=west,time=6": {
+      "model": "thingamajigs:block/clock_radio/cr_6",
+      "y": 270
+    },
+    "facing=east,time=7": {
+      "model": "thingamajigs:block/clock_radio/cr_7",
+      "y": 90
+    },
+    "facing=north,time=7": {
+      "model": "thingamajigs:block/clock_radio/cr_7"
+    },
+    "facing=south,time=7": {
+      "model": "thingamajigs:block/clock_radio/cr_7",
+      "y": 180
+    },
+    "facing=west,time=7": {
+      "model": "thingamajigs:block/clock_radio/cr_7",
+      "y": 270
+    },
+    "facing=east,time=8": {
+      "model": "thingamajigs:block/clock_radio/cr_8",
+      "y": 90
+    },
+    "facing=north,time=8": {
+      "model": "thingamajigs:block/clock_radio/cr_8"
+    },
+    "facing=south,time=8": {
+      "model": "thingamajigs:block/clock_radio/cr_8",
+      "y": 180
+    },
+    "facing=west,time=8": {
+      "model": "thingamajigs:block/clock_radio/cr_8",
+      "y": 270
+    },
+    "facing=east,time=9": {
+      "model": "thingamajigs:block/clock_radio/cr_9",
+      "y": 90
+    },
+    "facing=north,time=9": {
+      "model": "thingamajigs:block/clock_radio/cr_9"
+    },
+    "facing=south,time=9": {
+      "model": "thingamajigs:block/clock_radio/cr_9",
+      "y": 180
+    },
+    "facing=west,time=9": {
+      "model": "thingamajigs:block/clock_radio/cr_9",
+      "y": 270
+    },
+    "facing=east,time=10": {
+      "model": "thingamajigs:block/clock_radio/cr_10",
+      "y": 90
+    },
+    "facing=north,time=10": {
+      "model": "thingamajigs:block/clock_radio/cr_10"
+    },
+    "facing=south,time=10": {
+      "model": "thingamajigs:block/clock_radio/cr_10",
+      "y": 180
+    },
+    "facing=west,time=10": {
+      "model": "thingamajigs:block/clock_radio/cr_10",
+      "y": 270
+    },
+    "facing=east,time=11": {
+      "model": "thingamajigs:block/clock_radio/cr_11",
+      "y": 90
+    },
+    "facing=north,time=11": {
+      "model": "thingamajigs:block/clock_radio/cr_11"
+    },
+    "facing=south,time=11": {
+      "model": "thingamajigs:block/clock_radio/cr_11",
+      "y": 180
+    },
+    "facing=west,time=11": {
+      "model": "thingamajigs:block/clock_radio/cr_11",
+      "y": 270
+    },
+    "facing=east,time=12": {
+      "model": "thingamajigs:block/clock_radio/cr_12",
+      "y": 90
+    },
+    "facing=north,time=12": {
+      "model": "thingamajigs:block/clock_radio/cr_12"
+    },
+    "facing=south,time=12": {
+      "model": "thingamajigs:block/clock_radio/cr_12",
+      "y": 180
+    },
+    "facing=west,time=12": {
+      "model": "thingamajigs:block/clock_radio/cr_12",
+      "y": 270
+    },
+    "facing=east,time=13": {
+      "model": "thingamajigs:block/clock_radio/cr_13",
+      "y": 90
+    },
+    "facing=north,time=13": {
+      "model": "thingamajigs:block/clock_radio/cr_13"
+    },
+    "facing=south,time=13": {
+      "model": "thingamajigs:block/clock_radio/cr_13",
+      "y": 180
+    },
+    "facing=west,time=13": {
+      "model": "thingamajigs:block/clock_radio/cr_13",
+      "y": 270
+    },
+    "facing=east,time=14": {
+      "model": "thingamajigs:block/clock_radio/cr_14",
+      "y": 90
+    },
+    "facing=north,time=14": {
+      "model": "thingamajigs:block/clock_radio/cr_14"
+    },
+    "facing=south,time=14": {
+      "model": "thingamajigs:block/clock_radio/cr_14",
+      "y": 180
+    },
+    "facing=west,time=14": {
+      "model": "thingamajigs:block/clock_radio/cr_14",
+      "y": 270
+    },
+    "facing=east,time=15": {
+      "model": "thingamajigs:block/clock_radio/cr_15",
+      "y": 90
+    },
+    "facing=north,time=15": {
+      "model": "thingamajigs:block/clock_radio/cr_15"
+    },
+    "facing=south,time=15": {
+      "model": "thingamajigs:block/clock_radio/cr_15",
+      "y": 180
+    },
+    "facing=west,time=15": {
+      "model": "thingamajigs:block/clock_radio/cr_15",
+      "y": 270
+    },
+    "facing=east,time=16": {
+      "model": "thingamajigs:block/clock_radio/cr_16",
+      "y": 90
+    },
+    "facing=north,time=16": {
+      "model": "thingamajigs:block/clock_radio/cr_16"
+    },
+    "facing=south,time=16": {
+      "model": "thingamajigs:block/clock_radio/cr_16",
+      "y": 180
+    },
+    "facing=west,time=16": {
+      "model": "thingamajigs:block/clock_radio/cr_16",
+      "y": 270
+    },
+    "facing=east,time=17": {
+      "model": "thingamajigs:block/clock_radio/cr_17",
+      "y": 90
+    },
+    "facing=north,time=17": {
+      "model": "thingamajigs:block/clock_radio/cr_17"
+    },
+    "facing=south,time=17": {
+      "model": "thingamajigs:block/clock_radio/cr_17",
+      "y": 180
+    },
+    "facing=west,time=17": {
+      "model": "thingamajigs:block/clock_radio/cr_17",
+      "y": 270
+    },
+    "facing=east,time=18": {
+      "model": "thingamajigs:block/clock_radio/cr_18",
+      "y": 90
+    },
+    "facing=north,time=18": {
+      "model": "thingamajigs:block/clock_radio/cr_18"
+    },
+    "facing=south,time=18": {
+      "model": "thingamajigs:block/clock_radio/cr_18",
+      "y": 180
+    },
+    "facing=west,time=18": {
+      "model": "thingamajigs:block/clock_radio/cr_18",
+      "y": 270
+    },
+    "facing=east,time=19": {
+      "model": "thingamajigs:block/clock_radio/cr_19",
+      "y": 90
+    },
+    "facing=north,time=19": {
+      "model": "thingamajigs:block/clock_radio/cr_19"
+    },
+    "facing=south,time=19": {
+      "model": "thingamajigs:block/clock_radio/cr_19",
+      "y": 180
+    },
+    "facing=west,time=19": {
+      "model": "thingamajigs:block/clock_radio/cr_19",
+      "y": 270
+    },
+    "facing=east,time=20": {
+      "model": "thingamajigs:block/clock_radio/cr_20",
+      "y": 90
+    },
+    "facing=north,time=20": {
+      "model": "thingamajigs:block/clock_radio/cr_20"
+    },
+    "facing=south,time=20": {
+      "model": "thingamajigs:block/clock_radio/cr_20",
+      "y": 180
+    },
+    "facing=west,time=20": {
+      "model": "thingamajigs:block/clock_radio/cr_20",
+      "y": 270
+    },
+    "facing=east,time=21": {
+      "model": "thingamajigs:block/clock_radio/cr_21",
+      "y": 90
+    },
+    "facing=north,time=21": {
+      "model": "thingamajigs:block/clock_radio/cr_21"
+    },
+    "facing=south,time=21": {
+      "model": "thingamajigs:block/clock_radio/cr_21",
+      "y": 180
+    },
+    "facing=west,time=21": {
+      "model": "thingamajigs:block/clock_radio/cr_21",
+      "y": 270
+    },
+    "facing=east,time=22": {
+      "model": "thingamajigs:block/clock_radio/cr_22",
+      "y": 90
+    },
+    "facing=north,time=22": {
+      "model": "thingamajigs:block/clock_radio/cr_22"
+    },
+    "facing=south,time=22": {
+      "model": "thingamajigs:block/clock_radio/cr_22",
+      "y": 180
+    },
+    "facing=west,time=22": {
+      "model": "thingamajigs:block/clock_radio/cr_22",
+      "y": 270
+    },
+    "facing=east,time=23": {
+      "model": "thingamajigs:block/clock_radio/cr_23",
+      "y": 90
+    },
+    "facing=north,time=23": {
+      "model": "thingamajigs:block/clock_radio/cr_23"
+    },
+    "facing=south,time=23": {
+      "model": "thingamajigs:block/clock_radio/cr_23",
+      "y": 180
+    },
+    "facing=west,time=23": {
+      "model": "thingamajigs:block/clock_radio/cr_23",
+      "y": 270
+    },
+    "facing=east,time=24": {
+      "model": "thingamajigs:block/clock_radio/cr_24",
+      "y": 90
+    },
+    "facing=north,time=24": {
+      "model": "thingamajigs:block/clock_radio/cr_24"
+    },
+    "facing=south,time=24": {
+      "model": "thingamajigs:block/clock_radio/cr_24",
+      "y": 180
+    },
+    "facing=west,time=24": {
+      "model": "thingamajigs:block/clock_radio/cr_24",
+      "y": 270
+    }
+  }
+}

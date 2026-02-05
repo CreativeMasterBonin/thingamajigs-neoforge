@@ -1,0 +1,9 @@
+{
+  "parent": "thingamajigs:bases/wall_torch",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "0": "thingamajigs:block/torches/paper_lantern",
+    "missing": "thingamajigs:block/torches/paper_lantern",
+    "particle": "thingamajigs:block/torches/paper_lantern"
+  }
+}

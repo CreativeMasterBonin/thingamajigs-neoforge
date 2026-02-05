@@ -1,0 +1,7 @@
+{
+  "parent": "thingamajigs:bases/pole_vertical",
+  "textures": {
+    "all": "thingamajigs:block/redstone_pole_on",
+    "particle": "minecraft:block/blast_furnace_top"
+  }
+}

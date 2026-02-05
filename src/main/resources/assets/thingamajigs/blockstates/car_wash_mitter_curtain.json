@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:custom/car_wash_mitter_curtain",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:custom/car_wash_mitter_curtain"
+    },
+    "facing=south": {
+      "model": "thingamajigs:custom/car_wash_mitter_curtain",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:custom/car_wash_mitter_curtain",
+      "y": 270
+    }
+  }
+}

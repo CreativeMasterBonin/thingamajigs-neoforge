@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "thingamajigs:block/powered/powered_off",
+    "up": "thingamajigs:block/powered/powered_off",
+    "north": "thingamajigs:block/sidewalk_new",
+    "south": "thingamajigs:block/sidewalk_new",
+    "east": "thingamajigs:block/sidewalk_new",
+    "west": "thingamajigs:block/sidewalk_new",
+    "particle": "#up"
+  }
+}

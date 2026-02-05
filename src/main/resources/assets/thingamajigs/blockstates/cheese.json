@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "fullness=3": {
+      "model": "thingamajigs:block/cheese_h0"
+    },
+    "fullness=2": {
+      "model": "thingamajigs:block/cheese_h1"
+    },
+    "fullness=1": {
+      "model": "thingamajigs:block/cheese_h2"
+    },
+    "fullness=0": {
+      "model": "thingamajigs:block/cheese_h3"
+    }
+  }
+}

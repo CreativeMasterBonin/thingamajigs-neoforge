@@ -1,0 +1,33 @@
+{
+	"credit": "Made with Blockbench",
+    "render_type": "cutout",
+	"elements": [
+		{
+			"name": "backing",
+			"from": [5, 4, 15],
+			"to": [11, 13, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8.5, 15]},
+			"faces": {
+				"north": {"uv": [8, 3, 14, 12], "texture": "#back"},
+				"east": {"uv": [1, 3, 2, 12], "texture": "#back"},
+				"south": {"uv": [8, 3, 14, 12], "texture": "#back", "cullface": "south"},
+				"west": {"uv": [1, 3, 2, 12], "texture": "#back"},
+				"up": {"uv": [0, 15, 6, 16], "texture": "#back"},
+				"down": {"uv": [0, 15, 6, 16], "texture": "#back", "cullface": "down"}
+			}
+		},
+		{
+			"name": "button",
+			"from": [6, 6, 14],
+			"to": [10, 11, 15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8.5, 15]},
+			"faces": {
+				"north": {"uv": [7, 0, 11, 5], "texture": "#button"},
+				"east": {"uv": [0, 0, 1, 5], "texture": "#button"},
+				"west": {"uv": [0, 0, 1, 5], "texture": "#button"},
+				"up": {"uv": [0, 0, 4, 1], "texture": "#button"},
+				"down": {"uv": [0, 0, 4, 1], "texture": "#button"}
+			}
+		}
+	]
+}

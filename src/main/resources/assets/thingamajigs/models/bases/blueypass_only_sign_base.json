@@ -1,0 +1,71 @@
+{
+	"credit": "Made with Blockbench",
+    "ambientocclusion": false,
+    "render_type": "cutout",
+	"textures": {
+		"0": "minecraft:block/blast_furnace_side",
+		"front": "thingamajigs:block/signs/speciality_signs/blueypass_only",
+		"back": "thingamajigs:block/signs/back/blueypass_only_back",
+		"particle": "minecraft:block/blast_furnace_side"
+	},
+	"elements": [
+		{
+			"name": "front_sign",
+			"from": [-4, -4, 6.95],
+			"to": [20, 20, 6.95],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 6.95]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#front"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#back"}
+			}
+		},
+		{
+			"name": "vertical",
+			"from": [7, 0, 7],
+			"to": [9, 16, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"east": {"uv": [0, 0, 2, 16], "texture": "#0"},
+				"south": {"uv": [0, 0, 2, 16], "texture": "#0"},
+				"west": {"uv": [0, 0, 2, 16], "texture": "#0"},
+				"up": {"uv": [0, 0, 2, 2], "texture": "#0"},
+				"down": {"uv": [0, 0, 2, 2], "texture": "#0"}
+			}
+		},
+		{
+			"name": "horizontal",
+			"from": [0, 7, 7.01],
+			"to": [16, 9, 9.01],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"east": {"uv": [0, 0, 2, 2], "texture": "#0"},
+				"south": {"uv": [0, 0, 16, 2], "texture": "#0"},
+				"west": {"uv": [0, 0, 2, 2], "texture": "#0"},
+				"up": {"uv": [0, 0, 16, 2], "texture": "#0"},
+				"down": {"uv": [0, 0, 16, 2], "texture": "#0"}
+			}
+		},
+		{
+			"name": "back",
+			"from": [7, 7, 9],
+			"to": [9, 9, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 12.5]},
+			"faces": {
+				"east": {"uv": [0, 0, 7, 2], "texture": "#0"},
+				"south": {"uv": [0, 0, 2, 2], "texture": "#0"},
+				"west": {"uv": [0, 0, 7, 2], "texture": "#0"},
+				"up": {"uv": [0, 0, 2, 7], "texture": "#0"},
+				"down": {"uv": [0, 0, 2, 7], "texture": "#0"}
+			}
+		}
+	],
+	"groups": [
+		0,
+		{
+			"name": "pole",
+			"origin": [8, 8, 12.5],
+			"color": 0,
+			"children": [1, 2, 3]
+		}
+	]
+}

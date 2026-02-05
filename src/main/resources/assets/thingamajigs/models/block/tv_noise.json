@@ -1,0 +1,12 @@
+{
+  "parent": "thingamajigs:custom/tv",
+  "render_type": "cutout",
+  "textures": {
+    "all": "thingamajigs:block/tv/noise_ani",
+    "particle": "thingamajigs:block/tv/noise_ani",
+    "0": "thingamajigs:block/tv/noise_ani",
+    "1": "minecraft:block/blast_furnace_side",
+    "2": "minecraft:block/oak_planks",
+    "missing": "minecraft:block/oak_planks"
+  }
+}

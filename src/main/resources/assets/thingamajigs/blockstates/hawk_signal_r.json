@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/hawk_signal/hawk_signal_red",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/hawk_signal/hawk_signal_red"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/hawk_signal/hawk_signal_red",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/hawk_signal/hawk_signal_red",
+      "y": 270
+    }
+  }
+}

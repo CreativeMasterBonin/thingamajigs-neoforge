@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "render_type": "translucent",
+  "textures": {
+    "down": "minecraft:block/blast_furnace_top",
+    "up": "minecraft:block/blast_furnace_top",
+    "north": "thingamajigs:block/animated/fan_front_transparent",
+    "south": "thingamajigs:block/metal_scaffolding",
+    "east": "thingamajigs:block/metal_scaffolding",
+    "west": "thingamajigs:block/metal_scaffolding",
+    "particle": "thingamajigs:block/animated/fan_front_transparent"
+  }
+}

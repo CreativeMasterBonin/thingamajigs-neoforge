@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/exempt_half",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/exempt_half"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/exempt_half",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/exempt_half",
+      "y": 270
+    }
+  }
+}s

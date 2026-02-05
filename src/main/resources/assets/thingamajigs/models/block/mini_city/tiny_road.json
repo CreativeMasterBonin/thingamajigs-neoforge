@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/rail_flat",
+  "textures": {
+    "rail": "thingamajigs:block/mini_city/tiny_road_straight"
+  }
+}

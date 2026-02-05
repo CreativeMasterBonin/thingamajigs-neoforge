@@ -1,0 +1,15 @@
+{
+  "parent": "block/cube",
+  "ambientocclusion": false,
+  "render_type": "cutout",
+  "textures": {
+    "down": "minecraft:block/blast_furnace_top",
+    "up": "minecraft:block/blast_furnace_top",
+    "north": "thingamajigs:block/metal_scaffolding",
+    "south": "#north",
+    "east": "#north",
+    "west": "#north",
+    "particle": "#north"
+  }
+}
+

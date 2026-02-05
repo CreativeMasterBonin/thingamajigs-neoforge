@@ -1,0 +1,38 @@
+{
+	"credit": "Made with Blockbench",
+    "render_type": "translucent",
+	"textures": {
+		"0": "thingamajigs:block/mini_city/mini_yellow_building",
+        "particle": "#0"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 4, 9, 16], "texture": "#0"},
+				"east": {"uv": [0, 4, 9, 16], "texture": "#0"},
+				"south": {"uv": [0, 4, 9, 16], "texture": "#0"},
+				"west": {"uv": [0, 4, 9, 16], "texture": "#0"},
+				"up": {"uv": [0, 0, 4, 4], "texture": "#0"},
+				"down": {"uv": [8, 0, 12, 4], "texture": "#0"}
+			}
+		},
+		{
+			"from": [7, 0, -0.07],
+			"to": [9, 2, -0.07],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 1, -0.07]},
+			"faces": {
+				"north": {"uv": [9, 5, 15, 14], "texture": "#0"}
+			}
+		},
+		{
+			"from": [-0.07, 0, 6.93],
+			"to": [-0.07, 2, 8.93],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 1, 7.93]},
+			"faces": {
+				"west": {"uv": [9, 5, 15, 14], "texture": "#0"}
+			}
+		}
+	]
+}

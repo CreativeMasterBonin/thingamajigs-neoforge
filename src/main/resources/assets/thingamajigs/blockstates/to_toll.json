@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/to_toll",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/to_toll"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/to_toll",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/to_toll",
+      "y": 270
+    }
+  }
+}

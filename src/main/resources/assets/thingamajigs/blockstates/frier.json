@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,enabled=false": {
+      "model": "thingamajigs:custom/fryer_empty",
+      "y": 90
+    },
+    "facing=north,enabled=false": {
+      "model": "thingamajigs:custom/fryer_empty"
+    },
+    "facing=south,enabled=false": {
+      "model": "thingamajigs:custom/fryer_empty",
+      "y": 180
+    },
+    "facing=west,enabled=false": {
+      "model": "thingamajigs:custom/fryer_empty",
+      "y": 270
+    },
+    "facing=east,enabled=true": {
+      "model": "thingamajigs:custom/fryer_level_4",
+      "y": 90
+    },
+    "facing=north,enabled=true": {
+      "model": "thingamajigs:custom/fryer_level_4"
+    },
+    "facing=south,enabled=true": {
+      "model": "thingamajigs:custom/fryer_level_4",
+      "y": 180
+    },
+    "facing=west,enabled=true": {
+      "model": "thingamajigs:custom/fryer_level_4",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+    "name": "entry.thingamajigs.thingroads",
+    "icon": "thingamajigs:mini_road",
+    "category": "thingamajigs:addons",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Adds back asphalt, paintbrushes and their patterns for roads."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Due to the excessive amount of signs that could be added into the mod, they have not returned. Other mods may have to implement a better way of having limitless signs without using individual block ids and blockstates."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Can be downloaded from the usual websites that Thingamajigs is from."
+        }
+    ]
+}

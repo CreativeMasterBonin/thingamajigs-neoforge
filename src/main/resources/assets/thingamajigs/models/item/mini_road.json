@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "thingamajigs:block/mini_city/tiny_road_straight"
+  }
+}

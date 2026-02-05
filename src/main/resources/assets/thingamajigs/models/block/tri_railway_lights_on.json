@@ -1,0 +1,7 @@
+{
+	"parent": "thingamajigs:bases/base_tri_railway_lights",
+	"textures": {
+		"main": "thingamajigs:block/tri_off",
+		"overlay": "thingamajigs:block/animated/tri_flashing_emissive"
+	}
+}

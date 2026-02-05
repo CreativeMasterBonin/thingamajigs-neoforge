@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/t_pole_b",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/t_pole_b"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/t_pole_b",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/t_pole_b",
+      "y": 270
+    }
+  }
+}

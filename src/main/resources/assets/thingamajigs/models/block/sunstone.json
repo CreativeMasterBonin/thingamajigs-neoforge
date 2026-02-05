@@ -1,0 +1,8 @@
+{	
+	"parent": "thingamajigs:bases/base_overlay_block_emissive",
+	"textures": {
+		"0": "thingamajigs:block/runes/sunstone",
+		"overlay": "thingamajigs:block/runes/sunstone_emissive",
+		"particle": "#0"
+	}
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "thingamajigs:block/sculk_lantern"
+    },
+    "hanging=true": {
+      "model": "thingamajigs:block/sculk_lantern_hanging"
+    }
+  }
+}

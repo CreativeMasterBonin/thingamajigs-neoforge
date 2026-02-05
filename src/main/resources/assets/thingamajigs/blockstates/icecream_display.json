@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=east":[{"model": "thingamajigs:block/icecream_display", "y": 90}, {"model": "thingamajigs:block/icecream_display_alt", "y": 90}],
+    "facing=north":[{"model": "thingamajigs:block/icecream_display"}, {"model": "thingamajigs:block/icecream_display_alt"}],
+    "facing=south":[{"model": "thingamajigs:block/icecream_display", "y": 180}, {"model": "thingamajigs:block/icecream_display_alt", "y": 180}],
+    "facing=west":[{"model": "thingamajigs:block/icecream_display", "y": 270}, {"model": "thingamajigs:block/icecream_display_alt", "y": 270}]
+  }
+}

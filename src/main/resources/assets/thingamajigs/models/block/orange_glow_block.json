@@ -1,0 +1,6 @@
+{
+  "parent": "thingamajigs:bases/base_emissive_block",
+  "textures": {
+    "0": "thingamajigs:block/glow_block/orange"
+  }
+}

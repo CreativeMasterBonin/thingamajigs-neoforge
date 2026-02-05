@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_top_left",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "thingamajigs:block/doors/rubber_door_bottom",
+    "top": "thingamajigs:block/doors/rubber_door_top"
+  }
+}

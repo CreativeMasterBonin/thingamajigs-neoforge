@@ -1,0 +1,79 @@
+{
+  "variants": {
+    "facing=east,type=0": {
+      "model": "thingamajigs:block/other_signs/chev1",
+      "y": 90
+    },
+    "facing=north,type=0": {
+      "model": "thingamajigs:block/other_signs/chev1"
+    },
+    "facing=south,type=0": {
+      "model": "thingamajigs:block/other_signs/chev1",
+      "y": 180
+    },
+    "facing=west,type=0": {
+      "model": "thingamajigs:block/other_signs/chev1",
+      "y": 270
+    },
+    "facing=east,type=1": {
+      "model": "thingamajigs:block/other_signs/chev2",
+      "y": 90
+    },
+    "facing=north,type=1": {
+      "model": "thingamajigs:block/other_signs/chev2"
+    },
+    "facing=south,type=1": {
+      "model": "thingamajigs:block/other_signs/chev2",
+      "y": 180
+    },
+    "facing=west,type=1": {
+      "model": "thingamajigs:block/other_signs/chev2",
+      "y": 270
+    },
+    "facing=east,type=2": {
+      "model": "thingamajigs:block/other_signs/chev3",
+      "y": 90
+    },
+    "facing=north,type=2": {
+      "model": "thingamajigs:block/other_signs/chev3"
+    },
+    "facing=south,type=2": {
+      "model": "thingamajigs:block/other_signs/chev3",
+      "y": 180
+    },
+    "facing=west,type=2": {
+      "model": "thingamajigs:block/other_signs/chev3",
+      "y": 270
+    },
+    "facing=east,type=3": {
+      "model": "thingamajigs:block/other_signs/chev4",
+      "y": 90
+    },
+    "facing=north,type=3": {
+      "model": "thingamajigs:block/other_signs/chev4"
+    },
+    "facing=south,type=3": {
+      "model": "thingamajigs:block/other_signs/chev4",
+      "y": 180
+    },
+    "facing=west,type=3": {
+      "model": "thingamajigs:block/other_signs/chev4",
+      "y": 270
+    },
+    "facing=east,type=4": {
+      "model": "thingamajigs:block/other_signs/chev4",
+      "y": 90
+    },
+    "facing=north,type=4": {
+      "model": "thingamajigs:block/other_signs/chev4"
+    },
+    "facing=south,type=4": {
+      "model": "thingamajigs:block/other_signs/chev4",
+      "y": 180
+    },
+    "facing=west,type=4": {
+      "model": "thingamajigs:block/other_signs/chev4",
+      "y": 270
+    }
+  }
+}

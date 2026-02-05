@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "on=false": {
+      "model": "thingamajigs:block/lamps/tall_lamp_off"
+    },
+    "on=true": {
+      "model": "thingamajigs:block/lamps/tall_lamp_on"
+    }
+  }
+}

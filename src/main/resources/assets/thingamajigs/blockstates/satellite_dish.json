@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:custom/house_satelite",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:custom/house_satelite"
+    },
+    "facing=south": {
+      "model": "thingamajigs:custom/house_satelite",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:custom/house_satelite",
+      "y": 270
+    }
+  }
+}

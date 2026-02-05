@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "thingamajigs:item/globized_golden_apple_shard"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/escalator",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/escalator"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/escalator",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/escalator",
+      "y": 270
+    }
+  }
+}

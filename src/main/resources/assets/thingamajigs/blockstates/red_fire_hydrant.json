@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/fire_hydrants/red_fire_hydrant",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/fire_hydrants/red_fire_hydrant"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/fire_hydrants/red_fire_hydrant",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/fire_hydrants/red_fire_hydrant",
+      "y": 270
+    }
+  }
+}

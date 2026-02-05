@@ -1,0 +1,15 @@
+{
+    "name": "item.thingamajigs.p_book",
+    "landing_text": "Welcome to Thingamajigs! You'll see jokes and fun here and there, but mostly facts and useful information. Go to: https://bonincreativemedia.gitbook.io/thingamajigs-docs for more in-depth details and such.",
+    "book_texture": "patchouli:textures/gui/book_blue.png",
+    "model": "thingamajigs:p_book",
+    "version": 2,
+    "creative_tab": "thingamajigs",
+    "use_resource_pack": true,
+    "show_progress": false,
+    "open_sound": "thingamajigs:poop_break",
+    "flip_sound": "thingamajigs:poop_hit",
+    "advancements_tab": "thingamajigs:root",
+    "i18n": true,
+    "text_overflow_mode": "resize"
+}

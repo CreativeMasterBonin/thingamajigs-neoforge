@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/roundabout_uk",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/roundabout_uk"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/roundabout_uk",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/roundabout_uk",
+      "y": 270
+    }
+  }
+}

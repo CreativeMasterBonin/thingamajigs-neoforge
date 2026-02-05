@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/tire_scrubber",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/tire_scrubber"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/tire_scrubber",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/tire_scrubber",
+      "y": 270
+    }
+  }
+}

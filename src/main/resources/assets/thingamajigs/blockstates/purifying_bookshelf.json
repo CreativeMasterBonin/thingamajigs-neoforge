@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "":[
+        {"model":  "thingamajigs:block/purifying_bookshelf"},
+        {"model":  "thingamajigs:block/random/purifying_bookshelf2"}
+    ]
+  }
+}

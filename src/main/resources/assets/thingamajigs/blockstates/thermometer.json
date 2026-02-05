@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,enabled=false": {
+      "model": "thingamajigs:block/thermometer",
+      "y": 90
+    },
+    "facing=north,enabled=false": {
+      "model": "thingamajigs:block/thermometer"
+    },
+    "facing=south,enabled=false": {
+      "model": "thingamajigs:block/thermometer",
+      "y": 180
+    },
+    "facing=west,enabled=false": {
+      "model": "thingamajigs:block/thermometer",
+      "y": 270
+    },
+    "facing=east,enabled=true": {
+      "model": "thingamajigs:block/thermometer_cold",
+      "y": 90
+    },
+    "facing=north,enabled=true": {
+      "model": "thingamajigs:block/thermometer_cold"
+    },
+    "facing=south,enabled=true": {
+      "model": "thingamajigs:block/thermometer_cold",
+      "y": 180
+    },
+    "facing=west,enabled=true": {
+      "model": "thingamajigs:block/thermometer_cold",
+      "y": 270
+    }
+  }
+}

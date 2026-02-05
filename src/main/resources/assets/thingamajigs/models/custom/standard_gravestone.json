@@ -1,0 +1,35 @@
+{
+	"credit": "Made with Blockbench",
+    "render_type": "cutout",
+	"textures": {
+		"0": "minecraft:block/stone",
+        "particle": "minecraft:block/stone"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 5],
+			"to": [16, 2, 11],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0.5, 8]},
+			"faces": {
+				"north": {"uv": [1, 10, 8, 15], "texture": "#0"},
+				"east": {"uv": [1, 10, 15, 15], "texture": "#0"},
+				"south": {"uv": [1, 10, 15, 15], "texture": "#0"},
+				"west": {"uv": [1, 10, 15, 15], "texture": "#0"},
+				"up": {"uv": [4, 6, 11, 11], "texture": "#0"},
+				"down": {"uv": [1, 1, 15, 6], "texture": "#0"}
+			}
+		},
+		{
+			"from": [1, 2, 6],
+			"to": [15, 18, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 10, 8]},
+			"faces": {
+				"north": {"uv": [2, 1, 7, 6], "texture": "#0"},
+				"east": {"uv": [10, 6, 12, 11], "texture": "#0"},
+				"south": {"uv": [10, 1, 15, 6], "texture": "#0"},
+				"west": {"uv": [5, 6, 7, 11], "texture": "#0"},
+				"up": {"uv": [2, 10, 14, 14], "texture": "#0"}
+			}
+		}
+	]
+}

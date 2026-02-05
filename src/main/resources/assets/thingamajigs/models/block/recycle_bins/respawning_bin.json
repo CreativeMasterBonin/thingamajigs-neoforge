@@ -1,0 +1,7 @@
+{
+  "parent": "thingamajigs:custom/recycle_bin",
+  "textures": {
+    "1": "minecraft:block/respawn_anchor_side4",
+    "3": "minecraft:block/respawn_anchor_top"
+  }
+}

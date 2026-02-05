@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "render_type": "cutout",
+  "textures": {
+    "all": "thingamajigs:block/wood/lane/warped_lane"
+  }
+}

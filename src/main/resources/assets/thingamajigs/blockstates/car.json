@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/symbol_signs/car",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/symbol_signs/car"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/symbol_signs/car",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/symbol_signs/car",
+      "y": 270
+    }
+  }
+}

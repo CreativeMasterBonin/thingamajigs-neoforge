@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/barrel_keg",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/barrel_keg"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/barrel_keg",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/barrel_keg",
+      "y": 270
+    }
+  }
+}

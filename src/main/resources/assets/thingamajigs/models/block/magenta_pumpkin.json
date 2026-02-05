@@ -1,0 +1,7 @@
+{
+  "parent": "thingamajigs:bases/custom_pumpkin",
+  "textures": {
+    "end": "thingamajigs:block/pumpkins/magenta_pumpkin_top",
+    "side": "thingamajigs:block/pumpkins/magenta_pumpkin_side"
+  }
+}

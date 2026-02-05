@@ -1,0 +1,37 @@
+{
+    "name": "entry.thingamajigs.decoration",
+    "icon": "thingamajigs:love_couch",
+    "category": "thingamajigs:decorations",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Decorations are various visually useful blocks. Some can also be interacted with or store items like chests do. You'll need a thingamajig or some components first to craft them. Usually crafted in the crafting table."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Components are the various crafting items that can be used to craft specific decorations, which was introduced to reduce clutter and button bugs in the stonecutter. Each component has a category that is defined for itself. The recipes for components are on the next few pages."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "thingamajigs:base_component",
+            "text": "The most basic component of them all used in other components' creation."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "thingamajigs:home_component",
+            "recipe2": "thingamajigs:appliance_component"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "thingamajigs:phone_component"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Components not listed here are crafted in the smithing table or stonecutter."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Note that components actually are combined together in recipes to craft certain decorations, as decorations can fit into more than one category at once."
+        }
+    ]
+}

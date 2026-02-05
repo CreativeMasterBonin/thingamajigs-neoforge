@@ -1,0 +1,12 @@
+{
+    "athena:loader": "athena:ctm",
+    "ctm_textures":{
+        "center": "thingamajigs:block/ctm/orange_glow_ctm/cent",
+        "empty": "thingamajigs:block/ctm/orange_glow_ctm/empt",
+        "horizontal": "thingamajigs:block/ctm/orange_glow_ctm/horz",
+        "particle": "thingamajigs:block/glow_block/orange",
+        "vertical": "thingamajigs:block/ctm/orange_glow_ctm/vert"},
+        "variants":{
+            "": {"model":"thingamajigs:block/orange_glow_block"}
+    }
+}

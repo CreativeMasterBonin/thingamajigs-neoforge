@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/butter_churner",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/butter_churner"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/butter_churner",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/butter_churner",
+      "y": 270
+    }
+  }
+}

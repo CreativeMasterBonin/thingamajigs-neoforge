@@ -1,0 +1,58 @@
+{
+	"credit": "Made with Blockbench",
+    "render_type": "cutout",
+	"textures": {
+		"0": "thingamajigs:block/extra_metal",
+		"1": "thingamajigs:block/manhole_premade",
+		"particle": "thingamajigs:block/extra_metal"
+	},
+	"elements": [
+		{
+			"from": [6, 6, 15],
+			"to": [10, 10, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 15.5]},
+			"faces": {
+				"north": {"uv": [6, 10, 10, 14], "texture": "#0"},
+				"east": {"uv": [5, 10, 6, 14], "texture": "#0"},
+				"south": {"uv": [7, 2, 11, 6], "texture": "#0"},
+				"west": {"uv": [5, 10, 6, 14], "texture": "#0"},
+				"up": {"uv": [0, 0, 4, 1], "texture": "#0"},
+				"down": {"uv": [9, 6, 13, 7], "texture": "#0"}
+			}
+		},
+		{
+			"from": [7, 9.82843, 6.82843],
+			"to": [9, 11.82843, 17.82843],
+			"rotation": {"angle": 45, "axis": "x", "origin": [8, 10.82843, 12.32843]},
+			"faces": {
+				"north": {"uv": [7, 10, 9, 12], "texture": "#0"},
+				"east": {"uv": [3, 11, 11, 13], "texture": "#0"},
+				"south": {"uv": [7, 3, 9, 5], "texture": "#0"},
+				"west": {"uv": [3, 11, 11, 13], "texture": "#0"},
+				"up": {"uv": [7, 9, 9, 16], "texture": "#0"},
+				"down": {"uv": [7, 9, 9, 16], "texture": "#0"}
+			}
+		},
+		{
+			"from": [6, 13, 6],
+			"to": [10, 14, 10],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 13.5, 8]},
+			"faces": {
+				"north": {"uv": [4, 0, 8, 1], "texture": "#0"},
+				"east": {"uv": [4, 0, 8, 1], "texture": "#0"},
+				"south": {"uv": [4, 0, 8, 1], "texture": "#0"},
+				"west": {"uv": [4, 0, 8, 1], "texture": "#0"},
+				"up": {"uv": [7, 10, 11, 14], "texture": "#0"},
+				"down": {"uv": [1, 1, 5, 5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [6, 12.9567, 5.77496],
+			"to": [10, 12.9567, 9.77496],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 12.9567, 7.77496]},
+			"faces": {
+				"down": {"uv": [1, 1, 15, 14], "texture": "#1"}
+			}
+		}
+	]
+}

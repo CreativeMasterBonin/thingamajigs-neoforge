@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/international_signs/czech_rrc",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/international_signs/czech_rrc"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/international_signs/czech_rrc",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/international_signs/czech_rrc",
+      "y": 270
+    }
+  }
+}

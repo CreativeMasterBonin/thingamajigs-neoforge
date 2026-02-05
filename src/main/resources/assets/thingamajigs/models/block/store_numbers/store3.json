@@ -1,0 +1,7 @@
+{
+  "parent": "thingamajigs:custom/store_number_3",
+  "textures": {
+    "#0": "thingamajigs:block/aios/store_numbers_sign",
+    "particle": "thingamajigs:block/aios/store_numbers_sign"
+  }
+}

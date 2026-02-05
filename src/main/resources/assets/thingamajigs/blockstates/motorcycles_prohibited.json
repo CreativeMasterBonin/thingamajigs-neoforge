@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/motorcycles_prohibited",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/motorcycles_prohibited"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/motorcycles_prohibited",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/motorcycles_prohibited",
+      "y": 270
+    }
+  }
+}

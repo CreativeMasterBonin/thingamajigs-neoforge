@@ -1,0 +1,80 @@
+{
+	"credit": "Made By CreativeMasterBonin",
+	"render_type": "cutout",
+	"textures": {
+		"0": "minecraft:block/blast_furnace_side",
+		"2": "thingamajigs:block/parts/ports",
+		"3": "thingamajigs:block/animated/clock_radio_blink",
+		"particle": "#0",
+		"time": "thingamajigs:block/clock_radio/c_0"
+	},
+	"elements": [
+		{
+			"name": "box",
+			"from": [2, 0, 6],
+			"to": [14, 6, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 3, 8]},
+			"faces": {
+				"north": {"uv": [2, 4, 14, 8], "texture": "#0"},
+				"east": {"uv": [2, 4, 6, 8], "texture": "#0"},
+				"south": {"uv": [2, 4, 14, 8], "texture": "#0"},
+				"west": {"uv": [2, 4, 6, 8], "texture": "#0"},
+				"up": {"uv": [2, 4, 14, 8], "texture": "#0"},
+				"down": {"uv": [2, 4, 14, 8], "texture": "#0", "cullface": "down"}
+			}
+		},
+		{
+			"name": "time_display",
+			"from": [3, 1, 5.95],
+			"to": [13, 5, 5.95],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 3, 5.95]},
+			"faces": {
+				"north": {"uv": [0, 0, 13.5, 6.5], "texture": "#time"}
+			}
+		},
+		{
+			"name": "port",
+			"from": [11, 1, 10.1],
+			"to": [13, 2, 10.1],
+			"rotation": {"angle": 0, "axis": "y", "origin": [12, 1.5, 10.1]},
+			"faces": {
+				"south": {"uv": [3, 6, 8.5, 9], "texture": "#2"}
+			}
+		},
+		{
+			"name": "antenna",
+			"from": [3, 4, 10],
+			"to": [13, 5, 11],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [7, 4.5, 10.5]},
+			"faces": {
+				"north": {"uv": [0, 0, 10, 1], "texture": "#0"},
+				"east": {"uv": [0, 0, 1, 1], "texture": "#0"},
+				"south": {"uv": [0, 0, 10, 1], "texture": "#0"},
+				"west": {"uv": [0, 0, 1, 1], "texture": "#0"},
+				"up": {"uv": [0, 0, 10, 1], "texture": "#0"},
+				"down": {"uv": [0, 0, 10, 1], "texture": "#0"}
+			}
+		},
+		{
+			"from": [1.55, 4, 7],
+			"to": [2.05, 5.5, 8.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [1.8, 4.75, 7.75]},
+			"faces": {
+				"north": {"uv": [0, 0, 0.5, 1.5], "texture": "#0"},
+				"south": {"uv": [0, 0, 0.5, 1.5], "texture": "#0"},
+				"west": {"uv": [0, 0, 4, 4], "texture": "#0"},
+				"up": {"uv": [0, 0, 0.5, 1.5], "texture": "#0"},
+				"down": {"uv": [0, 0, 0.5, 1.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "blinker",
+			"from": [7.8, 1.93, 5.94],
+			"to": [8.25, 4.08, 5.94],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.025, 3.005, 5.94]},
+			"faces": {
+				"north": {"uv": [13, 4, 14, 9], "texture": "#3"}
+			}
+		}
+	]
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=east":[{"model": "thingamajigs:custom/standaloneshopshelf", "y": 90}, {"model": "thingamajigs:custom/standaloneshopshelf2", "y": 90}, {"model": "thingamajigs:custom/standaloneshopshelf3"}],
+    "facing=north":[{"model": "thingamajigs:custom/standaloneshopshelf"}, {"model": "thingamajigs:custom/standaloneshopshelf2"}, {"model": "thingamajigs:custom/standaloneshopshelf3"}],
+    "facing=south":[{"model": "thingamajigs:custom/standaloneshopshelf", "y": 180}, {"model": "thingamajigs:custom/standaloneshopshelf2", "y": 180}, {"model": "thingamajigs:custom/standaloneshopshelf3"}],
+    "facing=west":[{"model": "thingamajigs:custom/standaloneshopshelf", "y": 270}, {"model": "thingamajigs:custom/standaloneshopshelf2", "y": 270}, {"model": "thingamajigs:custom/standaloneshopshelf3"}]
+  }
+}

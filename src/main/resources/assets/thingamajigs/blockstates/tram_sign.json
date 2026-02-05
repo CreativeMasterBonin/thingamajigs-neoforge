@@ -1,0 +1,49 @@
+{
+  "variants": {
+    "facing=east,type=0": {
+      "model": "thingamajigs:block/symbol_signs/tram_one",
+      "y": 90
+    },
+    "facing=north,type=0": {
+      "model": "thingamajigs:block/symbol_signs/tram_one"
+    },
+    "facing=south,type=0": {
+      "model": "thingamajigs:block/symbol_signs/tram_one",
+      "y": 180
+    },
+    "facing=west,type=0": {
+      "model": "thingamajigs:block/symbol_signs/tram_one",
+      "y": 270
+    },
+    "facing=east,type=1": {
+      "model": "thingamajigs:block/symbol_signs/tram_two",
+      "y": 90
+    },
+    "facing=north,type=1": {
+      "model": "thingamajigs:block/symbol_signs/tram_two"
+    },
+    "facing=south,type=1": {
+      "model": "thingamajigs:block/symbol_signs/tram_two",
+      "y": 180
+    },
+    "facing=west,type=1": {
+      "model": "thingamajigs:block/symbol_signs/tram_two",
+      "y": 270
+    },
+    "facing=east,type=2": {
+      "model": "thingamajigs:block/symbol_signs/tram_two",
+      "y": 90
+    },
+    "facing=north,type=2": {
+      "model": "thingamajigs:block/symbol_signs/tram_two"
+    },
+    "facing=south,type=2": {
+      "model": "thingamajigs:block/symbol_signs/tram_two",
+      "y": 180
+    },
+    "facing=west,type=2": {
+      "model": "thingamajigs:block/symbol_signs/tram_two",
+      "y": 270
+    }
+  }
+}

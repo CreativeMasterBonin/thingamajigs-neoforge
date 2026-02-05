@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:custom/blueydows_laptop",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:custom/blueydows_laptop"
+    },
+    "facing=south": {
+      "model": "thingamajigs:custom/blueydows_laptop",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:custom/blueydows_laptop",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "thingamajigs:block/pillar/mysterious_pillar",
+    "side": "thingamajigs:block/pillar/mysterious_pillar_bottom"
+  }
+}

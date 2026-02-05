@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,enabled=false": {
+      "model": "thingamajigs:custom/standing_fan_static",
+      "y": 90
+    },
+    "facing=north,enabled=false": {
+      "model": "thingamajigs:custom/standing_fan_static"
+    },
+    "facing=south,enabled=false": {
+      "model": "thingamajigs:custom/standing_fan_static",
+      "y": 180
+    },
+    "facing=west,enabled=false": {
+      "model": "thingamajigs:custom/standing_fan_static",
+      "y": 270
+    },
+    "facing=east,enabled=true": {
+      "model": "thingamajigs:custom/standing_fan_animated",
+      "y": 90
+    },
+    "facing=north,enabled=true": {
+      "model": "thingamajigs:custom/standing_fan_animated"
+    },
+    "facing=south,enabled=true": {
+      "model": "thingamajigs:custom/standing_fan_animated",
+      "y": 180
+    },
+    "facing=west,enabled=true": {
+      "model": "thingamajigs:custom/standing_fan_animated",
+      "y": 270
+    }
+  }
+}

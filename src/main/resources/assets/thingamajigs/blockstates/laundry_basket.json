@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "enabled=false": {
+      "model": "thingamajigs:block/laundry_basket"
+    },
+    "enabled=true": {
+      "model": "thingamajigs:block/full_laundry_basket"
+    }
+  }
+}

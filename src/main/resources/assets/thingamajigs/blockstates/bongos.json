@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/bongos",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/bongos"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/bongos",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/bongos",
+      "y": 270
+    }
+  }
+}

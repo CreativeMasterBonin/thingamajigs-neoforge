@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "thingamajigs:block/slabs/road/old_asphalt_slab"
+    },
+    "type=double": {
+      "model": "thingamajigs:block/old_asphalt"
+    },
+    "type=top": {
+      "model": "thingamajigs:block/slabs/road/old_asphalt_slab_top"
+    }
+  }
+}

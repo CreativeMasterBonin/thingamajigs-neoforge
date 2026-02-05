@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/microscope",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/microscope"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/microscope",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/microscope",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/heart_monitor",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/heart_monitor"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/heart_monitor",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/heart_monitor",
+      "y": 270
+    }
+  }
+}

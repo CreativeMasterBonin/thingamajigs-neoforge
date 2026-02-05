@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "thingamajigs:block/minigolf_grass",
+    "up": "thingamajigs:block/minigolf_grass_hole",
+    "north": "thingamajigs:block/minigolf_grass",
+    "south": "thingamajigs:block/minigolf_grass",
+    "east": "thingamajigs:block/minigolf_grass",
+    "west": "thingamajigs:block/minigolf_grass",
+    "particle": "thingamajigs:block/minigolf_grass"
+  }
+}

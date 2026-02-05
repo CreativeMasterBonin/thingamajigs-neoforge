@@ -1,0 +1,79 @@
+{
+  "variants": {
+    "facing=east,type=0": {
+      "model": "thingamajigs:custom/large_tv_blank",
+      "y": 90
+    },
+    "facing=north,type=0": {
+      "model": "thingamajigs:custom/large_tv_blank"
+    },
+    "facing=south,type=0": {
+      "model": "thingamajigs:custom/large_tv_blank",
+      "y": 180
+    },
+    "facing=west,type=0": {
+      "model": "thingamajigs:custom/large_tv_blank",
+      "y": 270
+    },
+    "facing=east,type=1": {
+      "model": "thingamajigs:custom/large_tv_dancers",
+      "y": 90
+    },
+    "facing=north,type=1": {
+      "model": "thingamajigs:custom/large_tv_dancers"
+    },
+    "facing=south,type=1": {
+      "model": "thingamajigs:custom/large_tv_dancers",
+      "y": 180
+    },
+    "facing=west,type=1": {
+      "model": "thingamajigs:custom/large_tv_dancers",
+      "y": 270
+    },
+    "facing=east,type=2": {
+      "model": "thingamajigs:custom/large_tv_perfecttiming",
+      "y": 90
+    },
+    "facing=north,type=2": {
+      "model": "thingamajigs:custom/large_tv_perfecttiming"
+    },
+    "facing=south,type=2": {
+      "model": "thingamajigs:custom/large_tv_perfecttiming",
+      "y": 180
+    },
+    "facing=west,type=2": {
+      "model": "thingamajigs:custom/large_tv_perfecttiming",
+      "y": 270
+    },
+    "facing=east,type=3": {
+      "model": "thingamajigs:custom/large_tv_robo",
+      "y": 90
+    },
+    "facing=north,type=3": {
+      "model": "thingamajigs:custom/large_tv_robo"
+    },
+    "facing=south,type=3": {
+      "model": "thingamajigs:custom/large_tv_robo",
+      "y": 180
+    },
+    "facing=west,type=3": {
+      "model": "thingamajigs:custom/large_tv_robo",
+      "y": 270
+    },
+    "facing=east,type=4": {
+      "model": "thingamajigs:custom/large_tv_blank",
+      "y": 90
+    },
+    "facing=north,type=4": {
+      "model": "thingamajigs:custom/large_tv_blank"
+    },
+    "facing=south,type=4": {
+      "model": "thingamajigs:custom/large_tv_blank",
+      "y": 180
+    },
+    "facing=west,type=4": {
+      "model": "thingamajigs:custom/large_tv_blank",
+      "y": 270
+    }
+  }
+}

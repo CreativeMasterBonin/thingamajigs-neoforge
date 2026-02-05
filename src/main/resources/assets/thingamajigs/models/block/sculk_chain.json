@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/chain",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "all": "thingamajigs:block/chains/sculk_chain",
+    "particle": "thingamajigs:block/chains/sculk_chain"
+  }
+}

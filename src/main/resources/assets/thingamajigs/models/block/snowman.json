@@ -1,0 +1,9 @@
+{
+  "parent": "thingamajigs:custom/snowman_full",
+  "render_type": "cutout",
+  "textures": {
+    "0": "thingamajigs:block/aios/snowman_full",
+    "1": "thingamajigs:block/aios/snowman_top_hat",
+    "particle": "minecraft:block/snow"
+  }
+}

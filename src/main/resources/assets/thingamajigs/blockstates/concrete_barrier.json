@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:custom/concrete_barrier",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:custom/concrete_barrier"
+    },
+    "facing=south": {
+      "model": "thingamajigs:custom/concrete_barrier",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:custom/concrete_barrier",
+      "y": 270
+    }
+  }
+}

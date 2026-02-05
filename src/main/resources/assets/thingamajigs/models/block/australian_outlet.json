@@ -1,0 +1,6 @@
+{
+  "parent": "thingamajigs:bases/base_outlet",
+  "textures": {
+    "front": "thingamajigs:block/electric_plugs/australian"
+  }
+}

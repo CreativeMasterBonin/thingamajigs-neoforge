@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "thingamajigs:block/rubber_wood_slab"
+    },
+    "type=double": {
+      "model": "thingamajigs:block/rubber_planks"
+    },
+    "type=top": {
+      "model": "thingamajigs:block/rubber_wood_slab_top"
+    }
+  }
+}

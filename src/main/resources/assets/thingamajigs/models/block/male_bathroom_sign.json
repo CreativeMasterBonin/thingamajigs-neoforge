@@ -1,0 +1,8 @@
+{
+  "parent": "thingamajigs:bases/bathroom_sign",
+  "textures": {
+		"0": "thingamajigs:block/parts/male_icon",
+		"1": "thingamajigs:block/extra_metal",
+		"particle": "#1"
+	}
+}

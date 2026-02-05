@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/symbol_signs/smile",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/symbol_signs/smile"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/symbol_signs/smile",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/symbol_signs/smile",
+      "y": 270
+    }
+  }
+}

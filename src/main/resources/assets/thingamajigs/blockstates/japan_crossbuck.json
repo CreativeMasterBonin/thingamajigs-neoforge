@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/japan_crossbuck",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/japan_crossbuck"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/japan_crossbuck",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/japan_crossbuck",
+      "y": 270
+    }
+  }
+}

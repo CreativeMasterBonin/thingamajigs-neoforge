@@ -1,0 +1,9 @@
+{
+  "parent": "thingamajigs:bases/sign",
+  "textures": {
+    "back": "thingamajigs:block/signs/back/back_uk_triangle",
+    "front": "thingamajigs:block/signs/uk_signs/triangle/road_work",
+    "particle": "minecraft:block/blast_furnace_side",
+    "pole": "minecraft:block/blast_furnace_side"
+  }
+}

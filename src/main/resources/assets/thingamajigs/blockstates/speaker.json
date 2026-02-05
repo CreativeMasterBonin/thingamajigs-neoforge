@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/speaker",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/speaker"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/speaker",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/speaker",
+      "y": 270
+    }
+  }
+}

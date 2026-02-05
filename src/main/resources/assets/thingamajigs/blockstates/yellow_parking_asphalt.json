@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=east,age=0": {
+      "model": "thingamajigs:block/marked_road/py",
+      "y": 90
+    },
+    "facing=north,age=0": {
+      "model": "thingamajigs:block/marked_road/py"
+    },
+    "facing=south,age=0": {
+      "model": "thingamajigs:block/marked_road/py",
+      "y": 180
+    },
+    "facing=west,age=0": {
+      "model": "thingamajigs:block/marked_road/py",
+      "y": 270
+    },
+    "facing=east,age=1": {
+      "model": "thingamajigs:block/marked_road/ok_py",
+      "y": 90
+    },
+    "facing=north,age=1": {
+      "model": "thingamajigs:block/marked_road/ok_py"
+    },
+    "facing=south,age=1": {
+      "model": "thingamajigs:block/marked_road/ok_py",
+      "y": 180
+    },
+    "facing=west,age=1": {
+      "model": "thingamajigs:block/marked_road/ok_py",
+      "y": 270
+    },
+    "facing=east,age=2": {
+      "model": "thingamajigs:block/marked_road/mediocre_py",
+      "y": 90
+    },
+    "facing=north,age=2": {
+      "model": "thingamajigs:block/marked_road/mediocre_py"
+    },
+    "facing=south,age=2": {
+      "model": "thingamajigs:block/marked_road/mediocre_py",
+      "y": 180
+    },
+    "facing=west,age=2": {
+      "model": "thingamajigs:block/marked_road/mediocre_py",
+      "y": 270
+    },
+    "facing=east,age=3": {
+      "model": "thingamajigs:block/marked_road/old_py",
+      "y": 90
+    },
+    "facing=north,age=3": {
+      "model": "thingamajigs:block/marked_road/old_py"
+    },
+    "facing=south,age=3": {
+      "model": "thingamajigs:block/marked_road/old_py",
+      "y": 180
+    },
+    "facing=west,age=3": {
+      "model": "thingamajigs:block/marked_road/old_py",
+      "y": 270
+    }
+  }
+}

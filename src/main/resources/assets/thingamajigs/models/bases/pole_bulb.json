@@ -1,0 +1,71 @@
+{
+	"credit": "Made with Blockbench",
+    "render_type": "cutout",
+	"elements": [
+		{
+			"name": "pole",
+			"from": [7, 0, 7],
+			"to": [9, 16, 9],
+			"rotation": {"angle": 0, "axis": "z", "origin": [8, 8, 8]},
+			"color": 3,
+			"faces": {
+				"north": {"uv": [5, 0, 7, 16], "texture": "#all"},
+				"east": {"uv": [9, 0, 11, 16], "texture": "#all"},
+				"south": {"uv": [3, 0, 5, 16], "texture": "#all"},
+				"west": {"uv": [11, 0, 13, 16], "texture": "#all"},
+				"up": {"uv": [7, 7, 9, 9], "texture": "#all"},
+				"down": {"uv": [7, 7, 9, 9], "texture": "#all"}
+			}
+		},
+		{
+			"name": "connector",
+			"from": [7, 15, -1],
+			"to": [9, 16, 7],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 15.5, 3]},
+			"color": 3,
+			"faces": {
+				"north": {"uv": [0, 0, 2, 1], "texture": "#all"},
+				"east": {"uv": [0, 0, 8, 1], "texture": "#all"},
+				"south": {"uv": [0, 0, 2, 1], "texture": "#all"},
+				"west": {"uv": [0, 0, 8, 1], "texture": "#all"},
+				"up": {"uv": [0, 0, 2, 8], "texture": "#all"},
+				"down": {"uv": [0, 0, 2, 8], "texture": "#all"}
+			}
+		},
+		{
+			"name": "bulb",
+			"from": [6, 13, -6],
+			"to": [10, 15, 0],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 14, -3]},
+			"color": 1,
+			"faces": {
+				"north": {"uv": [0, 0, 4, 2], "texture": "#all"},
+				"east": {"uv": [0, 0, 6, 2], "texture": "#all"},
+				"south": {"uv": [0, 0, 4, 2], "texture": "#all"},
+				"west": {"uv": [0, 0, 6, 2], "texture": "#all"},
+				"up": {"uv": [0, 0, 4, 6], "texture": "#all"},
+				"down": {"uv": [6, 5, 10, 11], "texture": "#light"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "pole",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0]
+		},
+		{
+			"name": "pole_connector",
+			"origin": [8, 15.5, 3],
+			"color": 0,
+			"children": [1]
+		},
+		{
+			"name": "light_bulb",
+			"origin": [8, 14, -3],
+			"color": 0,
+			"children": [2]
+		}
+	]
+}

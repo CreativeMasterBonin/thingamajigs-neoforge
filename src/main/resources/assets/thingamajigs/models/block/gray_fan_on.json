@@ -1,0 +1,7 @@
+{
+  "parent": "thingamajigs:custom/standing_fan_animated",
+  "render_type": "cutout",
+  "textures": {
+    "0": "minecraft:block/gray_concrete"
+  }
+}

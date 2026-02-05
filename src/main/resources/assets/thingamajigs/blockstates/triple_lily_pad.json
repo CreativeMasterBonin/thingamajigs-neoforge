@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "thingamajigs:block/waterlily/triple_lily_pad"
+      },
+      {
+        "model": "thingamajigs:block/waterlily/triple_lily_pad",
+        "y": 90
+      },
+      {
+        "model": "thingamajigs:block/waterlily/triple_lily_pad",
+        "y": 180
+      },
+      {
+        "model": "thingamajigs:block/waterlily/triple_lily_pad",
+        "y": 270
+      }
+    ]
+  }
+}

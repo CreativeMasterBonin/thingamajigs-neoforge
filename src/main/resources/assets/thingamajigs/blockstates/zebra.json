@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/zebra",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/zebra"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/zebra",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/zebra",
+      "y": 270
+    }
+  }
+}

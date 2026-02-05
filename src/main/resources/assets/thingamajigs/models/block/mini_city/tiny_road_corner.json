@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/rail_curved",
+  "textures": {
+    "rail": "thingamajigs:block/mini_city/tiny_road_curve"
+  }
+}

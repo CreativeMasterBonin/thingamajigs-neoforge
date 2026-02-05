@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/dirt_culvert",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/dirt_culvert"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/dirt_culvert",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/dirt_culvert",
+      "y": 270
+    }
+  }
+}

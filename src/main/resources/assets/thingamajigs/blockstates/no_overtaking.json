@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/no_overtaking",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/no_overtaking"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/no_overtaking",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/no_overtaking",
+      "y": 270
+    }
+  }
+}

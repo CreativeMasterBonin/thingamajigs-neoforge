@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/fan_block_fast",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/fan_block_fast"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/fan_block_fast",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/fan_block_fast",
+      "y": 270
+    }
+  }
+}

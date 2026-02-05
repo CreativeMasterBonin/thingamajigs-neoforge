@@ -1,0 +1,19 @@
+{
+    "name": "entry.thingamajigs.addonintro",
+    "icon": "minecraft:book",
+    "category": "thingamajigs:addons",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Mod addons are mods that add content or change content in other mods! Thingamajigs has some in the Neo-version."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Two addons exist. Thingamajigs 2 Goodies, and Thingamajigs 2 Railroadways. Both require Thingamajigs as a base mod to function properly."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Previously, all content was in Thingamajigs, but to reduce clutter and unwanted features, some features have been split from the main mod into their own separate addons."
+        }
+    ]
+}

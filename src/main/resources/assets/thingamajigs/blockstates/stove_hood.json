@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:custom/stove_hood",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:custom/stove_hood"
+    },
+    "facing=south": {
+      "model": "thingamajigs:custom/stove_hood",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:custom/stove_hood",
+      "y": 270
+    }
+  }
+}

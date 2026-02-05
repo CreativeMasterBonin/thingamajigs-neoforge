@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "thingamajigs:block/vertical_redstone_pole"
+    },
+    "powered=true": {
+      "model": "thingamajigs:block/vertical_redstone_pole_powered"
+    }
+  }
+}

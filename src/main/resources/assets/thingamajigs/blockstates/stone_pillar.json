@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "type=0": {
+      "model": "thingamajigs:block/pillar/stone_bottom"
+    },
+    "type=1": {
+      "model": "thingamajigs:block/pillar/stone_middle"
+    },
+    "type=2": {
+      "model": "thingamajigs:block/pillar/stone_top"
+    },
+    "type=3": {
+      "model": "thingamajigs:block/pillar/stone_standing"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/wall_clear_bulb",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/wall_clear_bulb"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/wall_clear_bulb",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/wall_clear_bulb",
+      "y": 270
+    }
+  }
+}

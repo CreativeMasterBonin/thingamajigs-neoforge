@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=east":[{"model": "thingamajigs:custom/full_store_shelf", "y": 90}, {"model": "thingamajigs:custom/full_store_shelf_alt", "y": 90}],
+    "facing=north":[{"model": "thingamajigs:custom/full_store_shelf"}, {"model": "thingamajigs:custom/full_store_shelf_alt"}],
+    "facing=south":[{"model": "thingamajigs:custom/full_store_shelf", "y": 180}, {"model": "thingamajigs:custom/full_store_shelf_alt", "y": 180}],
+    "facing=west":[{"model": "thingamajigs:custom/full_store_shelf", "y": 270}, {"model": "thingamajigs:custom/full_store_shelf_alt", "y": 270}]
+  }
+}

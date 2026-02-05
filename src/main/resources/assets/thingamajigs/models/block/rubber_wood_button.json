@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "thingamajigs:block/rubber_planks"
+  }
+}

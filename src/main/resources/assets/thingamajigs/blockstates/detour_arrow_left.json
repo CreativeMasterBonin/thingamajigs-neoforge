@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/symbol_signs/detour_arrow_left",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/symbol_signs/detour_arrow_left"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/symbol_signs/detour_arrow_left",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/symbol_signs/detour_arrow_left",
+      "y": 270
+    }
+  }
+}

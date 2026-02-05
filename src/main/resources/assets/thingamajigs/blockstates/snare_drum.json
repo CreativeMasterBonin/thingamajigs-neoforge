@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/snare_drum",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/snare_drum"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/snare_drum",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/snare_drum",
+      "y": 270
+    }
+  }
+}

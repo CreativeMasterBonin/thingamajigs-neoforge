@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "":[
+        {"model":  "thingamajigs:block/scary_bookshelf"},
+        {"model":  "thingamajigs:block/random/scary_bookshelf2"},
+        {"model":  "thingamajigs:block/random/scary_bookshelf3"},
+        {"model":  "thingamajigs:block/random/scary_bookshelf4"}
+    ]
+  }
+}

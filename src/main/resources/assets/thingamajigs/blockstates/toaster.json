@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,powered=false": {
+      "model": "thingamajigs:custom/toaster",
+      "y": 90
+    },
+    "facing=north,powered=false": {
+      "model": "thingamajigs:custom/toaster"
+    },
+    "facing=south,powered=false": {
+      "model": "thingamajigs:custom/toaster",
+      "y": 180
+    },
+    "facing=west,powered=false": {
+      "model": "thingamajigs:custom/toaster",
+      "y": 270
+    },
+    "facing=east,powered=true": {
+      "model": "thingamajigs:custom/toaster_toasting",
+      "y": 90
+    },
+    "facing=north,powered=true": {
+      "model": "thingamajigs:custom/toaster_toasting"
+    },
+    "facing=south,powered=true": {
+      "model": "thingamajigs:custom/toaster_toasting",
+      "y": 180
+    },
+    "facing=west,powered=true": {
+      "model": "thingamajigs:custom/toaster_toasting",
+      "y": 270
+    }
+  }
+}

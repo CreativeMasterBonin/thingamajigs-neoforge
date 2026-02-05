@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/hazards/hard_hats_required",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/hazards/hard_hats_required"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/hazards/hard_hats_required",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/hazards/hard_hats_required",
+      "y": 270
+    }
+  }
+}

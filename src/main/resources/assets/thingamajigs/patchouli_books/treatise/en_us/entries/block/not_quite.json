@@ -1,0 +1,15 @@
+{
+    "name": "entry.thingamajigs.not_quite",
+    "icon": "thingamajigs:not_quite",
+    "category": "thingamajigs:block",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "This block wanted to be self similar, but it's math failed, so the block is 'just' short of a perfect menger sponge."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "We believe it's existence is purely for storing Thingamajigs themselves, so as to prevent their strangeness from becoming overwhelmingly colorfully curiously dangerous."
+        }
+    ]
+}

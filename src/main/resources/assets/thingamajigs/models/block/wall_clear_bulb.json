@@ -1,0 +1,8 @@
+{
+  "parent": "thingamajigs:bases/wall_torch",
+  "textures": {
+    "0": "thingamajigs:block/torches/clear_bulb",
+    "missing": "thingamajigs:block/torches/clear_bulb",
+    "particle": "thingamajigs:block/torches/clear_bulb"
+  }
+}

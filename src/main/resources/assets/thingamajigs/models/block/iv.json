@@ -1,0 +1,7 @@
+{
+  "parent": "thingamajigs:custom/iv_machine",
+  "render_type": "cutout",
+  "textures": {
+    "particle": "minecraft:block/white_concrete"
+  }
+}

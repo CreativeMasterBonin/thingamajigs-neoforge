@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "thingamajigs:block/pumpkins/gray_jack_o_lantern",
+    "side": "thingamajigs:block/pumpkins/gray_pumpkin_side",
+    "top": "thingamajigs:block/pumpkins/gray_pumpkin_top"
+  }
+}

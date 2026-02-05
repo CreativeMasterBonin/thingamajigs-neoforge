@@ -1,0 +1,44 @@
+{
+	"credit": "Made with Blockbench",
+	"render_type": "cutout",
+	"elements": [
+		{
+			"name": "tabletop",
+			"from": [0, 14, 0],
+			"to": [16, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 15, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 2], "texture": "#tabletop"},
+				"east": {"uv": [0, 0, 16, 2], "texture": "#tabletop"},
+				"south": {"uv": [0, 0, 16, 2], "texture": "#tabletop"},
+				"west": {"uv": [0, 0, 16, 2], "texture": "#tabletop"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#tabletop"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#tabletop"}
+			}
+		},
+		{
+			"name": "leg",
+			"from": [0, 0, 0],
+			"to": [2, 14, 2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [1, 7, 1]},
+			"faces": {
+				"north": {"uv": [0, 0, 2, 14], "texture": "#leg"},
+				"east": {"uv": [0, 0, 2, 14], "texture": "#leg"},
+				"south": {"uv": [0, 0, 2, 14], "texture": "#leg"},
+				"west": {"uv": [0, 0, 2, 14], "texture": "#leg"},
+				"up": {"uv": [0, 0, 2, 2], "texture": "#leg"},
+				"down": {"uv": [0, 0, 2, 2], "texture": "#leg"}
+			}
+		}
+	],
+	"groups": [
+		0,
+		{
+			"name": "legs",
+			"origin": [15, 7, 15],
+			"color": 0,
+			"nbt": "{}",
+			"children": [1]
+		}
+	]
+}

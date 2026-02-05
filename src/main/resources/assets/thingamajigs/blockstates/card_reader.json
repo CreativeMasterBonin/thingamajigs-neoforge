@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/card_reader",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/card_reader"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/card_reader",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/card_reader",
+      "y": 270
+    }
+  }
+}
