@@ -98,6 +98,10 @@ public class TSoundEvent{
     public static final Supplier<SoundEvent> SQUEAK = SOUND_EVENTS.register("squeak",
             () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID, "squeak")));
 
+    public static final Supplier<SoundEvent> PLASTIC_SHUFFLING = SOUND_EVENTS.register("plastic_shuffling",
+            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID, "plastic_shuffling")));
+
+
     // phone calls
     public static final Supplier<SoundEvent> PHONE_BIRDS_PERHAPS = SOUND_EVENTS.register("birds_perhaps",
             () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,"birds_perhaps")));
@@ -107,6 +111,8 @@ public class TSoundEvent{
             () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,"not_a_number")));
     public static final Supplier<SoundEvent> PHONE_SONG_MAYBE = SOUND_EVENTS.register("song_maybe",
             () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,"song_maybe")));
+
+
 
     // instruments for blocks
     public static final Supplier<SoundEvent> KICK_DRUM = SOUND_EVENTS.register("kick",

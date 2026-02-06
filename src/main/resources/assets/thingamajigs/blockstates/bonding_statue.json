@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,ruined=false": {
+      "model": "thingamajigs:block/statue/bonding_statue",
+      "y": 90
+    },
+    "facing=north,ruined=false": {
+      "model": "thingamajigs:block/statue/bonding_statue"
+    },
+    "facing=south,ruined=false": {
+      "model": "thingamajigs:block/statue/bonding_statue",
+      "y": 180
+    },
+    "facing=west,ruined=false": {
+      "model": "thingamajigs:block/statue/bonding_statue",
+      "y": 270
+    },
+    "facing=east,ruined=true": {
+      "model": "thingamajigs:block/statue/bonding_statue_bad",
+      "y": 90
+    },
+    "facing=north,ruined=true": {
+      "model": "thingamajigs:block/statue/bonding_statue_bad"
+    },
+    "facing=south,ruined=true": {
+      "model": "thingamajigs:block/statue/bonding_statue_bad",
+      "y": 180
+    },
+    "facing=west,ruined=true": {
+      "model": "thingamajigs:block/statue/bonding_statue_bad",
+      "y": 270
+    }
+  }
+}

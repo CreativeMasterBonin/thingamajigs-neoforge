@@ -6,6 +6,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffects;
@@ -28,6 +29,7 @@ import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.phys.HitResult;
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -45,6 +47,7 @@ import net.rk.thingamajigs.xtras.TWeatheringCopperOther;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.function.ToIntFunction;
 import java.util.stream.Stream;
@@ -2452,7 +2455,7 @@ public class TBlocks {
                 }
             });
 
-    public static final DeferredBlock<Block> CURVED_MONITOR = register("curved_monitor",
+    public static final DeferredBlock<Block> CURVED_MONITOR = registerBlockWithoutItem("curved_monitor",
             () -> new CurvedMonitor(BlockBehaviour.Properties.of().lightLevel(s -> 7)));
 
     // 1.7.7
@@ -2506,13 +2509,13 @@ public class TBlocks {
                 }
             });
 
-    public static final DeferredBlock<Block> CLEVER_BLACKBOARD = register("clever_blackboard",
+    public static final DeferredBlock<Block> CLEVER_BLACKBOARD = registerBlockWithoutItem("clever_blackboard",
             () -> new CleverBlackboard(BlockBehaviour.Properties.of()));
 
-    public static final DeferredBlock<Block> UMBRELLA = register("umbrella",
+    public static final DeferredBlock<Block> UMBRELLA = registerBlockWithoutItem("umbrella",
             () -> new UmbrellaBlock(BlockBehaviour.Properties.of()));
 
-    public static final DeferredBlock<Block> THEATER_PROJECTOR = register("theater_projector",
+    public static final DeferredBlock<Block> THEATER_PROJECTOR = registerBlockWithoutItem("theater_projector",
             () -> new TheaterProjector(BlockBehaviour.Properties.of()));
 
     public static final DeferredBlock<Block> SUPERMARKET_CONVEYOR = register("supermarket_conveyor",
@@ -3009,6 +3012,186 @@ public class TBlocks {
                 }
             });
 
+    // 1.8.0-1.8.4
+    public static final DeferredBlock<Block> ANIMATED_ICE_RINK = registerBlockWithoutItem("animated_ice_rink",
+            () -> new AnimatedIceRink(BlockBehaviour.Properties.of().lightLevel(enabledLitBlockEmission(5))));
+
+    public static final DeferredBlock<Block> NEWSPAPER_DISPENSER = register("newspaper_dispenser",
+            () -> new NewspaperDispenser(BlockBehaviour.Properties.of()));
+
+    public static final DeferredBlock<Block> RESTAURANT_TRASH_CAN = register("restaurant_trash_can",
+            () -> new NewspaperDispenser(BlockBehaviour.Properties.of()){
+                @Override
+                protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+                    switch(state.getValue(FACING)){
+                        case NORTH -> {
+                            return NewspaperDispenser.NORTH_TRASH_SHAPE;
+                        }
+                        case EAST -> {
+                            return NewspaperDispenser.EAST_TRASH_SHAPE;
+                        }
+                        case SOUTH -> {
+                            return NewspaperDispenser.SOUTH_TRASH_SHAPE;
+                        }
+                        case WEST -> {
+                            return NewspaperDispenser.WEST_TRASH_SHAPE;
+                        }
+                        default -> {
+                            return Shapes.block();
+                        }
+                    }
+                }
+            });
+
+    public static final DeferredBlock<Block> SPECIAL_STATUE = register("special_statue",
+            () -> new Podium(BlockBehaviour.Properties.of().sound(SoundType.METAL).mapColor(MapColor.TERRACOTTA_WHITE)){
+                @Override
+                public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                    tooltipComponents.add(Component.translatable("statue.thingamajigs.author.blueman")
+                            .withStyle(ChatFormatting.GREEN));
+                }
+            });
+
+    public static final DeferredBlock<Block> SNOW_MACHINE = register("snow_machine",
+            () -> new SnowMachine(BlockBehaviour.Properties.of()));
+
+    public static final DeferredBlock<Block> BALL_PIT = register("ball_pit",
+            () -> new BallPit(BlockBehaviour.Properties.of()));
+
+    public static final DeferredBlock<Block> BONDING_STATUE = register("bonding_statue",
+            () -> new BondingStatue(BlockBehaviour.Properties.of()));
+
+    public static final DeferredBlock<Block> CATCHING_STATUE = register("catching_statue",
+            () -> new Podium(BlockBehaviour.Properties.of().sound(SoundType.METAL).mapColor(MapColor.EMERALD).requiresCorrectToolForDrops()){
+                @Override
+                public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                    tooltipComponents.add(Component.translatable("statue.thingamajigs.author.blueman")
+                            .withStyle(ChatFormatting.GREEN));
+                }
+            });
+
+    public static final DeferredBlock<Block> STRANGE_STATUE = registerBlockWithoutItem("strange_statue",
+            () -> new Podium(BlockBehaviour.Properties.of().sound(SoundType.NETHERITE_BLOCK).mapColor(MapColor.COLOR_GRAY).requiresCorrectToolForDrops()){
+                @Override
+                public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                    tooltipComponents.add(Component.translatable("statue.thingamajigs.author.cmb")
+                            .withStyle(ChatFormatting.BLUE));
+                }
+            });
+
+    public static final DeferredBlock<Block> ANIMATED_DEER = registerBlockWithoutItem("animated_deer",
+            () -> new AnimatedDeer(BlockBehaviour.Properties.of().lightLevel(enabledLitBlockEmission(7))));
+
+    public static final DeferredBlock<Block> VALIANT_STATUE = registerBlockWithoutItem("valiant_statue",
+            () -> new Podium(BlockBehaviour.Properties.of().sound(SoundType.AMETHYST).mapColor(MapColor.COLOR_PURPLE).requiresCorrectToolForDrops()){
+                @Override
+                public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                    tooltipComponents.add(Component.translatable("statue.thingamajigs.author.blueman")
+                            .withStyle(ChatFormatting.GREEN));
+                }
+
+                @Override
+                public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
+                    return ALL_SHORT;
+                }
+            });
+    public static final DeferredBlock<Block> ROUND_BUSH = register("round_bush",
+            () -> new BushLikeBlock(BlockBehaviour.Properties.of().sound(SoundType.SWEET_BERRY_BUSH)){
+                @Override
+                protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+                    Vec3 stateOffset = state.getOffset(level,pos);
+                    return SAPLING_ALL.move(stateOffset.x,stateOffset.y,stateOffset.z);
+                }
+            });
+    public static final DeferredBlock<Block> BULBLET = register("bulblet",
+            () -> new BushLikeBlock(BlockBehaviour.Properties.of().sound(SoundType.GRASS)){
+                @Override
+                protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+                    Vec3 stateOffset = state.getOffset(level,pos);
+                    return FLOWER_ALL.move(stateOffset.x,stateOffset.y,stateOffset.z);
+                }
+            });
+    public static final DeferredBlock<Block> WISPY_WEED = register("wispy_weed",
+            () -> new BushLikeBlock(BlockBehaviour.Properties.of().sound(SoundType.AZALEA_LEAVES)){
+                @Override
+                protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+                    Vec3 stateOffset = state.getOffset(level,pos);
+                    return FLOWER_ALL.move(stateOffset.x,stateOffset.y,stateOffset.z);
+                }
+            });
+
+    public static final DeferredBlock<Block> FOOD_COOLER = register("food_cooler",
+            () -> new OpenableContainerBlock(BlockBehaviour.Properties.of().sound(SoundType.CALCITE)
+                    .strength(1f,15f).noOcclusion().mapColor(MapColor.TERRACOTTA_LIGHT_BLUE)){
+                public static final VoxelShape NORTHSOUTH = Stream.of(
+                        Block.box(14, 6, 6, 15, 7, 10),
+                        Block.box(2, 0, 3, 14, 10, 13),
+                        Block.box(1, 6, 6, 2, 7, 10)
+                ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+                public static final VoxelShape EASTWEST = Stream.of(
+                        Block.box(6, 6, 14, 10, 7, 15),
+                        Block.box(3, 0, 2, 13, 10, 14),
+                        Block.box(6, 6, 1, 10, 7, 2)
+                ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+                @Override
+                public void playCustomSound(Level lvl, BlockPos bp) {
+                    lvl.playSound(null,bp,SoundEvents.CALCITE_FALL, SoundSource.BLOCKS,1.0f,1.0f);
+                }
+
+                @Override
+                public VoxelShape getShape(BlockState bs, BlockGetter bg, BlockPos bp, CollisionContext cc) {
+                    switch(bs.getValue(FACING)){
+                        case NORTH,SOUTH -> {
+                            return NORTHSOUTH;
+                        }
+                        default -> {
+                            return EASTWEST;
+                        }
+                    }
+                }
+            });
+
+    public static final DeferredBlock<Block> FOOTBALL_GOAL = registerBlockWithoutItem("football_goal",
+            () -> new FootballGoal(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).noOcclusion()){
+                public static VoxelShape makeShape(){
+                    VoxelShape shape = Shapes.empty();
+                    shape = Shapes.join(shape, Shapes.box(0.375, 0, 0.375, 0.625, 3, 0.625), BooleanOp.OR);
+                    shape = Shapes.join(shape, Shapes.box(-1.5, 3, 0.375, 2.5, 3.125, 0.625), BooleanOp.OR);
+                    shape = Shapes.join(shape, Shapes.box(-1.5, 3.125, 0.375, -1.375, 6.125, 0.625), BooleanOp.OR);
+                    shape = Shapes.join(shape, Shapes.box(2.375, 3.125, 0.375, 2.5, 6.125, 0.625), BooleanOp.OR);
+                    return shape;
+                }
+
+                public static VoxelShape makeAltShape(){
+                    VoxelShape shape = Shapes.empty();
+                    shape = Shapes.join(shape, Shapes.box(0.375, 3.125, -1.5, 0.625, 6.125, -1.375), BooleanOp.OR);
+                    shape = Shapes.join(shape, Shapes.box(0.375, 0, 0.375, 0.625, 3.125, 0.625), BooleanOp.OR);
+                    shape = Shapes.join(shape, Shapes.box(0.375, 3, -1.5, 0.625, 3.125, 2.5), BooleanOp.OR);
+                    shape = Shapes.join(shape, Shapes.box(0.375, 3.125, 2.375, 0.625, 6.125, 2.5), BooleanOp.OR);
+                    return shape;
+                }
+
+                public static final VoxelShape NORTHSOUTH = makeShape();
+                public static final VoxelShape EASTWEST = makeAltShape();
+
+
+                @Override
+                public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+                    switch(state.getValue(FACING)){
+                        case NORTH,SOUTH -> {
+                            return NORTHSOUTH;
+                        }
+                        case EAST,WEST -> {
+                            return EASTWEST;
+                        }
+                        default -> {
+                            return Shapes.block();
+                        }
+                    }
+                }
+            });
+
 
 
 
@@ -3016,12 +3199,6 @@ public class TBlocks {
     // test features
     public static final DeferredBlock<Block> FAKE_FLUID_PUMP = register("fake_fluid_pump",
             () -> new FakeFluidPump(BlockBehaviour.Properties.of()));
-
-
-
-
-
-
 
     private static DeferredBlock<Block> register(String name, Supplier<Block> block) {
         DeferredBlock<Block> blk = BLOCKS.register(name,block);

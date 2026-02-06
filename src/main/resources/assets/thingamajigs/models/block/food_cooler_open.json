@@ -1,0 +1,61 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made By CreativeMasterBonin",
+	"textures": {
+		"0": "minecraft:block/calcite",
+		"1": "minecraft:block/blue_glazed_terracotta",
+		"particle": "#1"
+	},
+	"elements": [
+		{
+			"from": [2, 0, 3],
+			"to": [14, 8, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 4, 8]},
+			"faces": {
+				"north": {"uv": [1, 4, 2, 5], "texture": "#1"},
+				"east": {"uv": [3, 4, 4, 5], "texture": "#1"},
+				"south": {"uv": [3, 4, 4, 5], "texture": "#1"},
+				"west": {"uv": [3, 4, 4, 5], "texture": "#1"},
+				"up": {"uv": [6, 2, 7, 3], "texture": "#1"},
+				"down": {"uv": [5, 4, 6, 5], "texture": "#1", "cullface": "down"}
+			}
+		},
+		{
+			"from": [2.01, 7.6194, 10.08658],
+			"to": [14.01, 17.6194, 12.08658],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, 12.6194, 11.08658]},
+			"faces": {
+				"north": {"uv": [2, 0, 14, 10], "texture": "#0"},
+				"east": {"uv": [6, 3, 16, 5], "rotation": 270, "texture": "#0"},
+				"south": {"uv": [4, 0, 16, 10], "texture": "#0"},
+				"west": {"uv": [6, 3, 16, 5], "rotation": 90, "texture": "#0"},
+				"up": {"uv": [4, 4, 16, 6], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [4, 3, 16, 5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [1, 6, 6],
+			"to": [2, 7, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [1.5, 6.5, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 1, 1], "texture": "#0"},
+				"south": {"uv": [0, 0, 1, 1], "texture": "#0"},
+				"west": {"uv": [0, 0, 4, 1], "texture": "#0"},
+				"up": {"uv": [0, 0, 1, 4], "texture": "#0"},
+				"down": {"uv": [0, 0, 1, 4], "texture": "#0"}
+			}
+		},
+		{
+			"from": [14, 6, 6],
+			"to": [15, 7, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [14.5, 6.5, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 1, 1], "texture": "#0"},
+				"east": {"uv": [0, 0, 4, 1], "texture": "#0"},
+				"south": {"uv": [0, 0, 1, 1], "texture": "#0"},
+				"up": {"uv": [0, 0, 1, 4], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [0, 0, 1, 4], "rotation": 180, "texture": "#0"}
+			}
+		}
+	]
+}

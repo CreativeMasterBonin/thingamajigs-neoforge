@@ -4,6 +4,7 @@ import com.jcraft.jorbis.Block;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -290,6 +291,7 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.LOCKABLE_DOOR.get())
                 .add(TBlocks.DARK_CRYSTAL_BLOCK.get())
                 .add(TBlocks.REINFORCED_GLASS.get())
+                .add(TBlocks.STRANGE_STATUE.get())
         ;
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(TBlocks.MYSTERIOUS_PILLAR.get())
@@ -306,9 +308,13 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.TECHNO_PILLAR.get())
                 .add(TBlocks.CHISELED_TECHNO_BLOCK.get())
                 .add(TBlocks.SWIRLY_TECHNO_BLOCK.get())
+                .add(TBlocks.BONDING_STATUE.get())
         ;
 
         tag(BlockTags.NEEDS_STONE_TOOL)
+                .add(TBlocks.VALIANT_STATUE.get())
+                .add(TBlocks.CATCHING_STATUE.get())
+                .add(TBlocks.SPECIAL_STATUE.get())
                 .add(TBlocks.BARBER_CHAIR.get())
                 .add(TBlocks.WALL_TV.get())
                 .add(TBlocks.BARBER_POLE.get())
@@ -434,10 +440,16 @@ public class TBlockTag extends BlockTagsProvider {
 
         tag(BlockTags.REPLACEABLE_BY_TREES)
                 .add(TBlocks.BRAMBLE.get())
+                .add(TBlocks.ROUND_BUSH.get())
+                .add(TBlocks.BULBLET.get())
+                .add(TBlocks.WISPY_WEED.get())
         ;
 
         tag(BlockTags.REPLACEABLE)
                 .add(TBlocks.BRAMBLE.get())
+                .add(TBlocks.ROUND_BUSH.get())
+                .add(TBlocks.BULBLET.get())
+                .add(TBlocks.WISPY_WEED.get())
         ;
 
         tag(BlockTags.SOUL_FIRE_BASE_BLOCKS)
@@ -468,6 +480,9 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.OLD_TEAL_WOOL.get())
                 .add(TBlocks.MYSTERIOUS_ONE_WOOL.get())
                 .add(TBlocks.BRAMBLE.get())
+                .add(TBlocks.ROUND_BUSH.get())
+                .add(TBlocks.BULBLET.get())
+                .add(TBlocks.WISPY_WEED.get())
         ;
 
         tag(BlockTags.WALL_POST_OVERRIDE)
@@ -540,6 +555,8 @@ public class TBlockTag extends BlockTagsProvider {
 
         // tool type mineables
         this.tag(BlockTags.MINEABLE_WITH_AXE)
+                .add(TBlocks.NEWSPAPER_DISPENSER.get())
+                .add(TBlocks.RESTAURANT_TRASH_CAN.get())
                 .add(TBlocks.BLANK_BOOKSHELF.get())
                 .add(TBlocks.ABANDONED_BOOKSHELF.get())
                 .add(TBlocks.BONE_BOOKSHELF.get())
@@ -609,6 +626,9 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.DROOPY_FLOWER.get())
                 .add(TBlocks.RUBBER_LEAVES.get())
                 .add(TBlocks.RUBBER_SAPLING.get())
+                .add(TBlocks.ROUND_BUSH.get())
+                .add(TBlocks.BULBLET.get())
+                .add(TBlocks.WISPY_WEED.get())
                 .replace(false)
         ;
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
@@ -982,6 +1002,26 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.WAXED_WEATHERED_COPPER_TABLE.get())
                 .add(TBlocks.WAXED_OXIDIZED_COPPER_TABLE.get())
                 .add(TBlocks.IRON_TABLE.get())
+                .add(TBlocks.ANIMATED_ICE_RINK.get())
+                .add(TBlocks.NEWSPAPER_DISPENSER.get())
+                .add(TBlocks.RESTAURANT_TRASH_CAN.get())
+                .add(TBlocks.SPECIAL_STATUE.get())
+                .add(TBlocks.STRANGE_STATUE.get())
+                .add(TBlocks.BONDING_STATUE.get())
+                .add(TBlocks.CATCHING_STATUE.get())
+                .add(TBlocks.SNOW_MACHINE.get())
+                .add(TBlocks.BALL_PIT.get())
+                .add(TBlocks.ANIMATED_DEER.get())
+                .add(TBlocks.VALIANT_STATUE.get())
+                .add(TBlocks.FOOD_COOLER.get())
+                .add(TBlocks.FOOTBALL_GOAL.get())
+                .replace(false)
+        ;
+
+        tag(TTag.SUPPORTS_BUSH_LIKE)
+                .addTag(BlockTags.BAMBOO_PLANTABLE_ON)
+                .addTag(BlockTags.DIRT)
+                .add(Blocks.MYCELIUM)
                 .replace(false)
         ;
     }

@@ -54,13 +54,20 @@ public class ItemDisplayBE extends BlockEntity implements RandomizableContainer,
         }
     }
 
+    @Override
+    public void handleUpdateTag(CompoundTag tag, HolderLookup.Provider lookupProvider) {
+        this.loadAdditional(tag,lookupProvider);
+    }
+
     public ClientboundBlockEntityDataPacket getUpdatePacket() {
         return ClientboundBlockEntityDataPacket.create(this);
     }
 
     @Override
     public CompoundTag getUpdateTag(HolderLookup.Provider hlprov) {
-        return this.saveCustomOnly(hlprov);
+        CompoundTag tag = new CompoundTag();
+        this.saveAdditional(tag,hlprov);
+        return tag;
     }
 
     public void setFromItem(ItemStack is) {

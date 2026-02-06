@@ -341,5 +341,27 @@ public class TItems {
             () -> new PlaceOnWaterBlockItem(TBlocks.FLOWERING_LILY_PAD.get(),new Item.Properties()));
     public static final DeferredItem<Item> TRIPLE_LILY_PAD_ITEM = ITEMS.register("triple_lily_pad_item",
             () -> new PlaceOnWaterBlockItem(TBlocks.TRIPLE_LILY_PAD.get(),new Item.Properties()));
+
+
+    // 1.8.0-1.8.4
+    public static final DeferredItem<Item> ANIMATED_ICE_RINK = ITEMS.register("animated_ice_rink",
+            () -> new BlockItem(TBlocks.ANIMATED_ICE_RINK.get(),new Item.Properties()));
+    public static final DeferredItem<Item> STRANGE_STATUE = ITEMS.register("strange_statue",
+            () -> new BlockItem(TBlocks.STRANGE_STATUE.get(),new Item.Properties().fireResistant()));
+    public static final DeferredItem<Item> ANIMATED_DEER = ITEMS.register("animated_deer",
+            () -> new BlockItem(TBlocks.ANIMATED_DEER.get(),new Item.Properties()));
+    public static final DeferredItem<Item> VALIANT_STATUE = ITEMS.register("valiant_statue",
+            () -> new BlockItem(TBlocks.VALIANT_STATUE.get(),new Item.Properties().fireResistant()));
+    public static final DeferredItem<Item> FOOTBALL_GOAL = ITEMS.register("football_goal",
+            () -> new BlockItem(TBlocks.FOOTBALL_GOAL.get(),new Item.Properties()));
+
+    public static final DeferredItem<Item> UMBRELLA = ITEMS.register("umbrella",
+            () -> new BlockItem(TBlocks.UMBRELLA.get(),new Item.Properties()));
+    public static final DeferredItem<Item> CURVED_MONITOR = ITEMS.register("curved_monitor",
+            () -> new BlockItem(TBlocks.CURVED_MONITOR.get(),new Item.Properties()));
+    public static final DeferredItem<Item> THEATER_PROJECTOR = ITEMS.register("theater_projector",
+            () -> new BlockItem(TBlocks.THEATER_PROJECTOR.get(),new Item.Properties()));
+    public static final DeferredItem<Item> CLEVER_BLACKBOARD = ITEMS.register("clever_blackboard",
+            () -> new BlockItem(TBlocks.CLEVER_BLACKBOARD.get(),new Item.Properties()));
 }
 

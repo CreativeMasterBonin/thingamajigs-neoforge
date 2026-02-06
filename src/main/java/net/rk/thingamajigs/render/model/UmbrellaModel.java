@@ -47,7 +47,7 @@ public class UmbrellaModel extends Model {
     public static final ModelLayerLocation BLACK = new ModelLayerLocation(
             ResourceLocation.parse("thingamajigs:textures/entity/black_umbrella.png"), "main");
 
-    private final ModelPart main;
+    public final ModelPart main;
     private final ModelPart pole;
     private final ModelPart top;
 

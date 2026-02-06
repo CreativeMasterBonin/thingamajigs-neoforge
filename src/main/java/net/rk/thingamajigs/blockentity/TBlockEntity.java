@@ -58,6 +58,28 @@ public class TBlockEntity {
                             TBlocks.TRIPLE_SHELF.get(),TBlocks.TOY_BOX.get()
                     ).build(null));
 
+    public static final Supplier<BlockEntityType<AnimatedIceRinkBE>> ANIMATED_ICE_RINK = BLOCK_ENTITIES.register(
+            "animated_ice_rink_be",() -> BlockEntityType.Builder.of(AnimatedIceRinkBE::new,TBlocks.ANIMATED_ICE_RINK.get())
+                    .build(null)
+    );
+
+    public static final Supplier<BlockEntityType<AnimatedDeerBE>> ANIMATED_DEER_BE = BLOCK_ENTITIES.register(
+            "animated_deer_be",() -> BlockEntityType.Builder.of(AnimatedDeerBE::new,TBlocks.ANIMATED_DEER.get())
+            .build(null)
+    );
+
+    public static final Supplier<BlockEntityType<FootballGoalBE>> FOOTBALL_GOAL = BLOCK_ENTITIES.register(
+            "football_goal",() -> BlockEntityType.Builder.of(FootballGoalBE::new,TBlocks.FOOTBALL_GOAL.get())
+                    .build(null)
+    );
+
+    // general purpose block entities (add blocks here so they are supported when needed)
+    public static final Supplier<BlockEntityType<OpenableContainer>> OPENABLE_CONTAINER = BLOCK_ENTITIES.register(
+            "openable_container_be",() -> BlockEntityType.Builder.of(OpenableContainer::new,
+                            TBlocks.FOOD_COOLER.get()//,TBlocks.CARDBOARD_BOX.get()
+                    )
+                    .build(null));
+
 
     public static void register(IEventBus eventBus){
         BLOCK_ENTITIES.register(eventBus);

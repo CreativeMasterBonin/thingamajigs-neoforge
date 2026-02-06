@@ -16,6 +16,15 @@ public class TParticles {
     public static final Supplier<SimpleParticleType> CHIMNEY_SMOKE =
             PARTICLE_TYPES.register("chimney_smoke", () -> new SimpleParticleType(false));
 
+    public static final Supplier<SimpleParticleType> ICY_AIR =
+            PARTICLE_TYPES.register("icy_air", () -> new SimpleParticleType(false));
+
+    public static final Supplier<SimpleParticleType> PLASTIC_BALL =
+            PARTICLE_TYPES.register("plastic_ball", () -> new SimpleParticleType(false));
+
+    public static final Supplier<SimpleParticleType> SOAP =
+            PARTICLE_TYPES.register("soap", () -> new SimpleParticleType(false));
+
     public static void register(IEventBus bus){
         PARTICLE_TYPES.register(bus);
     }

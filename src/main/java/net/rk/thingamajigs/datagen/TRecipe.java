@@ -4381,7 +4381,127 @@ public class TRecipe extends RecipeProvider {
                 .unlockedBy("has_thing",InventoryChangeTrigger.TriggerInstance.hasItems(
                         TItems.SPORTS_COMPONENT.get()))
                 .save(rc);
-        // end
+        // 1.8.0-1.8.4
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS,
+                TItems.ANIMATED_ICE_RINK.get(),1)
+                .requires(TItems.MISC_COMPONENT.get())
+                .requires(Items.PACKED_ICE)
+                .requires(Items.POWDER_SNOW_BUCKET)
+                .requires(Items.TORCH)
+                .requires(Items.IRON_INGOT)
+                .unlockedBy("has_thing",InventoryChangeTrigger.TriggerInstance.hasItems(
+                        TItems.MISC_COMPONENT.get()))
+                .save(rc);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS,
+                TBlocks.NEWSPAPER_DISPENSER.get(),1)
+                .requires(TItems.MISC_COMPONENT.get())
+                .requires(Items.BARREL)
+                .requires(ItemTags.PLANKS)
+                .requires(Items.IRON_INGOT)
+                .requires(Items.PAPER)
+                .requires(Items.PAPER)
+                .unlockedBy("has_thing",InventoryChangeTrigger.TriggerInstance.hasItems(
+                        TItems.MISC_COMPONENT.get()))
+                .save(rc);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS,
+                TBlocks.RESTAURANT_TRASH_CAN.get(),1)
+                .requires(TBlocks.TRASH_CAN.asItem())
+                .requires(Items.BARREL)
+                .requires(ItemTags.PLANKS)
+                .requires(Items.IRON_INGOT)
+                .unlockedBy("has_thing",InventoryChangeTrigger.TriggerInstance.hasItems(
+                        TBlocks.TRASH_CAN.asItem()))
+                .save(rc);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.SPECIAL_STATUE.asItem(),1)
+                .requires(Items.IRON_INGOT)
+                .requires(Items.WHITE_CONCRETE)
+                .requires(Items.ARMOR_STAND)
+                .requires(TItems.MISC_COMPONENT)
+                .unlockedBy("has_thingy",has(TItems.MISC_COMPONENT))
+                .save(rc);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.SNOW_MACHINE.asItem(),1)
+                .requires(TBlocks.SCREEN.asItem())
+                .requires(TBlocks.FAN_BLOCK.asItem())
+                .requires(Items.SNOWBALL)
+                .requires(Items.SNOWBALL)
+                .requires(Items.IRON_INGOT)
+                .requires(TItems.MISC_COMPONENT)
+                .unlockedBy("has_thingy",has(TItems.MISC_COMPONENT))
+                .save(rc);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.BALL_PIT.asItem(),3)
+                .requires(Tags.Items.DYES)
+                .requires(Items.CLAY_BALL)
+                .requires(Items.IRON_INGOT)
+                .requires(Items.BAMBOO_BLOCK)
+                .requires(TItems.ARCADE_COMPONENT)
+                .unlockedBy("has_thingy",has(TItems.ARCADE_COMPONENT))
+                .save(rc);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.BONDING_STATUE.asItem(),1)
+                .requires(Items.DIAMOND)
+                .requires(Items.WHITE_CONCRETE)
+                .requires(Items.PINK_CONCRETE)
+                .requires(Items.MAGENTA_CONCRETE)
+                .requires(Items.ARMOR_STAND)
+                .requires(TItems.MISC_COMPONENT)
+                .unlockedBy("has_thingy",has(TItems.MISC_COMPONENT))
+                .save(rc);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.CATCHING_STATUE.asItem(),1)
+                .requires(Items.EMERALD)
+                .requires(Items.PINK_CONCRETE)
+                .requires(Items.RED_CONCRETE)
+                .requires(Items.ORANGE_TERRACOTTA)
+                .requires(Items.ENDER_EYE)
+                .requires(Items.ARMOR_STAND)
+                .requires(TItems.MISC_COMPONENT)
+                .unlockedBy("has_thingy",has(TItems.MISC_COMPONENT))
+                .save(rc);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TItems.STRANGE_STATUE.asItem(),1)
+                .requires(Items.NETHERITE_INGOT)
+                .requires(Items.IRON_BARS)
+                .requires(Items.OAK_PLANKS)
+                .requires(Items.ENDER_EYE)
+                .requires(Items.ARMOR_STAND)
+                .requires(TItems.MISC_COMPONENT)
+                .unlockedBy("has_thingy",has(TItems.MISC_COMPONENT))
+                .save(rc);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TItems.ANIMATED_DEER.asItem(),1)
+                .requires(Items.PISTON)
+                .requires(TBlocks.LIGHTED_DEER.asItem())
+                .requires(TItems.CHRISTMAS_COMPONENT)
+                .requires(Items.WHITE_DYE)
+                .unlockedBy("has_thingy",has(TItems.CHRISTMAS_COMPONENT))
+                .save(rc);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TItems.VALIANT_STATUE.asItem(),1)
+                .requires(Items.AMETHYST_BLOCK)
+                .requires(Items.PURPLE_TERRACOTTA)
+                .requires(Items.DRAGON_BREATH)
+                .requires(Items.ARMOR_STAND)
+                .requires(TItems.MISC_COMPONENT)
+                .unlockedBy("has_thingy",has(TItems.MISC_COMPONENT))
+                .save(rc);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.FOOD_COOLER.get().asItem(),2)
+                .requires(Items.ICE)
+                .requires(TItems.RUBBER.get())
+                .requires(Items.LIGHT_BLUE_TERRACOTTA)
+                .requires(Items.WHITE_CONCRETE)
+                .requires(TItems.HOME_COMPONENT.get())
+                .unlockedBy("has_thingy",has(TItems.HOME_COMPONENT.get()))
+                .save(rc);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS,TBlocks.FOOTBALL_GOAL.get(),1)
+                .define('y',Items.YELLOW_CONCRETE)
+                .define('c',TItems.SPORTS_COMPONENT.get())
+                .pattern("y y")
+                .pattern("ycy")
+                .pattern(" y ")
+                .unlockedBy("has_thing",InventoryChangeTrigger.TriggerInstance.hasItems(TItems.SPORTS_COMPONENT.get()))
+                .save(rc);
     }
 
     public static RecipeBuilder stonecutterAny(Item requiredItem, Ingredient inputItem, Item result, int amt){

@@ -539,5 +539,15 @@
         "stream": false
       }
     ]
+  },
+  "plastic_shuffling": {
+    "category": "block",
+    "subtitle": "thingamajigs.subtitle.plastic_shuffling",
+    "sounds": [
+      {
+        "name": "thingamajigs:block/plastic_shuffling",
+        "stream": false
+      }
+    ]
   }
 }

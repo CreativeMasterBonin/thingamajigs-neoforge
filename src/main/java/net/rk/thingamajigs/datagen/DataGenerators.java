@@ -29,7 +29,7 @@ public class DataGenerators{
         generator.addProvider(event.includeServer(), new LootTableProvider(packOutput, Collections.emptySet(),
                 List.of(new LootTableProvider.SubProviderEntry(TLoot::new,LootContextParamSets.BLOCK)),lookupProvider));
 
-        //TODO stuff coming up soon for other providers
+
         event.getGenerator().addProvider(event.includeServer(), new TBlockStateProvider(packOutput,event.getExistingFileHelper()));
 
         event.getGenerator().addProvider(event.includeClient(), new TBlockModelProvider(packOutput, event.getExistingFileHelper()));
@@ -46,6 +46,7 @@ public class DataGenerators{
         generator.addProvider(event.includeServer(),new TRecipe(packOutput,lookupProvider));
 
         Logger.getAnonymousLogger().info("Thingamajigs Datagen is running worldgen bootstaps.");
+        generator.addProvider(event.includeServer(), new TBiomeTag(packOutput,lookupProvider,event.getExistingFileHelper()));
         event.getGenerator().addProvider(event.includeServer(),new TWorldGen(packOutput,lookupProvider));
     }
 }

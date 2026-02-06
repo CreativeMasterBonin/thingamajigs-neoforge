@@ -24,6 +24,12 @@ public class Podium extends ThingamajigsDecorativeBlock{
             Block.box(3, 12, 3, 13, 14, 13)
     ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
+    public static final VoxelShape ALL_SHORT = Stream.of(
+            Block.box(3, 0, 3, 13, 2, 13),
+            Block.box(4, 2, 4, 12, 8, 12),
+            Block.box(3, 8, 3, 13, 10, 13)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
     public Podium(Properties properties) {
         super(properties);
         this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, Boolean.FALSE));

@@ -14,6 +14,8 @@ import net.rk.thingamajigs.block.TBlocks;
 
 public class TPlacedFeature{
     public static final ResourceKey<PlacedFeature> RUBBER_PLACED_KEY = registerKey("rubber_placed");
+    public static final ResourceKey<PlacedFeature> WISPY_WEEDS_KEY = registerKey("wispy_weeds_patch");
+    public static final ResourceKey<PlacedFeature> BULBLET_PATCH_KEY = registerKey("bulblets_patch");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> cf = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -21,6 +23,12 @@ public class TPlacedFeature{
         context.register(RUBBER_PLACED_KEY, new PlacedFeature(cf.getOrThrow(TConfiguredFeature.RUBBER_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.5f, 1),
                         TBlocks.RUBBER_SAPLING.get())));
+
+        context.register(WISPY_WEEDS_KEY, new PlacedFeature(cf.getOrThrow(TConfiguredFeature.WISPY_WEEDS_FEATURE),
+                VegetationPlacements.worldSurfaceSquaredWithCount(2)));
+
+        context.register(BULBLET_PATCH_KEY, new PlacedFeature(cf.getOrThrow(TConfiguredFeature.BULBLETS_PATCH_FEATURE),
+                VegetationPlacements.worldSurfaceSquaredWithCount(1)));
     }
 
     public static ResourceKey<PlacedFeature> registerKey(String name) {

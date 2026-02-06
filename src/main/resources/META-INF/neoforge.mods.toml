@@ -6,7 +6,7 @@ modLoader="javafml"
 # A version range to match for said mod loader - for regular FML @Mod it will be the the FML version. This is currently 47.
 loaderVersion="${loader_version_range}"
 
-# Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
+# mod license
 license="${mod_license}"
 
 # A URL to refer people to when problems occur with this mod

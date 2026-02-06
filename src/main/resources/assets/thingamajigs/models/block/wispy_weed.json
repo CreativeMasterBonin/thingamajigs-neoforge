@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/tinted_cross",
+  "textures": {
+    "cross": "thingamajigs:block/plants/wispy_weed"
+  }
+}

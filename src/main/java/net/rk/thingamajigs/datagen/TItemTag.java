@@ -4,6 +4,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.rk.thingamajigs.Thingamajigs;
@@ -94,6 +95,28 @@ public class TItemTag extends ItemTagsProvider{
                 .add(TBlocks.WAXED_EXPOSED_COPPER_TABLE.get().asItem())
                 .add(TBlocks.WAXED_WEATHERED_COPPER_TABLE.get().asItem())
                 .add(TBlocks.WAXED_OXIDIZED_COPPER_TABLE.get().asItem())
+                .replace(false)
+        ;
+
+        this.tag(TTag.MYSTERIOUS_ITEMS)
+                .add(Items.DRAGON_BREATH)
+                .add(Items.NETHER_STAR)
+                .add(TItems.THINGAMAJIG.asItem())
+                .add(TItems.THINGAMAJIG_GLOB.asItem())
+                .add(Items.PINK_CANDLE)
+                .add(Items.WHITE_CANDLE)
+                .add(Items.PINK_GLAZED_TERRACOTTA)
+                .add(Items.WHITE_GLAZED_TERRACOTTA)
+                .replace(false)
+        ;
+
+        this.tag(TTag.PROTECTS_STATUES)
+                .add(Items.ENDER_PEARL)
+                .add(Items.ENDER_EYE)
+                .add(Items.HONEY_BLOCK)
+                .add(Items.HONEYCOMB)
+                .add(Items.HONEY_BOTTLE)
+                .add(Items.HONEYCOMB_BLOCK)
                 .replace(false)
         ;
     }

@@ -4,6 +4,7 @@ import net.minecraft.advancements.critereon.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.packs.VanillaBlockLoot;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -14,12 +15,11 @@ import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.SlabType;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
-import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.entries.*;
+import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
+import net.minecraft.world.level.storage.loot.functions.EnchantRandomlyFunction;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
-import net.minecraft.world.level.storage.loot.predicates.BonusLevelTableCondition;
-import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
-import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
-import net.minecraft.world.level.storage.loot.predicates.MatchTool;
+import net.minecraft.world.level.storage.loot.predicates.*;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -1174,9 +1174,31 @@ public class TLoot extends VanillaBlockLoot {
         this.dropSelf(TBlocks.MYSTERIOUS_PILLAR.get());
         this.dropSelf(TBlocks.GOAL.get());
 
+        // 1.8.0-1.8.4
+        this.dropSelf(TBlocks.ANIMATED_ICE_RINK.get());
+        this.dropSelf(TBlocks.NEWSPAPER_DISPENSER.get());
+        this.dropSelf(TBlocks.RESTAURANT_TRASH_CAN.get());
+        this.dropSelf(TBlocks.SPECIAL_STATUE.get());
+        this.dropSelf(TBlocks.SNOW_MACHINE.get());
+        this.dropSelf(TBlocks.BALL_PIT.get());
+        this.dropSelf(TBlocks.BONDING_STATUE.get());
+        this.dropSelf(TBlocks.CATCHING_STATUE.get());
+        this.dropSelf(TBlocks.STRANGE_STATUE.get());
+        this.dropSelf(TBlocks.ANIMATED_DEER.get());
+        this.dropSelf(TBlocks.VALIANT_STATUE.get());
+
+        this.add(TBlocks.ROUND_BUSH.get(), (supplier) ->
+                createGenericRandomSeedDrops(TBlocks.ROUND_BUSH.get()));
+        this.add(TBlocks.BULBLET.get(), (supplier) ->
+                createGenericRandomSeedDrops(TBlocks.BULBLET.get()));
+        this.add(TBlocks.WISPY_WEED.get(), (supplier) ->
+                createGenericRandomSeedDrops(TBlocks.WISPY_WEED.get()));
+
+        this.dropSelf(TBlocks.FOOD_COOLER.get());
+        this.dropSelf(TBlocks.FOOTBALL_GOAL.get());
+
 
         this.add(TBlocks.FAKE_FLUID_PUMP.get(),noDrop());
-
         // torches
         this.dropOther(TBlocks.WALL_CLEAR_BULB.get(), TItems.CLEAR_BULB_ITEM);
         this.dropOther(TBlocks.GROUND_CLEAR_BULB.get(), TItems.CLEAR_BULB_ITEM);
@@ -1214,6 +1236,9 @@ public class TLoot extends VanillaBlockLoot {
         return knownBlocks;
     }
 
+    public LootItemCondition.Builder hasShearsOrSilkTouch() {
+        return HAS_SHEARS.or(this.hasSilkTouch());
+    }
 
     protected LootItemCondition.Builder hasSilkTouch() {
         HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
@@ -1239,5 +1264,22 @@ public class TLoot extends VanillaBlockLoot {
                                 .when(BonusLevelTableCondition.bonusLevelFlatChance(
                                         rl.getOrThrow(Enchantments.FORTUNE), 0.002F,
                                         0.0055555557F, 0.00625F, 0.008333334F, 0.025F))));
+    }
+
+    public LootTable.Builder createGenericRandomSeedDrops(Block block) {
+        //HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+        return this.applyExplosionDecay(block.asItem(),
+                LootTable.lootTable()
+                        .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
+                                .add(LootItem.lootTableItem(block).when(this.hasShearsOrSilkTouch()).otherwise(
+                                        NestedLootTable.inlineLootTable(LootTable.lootTable()
+                                                .withPool(
+                                                        LootPool.lootPool()
+                                                                .setRolls(ConstantValue.exactly(1.0f))
+                                                                .add(LootItem.lootTableItem(Items.WHEAT_SEEDS).setWeight(10))
+                                                                .add(LootItem.lootTableItem(Items.BEETROOT_SEEDS).setWeight(2))
+                                                ).build()).when(this.hasShearsOrSilkTouch().invert()
+                                )))
+        ));
     }
 }

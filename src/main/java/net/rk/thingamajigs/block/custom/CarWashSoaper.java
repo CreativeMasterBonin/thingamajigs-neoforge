@@ -16,6 +16,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
+import net.rk.thingamajigs.xtras.TParticles;
 
 @SuppressWarnings("deprecated")
 public class CarWashSoaper extends RedstoneLampBlock{
@@ -37,7 +38,7 @@ public class CarWashSoaper extends RedstoneLampBlock{
             boolean random_boolean = pRandom.nextBoolean();
             if (is_lit){
                 if (random_boolean){
-                    pLevel.addParticle(ParticleTypes.POOF, d0, d1, d2, 0.0D, -0.3D, 0.0D);
+                    pLevel.addParticle(TParticles.SOAP.get(), d0, d1, d2, 0.0D, -0.3D, 0.0D);
                 }
                 else{
                     pLevel.addParticle(ParticleTypes.CLOUD, d0, d1, d2, 0.0D, -0.4D, 0.0D);
