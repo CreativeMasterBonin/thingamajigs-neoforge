@@ -45,6 +45,7 @@ import net.rk.thingamajigs.xtras.TSoundEvent;
 import net.rk.thingamajigs.xtras.TSoundType;
 import net.rk.thingamajigs.xtras.TWeatheringCopperOther;
 
+import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
@@ -3192,6 +3193,275 @@ public class TBlocks {
                 }
             });
 
+    public static final DeferredBlock<Block> SPHERES_AND_RINGS_MACHINE = register("throw_sphere_into_ring_machine",
+            () -> new ThrowSphereIntoRingMachine(BlockBehaviour.Properties.of().friction(0.8F)
+                    .strength(2f,10f).noOcclusion().sound(SoundType.LANTERN)));
+
+    public static final DeferredBlock<Block> ROUND_CLOTHES_RACK = register("round_clothes_rack",
+            () -> new RoundClothesRack(BlockBehaviour.Properties.of()));
+
+    public static final DeferredBlock<Block> PLUNGER = register("plunger",
+            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of()){
+                public static final VoxelShape ALL = Stream.of(
+                        Block.box(7, 5, 7, 9, 21, 9),
+                        Block.box(5, 3, 5, 11, 5, 11),
+                        Block.box(6, 5, 6, 10, 6, 10),
+                        Block.box(4, 2, 4, 12, 3, 12),
+                        Block.box(3, 0, 3, 12, 2, 4),
+                        Block.box(4, 0, 12, 13, 2, 13),
+                        Block.box(3, 0, 4, 4, 2, 13),
+                        Block.box(12, 0, 3, 13, 2, 12)
+                ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+                @Override
+                public VoxelShape getShape(BlockState state, BlockGetter getter, BlockPos pos, CollisionContext context) {
+                    return ALL;
+                }
+            });
+
+    public static final DeferredBlock<Block> PIZZA = register("pizza",
+            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of()){
+                public static final VoxelShape PIZZA_ALL = Stream.of(
+                        Block.box(2, 0, 2, 14, 1, 14),
+                        Block.box(2, 0, 1, 14, 1, 2),
+                        Block.box(2, 0, 14, 14, 1, 15),
+                        Block.box(1, 0, 2, 2, 1, 14),
+                        Block.box(14, 0, 2, 15, 1, 14)
+                ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+                @Override
+                public VoxelShape getShape(BlockState state, BlockGetter getter, BlockPos pos, CollisionContext context) {
+                    return PIZZA_ALL;
+                }
+
+                @Override
+                public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
+                    list.add(Component.translatable("block.thingamajigs.pizza.desc").withStyle(ChatFormatting.GRAY));
+                }
+            });
+
+    public static final DeferredBlock<Block> CAR_WHEEL = register("car_wheel",
+            () -> new CarWheel(BlockBehaviour.Properties.of()));
+
+    public static final DeferredBlock<Block> POOL_TABLE = register("pool_table",
+            () -> new PoolTable(BlockBehaviour.Properties.of()
+                    .sound(SoundType.WOOD).strength(1f,5f).noOcclusion()));
+    public static final DeferredBlock<Block> METAL_POOL_TABLE = register("metal_pool_table",
+            () -> new PoolTable(BlockBehaviour.Properties.of()
+                    .sound(SoundType.METAL).strength(1.25f,10f).noOcclusion()));
+
+    public static final DeferredBlock<Block> TOWEL_STACK = register("towel_stack",
+            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.WOOL)
+                    .strength(1f,2f).mapColor(MapColor.WOOL)){
+                public static final VoxelShape NORTHSOUTH = Stream.of(
+                        Block.box(0, 0, 2, 16, 4, 6),
+                        Block.box(0, 0, 6, 16, 4, 10),
+                        Block.box(0, 0, 10, 16, 4, 14),
+                        Block.box(0, 4, 8, 16, 8, 12),
+                        Block.box(0, 4, 4, 16, 8, 8),
+                        Block.box(0, 8, 6, 16, 12, 10)
+                ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+                public static final VoxelShape EASTWEST = Stream.of(
+                        Block.box(10, 0, 0, 14, 4, 16),
+                        Block.box(6, 0, 0, 10, 4, 16),
+                        Block.box(2, 0, 0, 6, 4, 16),
+                        Block.box(4, 4, 0, 8, 8, 16),
+                        Block.box(8, 4, 0, 12, 8, 16),
+                        Block.box(6, 8, 0, 10, 12, 16)
+                ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+                @Override
+                public VoxelShape getShape(BlockState blockState, BlockGetter getter, BlockPos blockPos, CollisionContext context) {
+                    switch(blockState.getValue(FACING)){
+                        case NORTH,SOUTH -> {
+                            return NORTHSOUTH;
+                        }
+                        case EAST,WEST -> {
+                            return EASTWEST;
+                        }
+                        default -> {
+                            return Shapes.block();
+                        }
+                    }
+                }
+            });
+
+    public static final DeferredBlock<Block> RARE_BLUE_GRAY_GAME_CONSOLE = register("rare_blue_gray_game_console",
+            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLUE)
+                    .noOcclusion().strength(1f,10f)){
+                public static final VoxelShape NORTHSOUTH = Block.box(2, 0, 4, 14, 2, 12);
+                public static final VoxelShape EASTWEST = Block.box(4, 0, 2, 12, 2, 14);
+                @Override
+                public VoxelShape getShape(BlockState bs, BlockGetter bg, BlockPos bp, CollisionContext cc) {
+                    switch(bs.getValue(FACING)){
+                        case NORTH,SOUTH -> {
+                            return NORTHSOUTH;
+                        }
+                        case EAST,WEST -> {
+                            return EASTWEST;
+                        }
+                        default -> {
+                            return Shapes.block();
+                        }
+                    }
+                }
+            });
+
+    public static final DeferredBlock<Block> GOLDME_CONSOLE = register("goldme_console",
+            () -> new BluemanConsole(BlockBehaviour.Properties.of().sound(SoundType.METAL).mapColor(MapColor.GOLD)));
+
+    public static final DeferredBlock<Block> FUNDEVICE_GAME_CONSOLE = register("fundevice_game_console",
+            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL).mapColor(MapColor.METAL)){
+                public static final VoxelShape NORTHSOUTH =
+                        Block.box(3, 0, 2, 13, 2, 14);
+                public static final VoxelShape EASTWEST = Block.box(2, 0, 3, 14, 2, 13);
+                @Override
+                public VoxelShape getShape(BlockState blockState, BlockGetter getter, BlockPos blockPos, CollisionContext context) {
+                    switch(blockState.getValue(FACING)){
+                        case NORTH,SOUTH -> {
+                            return NORTHSOUTH;
+                        }
+                        case EAST,WEST -> {
+                            return EASTWEST;
+                        }
+                        default -> {
+                            return Shapes.block();
+                        }
+                    }
+                }
+
+                @Override
+                public void appendHoverText(ItemStack p_49816_, Item.TooltipContext p_339606_, List<Component> list, TooltipFlag p_49819_) {
+                    list.add(Component.translatable("block.thingamajigs.fundevice_game_console.desc").withStyle(ChatFormatting.GRAY));
+                }
+            });
+
+    public static final DeferredBlock<Block> CARDBOARD_BOX = register("cardboard_box",
+            () -> new OpenableContainerBlock(BlockBehaviour.Properties.of().sound(SoundType.BAMBOO_WOOD)){
+
+                @Override
+                public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
+                    list.add(Component.translatable("block.thingamajigs.cardboard_box.desc")
+                            .withStyle(ChatFormatting.GRAY));
+                }
+
+                @Override
+                public void playCustomSound(Level lvl, BlockPos bp) {
+                    lvl.playSound(null,bp,SoundEvents.BAMBOO_WOOD_TRAPDOOR_OPEN,SoundSource.BLOCKS,1.0f,1.0f);
+                }
+            });
+    public static final DeferredBlock<Block> FURIOUS_STATUE = register("furious_statue",
+            () -> new Podium(BlockBehaviour.Properties.of()
+                    .sound(SoundType.METAL).mapColor(MapColor.FIRE).requiresCorrectToolForDrops()
+                    .strength(5.0f,6.0f)
+                    .isRedstoneConductor(TBlocks::never)){
+                @Override
+                public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {list.add(Component.translatable("statue.thingamajigs.author.cmb").withStyle(ChatFormatting.BLUE));}
+                @Override
+                public boolean isSignalSource(BlockState state) {
+                    return true;
+                }
+                @Override
+                public int getSignal(BlockState state, BlockGetter getter, BlockPos pos, Direction dir) {
+                    return 15;
+                }
+            });
+    public static final DeferredBlock<Block> SORROW_STATUE = register("sorrow_statue",
+            () -> new Podium(BlockBehaviour.Properties.of()
+                    .sound(SoundType.STONE).mapColor(MapColor.LAPIS).requiresCorrectToolForDrops()
+                    .strength(3.0f)){
+                @Override
+                public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {list.add(Component.translatable("statue.thingamajigs.author.cmb").withStyle(ChatFormatting.BLUE));}
+            });
+    public static final DeferredBlock<Block> SOCCER_BALL = register("soccer_ball",
+            () -> new DecorativeSportBall(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK)));
+    public static final DeferredBlock<Block> BASKETBALL = register("basketball",
+            () -> new DecorativeSportBall(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE)));
+    public static final DeferredBlock<Block> TENNIS_BALL = register("tennis_ball",
+            () -> new TennisBall(BlockBehaviour.Properties.of()));
+    public static final DeferredBlock<Block> TENNIS_NET = register("tennis_net",
+            () -> new TennisNet(BlockBehaviour.Properties.of()));
+    public static final DeferredBlock<Block> TENNIS_RACKET = register("tennis_racket",
+            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of()
+                    .sound(SoundType.CANDLE).instabreak()){
+                @Override
+                public VoxelShape getShape(BlockState state, BlockGetter getter, BlockPos pos, CollisionContext context) {
+                    return Block.box(0,0,0,16,1,16);
+                }
+            });
+    public static final DeferredBlock<Block> PHONE_CROSSBAR = register("phone_crossbar",
+            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of()){
+                public static final VoxelShape NORTH = Block.box(0, 0, 0, 16, 16, 10);
+                public static final VoxelShape EAST = Block.box(6, 0, 0, 16, 16, 16);
+                public static final VoxelShape SOUTH = Block.box(0, 0, 6, 16, 16, 16);
+                public static final VoxelShape WEST = Block.box(0, 0, 0, 10, 16, 16);
+
+                @Override
+                public VoxelShape getShape(BlockState state, BlockGetter getter, BlockPos pos, CollisionContext context) {
+                    switch(state.getValue(FACING)){
+                        case NORTH: {
+                            return NORTH;
+                        }
+                        case SOUTH: {
+                            return SOUTH;
+                        }
+                        case EAST: {
+                            return EAST;
+                        }
+                        case WEST: {
+                            return WEST;
+                        }
+                        default: {
+                            return Shapes.block();
+                        }
+                    }
+                }
+            });
+    public static final DeferredBlock<Block> STAINLESS_WASHER = register("stainless_washer",
+            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of()
+                    .sound(SoundType.METAL)));
+    public static final DeferredBlock<Block> WEIGHT_SCALE = register("weight_scale",
+            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of()
+                    .sound(SoundType.METAL)){
+                public static final VoxelShape ALL = Block.box(
+                        0.0D, 0.0D, 0.0D,
+                        16.0D, 2.0D, 16.0D);
+                @Override
+                public VoxelShape getShape(BlockState state, BlockGetter getter, BlockPos pos, CollisionContext context) {
+                    return ALL;
+                }
+            });
+    public static final DeferredBlock<Block> PHONE_GROUP_SELECTOR = register("phone_group_selector",
+            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL)){
+                public static final VoxelShape NORTH = Block.box(0, 0, 0, 16, 16, 10);
+                public static final VoxelShape EAST = Block.box(6, 0, 0, 16, 16, 16);
+                public static final VoxelShape SOUTH = Block.box(0, 0, 6, 16, 16, 16);
+                public static final VoxelShape WEST = Block.box(0, 0, 0, 10, 16, 16);
+
+                @Override
+                public VoxelShape getShape(BlockState state, BlockGetter getter, BlockPos pos, CollisionContext context) {
+                    switch(state.getValue(FACING)){
+                        case NORTH: {
+                            return NORTH;
+                        }
+                        case SOUTH: {
+                            return SOUTH;
+                        }
+                        case EAST: {
+                            return EAST;
+                        }
+                        case WEST: {
+                            return WEST;
+                        }
+                        default: {
+                            return Shapes.block();
+                        }
+                    }
+                }
+            });
+    public static final DeferredBlock<Block> PHONE_AXIS_SWITCH = register("phone_axis_switch",
+            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL)));
+    public static final DeferredBlock<Block> PHONE_AXIS_SWITCH_RELAY = register("phone_axis_switch_relay",
+            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL)));
 
 
 
@@ -3263,19 +3533,4 @@ public class TBlocks {
         }
         return entt == EntityType.PLAYER;
     }
-
-    /*
-    private static ToIntFunction<BlockState> rrCrossingLightsEmission(int i) {
-        return (properties) -> {
-            return properties.getValue(RailroadCrossingLights.POWERED) ? i : 0;
-        };
-    }
-
-    private static ToIntFunction<BlockState> rrCrossingCantileverLightEmission(int i) {
-        return (properties) -> {
-            return properties.getValue(RailroadCrossingCantilever.POWERED) ? i : 0;
-        };
-    }
-
-     */
 }

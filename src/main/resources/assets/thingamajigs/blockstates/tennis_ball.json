@@ -1,0 +1,67 @@
+{
+  "variants": {
+    "amount=1,facing=east": {
+      "model": "thingamajigs:block/tennis_ball/single_tennis_ball",
+      "y": 90
+    },
+    "amount=1,facing=north": {
+      "model": "thingamajigs:block/tennis_ball/single_tennis_ball"
+    },
+    "amount=1,facing=south": {
+      "model": "thingamajigs:block/tennis_ball/single_tennis_ball",
+      "y": 180
+    },
+    "amount=1,facing=west": {
+      "model": "thingamajigs:block/tennis_ball/single_tennis_ball",
+      "y": 270
+    },
+
+    "amount=2,facing=east": {
+      "model": "thingamajigs:block/tennis_ball/double_tennis_ball",
+      "y": 90
+    },
+    "amount=2,facing=north": {
+      "model": "thingamajigs:block/tennis_ball/double_tennis_ball"
+    },
+    "amount=2,facing=south": {
+      "model": "thingamajigs:block/tennis_ball/double_tennis_ball",
+      "y": 180
+    },
+    "amount=2,facing=west": {
+      "model": "thingamajigs:block/tennis_ball/double_tennis_ball",
+      "y": 270
+    },
+
+    "amount=3,facing=east": {
+      "model": "thingamajigs:block/tennis_ball/triple_tennis_ball",
+      "y": 90
+    },
+    "amount=3,facing=north": {
+      "model": "thingamajigs:block/tennis_ball/triple_tennis_ball"
+    },
+    "amount=3,facing=south": {
+      "model": "thingamajigs:block/tennis_ball/triple_tennis_ball",
+      "y": 180
+    },
+    "amount=3,facing=west": {
+      "model": "thingamajigs:block/tennis_ball/triple_tennis_ball",
+      "y": 270
+    },
+
+    "amount=4,facing=east": {
+      "model": "thingamajigs:block/tennis_ball/quadruple_tennis_ball",
+      "y": 90
+    },
+    "amount=4,facing=north": {
+      "model": "thingamajigs:block/tennis_ball/quadruple_tennis_ball"
+    },
+    "amount=4,facing=south": {
+      "model": "thingamajigs:block/tennis_ball/quadruple_tennis_ball",
+      "y": 180
+    },
+    "amount=4,facing=west": {
+      "model": "thingamajigs:block/tennis_ball/quadruple_tennis_ball",
+      "y": 270
+    }
+  }
+}

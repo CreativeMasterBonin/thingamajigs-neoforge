@@ -27,6 +27,7 @@ import net.rk.thingamajigs.block.TBlocks;
 import net.rk.thingamajigs.block.custom.CheeseBlock;
 import net.rk.thingamajigs.block.custom.GlowingCheeseBlock;
 import net.rk.thingamajigs.block.custom.LockableDoor;
+import net.rk.thingamajigs.block.custom.ThrowSphereIntoRingMachine;
 import net.rk.thingamajigs.item.TItems;
 
 import java.util.ArrayList;
@@ -1174,7 +1175,7 @@ public class TLoot extends VanillaBlockLoot {
         this.dropSelf(TBlocks.MYSTERIOUS_PILLAR.get());
         this.dropSelf(TBlocks.GOAL.get());
 
-        // 1.8.0-1.8.4
+        // 1.8.0-1.8.3
         this.dropSelf(TBlocks.ANIMATED_ICE_RINK.get());
         this.dropSelf(TBlocks.NEWSPAPER_DISPENSER.get());
         this.dropSelf(TBlocks.RESTAURANT_TRASH_CAN.get());
@@ -1186,16 +1187,41 @@ public class TLoot extends VanillaBlockLoot {
         this.dropSelf(TBlocks.STRANGE_STATUE.get());
         this.dropSelf(TBlocks.ANIMATED_DEER.get());
         this.dropSelf(TBlocks.VALIANT_STATUE.get());
-
         this.add(TBlocks.ROUND_BUSH.get(), (supplier) ->
                 createGenericRandomSeedDrops(TBlocks.ROUND_BUSH.get()));
         this.add(TBlocks.BULBLET.get(), (supplier) ->
                 createGenericRandomSeedDrops(TBlocks.BULBLET.get()));
         this.add(TBlocks.WISPY_WEED.get(), (supplier) ->
                 createGenericRandomSeedDrops(TBlocks.WISPY_WEED.get()));
-
         this.dropSelf(TBlocks.FOOD_COOLER.get());
         this.dropSelf(TBlocks.FOOTBALL_GOAL.get());
+        this.add(TBlocks.SPHERES_AND_RINGS_MACHINE.get(),noDrop());
+        this.dropSelf(TBlocks.ROUND_CLOTHES_RACK.get());
+        this.dropSelf(TBlocks.PLUNGER.get());
+        this.dropSelf(TBlocks.PIZZA.get());
+        this.dropSelf(TBlocks.CAR_WHEEL.get());
+        this.add(TBlocks.POOL_TABLE.get(),noDrop());
+        this.add(TBlocks.METAL_POOL_TABLE.get(),noDrop());
+        this.dropSelf(TBlocks.TOWEL_STACK.get());
+        this.dropSelf(TBlocks.RARE_BLUE_GRAY_GAME_CONSOLE.get());
+        this.dropSelf(TBlocks.FUNDEVICE_GAME_CONSOLE.get());
+        this.dropSelf(TBlocks.GOLDME_CONSOLE.get());
+        this.dropSelf(TBlocks.CARDBOARD_BOX.get());
+        // 1.8.4
+        this.dropSelf(TBlocks.FURIOUS_STATUE.get());
+        this.dropSelf(TBlocks.SORROW_STATUE.get());
+        this.dropSelf(TBlocks.SOCCER_BALL.get());
+        this.dropSelf(TBlocks.BASKETBALL.get());
+        this.add(TBlocks.TENNIS_BALL.get(),noDrop());
+        this.dropSelf(TBlocks.TENNIS_NET.get());
+        this.dropSelf(TBlocks.TENNIS_RACKET.get());
+        this.dropSelf(TBlocks.PHONE_CROSSBAR.get());
+        this.dropSelf(TBlocks.STAINLESS_WASHER.get());
+        this.dropSelf(TBlocks.WEIGHT_SCALE.get());
+        this.dropSelf(TBlocks.PHONE_GROUP_SELECTOR.get());
+        this.dropSelf(TBlocks.PHONE_AXIS_SWITCH.get());
+        this.dropSelf(TBlocks.PHONE_AXIS_SWITCH_RELAY.get());
+
 
 
         this.add(TBlocks.FAKE_FLUID_PUMP.get(),noDrop());
@@ -1232,7 +1258,9 @@ public class TLoot extends VanillaBlockLoot {
     @Override
     protected Iterable<Block> getKnownBlocks() {
         List<Block> knownBlocks = new ArrayList<>();
-        knownBlocks.addAll(TBlocks.BLOCKS.getEntries().stream().map(DeferredHolder::get).toList());
+        knownBlocks.addAll(TBlocks.BLOCKS.getEntries().stream().map(DeferredHolder::get)
+                //.filter(x -> !(x == TBlocks.SPHERES_AND_RINGS_MACHINE.get()))
+                .toList());
         return knownBlocks;
     }
 

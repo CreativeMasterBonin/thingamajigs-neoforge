@@ -7,6 +7,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.core.Direction;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.rk.thingamajigs.block.custom.FootballGoal;
 import net.rk.thingamajigs.blockentity.custom.FootballGoalBE;
@@ -74,5 +75,11 @@ public class FootballGoalRenderer implements BlockEntityRenderer<FootballGoalBE>
     public boolean shouldRender(FootballGoalBE be, Vec3 vec3) {
         return Vec3.atCenterOf(be.getBlockPos()).multiply(2.0, 2.0, 2.0)
                 .closerThan(vec3.multiply(2.0, 2.0, 2.0), (double)this.getViewDistance());
+    }
+
+    @Override
+    public AABB getRenderBoundingBox(FootballGoalBE blockEntity) {
+        return new AABB(blockEntity.getBlockPos().getX() - 4, blockEntity.getBlockPos().getY() - 4, blockEntity.getBlockPos().getZ() - 4,
+                blockEntity.getBlockPos().getX() + 4, blockEntity.getBlockPos().getY() + 4, blockEntity.getBlockPos().getZ() + 4);
     }
 }

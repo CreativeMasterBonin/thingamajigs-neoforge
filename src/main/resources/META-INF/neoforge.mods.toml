@@ -50,6 +50,9 @@ authors="${mod_authors}"
 description='''${mod_description}'''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 
+[[mixins]]
+    config="thingamajigs.mixins.json"
+
 [modproperties.thingamajigs]
     thingamajigsisyes = true
 

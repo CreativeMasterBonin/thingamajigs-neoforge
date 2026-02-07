@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,machine_ending=payment_section": {
+      "model": "thingamajigs:block/sb_machine_front",
+      "y": 90
+    },
+    "facing=north,machine_ending=payment_section": {
+      "model": "thingamajigs:block/sb_machine_front"
+    },
+    "facing=south,machine_ending=payment_section": {
+      "model": "thingamajigs:block/sb_machine_front",
+      "y": 180
+    },
+    "facing=west,machine_ending=payment_section": {
+      "model": "thingamajigs:block/sb_machine_front",
+      "y": 270
+    },
+    "facing=east,machine_ending=goal_section": {
+      "model": "thingamajigs:block/sb_machine_back",
+      "y": 90
+    },
+    "facing=north,machine_ending=goal_section": {
+      "model": "thingamajigs:block/sb_machine_back"
+    },
+    "facing=south,machine_ending=goal_section": {
+      "model": "thingamajigs:block/sb_machine_back",
+      "y": 180
+    },
+    "facing=west,machine_ending=goal_section": {
+      "model": "thingamajigs:block/sb_machine_back",
+      "y": 270
+    }
+  }
+}

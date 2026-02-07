@@ -312,6 +312,8 @@ public class TBlockTag extends BlockTagsProvider {
         ;
 
         tag(BlockTags.NEEDS_STONE_TOOL)
+                .add(TBlocks.FURIOUS_STATUE.get())
+                .add(TBlocks.SORROW_STATUE.get())
                 .add(TBlocks.VALIANT_STATUE.get())
                 .add(TBlocks.CATCHING_STATUE.get())
                 .add(TBlocks.SPECIAL_STATUE.get())
@@ -555,6 +557,8 @@ public class TBlockTag extends BlockTagsProvider {
 
         // tool type mineables
         this.tag(BlockTags.MINEABLE_WITH_AXE)
+                .add(TBlocks.TOWEL_STACK.get())
+                .add(TBlocks.POOL_TABLE.get())
                 .add(TBlocks.NEWSPAPER_DISPENSER.get())
                 .add(TBlocks.RESTAURANT_TRASH_CAN.get())
                 .add(TBlocks.BLANK_BOOKSHELF.get())
@@ -615,9 +619,11 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.BRAMBLE.get())
                 .add(TBlocks.DOOR_BLOCKADE.get())
                 .add(TBlocks.WINDOW_BLOCKADE.get())
+                .add(TBlocks.CARDBOARD_BOX.get())
                 .replace(false)
         ;
         this.tag(BlockTags.MINEABLE_WITH_HOE)
+                .add(TBlocks.TOWEL_STACK.get())
                 .add(TBlocks.CHRISTMAS_TREE.get())
                 .add(TBlocks.CHRISTMAS_WREATH.get())
                 .add(TBlocks.LIGHTED_CHRISTMAS_TREE.get())
@@ -632,6 +638,8 @@ public class TBlockTag extends BlockTagsProvider {
                 .replace(false)
         ;
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .add(TBlocks.TOWEL_STACK.get())
+                .add(TBlocks.CAR_WHEEL.get())
                 .add(TBlocks.SNOWMAN.get())
                 .add(TBlocks.SNOWMAN_BLUEMAN_STATUE.get())
                 .add(TBlocks.FULL_POOP_BLOCK.get())
@@ -1015,6 +1023,31 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.VALIANT_STATUE.get())
                 .add(TBlocks.FOOD_COOLER.get())
                 .add(TBlocks.FOOTBALL_GOAL.get())
+                .add(TBlocks.SPHERES_AND_RINGS_MACHINE.get())
+                .add(TBlocks.ROUND_CLOTHES_RACK.get())
+                .add(TBlocks.PLUNGER.get())
+                .add(TBlocks.PIZZA.get())
+                .add(TBlocks.CAR_WHEEL.get())
+                .add(TBlocks.POOL_TABLE.get())
+                .add(TBlocks.METAL_POOL_TABLE.get())
+                .add(TBlocks.TOWEL_STACK.get())
+                .add(TBlocks.RARE_BLUE_GRAY_GAME_CONSOLE.get())
+                .add(TBlocks.FUNDEVICE_GAME_CONSOLE.get())
+                .add(TBlocks.GOLDME_CONSOLE.get())
+                .add(TBlocks.CARDBOARD_BOX.get())
+                .add(TBlocks.FURIOUS_STATUE.get())
+                .add(TBlocks.SORROW_STATUE.get())
+                .add(TBlocks.SOCCER_BALL.get())
+                .add(TBlocks.BASKETBALL.get())
+                .add(TBlocks.TENNIS_BALL.get())
+                .add(TBlocks.TENNIS_NET.get())
+                .add(TBlocks.TENNIS_RACKET.get())
+                .add(TBlocks.PHONE_CROSSBAR.get())
+                .add(TBlocks.STAINLESS_WASHER.get())
+                .add(TBlocks.WEIGHT_SCALE.get())
+                .add(TBlocks.PHONE_GROUP_SELECTOR.get())
+                .add(TBlocks.PHONE_AXIS_SWITCH.get())
+                .add(TBlocks.PHONE_AXIS_SWITCH_RELAY.get())
                 .replace(false)
         ;
 
@@ -1022,6 +1055,7 @@ public class TBlockTag extends BlockTagsProvider {
                 .addTag(BlockTags.BAMBOO_PLANTABLE_ON)
                 .addTag(BlockTags.DIRT)
                 .add(Blocks.MYCELIUM)
+                .addTag(Tags.Blocks.VILLAGER_FARMLANDS)
                 .replace(false)
         ;
     }

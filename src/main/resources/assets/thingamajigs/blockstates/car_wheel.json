@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/car_wheel",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/car_wheel"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/car_wheel",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/car_wheel",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "thingamajigs:block/car_wheel_up"
+    },
+    "facing=down": {
+      "model": "thingamajigs:block/car_wheel_down"
+    }
+  }
+}

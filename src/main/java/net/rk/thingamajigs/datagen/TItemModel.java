@@ -63,6 +63,29 @@ public class TItemModel extends ItemModelProvider {
         flatDefault(TBlocks.BULBLET.get(),"plants/bulblet");
         flatDefault(TBlocks.WISPY_WEED.get(),"plants/wispy_weed");
         fromModelMod(TBlocks.FOOD_COOLER.get(),"block/food_cooler");
+
+        fromModelMod(TBlocks.ROUND_CLOTHES_RACK.get(),"block/full_round_clothes_rack");
+        fromModelMod(TBlocks.PLUNGER.get(),"block/plunger");
+        fromModelMod(TBlocks.PIZZA.get(),"block/pizza");
+        fromModelMod(TBlocks.CAR_WHEEL.get(),"block/car_wheel");
+        fromModelMod(TBlocks.TOWEL_STACK.get(),"block/towel_stack");
+        fromModelMod(TBlocks.RARE_BLUE_GRAY_GAME_CONSOLE.get(),"block/rare_blue_gray_game_console");
+        fromModelMod(TBlocks.FUNDEVICE_GAME_CONSOLE.get(),"block/fundevice_game_console");
+        fromModelMod(TBlocks.GOLDME_CONSOLE.get(),"block/goldme_console");
+        fromModelMod(TBlocks.CARDBOARD_BOX.get(),"block/cardboard_box");
+        fromModelMod(TBlocks.FURIOUS_STATUE.get(),"block/statue/furious_statue");
+        fromModelMod(TBlocks.SORROW_STATUE.get(),"block/statue/sorrow_statue");
+        fromModelMod(TBlocks.SOCCER_BALL.get(),"block/soccer_ball");
+        fromModelMod(TBlocks.BASKETBALL.get(),"block/basketball");
+        fromModelMod(TBlocks.TENNIS_BALL.get(),"block/tennis_ball/single_tennis_ball");
+        fromModelMod(TBlocks.TENNIS_NET.get(),"block/tennis_net/tennis_net_middle");
+        fromModelMod(TBlocks.TENNIS_RACKET.get(),"block/tennis_racket");
+        fromModelMod(TBlocks.PHONE_CROSSBAR.get(),"block/phone_crossbar");
+        fromModelMod(TBlocks.STAINLESS_WASHER.get(),"block/stainless_washer");
+        fromModelMod(TBlocks.WEIGHT_SCALE.get(),"block/weight_scale");
+        fromModelMod(TBlocks.PHONE_GROUP_SELECTOR.get(),"block/phone_group_selector");
+        fromModelMod(TBlocks.PHONE_AXIS_SWITCH.get(),"block/phone_axis_switch");
+        fromModelMod(TBlocks.PHONE_AXIS_SWITCH_RELAY.get(),"block/phone_axis_switch_relay");
     }
 
     private ItemModelBuilder fromModelModItem(Item item, String source){

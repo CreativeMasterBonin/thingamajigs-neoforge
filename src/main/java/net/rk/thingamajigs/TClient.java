@@ -25,6 +25,8 @@ import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
+import net.neoforged.neoforge.client.gui.ConfigurationScreen;
+import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.rk.thingamajigs.block.TBlocks;
 import net.rk.thingamajigs.blockentity.TBlockEntity;
@@ -55,6 +57,7 @@ public class TClient{
         eventBus.addListener(this::setupBlockColors);
         eventBus.addListener(this::setupItemColors);
         eventBus.addListener(this::addCreative);
+        container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
     }
 
     public void setupItemColors(RegisterColorHandlersEvent.Item event){
@@ -72,6 +75,11 @@ public class TClient{
                 TBlocks.WISPY_WEED.get(),
                 TBlocks.BULBLET.get()
         );
+
+        // liquid color items
+        event.register((itemStack,i) ->
+                TColors.getDefaultWater(),TItems.WATER_SOURCE.asItem());
+
         // glow blocks
         event.register((itemStack,i) -> TColors.getLightGray(),
                 TBlocks.LIGHT_GRAY_GLOW_BLOCK.asItem()
@@ -478,6 +486,8 @@ public class TClient{
             event.accept(TBlocks.CINDER_BLOCK_SMALL.get().asItem());
             event.accept(TBlocks.DOOR_BLOCKADE.get().asItem());
             event.accept(TBlocks.WINDOW_BLOCKADE.get().asItem());
+            // car parts or car shop related
+            event.accept(TBlocks.CAR_WHEEL.get().asItem());
             // Road Covers (sewer or otherwise, service panels, etc.)
             event.accept(TBlocks.ROAD_COVER.get().asItem());
             event.accept(TBlocks.ALT_ROAD_COVER.get().asItem());
@@ -500,6 +510,10 @@ public class TClient{
             event.accept(TBlocks.CAR_WASH_DRYER.get().asItem());
             // telephone & cell service towers
             event.accept(TBlocks.PHONE_SWITCHER.get().asItem());
+            event.accept(TBlocks.PHONE_AXIS_SWITCH.get().asItem());
+            event.accept(TBlocks.PHONE_AXIS_SWITCH_RELAY.get().asItem());
+            event.accept(TBlocks.PHONE_CROSSBAR.get().asItem());
+            event.accept(TBlocks.PHONE_GROUP_SELECTOR.get().asItem());
             event.accept(TBlocks.CELL_MULTI_ANGLED_TRANSMITTER.get().asItem());
             event.accept(TBlocks.CELL_MULTI_TRANSMITTER.get().asItem());
             event.accept(TBlocks.CELL_TRANSMITTER.get().asItem());
@@ -580,6 +594,11 @@ public class TClient{
             event.accept(TBlocks.POOPSHELF.get().asItem());
             event.accept(TBlocks.ANCIENT_BOOKSHELF.get().asItem());
             // Sports & Games
+            event.accept(TBlocks.TENNIS_BALL.get().asItem());
+            event.accept(TBlocks.SOCCER_BALL.get().asItem());
+            event.accept(TBlocks.BASKETBALL.get().asItem());
+            event.accept(TBlocks.TENNIS_RACKET.get().asItem());
+            event.accept(TBlocks.TENNIS_NET.get().asItem());
             // outdoor and workout
             event.accept(TBlocks.GOAL.get().asItem());
             event.accept(TItems.FOOTBALL_GOAL.get().asItem());
@@ -620,6 +639,10 @@ public class TClient{
             event.accept(TBlocks.HAMMER_MACHINE.get().asItem());
             event.accept(TBlocks.WACK_MACHINE.get().asItem());
             event.accept(TBlocks.AIR_HOCKEY_TABLE.get().asItem());
+            event.accept(TBlocks.SPHERES_AND_RINGS_MACHINE.get().asItem());
+            // Other games and things
+            event.accept(TBlocks.POOL_TABLE.get().asItem());
+            event.accept(TBlocks.METAL_POOL_TABLE.get().asItem());
             // Water Park
             event.accept(TBlocks.WATER_SLIDE.get().asItem());
             event.accept(TBlocks.DIVING_BOARD.get().asItem());
@@ -654,6 +677,7 @@ public class TClient{
             event.accept(TBlocks.COMMERCIAL_JUICE_DISPENSER.get().asItem());
             event.accept(TBlocks.COMMERCIAL_LIQUID_DISPENSER.get().asItem());
             event.accept(TBlocks.CLOTHES_RACK.get().asItem());
+            event.accept(TBlocks.ROUND_CLOTHES_RACK.get().asItem());
             event.accept(TBlocks.CASH_REGISTER.get().asItem());
             event.accept(TBlocks.CARD_READER.get().asItem());
             event.accept(TBlocks.SUPERMARKET_CONVEYOR.get().asItem());
@@ -725,13 +749,16 @@ public class TClient{
             event.accept(TBlocks.BLUEYDOWS_LAPTOP.get().asItem());
             event.accept(TBlocks.BLUEYTOSH_LAPTOP.get().asItem());
             event.accept(TBlocks.BLUEYTOSH_STUDIO.get().asItem());
+            event.accept(TBlocks.FUNDEVICE_GAME_CONSOLE.get().asItem());
             event.accept(TBlocks.GRAY_GAME_CONSOLE.get().asItem());
+            event.accept(TBlocks.RARE_BLUE_GRAY_GAME_CONSOLE.get().asItem());
             event.accept(TBlocks.BLACK_GAME_CONSOLE.get().asItem());
             event.accept(TBlocks.BOXY_CONSOLE.get().asItem());
             event.accept(TBlocks.ORANGE_BOXY_CONSOLE.get().asItem());
             event.accept(TBlocks.TALL_BOXY_CONSOLE.get().asItem());
             event.accept(TBlocks.BLUEYCUBE_CONSOLE.get().asItem());
             event.accept(TBlocks.BLUEMAN_CONSOLE.get().asItem());
+            event.accept(TBlocks.GOLDME_CONSOLE.get().asItem());
             event.accept(TBlocks.BLUEYSNAP_BASE.get().asItem());
             event.accept(TBlocks.BLUEYSNAP_CONSOLE.get().asItem());
             event.accept(TBlocks.ANALOG_CLOCK.get().asItem());
@@ -943,9 +970,11 @@ public class TClient{
             event.accept(TBlocks.LOVE_COUCH.get().asItem());
             event.accept(TBlocks.MYSTERIOUS_ONE_COUCH.get().asItem());
             // appliances
+            event.accept(TBlocks.WEIGHT_SCALE.get().asItem());
             event.accept(TBlocks.WATER_DISPENSER.get().asItem());
             event.accept(TBlocks.DRYER.get().asItem());
             event.accept(TBlocks.WASHER.get().asItem());
+            event.accept(TBlocks.STAINLESS_WASHER.get().asItem());
             event.accept(TBlocks.DISHWASHER_WALL.get().asItem());
             event.accept(TBlocks.PORTABLE_DISH_WASHER.get().asItem());
             event.accept(TBlocks.HUMIDIFIER.get().asItem());
@@ -987,9 +1016,11 @@ public class TClient{
             event.accept(TBlocks.MIRROR.get().asItem());
             event.accept(TBlocks.SMALL_SINK.get().asItem());
             event.accept(TBlocks.FANCY_SINK.get().asItem());
+            event.accept(TBlocks.TOWEL_STACK.get().asItem());
             event.accept(TBlocks.SHOWER_HANDLES.get().asItem());
             event.accept(TBlocks.SHOWER_HEAD.get().asItem());
             event.accept(TBlocks.BATHTUB_NOZZLE.get().asItem());
+            event.accept(TBlocks.PLUNGER.get().asItem());
             event.accept(TBlocks.DENTAL_CUP.get().asItem());
             event.accept(TBlocks.TOILET.get().asItem());
             event.accept(TBlocks.TOILET_PAPER.get().asItem());
@@ -1021,6 +1052,7 @@ public class TClient{
             // Packed & Bulk Items
             event.accept(TBlocks.WATER_BOTTLE_PACK.get().asItem());
             event.accept(TBlocks.BULK_PRODUCT.get().asItem());
+            event.accept(TBlocks.CARDBOARD_BOX.get().asItem());
             // Graveyards & Death
             event.accept(TBlocks.COFFIN.get().asItem());
             event.accept(TBlocks.CROSS_GRAVESTONE.get().asItem());
@@ -1057,6 +1089,7 @@ public class TClient{
             event.accept(TBlocks.FOOD_COOLER.get().asItem());
             event.accept(TBlocks.WINE_BOTTLE.get().asItem());
             event.accept(TBlocks.ROAST_TURKEY.get().asItem());
+            event.accept(TBlocks.PIZZA.get().asItem());
             event.accept(TBlocks.PIZZA_BOX.get().asItem());
             event.accept(TBlocks.TENTH_ANNIVERSARY_CAKE.get().asItem());
             event.accept(TBlocks.CHEESE_BLOCK.get().asItem());
@@ -1071,9 +1104,9 @@ public class TClient{
             event.accept(TBlocks.BLUEMAN_STATUE.get().asItem());
             event.accept(TBlocks.SPECIAL_STATUE.get().asItem());
             event.accept(TBlocks.PARTICULAR_STATUE.get().asItem());
-            //event.accept(TBlocks.FURIOUS_STATUE.get().asItem());
+            event.accept(TBlocks.FURIOUS_STATUE.get().asItem());
             event.accept(TBlocks.CATCHING_STATUE.get().asItem());
-            //event.accept(TBlocks.SORROW_STATUE.get().asItem());
+            event.accept(TBlocks.SORROW_STATUE.get().asItem());
             event.accept(TBlocks.BONDING_STATUE.get().asItem());
             event.accept(TItems.STRANGE_STATUE.get());
             event.accept(TBlocks.DUCK_STATUE.get().asItem());

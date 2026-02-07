@@ -22,6 +22,10 @@ public class TColors{
         return 6616766;
     }
 
+    public static int getDefaultWater(){
+        return 4159204;
+    }
+
     public static int getRandom(){
         RandomSource rs = RandomSource.create();
         return rs.nextInt(16777215);

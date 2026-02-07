@@ -38,7 +38,23 @@ public class TBlockStateProvider extends BlockStateProvider{
         rotatedThingamajigsDecoration(TBlocks.STRANGE_STATUE.get(),"thingamajigs:block/statue/strange_statue");
         rotatedThingamajigsDecoration(TBlocks.VALIANT_STATUE.get(),"thingamajigs:block/statue/valiant_statue");
 
-
+        rotatedThingamajigsDecoration(TBlocks.PLUNGER.get(),"thingamajigs:block/plunger");
+        rotatedThingamajigsDecoration(TBlocks.PIZZA.get(),"thingamajigs:block/pizza");
+        rotatedThingamajigsDecoration(TBlocks.TOWEL_STACK.get(),"thingamajigs:block/towel_stack");
+        rotatedThingamajigsDecoration(TBlocks.RARE_BLUE_GRAY_GAME_CONSOLE.get(),"thingamajigs:block/rare_blue_gray_game_console");
+        rotatedThingamajigsDecoration(TBlocks.FUNDEVICE_GAME_CONSOLE.get(),"thingamajigs:block/fundevice_game_console");
+        rotatedThingamajigsDecoration(TBlocks.GOLDME_CONSOLE.get(),"thingamajigs:block/goldme_console");
+        rotatedThingamajigsDecoration(TBlocks.FURIOUS_STATUE.get(),"thingamajigs:block/statue/furious_statue");
+        rotatedThingamajigsDecoration(TBlocks.SORROW_STATUE.get(),"thingamajigs:block/statue/sorrow_statue");
+        rotatedThingamajigsDecoration(TBlocks.SOCCER_BALL.get(),"thingamajigs:block/soccer_ball");
+        rotatedThingamajigsDecoration(TBlocks.BASKETBALL.get(),"thingamajigs:block/basketball");
+        rotatedThingamajigsDecoration(TBlocks.TENNIS_RACKET.get(),"thingamajigs:block/tennis_racket");
+        rotatedThingamajigsDecoration(TBlocks.PHONE_CROSSBAR.get(),"thingamajigs:block/phone_crossbar");
+        rotatedThingamajigsDecoration(TBlocks.STAINLESS_WASHER.get(),"thingamajigs:block/stainless_washer");
+        rotatedThingamajigsDecoration(TBlocks.WEIGHT_SCALE.get(),"thingamajigs:block/weight_scale");
+        rotatedThingamajigsDecoration(TBlocks.PHONE_GROUP_SELECTOR.get(),"thingamajigs:block/phone_group_selector");
+        rotatedThingamajigsDecoration(TBlocks.PHONE_AXIS_SWITCH.get(),"thingamajigs:block/phone_axis_switch");
+        rotatedThingamajigsDecoration(TBlocks.PHONE_AXIS_SWITCH_RELAY.get(),"thingamajigs:block/phone_axis_switch_relay");
 
         /*
         rotatedThingamajigsDecoration(TBlocks.STAINLESS_WASHER.get(),"thingamajigs:block/stainless_washer");

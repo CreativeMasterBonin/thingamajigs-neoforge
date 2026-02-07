@@ -1,0 +1,8 @@
+{
+  "parent": "thingamajigs:block/pool_table_front",
+  "textures": {
+    "0": "thingamajigs:block/blue_surface",
+    "1": "thingamajigs:block/aios/metal_pool_table",
+    "particle": "#1"
+  }
+}

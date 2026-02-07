@@ -1,0 +1,93 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made By CreativeMasterBonin",
+	"textures": {
+		"0": "thingamajigs:block/aios/arcade_machine",
+		"1": "thingamajigs:block/parts/generic_board_backing",
+		"particle": "thingamajigs:block/aios/arcade_machine"
+	},
+	"elements": [
+		{
+			"name": "board",
+			"from": [0, 7, 0],
+			"to": [16, 11, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 9, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 4, 1.25], "texture": "#0", "cullface": "north"},
+				"east": {"uv": [0, 0, 4, 1.25], "texture": "#0"},
+				"south": {"uv": [4, 9.25, 8, 10.5], "texture": "#0", "cullface": "south"},
+				"west": {"uv": [0, 0, 4, 1.25], "texture": "#0"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"down": {"uv": [0, 8, 4, 12], "texture": "#0"}
+			}
+		},
+		{
+			"from": [0, 0, 0],
+			"to": [4, 7, 2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [2, 3.5, 1]},
+			"faces": {
+				"north": {"uv": [3, 0.75, 4, 4.25], "texture": "#0", "cullface": "north"},
+				"east": {"uv": [0.5, 0.5, 2.75, 2.75], "texture": "#0"},
+				"south": {"uv": [0.5, 0.5, 2.75, 2.75], "texture": "#0"},
+				"west": {"uv": [0, 0.75, 0.5, 4.25], "texture": "#0"},
+				"down": {"uv": [0.5, 0.5, 2.75, 2.75], "texture": "#0", "cullface": "down"}
+			}
+		},
+		{
+			"from": [12, 0, 0],
+			"to": [16, 7, 2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [14, 3.5, 1]},
+			"faces": {
+				"north": {"uv": [0, 0.75, 1, 4.25], "texture": "#0", "cullface": "north"},
+				"east": {"uv": [3.5, 0.75, 4, 4.25], "texture": "#0"},
+				"south": {"uv": [0.5, 0.5, 2.75, 2.75], "texture": "#0"},
+				"west": {"uv": [0.5, 0.5, 2.75, 2.75], "texture": "#0"},
+				"down": {"uv": [0.5, 0.5, 2.75, 2.75], "texture": "#0", "cullface": "down"}
+			}
+		},
+		{
+			"name": "ballreturn",
+			"from": [0, 11, 0],
+			"to": [2, 13, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [1, 12, 8]},
+			"faces": {
+				"north": {"uv": [4.75, 8.75, 6.75, 10.75], "texture": "#0", "cullface": "north"},
+				"east": {"uv": [4.75, 8.75, 6.75, 10.75], "texture": "#0"},
+				"south": {"uv": [4.75, 8.75, 6.75, 10.75], "texture": "#0", "cullface": "south"},
+				"west": {"uv": [4.75, 8.75, 6.75, 10.75], "texture": "#0"},
+				"up": {"uv": [11.25, 4.5, 11.5, 11.5], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"from": [14, 11, 0],
+			"to": [16, 13, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [15, 12, 8]},
+			"faces": {
+				"north": {"uv": [4.75, 8.75, 6.75, 10.75], "texture": "#0", "cullface": "north"},
+				"east": {"uv": [4.75, 8.75, 6.75, 10.75], "texture": "#0"},
+				"south": {"uv": [4.75, 8.75, 6.75, 10.75], "texture": "#0", "cullface": "south"},
+				"west": {"uv": [4.75, 8.75, 6.75, 10.75], "texture": "#0"},
+				"up": {"uv": [4.75, 8.75, 6.75, 10.75], "texture": "#0"}
+			}
+		},
+		{
+			"name": "paymentarea",
+			"from": [0, 8, -0.11],
+			"to": [4, 11, -0.11],
+			"rotation": {"angle": 0, "axis": "y", "origin": [2, 9.5, -0.11]},
+			"faces": {
+				"north": {"uv": [8, 7.75, 12, 12], "texture": "#0", "cullface": "north"}
+			}
+		},
+		{
+			"from": [2, 11, 0],
+			"to": [14, 13, 1],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 12, 0.5]},
+			"faces": {
+				"north": {"uv": [4.75, 9, 7.5, 9.75], "texture": "#0", "cullface": "north"},
+				"south": {"uv": [11.5, 0, 11.95, 2.25], "texture": "#0"},
+				"up": {"uv": [10, 0.5, 10.45, 2.75], "texture": "#0"}
+			}
+		}
+	]
+}

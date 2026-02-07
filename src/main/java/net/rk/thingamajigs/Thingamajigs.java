@@ -34,7 +34,7 @@ public class Thingamajigs {
             .title(Component.translatable("itemGroup.thingamajigs"))
             .withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
             .icon(() -> TItems.THINGAMAJIG.get().getDefaultInstance())
-            .backgroundTexture(ResourceLocation.fromNamespaceAndPath("thingamajigs","textures/gui/thingamajigsitems.png"))
+            //.backgroundTexture(ResourceLocation.fromNamespaceAndPath("thingamajigs","textures/gui/thingamajigsitems.png"))
             .build());
 
     public Thingamajigs(IEventBus modEventBus, ModContainer modContainer){

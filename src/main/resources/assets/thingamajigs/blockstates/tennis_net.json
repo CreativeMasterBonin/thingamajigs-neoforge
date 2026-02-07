@@ -1,0 +1,99 @@
+{
+  "variants": {
+    "part=left,net=true,facing=east": {
+      "model": "thingamajigs:block/tennis_net/tennis_net_left",
+      "y": 90
+    },
+    "part=left,net=true,facing=north": {
+      "model": "thingamajigs:block/tennis_net/tennis_net_left"
+    },
+    "part=left,net=true,facing=south": {
+      "model": "thingamajigs:block/tennis_net/tennis_net_left",
+      "y": 180
+    },
+    "part=left,net=true,facing=west": {
+      "model": "thingamajigs:block/tennis_net/tennis_net_left",
+      "y": 270
+    },
+
+    "part=middle,net=true,facing=east": {
+      "model": "thingamajigs:block/tennis_net/tennis_net_middle",
+      "y": 90
+    },
+    "part=middle,net=true,facing=north": {
+      "model": "thingamajigs:block/tennis_net/tennis_net_middle"
+    },
+    "part=middle,net=true,facing=south": {
+      "model": "thingamajigs:block/tennis_net/tennis_net_middle",
+      "y": 180
+    },
+    "part=middle,net=true,facing=west": {
+      "model": "thingamajigs:block/tennis_net/tennis_net_middle",
+      "y": 270
+    },
+
+    "part=right,net=true,facing=east": {
+      "model": "thingamajigs:block/tennis_net/tennis_net_right",
+      "y": 90
+    },
+    "part=right,net=true,facing=north": {
+      "model": "thingamajigs:block/tennis_net/tennis_net_right"
+    },
+    "part=right,net=true,facing=south": {
+      "model": "thingamajigs:block/tennis_net/tennis_net_right",
+      "y": 180
+    },
+    "part=right,net=true,facing=west": {
+      "model": "thingamajigs:block/tennis_net/tennis_net_right",
+      "y": 270
+    },
+
+    "part=left,net=false,facing=east": {
+      "model": "thingamajigs:block/tennis_net/tennis_net_left_pole",
+      "y": 90
+    },
+    "part=left,net=false,facing=north": {
+      "model": "thingamajigs:block/tennis_net/tennis_net_left_pole"
+    },
+    "part=left,net=false,facing=south": {
+      "model": "thingamajigs:block/tennis_net/tennis_net_left_pole",
+      "y": 180
+    },
+    "part=left,net=false,facing=west": {
+      "model": "thingamajigs:block/tennis_net/tennis_net_left_pole",
+      "y": 270
+    },
+
+    "part=middle,net=false,facing=east": {
+      "model": "thingamajigs:block/tennis_net/tennis_net_middle_none",
+      "y": 90
+    },
+    "part=middle,net=false,facing=north": {
+      "model": "thingamajigs:block/tennis_net/tennis_net_middle_none"
+    },
+    "part=middle,net=false,facing=south": {
+      "model": "thingamajigs:block/tennis_net/tennis_net_middle_none",
+      "y": 180
+    },
+    "part=middle,net=false,facing=west": {
+      "model": "thingamajigs:block/tennis_net/tennis_net_middle_none",
+      "y": 270
+    },
+
+    "part=right,net=false,facing=east": {
+      "model": "thingamajigs:block/tennis_net/tennis_net_right_pole",
+      "y": 90
+    },
+    "part=right,net=false,facing=north": {
+      "model": "thingamajigs:block/tennis_net/tennis_net_right_pole"
+    },
+    "part=right,net=false,facing=south": {
+      "model": "thingamajigs:block/tennis_net/tennis_net_right_pole",
+      "y": 180
+    },
+    "part=right,net=false,facing=west": {
+      "model": "thingamajigs:block/tennis_net/tennis_net_right_pole",
+      "y": 270
+    }
+  }
+}
