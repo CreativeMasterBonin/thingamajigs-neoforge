@@ -29,20 +29,15 @@ public class CarWashSoaper extends RedstoneLampBlock{
 
     @OnlyIn(Dist.CLIENT)
     @Override
-    public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRandom) {
+    public void animateTick(BlockState pState, Level level, BlockPos pPos, RandomSource pRandom) {
         for (int i = 0; i < 3; i++){
-            double d0 = (double)pPos.getX() + 0.5D * pRandom.nextDouble();
+            double d0 = (double)pPos.getX() + 0.33D - level.getRandom().nextDouble() * 0.25D;
             double d1 = (double)pPos.getY() + 0.2D;
-            double d2 = (double)pPos.getZ() + 0.5D * pRandom.nextDouble();
-            boolean is_lit = pState.getValue(LIT);
-            boolean random_boolean = pRandom.nextBoolean();
-            if (is_lit){
-                if (random_boolean){
-                    pLevel.addParticle(TParticles.SOAP.get(), d0, d1, d2, 0.0D, -0.3D, 0.0D);
-                }
-                else{
-                    pLevel.addParticle(ParticleTypes.CLOUD, d0, d1, d2, 0.0D, -0.4D, 0.0D);
-                }
+            double d2 = (double)pPos.getZ() + 0.33D - level.getRandom().nextDouble() * 0.25D;
+            boolean isLit = pState.getValue(LIT);
+            if (isLit){
+                level.addParticle(TParticles.SOAP.get(), d0 + 0.33D, d1, d2 + 0.33D, 0.0D,
+                        0.01D + level.getRandom().nextDouble() * 0.15D, 0.0D);
             }
         }
     }

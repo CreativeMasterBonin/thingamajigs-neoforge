@@ -76,7 +76,7 @@ public class TBlockEntity {
     // general purpose block entities (add blocks here so they are supported when needed)
     public static final Supplier<BlockEntityType<OpenableContainer>> OPENABLE_CONTAINER = BLOCK_ENTITIES.register(
             "openable_container_be",() -> BlockEntityType.Builder.of(OpenableContainer::new,
-                            TBlocks.FOOD_COOLER.get()//,TBlocks.CARDBOARD_BOX.get()
+                            TBlocks.FOOD_COOLER.get(),TBlocks.CARDBOARD_BOX.get()
                     )
                     .build(null));
 

@@ -25,7 +25,9 @@ public class TConfig{
     public enum Theme implements StringRepresentable {
         GREEN("green"),
         BLUE("blue"),
-        PURPLE("purple");
+        PURPLE("purple"),
+        ORANGE("orange"),
+        RED("red");
 
         public String name;
 

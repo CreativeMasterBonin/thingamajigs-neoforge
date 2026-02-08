@@ -25,6 +25,9 @@ public class TParticles {
     public static final Supplier<SimpleParticleType> SOAP =
             PARTICLE_TYPES.register("soap", () -> new SimpleParticleType(false));
 
+    public static final Supplier<SimpleParticleType> WATER_SPRAY =
+            PARTICLE_TYPES.register("water_spray", () -> new SimpleParticleType(false));
+
     public static void register(IEventBus bus){
         PARTICLE_TYPES.register(bus);
     }

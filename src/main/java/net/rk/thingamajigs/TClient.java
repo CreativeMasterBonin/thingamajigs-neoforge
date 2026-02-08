@@ -39,10 +39,7 @@ import net.rk.thingamajigs.screen.DJLaserLightScreen;
 import net.rk.thingamajigs.screen.MailboxScreen;
 import net.rk.thingamajigs.xtras.TColors;
 import net.rk.thingamajigs.xtras.TParticles;
-import net.rk.thingamajigs.xtras.particletypes.BallPitParticleType;
-import net.rk.thingamajigs.xtras.particletypes.ChimneySmokeParticleType;
-import net.rk.thingamajigs.xtras.particletypes.IcyAirParticleType;
-import net.rk.thingamajigs.xtras.particletypes.SoapParticleType;
+import net.rk.thingamajigs.xtras.particletypes.*;
 
 import java.util.logging.Logger;
 
@@ -161,6 +158,7 @@ public class TClient{
         event.registerSpriteSet(TParticles.ICY_AIR.get(),IcyAirParticleType.IcyAirParticleFactory::new);
         event.registerSpriteSet(TParticles.PLASTIC_BALL.get(),BallPitParticleType.BallPitParticleFactory::new);
         event.registerSpriteSet(TParticles.SOAP.get(),SoapParticleType.SoapParticleFactory::new);
+        event.registerSpriteSet(TParticles.WATER_SPRAY.get(),WaterSprayParticleType.WaterSprayParticleFactory::new);
     }
 
     public void setupMenuTypes(RegisterMenuScreensEvent event){

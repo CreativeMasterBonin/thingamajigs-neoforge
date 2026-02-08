@@ -20,7 +20,13 @@ public abstract class TMixCTab {
     public void thingamajigs_getBackgroundRL(CallbackInfoReturnable<ResourceLocation> cir){
         if(this.getDisplayName().equals(Thingamajigs.MAIN_CTAB.get().getDisplayName()) && TConfig.blueTabs.get().booleanValue()){
             if(TConfig.tabTheme.get().equals(TConfig.Theme.BLUE)){
-                cir.setReturnValue(ResourceLocation.parse("thingamajigs:textures/gui/thingamajigsitems.png"));
+                cir.setReturnValue(ResourceLocation.parse("thingamajigs:textures/gui/themes/blue.png"));
+            }
+            else if(TConfig.tabTheme.get().equals(TConfig.Theme.RED)){
+                cir.setReturnValue(ResourceLocation.parse("thingamajigs:textures/gui/themes/red.png"));
+            }
+            else if(TConfig.tabTheme.get().equals(TConfig.Theme.ORANGE)){
+                cir.setReturnValue(ResourceLocation.parse("thingamajigs:textures/gui/themes/orange.png"));
             }
             else if(TConfig.tabTheme.get().equals(TConfig.Theme.GREEN)){
                 cir.setReturnValue(ResourceLocation.parse("thingamajigs:textures/gui/themes/green.png"));
@@ -40,6 +46,22 @@ public abstract class TMixCTab {
                 }
                 else{
                     cir.setReturnValue(ResourceLocation.parse("thingamajigs:container/creative_inventory/scroller_disabled"));
+                }
+            }
+            else if(TConfig.tabTheme.get().equals(TConfig.Theme.RED)){
+                if(this.canScroll()){
+                    cir.setReturnValue(ResourceLocation.parse("thingamajigs:container/creative_inventory/scroller_red"));
+                }
+                else{
+                    cir.setReturnValue(ResourceLocation.parse("thingamajigs:container/creative_inventory/scroller_red_disabled"));
+                }
+            }
+            else if(TConfig.tabTheme.get().equals(TConfig.Theme.ORANGE)){
+                if(this.canScroll()){
+                    cir.setReturnValue(ResourceLocation.parse("thingamajigs:container/creative_inventory/scroller_orange"));
+                }
+                else{
+                    cir.setReturnValue(ResourceLocation.parse("thingamajigs:container/creative_inventory/scroller_orange_disabled"));
                 }
             }
             else if(TConfig.tabTheme.get().equals(TConfig.Theme.GREEN)){

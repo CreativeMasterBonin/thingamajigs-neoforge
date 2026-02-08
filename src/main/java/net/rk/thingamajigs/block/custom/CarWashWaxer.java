@@ -17,7 +17,6 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 
-@SuppressWarnings("deprecated")
 public class CarWashWaxer extends RedstoneLampBlock{
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
@@ -28,20 +27,19 @@ public class CarWashWaxer extends RedstoneLampBlock{
 
     @OnlyIn(Dist.CLIENT)
     @Override
-    public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRandom) {
-        for (int i = 0; i < 3; i++) {
-            double d0 = (double)pPos.getX() + 0.7D * pRandom.nextDouble();
-            double d1 = (double)pPos.getY() - 3.5D * pRandom.nextDouble();
-            double d2 = (double)pPos.getZ() + 0.7D * pRandom.nextDouble();
-            boolean is_lit = pState.getValue(LIT);
-            boolean random_boolean = pRandom.nextBoolean();
-            if (is_lit){
-                if (random_boolean){
-                    pLevel.addParticle(ParticleTypes.WAX_ON, d0, d1, d2, 0.0D, -2.0D, 0.0D);
+    public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource randomSource){
+        if(state.getValue(LIT)){
+            for (int i = 0; i < 3; i++) {
+                double d0 = (double)pos.getX() + 0.7D * randomSource.nextDouble();
+                double d1 = (double)pos.getY() - 3.5D * randomSource.nextDouble();
+                double d2 = (double)pos.getZ() + 0.7D * randomSource.nextDouble();
+                boolean randomBoolean = randomSource.nextBoolean();
+                if (randomBoolean){
+                    level.addParticle(ParticleTypes.WAX_ON, d0, d1, d2, 0.0D, -2.0D, 0.0D);
                 }
                 else{
-                    pLevel.addParticle(ParticleTypes.CLOUD, d0, d1, d2, 0.0D, 0.0D, 0.0D);
-                    pLevel.addParticle(ParticleTypes.DOLPHIN, d0, d1, d2, 0.0D, -0.2D, 0.0D);
+                    level.addParticle(ParticleTypes.CLOUD, d0, d1, d2, 0.0D, 0.0D, 0.0D);
+                    level.addParticle(ParticleTypes.DOLPHIN, d0, d1, d2, 0.0D, -0.2D, 0.0D);
                 }
             }
         }

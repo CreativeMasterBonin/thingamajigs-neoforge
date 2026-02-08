@@ -16,6 +16,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
+import net.rk.thingamajigs.xtras.TCalcStuff;
 
 @SuppressWarnings("deprecated")
 public class CarWashDripper extends RedstoneLampBlock{
@@ -28,20 +29,24 @@ public class CarWashDripper extends RedstoneLampBlock{
 
     @OnlyIn(Dist.CLIENT)
     @Override
-    public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRandom) {
-        double d0 = (double)pPos.getX() + 0.5D * pRandom.nextDouble();
-        double d1 = (double)pPos.getY() + 0.2D;
-        double d2 = (double)pPos.getZ() + 0.5D * pRandom.nextDouble();
-        boolean is_lit = pState.getValue(LIT);
-        boolean random_boolean = pRandom.nextBoolean();
-        if (is_lit){
-            if (random_boolean){
-                pLevel.addParticle(ParticleTypes.DRIPPING_WATER, d0, d1, d2, 0.0D, 0.1D, 0.0D);
-                pLevel.addParticle(ParticleTypes.DRIPPING_WATER, d0, d1, d2, 0.0D, 0.2D, 0.0D);
-            }
-            else{
-                pLevel.addParticle(ParticleTypes.DRIPPING_DRIPSTONE_WATER, d0, d1, d2, 0.0D, 0.1D, 0.0D);
-                pLevel.addParticle(ParticleTypes.DRIPPING_DRIPSTONE_WATER, d0, d1, d2, 0.0D, 0.2D, 0.0D);
+    public void animateTick(BlockState pState, Level level, BlockPos pPos, RandomSource pRandom) {
+        boolean isLit = pState.getValue(LIT);
+        if (isLit){
+            for(int dripParticleRun = 0; dripParticleRun < 3; dripParticleRun++){
+                double d0 = (double)pPos.getX() + TCalcStuff.nextDoubleBetweenInclusive(-0.02D,0.005D);
+                double d1 = (double)pPos.getY() + 0.2D;
+                double d2 = (double)pPos.getZ() + TCalcStuff.nextDoubleBetweenInclusive(-0.02D,0.005D);
+                boolean randomBoolean = pRandom.nextBoolean();
+                if (randomBoolean){
+                    level.addParticle(ParticleTypes.DRIPPING_WATER,
+                            d0 + 0.2D, d1, d2 + 0.2D,
+                            0.0D, 0.12D, 0.0D);
+                }
+                else{
+                    level.addParticle(ParticleTypes.DRIPPING_DRIPSTONE_WATER,
+                            d0 + 0.2D, d1, d2 + 0.2D,
+                            0.0D, 0.12D, 0.0D);
+                }
             }
         }
     }
