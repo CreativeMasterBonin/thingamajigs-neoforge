@@ -11,6 +11,7 @@ import net.minecraft.world.phys.Vec3;
 import net.rk.thingamajigs.block.custom.CleverBlackboard;
 import net.rk.thingamajigs.blockentity.custom.CleverBlackboardBE;
 import net.rk.thingamajigs.render.model.CleverBlackboardModel;
+import net.rk.thingamajigs.xtras.TCalcStuff;
 import net.rk.thingamajigs.xtras.TColors;
 import org.joml.Quaternionf;
 
@@ -43,7 +44,7 @@ public class CleverBlackboardBERenderer implements BlockEntityRenderer<CleverBla
         poseStack.scale(1.0f,1.0f,1.0f);
 
         if(be.custom){
-            poseStack.mulPose(new Quaternionf().rotateY(be.yAngle));
+            poseStack.mulPose(new Quaternionf().rotateY(TCalcStuff.degreesToRadians(be.yAngle)));
             poseStack.translate(be.x_xtra, 0.0,be.z_xtra);
         }
         else{

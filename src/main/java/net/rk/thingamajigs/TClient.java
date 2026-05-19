@@ -7,7 +7,9 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.BlockAndTintGetter;
@@ -19,10 +21,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
-import net.neoforged.neoforge.client.event.EntityRenderersEvent;
-import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
-import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
-import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
+import net.neoforged.neoforge.client.event.*;
 import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
@@ -54,7 +53,44 @@ public class TClient{
         eventBus.addListener(this::setupBlockColors);
         eventBus.addListener(this::setupItemColors);
         eventBus.addListener(this::addCreative);
+        eventBus.addListener(this::registerAdditionalModels);
         container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
+    }
+
+    public static final String carWashCustomModelBaseLocation = "bases/car_wash_components/";
+
+    public void registerAdditionalModels(ModelEvent.RegisterAdditional event){
+        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
+                carWashCustomModelBaseLocation + "spinning_brush_base"),ModelResourceLocation.STANDALONE_VARIANT));
+        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
+                carWashCustomModelBaseLocation + "spinning_short_brush_base"),ModelResourceLocation.STANDALONE_VARIANT));
+        // mitter curtains
+        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
+                carWashCustomModelBaseLocation + "mitter_curtain"),ModelResourceLocation.STANDALONE_VARIANT));
+        // mixed car brush
+        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
+                carWashCustomModelBaseLocation + "spinning_mixed_brush_blade"),ModelResourceLocation.STANDALONE_VARIANT));
+        // blue car brush
+        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
+                carWashCustomModelBaseLocation + "spinning_brush_long_blade"),ModelResourceLocation.STANDALONE_VARIANT));
+        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
+                carWashCustomModelBaseLocation + "spinning_brush_medium_blade"),ModelResourceLocation.STANDALONE_VARIANT));
+        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
+                carWashCustomModelBaseLocation + "spinning_brush_short_blade"),ModelResourceLocation.STANDALONE_VARIANT));
+        // red car brush
+        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
+                carWashCustomModelBaseLocation + "spinning_red_brush_long_blade"),ModelResourceLocation.STANDALONE_VARIANT));
+        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
+                carWashCustomModelBaseLocation + "spinning_red_brush_medium_blade"),ModelResourceLocation.STANDALONE_VARIANT));
+        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
+                carWashCustomModelBaseLocation + "spinning_red_brush_short_blade"),ModelResourceLocation.STANDALONE_VARIANT));
+        // yellow car brush
+        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
+                carWashCustomModelBaseLocation + "spinning_yellow_brush_long_blade"),ModelResourceLocation.STANDALONE_VARIANT));
+        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
+                carWashCustomModelBaseLocation + "spinning_yellow_brush_medium_blade"),ModelResourceLocation.STANDALONE_VARIANT));
+        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
+                carWashCustomModelBaseLocation + "spinning_yellow_brush_short_blade"),ModelResourceLocation.STANDALONE_VARIANT));
     }
 
     public void setupItemColors(RegisterColorHandlersEvent.Item event){
@@ -200,6 +236,9 @@ public class TClient{
             BlockEntityRenderers.register(TBlockEntity.ANIMATED_ICE_RINK.get(),AnimatedIceRinkRenderer::new);
             BlockEntityRenderers.register(TBlockEntity.ANIMATED_DEER_BE.get(),AnimatedDeerBERenderer::new);
             BlockEntityRenderers.register(TBlockEntity.FOOTBALL_GOAL.get(),FootballGoalRenderer::new);
+            // 1.8.5
+            BlockEntityRenderers.register(TBlockEntity.CAR_WASH_BRUSH_BE.get(),CarWashBrushBERenderer::new);
+            BlockEntityRenderers.register(TBlockEntity.MITTER_CURTAIN.get(),MitterCurtainBERenderer::new);
         }
         catch (Exception e){
             Logger.getAnonymousLogger().warning(e.getMessage());

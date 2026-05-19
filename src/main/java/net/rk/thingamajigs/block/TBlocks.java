@@ -1965,9 +1965,9 @@ public class TBlocks {
     public static final DeferredBlock<Block> CAR_WASH_DRYER = register("car_wash_dryer",
             () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).noCollission()));
     public static final DeferredBlock<Block> CAR_WASH_MITTER_CURTAIN = register("car_wash_mitter_curtain",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).noCollission()));
+            () -> new MitterCurtain(BlockBehaviour.Properties.of()));
     public static final DeferredBlock<Block> CAR_WASH_MIXED_BRUSH = register("car_wash_mixed_brush",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).noCollission()));
+            () -> new ShortCarWashBrush(BlockBehaviour.Properties.of()));
     public static final DeferredBlock<Block> CAR_WASH_SIGNAGE = register("car_wash_signage",
             () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).noCollission()));
     public static final DeferredBlock<Block> CAR_WASH_SIGNAL = register("car_wash_signal",
@@ -1983,11 +1983,11 @@ public class TBlocks {
     public static final DeferredBlock<Block> CAR_WASH_TRIFOAMER = register("car_wash_trifoamer",
             () -> new CarWashMultiFoamSprayer(BlockBehaviour.Properties.of()));
     public static final DeferredBlock<Block> CAR_WASH_BLUE_BRUSH = register("car_wash_blue_brush",
-            () -> new DoubleTallDecorationBlock(BlockBehaviour.Properties.of().noCollission()));
+            () -> new CarWashBrush(BlockBehaviour.Properties.of().noCollission()));
     public static final DeferredBlock<Block> CAR_WASH_RED_BRUSH = register("car_wash_red_brush",
-            () -> new DoubleTallDecorationBlock(BlockBehaviour.Properties.of().noCollission()));
+            () -> new CarWashBrush(BlockBehaviour.Properties.of().noCollission()));
     public static final DeferredBlock<Block> CAR_WASH_YELLOW_BRUSH = register("car_wash_yellow_brush",
-            () -> new DoubleTallDecorationBlock(BlockBehaviour.Properties.of().noCollission()));
+            () -> new CarWashBrush(BlockBehaviour.Properties.of().noCollission()));
     public static final DeferredBlock<Block> CAR_WASH_TIRE_SCRUBBER = register("car_wash_tire_scrubber",
             () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().noCollission()));
 

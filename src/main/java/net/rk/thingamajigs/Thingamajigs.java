@@ -6,10 +6,12 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.event.BlockEntityTypeAddBlocksEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.rk.thingamajigs.block.TBlocks;
@@ -50,6 +52,11 @@ public class Thingamajigs {
         TMenu.register(modEventBus);
         TBlockEntity.register(modEventBus);
         TEntity.register(modEventBus);
+        modEventBus.addListener(this::registerAdditionalBESupport); // additional vanilla BE variants require this now
+    }
+
+    public void registerAdditionalBESupport(BlockEntityTypeAddBlocksEvent event){
+        event.modify(BlockEntityType.CHISELED_BOOKSHELF,TBlocks.NETHER_CHISELED_BOOKSHELF.get());
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

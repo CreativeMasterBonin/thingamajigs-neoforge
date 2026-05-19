@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.logging.Logger;
 
-@EventBusSubscriber(modid = Thingamajigs.MODID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = Thingamajigs.MODID)
 public class DataGenerators{
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {

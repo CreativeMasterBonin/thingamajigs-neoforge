@@ -1,19 +1,7 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "thingamajigs:block/car_wash_brush_yellow",
-      "y": 90
-    },
-    "facing=north": {
+    "": {
       "model": "thingamajigs:block/car_wash_brush_yellow"
-    },
-    "facing=south": {
-      "model": "thingamajigs:block/car_wash_brush_yellow",
-      "y": 180
-    },
-    "facing=west": {
-      "model": "thingamajigs:block/car_wash_brush_yellow",
-      "y": 270
     }
   }
 }

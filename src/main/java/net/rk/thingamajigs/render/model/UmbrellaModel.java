@@ -11,6 +11,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.rk.thingamajigs.blockentity.custom.UmbrellaBE;
+import net.rk.thingamajigs.xtras.TCalcStuff;
 
 public class UmbrellaModel extends Model {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
@@ -96,12 +97,12 @@ public class UmbrellaModel extends Model {
         this.pole.yScale = 1.35f;
         this.pole.zScale = 1.35f;
         if(be.custom){
-            this.pole.xRot = be.base_x_rot;
+            this.pole.xRot = TCalcStuff.degreesToRadians(be.base_x_rot);
             this.main.xRot = Mth.PI;
-            this.pole.zRot = be.base_z_rot;
-            this.top.xRot = be.pole_x_rot;
-            this.top.yRot = be.pole_y_rot;
-            this.top.zRot = be.pole_z_rot;
+            this.pole.zRot = TCalcStuff.degreesToRadians(be.base_z_rot);
+            this.top.xRot = TCalcStuff.degreesToRadians(be.pole_x_rot);
+            this.top.yRot = TCalcStuff.degreesToRadians(be.pole_y_rot);
+            this.top.zRot = TCalcStuff.degreesToRadians(be.pole_z_rot);
         }
         else{
             this.pole.xRot = 0.17f;

@@ -11,6 +11,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.rk.thingamajigs.blockentity.custom.FootballGoalBE;
+import net.rk.thingamajigs.xtras.TCalcStuff;
 
 public class FootballGoalModel extends Model {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
@@ -35,7 +36,7 @@ public class FootballGoalModel extends Model {
     }
 
     public void setupAnim(FootballGoalBE be){
-        this.main.yRot = be.yAngle;
+        this.main.yRot = TCalcStuff.degreesToRadians(be.yAngle);
         this.main.zRot = 0;
         this.main.xRot = Mth.PI;
     }

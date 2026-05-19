@@ -2,6 +2,7 @@ package net.rk.thingamajigs.render;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
+import com.mojang.math.Axis;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
@@ -12,6 +13,7 @@ import net.minecraft.world.phys.Vec3;
 import net.rk.thingamajigs.block.custom.TheaterProjector;
 import net.rk.thingamajigs.blockentity.custom.TheaterProjectorBE;
 import net.rk.thingamajigs.render.model.TheaterProjectorModel;
+import net.rk.thingamajigs.xtras.TCalcStuff;
 import net.rk.thingamajigs.xtras.TColors;
 import org.joml.Quaternionf;
 
@@ -44,7 +46,7 @@ public class TheaterProjectorBERenderer implements BlockEntityRenderer<TheaterPr
         poseStack.scale(1.0f,1.0f,1.0f);
         VertexConsumer consumer = multiBufferSource.getBuffer(RenderType.entitySolid(TheaterProjectorModel.LAYER_LOCATION.getModel()));
         if(be.custom){
-            poseStack.mulPose(new Quaternionf().rotateY(be.yAngle));
+            poseStack.rotateAround(Axis.YP.rotationDegrees(be.yAngle),0f,0f,0f);
             poseStack.translate(be.x_xtra, 1.25f, be.z_xtra);
         }
         else{
@@ -65,7 +67,7 @@ public class TheaterProjectorBERenderer implements BlockEntityRenderer<TheaterPr
                 poseStack.translate(0.5,1.25f,-0.8);
             }
         }
-        this.model.projectorTop.xRot = be.projector_image_angle;
+        this.model.projectorTop.xRot = TCalcStuff.degreesToRadians(be.projector_image_angle);
         this.model.setupAnim(be);
         this.model.renderToBuffer(poseStack,consumer,
                 i,i1, TColors.getWhite());

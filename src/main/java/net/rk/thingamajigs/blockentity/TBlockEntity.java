@@ -80,6 +80,22 @@ public class TBlockEntity {
                     )
                     .build(null));
 
+    public static final Supplier<BlockEntityType<CarWashBrushBE>> CAR_WASH_BRUSH_BE = BLOCK_ENTITIES.register(
+            "car_wash_brush_be",() -> BlockEntityType.Builder.of(CarWashBrushBE::new,
+                            TBlocks.CAR_WASH_BLUE_BRUSH.get(),
+                            TBlocks.CAR_WASH_YELLOW_BRUSH.get(),
+                            TBlocks.CAR_WASH_RED_BRUSH.get(),
+                            TBlocks.CAR_WASH_MIXED_BRUSH.get()
+                    )
+                    .build(null)
+    );
+
+    public static final Supplier<BlockEntityType<MitterCurtainBE>> MITTER_CURTAIN = BLOCK_ENTITIES.register(
+            "mitter_curtain",() -> BlockEntityType.Builder.of(MitterCurtainBE::new,
+                            TBlocks.CAR_WASH_MITTER_CURTAIN.get())
+                    .build(null)
+    );
+
 
     public static void register(IEventBus eventBus){
         BLOCK_ENTITIES.register(eventBus);

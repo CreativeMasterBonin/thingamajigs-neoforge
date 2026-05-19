@@ -2,6 +2,7 @@ package net.rk.thingamajigs.render;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
+import com.mojang.math.Axis;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
@@ -12,6 +13,7 @@ import net.minecraft.world.phys.Vec3;
 import net.rk.thingamajigs.block.custom.FootballGoal;
 import net.rk.thingamajigs.blockentity.custom.FootballGoalBE;
 import net.rk.thingamajigs.render.model.FootballGoalModel;
+import net.rk.thingamajigs.xtras.TCalcStuff;
 import org.joml.Quaternionf;
 
 public class FootballGoalRenderer implements BlockEntityRenderer<FootballGoalBE> {
@@ -37,7 +39,7 @@ public class FootballGoalRenderer implements BlockEntityRenderer<FootballGoalBE>
 
     public void rotate(Direction direction, FootballGoalBE rotatableBlockEntity, PoseStack poseStack){
         if(rotatableBlockEntity.custom){
-            poseStack.mulPose(new Quaternionf().rotateY(rotatableBlockEntity.yAngle));
+
         }
         else{
             if(direction == Direction.NORTH){

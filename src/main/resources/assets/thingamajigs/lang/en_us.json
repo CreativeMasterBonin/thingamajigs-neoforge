@@ -1637,5 +1637,6 @@
   "thingamajigs.subtitle.paper_hit": "Instrument crinkles",
   "thingamajigs.subtitle.rattle_hit": "Instrument rattles",
 
-  "block.thingamajigs.fake_fluid_pump": "Fake Fluid Pump"
+  "block.thingamajigs.fake_fluid_pump": "Fake Fluid Pump",
+  "thingamajigs.configuration.General.button": "General"
 }

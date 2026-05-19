@@ -156,27 +156,17 @@ public class DJLaserLightScreen extends AbstractContainerScreen<DJLaserLightMenu
     }
 
     @Override
-    public void renderBackground(GuiGraphics pGuiGraphics, int pMouseX, int pMouseY, float pPartialTick) {
-        this.renderCustomBg(pGuiGraphics);
-        if (this.minecraft.level != null) {
-            net.neoforged.neoforge.common.NeoForge.EVENT_BUS.post(new net.neoforged.neoforge.client.event.ScreenEvent.BackgroundRendered(this, pGuiGraphics));
-        }
+    public void renderBackground(GuiGraphics guiGraphics, int pMouseX, int pMouseY, float pPartialTick) {
+        guiGraphics.setColor(FastColor.ARGB32.red(djllbe.color),
+                FastColor.ARGB32.green(djllbe.color),
+                FastColor.ARGB32.blue(djllbe.color),
+                1.0f);
+        guiGraphics.blit(BG_LOC, this.leftPos - 18, this.topPos + 107, 0, 0.0F, 0.0F,
+                16, 16, 16, 16);
     }
 
     public static final ResourceLocation BG_LOC = ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,"textures/block/sidewalk_new.png");
 
-    public void renderCustomBg(GuiGraphics guigraph){
-        guigraph.setColor(FastColor.ARGB32.red(djllbe.color),
-                FastColor.ARGB32.green(djllbe.color),
-                FastColor.ARGB32.blue(djllbe.color),
-                1.0f);
-
-        guigraph.blit(BG_LOC, this.leftPos - 18, this.topPos + 107, 0, 0.0F, 0.0F,
-                16, 16, 16, 16);
-
-        net.neoforged.neoforge.common.NeoForge.EVENT_BUS.post(
-                new net.neoforged.neoforge.client.event.ScreenEvent.BackgroundRendered(this, guigraph));
-    }
 
     @Override
     protected void renderBg(GuiGraphics ggraph, float ptick, int mousx, int mousy) {

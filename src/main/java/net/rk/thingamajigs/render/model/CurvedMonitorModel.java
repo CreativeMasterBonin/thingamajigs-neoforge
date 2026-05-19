@@ -12,6 +12,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.rk.thingamajigs.block.custom.CurvedMonitor;
 import net.rk.thingamajigs.blockentity.custom.CurvedMonitorBE;
+import net.rk.thingamajigs.xtras.TCalcStuff;
 
 public class CurvedMonitorModel extends Model{
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
@@ -45,20 +46,30 @@ public class CurvedMonitorModel extends Model{
 
     public void setupAnim(CurvedMonitorBE cmbe){
         if(cmbe.customAngle){
-            screen.yRot = cmbe.yAngle;
+            screen.yRot = TCalcStuff.degreesToRadians(cmbe.yAngle);
+            screen.x = 0.0f;
+            screen.z = 0.0f;
         }
         else{
             if(cmbe.getBlockState().getValue(CurvedMonitor.FACING) == Direction.NORTH){
-                screen.yRot = 3.15000000f;
+                screen.yRot = TCalcStuff.degreesToRadians(180);
+                screen.x = 2.0f;
+                screen.z = 4.0f;
             }
             else if (cmbe.getBlockState().getValue(CurvedMonitor.FACING) == Direction.SOUTH) {
-                screen.yRot = 0.000000f;
+                screen.yRot = TCalcStuff.degreesToRadians(0);
+                screen.x = 2.0f;
+                screen.z = 0.0f;
             }
             else if (cmbe.getBlockState().getValue(CurvedMonitor.FACING) == Direction.EAST) {
-                screen.yRot = 1.57000000f;
+                screen.yRot = TCalcStuff.degreesToRadians(90);
+                screen.x = 0.0f;
+                screen.z = 2.0f;
             }
             else if (cmbe.getBlockState().getValue(CurvedMonitor.FACING) == Direction.WEST){
-                screen.yRot = -1.57000000f;
+                screen.yRot = TCalcStuff.degreesToRadians(270);
+                screen.x = 4.0f;
+                screen.z = 2.0f;
             }
         }
         screen.zRot = 0;
