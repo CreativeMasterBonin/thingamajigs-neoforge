@@ -86,6 +86,9 @@ public class TItemModel extends ItemModelProvider {
         fromModelMod(TBlocks.PHONE_GROUP_SELECTOR.get(),"block/phone_group_selector");
         fromModelMod(TBlocks.PHONE_AXIS_SWITCH.get(),"block/phone_axis_switch");
         fromModelMod(TBlocks.PHONE_AXIS_SWITCH_RELAY.get(),"block/phone_axis_switch_relay");
+        // 1.8.5
+        fromModelMod(TBlocks.DELUXE_CAT_TREE.get(),"block/deluxe_cat_tree");
+        fromModelMod(TBlocks.CLAW_MACHINE.get(),"block/claw_machine");
     }
 
     private ItemModelBuilder fromModelModItem(Item item, String source){

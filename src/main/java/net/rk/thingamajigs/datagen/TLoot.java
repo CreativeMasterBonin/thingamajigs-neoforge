@@ -1221,7 +1221,8 @@ public class TLoot extends VanillaBlockLoot {
         this.dropSelf(TBlocks.PHONE_GROUP_SELECTOR.get());
         this.dropSelf(TBlocks.PHONE_AXIS_SWITCH.get());
         this.dropSelf(TBlocks.PHONE_AXIS_SWITCH_RELAY.get());
-
+        // 1.8.5
+        this.dropSelf(TBlocks.DELUXE_CAT_TREE.get());
 
 
         this.add(TBlocks.FAKE_FLUID_PUMP.get(),noDrop());

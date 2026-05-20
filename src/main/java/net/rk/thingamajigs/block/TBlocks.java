@@ -1983,13 +1983,13 @@ public class TBlocks {
     public static final DeferredBlock<Block> CAR_WASH_TRIFOAMER = register("car_wash_trifoamer",
             () -> new CarWashMultiFoamSprayer(BlockBehaviour.Properties.of()));
     public static final DeferredBlock<Block> CAR_WASH_BLUE_BRUSH = register("car_wash_blue_brush",
-            () -> new CarWashBrush(BlockBehaviour.Properties.of().noCollission()));
+            () -> new CarWashBrush(BlockBehaviour.Properties.of()));
     public static final DeferredBlock<Block> CAR_WASH_RED_BRUSH = register("car_wash_red_brush",
-            () -> new CarWashBrush(BlockBehaviour.Properties.of().noCollission()));
+            () -> new CarWashBrush(BlockBehaviour.Properties.of()));
     public static final DeferredBlock<Block> CAR_WASH_YELLOW_BRUSH = register("car_wash_yellow_brush",
-            () -> new CarWashBrush(BlockBehaviour.Properties.of().noCollission()));
+            () -> new CarWashBrush(BlockBehaviour.Properties.of()));
     public static final DeferredBlock<Block> CAR_WASH_TIRE_SCRUBBER = register("car_wash_tire_scrubber",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().noCollission()));
+            () -> new CarWashTireScrubber(BlockBehaviour.Properties.of()));
 
 
     //1.7.5
@@ -3463,6 +3463,84 @@ public class TBlocks {
     public static final DeferredBlock<Block> PHONE_AXIS_SWITCH_RELAY = register("phone_axis_switch_relay",
             () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL)));
 
+    // 1.8.5
+    public static final DeferredBlock<Block> DELUXE_CAT_TREE = register("deluxe_cat_tree",
+            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.WOOD)){
+                public static final VoxelShape NORTH = Stream.of(
+                        Block.box(-8, 0, 0, 8, 1, 16),
+                        Block.box(8, 0, 0, 24, 1, 16),
+                        Block.box(16, 13, 6, 20, 21, 10),
+                        Block.box(8, 21, 0, 24, 22, 16),
+                        Block.box(-2, 1, 7, 0, 31, 9),
+                        Block.box(-7, 31, 2, 5, 32, 14),
+                        Block.box(-8, 12, 1, 6, 13, 15),
+                        Block.box(23, 1, 0, 24, 12, 16),
+                        Block.box(13, 1, 15, 23, 12, 16),
+                        Block.box(12, 1, 0, 13, 12, 16),
+                        Block.box(12, 12, 0, 24, 13, 16)
+                ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+                public static final VoxelShape SOUTH = Stream.of(
+                        Block.box(8, 0, 0, 24, 1, 16),
+                        Block.box(-8, 0, 0, 8, 1, 16),
+                        Block.box(-4, 13, 6, 0, 21, 10),
+                        Block.box(-8, 21, 0, 8, 22, 16),
+                        Block.box(16, 1, 7, 18, 31, 9),
+                        Block.box(11, 31, 2, 23, 32, 14),
+                        Block.box(10, 12, 1, 24, 13, 15),
+                        Block.box(-8, 1, 0, -7, 12, 16),
+                        Block.box(-7, 1, 0, 3, 12, 1),
+                        Block.box(3, 1, 0, 4, 12, 16),
+                        Block.box(-8, 12, 0, 4, 13, 16)
+                ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+                public static final VoxelShape EAST = Stream.of(
+                        Block.box(0, 0, -8, 16, 1, 8),
+                        Block.box(0, 0, 8, 16, 1, 24),
+                        Block.box(6, 13, 16, 10, 21, 20),
+                        Block.box(0, 21, 8, 16, 22, 24),
+                        Block.box(7, 1, -2, 9, 31, 0),
+                        Block.box(2, 31, -7, 14, 32, 5),
+                        Block.box(1, 12, -8, 15, 13, 6),
+                        Block.box(0, 1, 23, 16, 12, 24),
+                        Block.box(0, 1, 13, 1, 12, 23),
+                        Block.box(0, 1, 12, 16, 12, 13),
+                        Block.box(0, 12, 12, 16, 13, 24)
+                ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+                public static final VoxelShape WEST = Stream.of(
+                        Block.box(0, 0, 8, 16, 1, 24),
+                        Block.box(0, 0, -8, 16, 1, 8),
+                        Block.box(6, 13, -4, 10, 21, 0),
+                        Block.box(0, 21, -8, 16, 22, 8),
+                        Block.box(7, 1, 16, 9, 31, 18),
+                        Block.box(2, 31, 11, 14, 32, 23),
+                        Block.box(1, 12, 10, 15, 13, 24),
+                        Block.box(0, 1, -8, 16, 12, -7),
+                        Block.box(15, 1, -7, 16, 12, 3),
+                        Block.box(0, 1, 3, 16, 12, 4),
+                        Block.box(0, 12, -8, 16, 13, 4)
+                ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+                @Override
+                public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+                    switch(state.getValue(FACING)){
+                        case NORTH -> {
+                            return NORTH;
+                        }
+                        case SOUTH -> {
+                            return SOUTH;
+                        }
+                        case EAST -> {
+                            return EAST;
+                        }
+                        case WEST -> {
+                            return WEST;
+                        }
+                        default -> {
+                            return Shapes.block();
+                        }
+                    }
+                }
+            });
 
 
 

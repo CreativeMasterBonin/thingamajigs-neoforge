@@ -64,6 +64,11 @@ public class TClient{
                 carWashCustomModelBaseLocation + "spinning_brush_base"),ModelResourceLocation.STANDALONE_VARIANT));
         event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
                 carWashCustomModelBaseLocation + "spinning_short_brush_base"),ModelResourceLocation.STANDALONE_VARIANT));
+        // tire scrubber
+        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
+                carWashCustomModelBaseLocation + "tire_scrubber_base"),ModelResourceLocation.STANDALONE_VARIANT));
+        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
+                carWashCustomModelBaseLocation + "tire_scrubber_blade"),ModelResourceLocation.STANDALONE_VARIANT));
         // mitter curtains
         event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
                 carWashCustomModelBaseLocation + "mitter_curtain"),ModelResourceLocation.STANDALONE_VARIANT));
@@ -239,6 +244,7 @@ public class TClient{
             // 1.8.5
             BlockEntityRenderers.register(TBlockEntity.CAR_WASH_BRUSH_BE.get(),CarWashBrushBERenderer::new);
             BlockEntityRenderers.register(TBlockEntity.MITTER_CURTAIN.get(),MitterCurtainBERenderer::new);
+            BlockEntityRenderers.register(TBlockEntity.CAR_WASH_TIRE_SCRUBBER_BE.get(),CarWashTireScrubberBERenderer::new);
         }
         catch (Exception e){
             Logger.getAnonymousLogger().warning(e.getMessage());

@@ -95,6 +95,11 @@ public class TBlockEntity {
                             TBlocks.CAR_WASH_MITTER_CURTAIN.get())
                     .build(null)
     );
+    public static final Supplier<BlockEntityType<CarWashTireScrubberBE>> CAR_WASH_TIRE_SCRUBBER_BE = BLOCK_ENTITIES.register(
+            "car_wash_tire_scrubber",() -> BlockEntityType.Builder.of(CarWashTireScrubberBE::new,
+                            TBlocks.CAR_WASH_TIRE_SCRUBBER.get())
+                    .build(null)
+    );
 
 
     public static void register(IEventBus eventBus){

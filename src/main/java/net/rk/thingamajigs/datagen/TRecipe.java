@@ -4707,6 +4707,14 @@ public class TRecipe extends RecipeProvider {
                 .requires(TItems.PHONE_COMPONENT.get())
                 .unlockedBy("has_thingy",has(TItems.PHONE_COMPONENT.get()))
                 .save(rc);
+        // 1.8.5
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.DELUXE_CAT_TREE.get().asItem(),1)
+                .requires(TBlocks.CAT_TREE.get().asItem())
+                .requires(Items.BLACK_WOOL)
+                .requires(ItemTags.PLANKS)
+                .requires(Items.STRING)
+                .unlockedBy("has_thingy",has(TBlocks.CAT_TREE.get().asItem()))
+                .save(rc);
     }
 
     public static RecipeBuilder stonecutterAny(Item requiredItem, Ingredient inputItem, Item result, int amt){

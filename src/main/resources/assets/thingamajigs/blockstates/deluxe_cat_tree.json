@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/deluxe_cat_tree",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/deluxe_cat_tree"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/deluxe_cat_tree",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/deluxe_cat_tree",
+      "y": 270
+    }
+  }
+}

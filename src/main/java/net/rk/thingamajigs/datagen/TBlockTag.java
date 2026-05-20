@@ -126,6 +126,7 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.RUNICSTONE_BLOCK.get())
                 .add(TBlocks.RUNICSTONE_BRICKS.get())
                 .add(TBlocks.EXPOSED_RUNICSTONE_BLOCK.get())
+                .add(TBlocks.DELUXE_CAT_TREE.get())
         ;
 
         tag(BlockTags.DOORS)
@@ -401,6 +402,7 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.RUNICSTONE_BLOCK.get())
                 .add(TBlocks.RUNICSTONE_BRICKS.get())
                 .add(TBlocks.EXPOSED_RUNICSTONE_BLOCK.get())
+                .add(TBlocks.DELUXE_CAT_TREE.get())
         ;
 
         tag(BlockTags.PIGLIN_REPELLENTS)
