@@ -1,5 +1,6 @@
 package net.rk.thingamajigs.block.custom;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -34,7 +35,7 @@ public class CheckerboardWool extends Block{
 
     @Override
     public void appendHoverText(ItemStack p_49816_, Item.TooltipContext p_339606_, List<Component> p_49818_, TooltipFlag p_49819_) {
-        p_49818_.add(Component.translatable("block.checkerboard_wool.desc"));
+        p_49818_.add(Component.translatable("block.checkerboard_wool.desc").withStyle(ChatFormatting.GRAY));
     }
 
     // we want the checkerboard wool when stepped on to give entities (who can) obtain helpful effects for fast sneaking (without enchanted boots)

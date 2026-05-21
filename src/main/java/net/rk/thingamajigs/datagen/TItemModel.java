@@ -89,6 +89,11 @@ public class TItemModel extends ItemModelProvider {
         // 1.8.5
         fromModelMod(TBlocks.DELUXE_CAT_TREE.get(),"block/deluxe_cat_tree");
         fromModelMod(TBlocks.CLAW_MACHINE.get(),"block/claw_machine");
+        fromModelMod(TBlocks.OLD_MICROWAVE_TRANSMITTER.get(),"block/old_microwave_reflector");
+        fromModelMod(TBlocks.OLD_MICROWAVE_TRANSMITTER_OPAQUE.get(),"block/old_microwave_reflector_opaque");
+        fromModelMod(TBlocks.OLD_MICROWAVE_REFLECTOR_ROUNDED.get(),"block/old_microwave_reflector_rounded");
+        fromModelMod(TBlocks.OLD_MICROWAVE_REFLECTOR_ROUNDED_OPAQUE.get(),"block/old_microwave_reflector_rounded_opaque");
+        fromModelMod(TBlocks.DECORATIONAL_BUCKET.get(),"block/decorational_bucket");
     }
 
     private ItemModelBuilder fromModelModItem(Item item, String source){

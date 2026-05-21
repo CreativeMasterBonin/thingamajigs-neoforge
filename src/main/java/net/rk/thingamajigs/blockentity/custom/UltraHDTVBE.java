@@ -7,16 +7,16 @@ import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.rk.thingamajigs.blockentity.TBlockEntity;
 
-public class CarWashTireScrubberBE extends BlockEntity {
+public class UltraHDTVBE extends BlockEntity {
     public float yAngle = 0.0f;
-    public float rotation = 0.0f;
     public boolean customRotation = false;
+    public int currentChannel = 0;
+    public int randomColor = 0;
 
-    public CarWashTireScrubberBE(BlockPos pos, BlockState blockState) {
-        super(TBlockEntity.CAR_WASH_TIRE_SCRUBBER_BE.get(),pos, blockState);
+    public UltraHDTVBE(BlockPos pos, BlockState blockState) {
+        super(TBlockEntity.ULTRA_HD_TV.get(), pos, blockState);
     }
 
     public void updateBlock(){
@@ -45,6 +45,13 @@ public class CarWashTireScrubberBE extends BlockEntity {
     }
 
     @Override
+    public void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
+        tag.putFloat("y_angle",yAngle);
+        tag.putBoolean("custom_rotation",customRotation);
+        tag.putInt("current_channel",currentChannel);
+    }
+
+    @Override
     public void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         if(tag.contains("y_angle")){
             yAngle = tag.getFloat("y_angle");
@@ -52,23 +59,14 @@ public class CarWashTireScrubberBE extends BlockEntity {
         if(tag.contains("custom_rotation")){
             customRotation = tag.getBoolean("custom_rotation");
         }
-    }
-
-    @Override
-    public void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        tag.putFloat("y_angle",yAngle);
-        tag.putBoolean("custom_rotation",customRotation);
-    }
-
-    public static void clientTick(Level lvl, BlockPos bp, BlockState bs, CarWashTireScrubberBE tireScrubber){
-        if(bs.getValue(BlockStateProperties.LIT)){
-            tireScrubber.rotation += 24.1f;
-            if(tireScrubber.rotation >= 360.0f || tireScrubber.rotation <= -360.0f){
-                tireScrubber.rotation = 0.0f;
-            }
+        if(tag.contains("current_channel")){
+            currentChannel = tag.getInt("current_channel");
         }
-        else{
-            tireScrubber.rotation = 0.0f;
+    }
+
+    public static void clientTick(Level lvl, BlockPos bp, BlockState bs, UltraHDTVBE tv){
+        if(lvl.getRandom().nextIntBetweenInclusive(2,12003) % 51 == 0){
+            tv.randomColor = lvl.getRandom().nextIntBetweenInclusive(1,16777215);
         }
     }
 }

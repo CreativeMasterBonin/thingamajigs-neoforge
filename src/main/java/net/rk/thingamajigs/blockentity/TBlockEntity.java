@@ -101,6 +101,18 @@ public class TBlockEntity {
                     .build(null)
     );
 
+    public static final Supplier<BlockEntityType<UltraHDTVBE>> ULTRA_HD_TV = BLOCK_ENTITIES.register(
+            "ultra_hd_tv_be",() -> BlockEntityType.Builder.of(UltraHDTVBE::new,
+                            TBlocks.ULTRA_HD_TV.get())
+                    .build(null)
+    );
+
+    public static final Supplier<BlockEntityType<DecorationalBucketBE>> DECORATIONAL_BUCKET_BE = BLOCK_ENTITIES.register(
+            "decorational_bucket_be",() -> BlockEntityType.Builder.of(DecorationalBucketBE::new,
+                            TBlocks.DECORATIONAL_BUCKET.get())
+                    .build(null)
+    );
+
 
     public static void register(IEventBus eventBus){
         BLOCK_ENTITIES.register(eventBus);

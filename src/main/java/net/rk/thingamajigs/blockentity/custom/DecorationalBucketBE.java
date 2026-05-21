@@ -4,19 +4,23 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.material.Fluid;
+import net.neoforged.neoforge.fluids.FluidStack;
+import net.neoforged.neoforge.fluids.capability.templates.FluidTank;
 import net.rk.thingamajigs.blockentity.TBlockEntity;
 
-public class CarWashTireScrubberBE extends BlockEntity {
-    public float yAngle = 0.0f;
-    public float rotation = 0.0f;
-    public boolean customRotation = false;
+public class DecorationalBucketBE extends BlockEntity{
+    public FluidTank fakeTank = new FluidTank(16); // this is for show only, not for actual fluid storage
 
-    public CarWashTireScrubberBE(BlockPos pos, BlockState blockState) {
-        super(TBlockEntity.CAR_WASH_TIRE_SCRUBBER_BE.get(),pos, blockState);
+    public DecorationalBucketBE(BlockPos pos, BlockState blockState) {
+        super(TBlockEntity.DECORATIONAL_BUCKET_BE.get(), pos, blockState);
+    }
+
+    public void setFluid(Fluid fluid){
+        fakeTank.setFluid(new FluidStack(fluid,16));
+        updateBlock();
     }
 
     public void updateBlock(){
@@ -45,30 +49,14 @@ public class CarWashTireScrubberBE extends BlockEntity {
     }
 
     @Override
-    public void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        if(tag.contains("y_angle")){
-            yAngle = tag.getFloat("y_angle");
-        }
-        if(tag.contains("custom_rotation")){
-            customRotation = tag.getBoolean("custom_rotation");
-        }
+    public void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
+        fakeTank.writeToNBT(registries,tag);
     }
 
     @Override
-    public void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        tag.putFloat("y_angle",yAngle);
-        tag.putBoolean("custom_rotation",customRotation);
-    }
-
-    public static void clientTick(Level lvl, BlockPos bp, BlockState bs, CarWashTireScrubberBE tireScrubber){
-        if(bs.getValue(BlockStateProperties.LIT)){
-            tireScrubber.rotation += 24.1f;
-            if(tireScrubber.rotation >= 360.0f || tireScrubber.rotation <= -360.0f){
-                tireScrubber.rotation = 0.0f;
-            }
-        }
-        else{
-            tireScrubber.rotation = 0.0f;
+    public void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
+        if(tag.contains("Fluid")){
+            fakeTank.readFromNBT(registries,tag);
         }
     }
 }

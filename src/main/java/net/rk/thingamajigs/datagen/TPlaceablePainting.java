@@ -13,12 +13,12 @@ import org.jetbrains.annotations.Nullable;
 import java.util.concurrent.CompletableFuture;
 
 public class TPlaceablePainting extends TagsProvider<PaintingVariant> {
-    protected TPlaceablePainting(PackOutput p_256596_, CompletableFuture<HolderLookup.Provider> p_256513_, @Nullable ExistingFileHelper existingFileHelper) {
+    public TPlaceablePainting(PackOutput p_256596_, CompletableFuture<HolderLookup.Provider> p_256513_, @Nullable ExistingFileHelper existingFileHelper) {
         super(p_256596_, Registries.PAINTING_VARIANT, p_256513_, Thingamajigs.MODID, existingFileHelper);
     }
 
     @Override
-    protected void addTags(HolderLookup.Provider p) {
+    public void addTags(HolderLookup.Provider p) {
         this.tag(PaintingVariantTags.PLACEABLE);
     }
 }

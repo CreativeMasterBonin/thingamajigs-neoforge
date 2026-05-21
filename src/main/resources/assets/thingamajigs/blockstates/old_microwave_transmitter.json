@@ -1,18 +1,18 @@
 {
   "variants": {
     "facing=east": {
-      "model": "thingamajigs:block/old_microwave_transmitter",
+      "model": "thingamajigs:block/old_microwave_reflector",
       "y": 90
     },
     "facing=north": {
-      "model": "thingamajigs:block/old_microwave_transmitter"
+      "model": "thingamajigs:block/old_microwave_reflector"
     },
     "facing=south": {
-      "model": "thingamajigs:block/old_microwave_transmitter",
+      "model": "thingamajigs:block/old_microwave_reflector",
       "y": 180
     },
     "facing=west": {
-      "model": "thingamajigs:block/old_microwave_transmitter",
+      "model": "thingamajigs:block/old_microwave_reflector",
       "y": 270
     }
   }

@@ -1223,6 +1223,11 @@ public class TLoot extends VanillaBlockLoot {
         this.dropSelf(TBlocks.PHONE_AXIS_SWITCH_RELAY.get());
         // 1.8.5
         this.dropSelf(TBlocks.DELUXE_CAT_TREE.get());
+        this.dropSelf(TBlocks.OLD_MICROWAVE_TRANSMITTER_OPAQUE.get());
+        this.dropSelf(TBlocks.OLD_MICROWAVE_REFLECTOR_ROUNDED.get());
+        this.dropSelf(TBlocks.OLD_MICROWAVE_REFLECTOR_ROUNDED_OPAQUE.get());
+        this.dropSelf(TBlocks.DECORATIONAL_BUCKET.get());
+
 
 
         this.add(TBlocks.FAKE_FLUID_PUMP.get(),noDrop());

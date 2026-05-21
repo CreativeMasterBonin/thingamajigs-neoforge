@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/bucket_3d",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/bucket_3d"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/bucket_3d",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/bucket_3d",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/old_microwave_reflector_rounded",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/old_microwave_reflector_rounded"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/old_microwave_reflector_rounded",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/old_microwave_reflector_rounded",
+      "y": 270
+    }
+  }
+}

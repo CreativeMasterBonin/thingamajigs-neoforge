@@ -1,5 +1,6 @@
 package net.rk.thingamajigs;
 
+import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
@@ -58,8 +59,14 @@ public class TClient{
     }
 
     public static final String carWashCustomModelBaseLocation = "bases/car_wash_components/";
+    public static ModelResourceLocation uhdTVLocation = new ModelResourceLocation(
+            ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
+            "oversized/uhd_tv"),ModelResourceLocation.STANDALONE_VARIANT);
 
     public void registerAdditionalModels(ModelEvent.RegisterAdditional event){
+        // other
+        event.register(uhdTVLocation);
+        // car brush wash bases
         event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
                 carWashCustomModelBaseLocation + "spinning_brush_base"),ModelResourceLocation.STANDALONE_VARIANT));
         event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
@@ -245,9 +252,11 @@ public class TClient{
             BlockEntityRenderers.register(TBlockEntity.CAR_WASH_BRUSH_BE.get(),CarWashBrushBERenderer::new);
             BlockEntityRenderers.register(TBlockEntity.MITTER_CURTAIN.get(),MitterCurtainBERenderer::new);
             BlockEntityRenderers.register(TBlockEntity.CAR_WASH_TIRE_SCRUBBER_BE.get(),CarWashTireScrubberBERenderer::new);
+            BlockEntityRenderers.register(TBlockEntity.ULTRA_HD_TV.get(),UltraHDTVBERenderer::new);
+            BlockEntityRenderers.register(TBlockEntity.DECORATIONAL_BUCKET_BE.get(),DecorationalBucketBERenderer::new);
         }
         catch (Exception e){
-            Logger.getAnonymousLogger().warning(e.getMessage());
+            LogUtils.getLogger().error(e.getLocalizedMessage());
         }
     }
 
@@ -279,6 +288,7 @@ public class TClient{
             event.accept(TItems.GIANT_SPAWN_EGG);
             // experimental things
             event.accept(TBlocks.FAKE_FLUID_PUMP.get().asItem());
+            event.accept(TItems.PANORAMIC_CAMERA.asItem()); // a panorama screenshot taker
         }
         if(event.getTabKey() == Thingamajigs.MAIN_CTAB.getKey()){
             event.accept(TItems.THINGAMAJIG);
@@ -562,6 +572,9 @@ public class TClient{
             event.accept(TBlocks.CELL_TRANSMITTER.get().asItem());
             event.accept(TBlocks.CELL_MICROWAVE_TRANSMITTER.get().asItem());
             event.accept(TBlocks.OLD_MICROWAVE_TRANSMITTER.get().asItem());
+            event.accept(TBlocks.OLD_MICROWAVE_TRANSMITTER_OPAQUE.get().asItem());
+            event.accept(TBlocks.OLD_MICROWAVE_REFLECTOR_ROUNDED.get().asItem());
+            event.accept(TBlocks.OLD_MICROWAVE_REFLECTOR_ROUNDED_OPAQUE.get().asItem());
             // dark stone
             event.accept(TBlocks.DARKENED_STONE.get().asItem());
             event.accept(TBlocks.GRADIENT_DARKENED_STONE.get().asItem());
@@ -928,6 +941,7 @@ public class TClient{
             event.accept(TBlocks.AQUARIUM.get().asItem());
             event.accept(TBlocks.DOG_HOUSE.get().asItem());
             event.accept(TBlocks.CAT_TREE.get().asItem());
+            event.accept(TBlocks.DELUXE_CAT_TREE.get().asItem());
             event.accept(TBlocks.LITTER_BOX.get().asItem());
             event.accept(TBlocks.HOTTUB.get().asItem());
             event.accept(TBlocks.MAILBOX.get().asItem());
@@ -1138,6 +1152,7 @@ public class TClient{
             event.accept(TBlocks.CHEESE_BLOCK.get().asItem());
             event.accept(TBlocks.GLOWING_CHEESE_BLOCK.get().asItem());
             // Misc. Junk
+            event.accept(TBlocks.DECORATIONAL_BUCKET.get().asItem());
             event.accept(TBlocks.POWDER_KEG.get().asItem());
             event.accept(TBlocks.BIOHAZARD_BIN.get().asItem());
             event.accept(TBlocks.RADIOACTIVE_BARREL.get().asItem());

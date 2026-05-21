@@ -1,5 +1,6 @@
 package net.rk.thingamajigs.block.custom;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
@@ -51,6 +52,6 @@ public class DroopyFlower extends FlowerBlock{
 
     @Override
     public void appendHoverText(ItemStack is, Item.TooltipContext itc, List<Component> list, TooltipFlag tf) {
-        list.add(Component.translatable("block.droopy_flower.desc"));
+        list.add(Component.translatable("block.droopy_flower.desc").withStyle(ChatFormatting.GRAY));
     }
 }

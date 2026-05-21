@@ -4715,6 +4715,30 @@ public class TRecipe extends RecipeProvider {
                 .requires(Items.STRING)
                 .unlockedBy("has_thingy",has(TBlocks.CAT_TREE.get().asItem()))
                 .save(rc);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.OLD_MICROWAVE_TRANSMITTER_OPAQUE.get().asItem(),1)
+                .requires(TBlocks.OLD_MICROWAVE_TRANSMITTER.get().asItem())
+                .requires(Items.WHITE_BANNER)
+                .requires(Items.IRON_INGOT)
+                .unlockedBy("has_thingy",has(TBlocks.OLD_MICROWAVE_TRANSMITTER.get().asItem()))
+                .save(rc);
+        stonecutterAny(TBlocks.OLD_MICROWAVE_REFLECTOR_ROUNDED.get().asItem(),
+                Ingredient.of(TBlocks.OLD_MICROWAVE_TRANSMITTER.get().asItem()),
+                TBlocks.OLD_MICROWAVE_REFLECTOR_ROUNDED.get().asItem(),1)
+                .unlockedBy("has_thingy",InventoryChangeTrigger.TriggerInstance
+                        .hasItems(TBlocks.OLD_MICROWAVE_TRANSMITTER.get().asItem()))
+                .save(rc);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.OLD_MICROWAVE_REFLECTOR_ROUNDED_OPAQUE.get().asItem(),1)
+                .requires(TBlocks.OLD_MICROWAVE_REFLECTOR_ROUNDED.get().asItem())
+                .requires(Items.WHITE_BANNER)
+                .requires(Items.IRON_INGOT)
+                .unlockedBy("has_thingy",has(TBlocks.OLD_MICROWAVE_REFLECTOR_ROUNDED.get().asItem()))
+                .save(rc);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.DECORATIONAL_BUCKET.get().asItem(),1)
+                .requires(TItems.THINGAMAJIG)
+                .requires(Items.BUCKET)
+                .unlockedBy("has_thingy",has(Items.BUCKET))
+                .group("vanilla_plus")
+                .save(rc);
     }
 
     public static RecipeBuilder stonecutterAny(Item requiredItem, Ingredient inputItem, Item result, int amt){

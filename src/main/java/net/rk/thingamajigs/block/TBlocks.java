@@ -3420,8 +3420,7 @@ public class TBlocks {
             () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of()
                     .sound(SoundType.METAL)));
     public static final DeferredBlock<Block> WEIGHT_SCALE = register("weight_scale",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of()
-                    .sound(SoundType.METAL)){
+            () -> new WeightScale(BlockBehaviour.Properties.of()){
                 public static final VoxelShape ALL = Block.box(
                         0.0D, 0.0D, 0.0D,
                         16.0D, 2.0D, 16.0D);
@@ -3541,6 +3540,38 @@ public class TBlocks {
                     }
                 }
             });
+
+    public static final DeferredBlock<Block> OLD_MICROWAVE_TRANSMITTER_OPAQUE = register("old_microwave_transmitter_opaque",
+            () -> new MicrowaveTransmitter(BlockBehaviour.Properties.of().sound(SoundType.METAL)));
+    public static final DeferredBlock<Block> OLD_MICROWAVE_REFLECTOR_ROUNDED = register("old_microwave_reflector_rounded",
+            () -> new MicrowaveTransmitter(BlockBehaviour.Properties.of().sound(SoundType.METAL)){
+                @Override
+                public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext ctx) {
+                    switch(state.getValue(FACING)){
+                        case NORTH: return NORTH_ROUNDED;
+                        case SOUTH: return SOUTH_ROUNDED;
+                        case EAST: return EAST_ROUNDED;
+                        case WEST: return WEST_ROUNDED;
+                        default: return Shapes.block();
+                    }
+                }
+            });
+    public static final DeferredBlock<Block> OLD_MICROWAVE_REFLECTOR_ROUNDED_OPAQUE = register("old_microwave_reflector_rounded_opaque",
+            () -> new MicrowaveTransmitter(BlockBehaviour.Properties.of().sound(SoundType.METAL)){
+                @Override
+                public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext ctx) {
+                    switch(state.getValue(FACING)){
+                        case NORTH: return NORTH_ROUNDED;
+                        case SOUTH: return SOUTH_ROUNDED;
+                        case EAST: return EAST_ROUNDED;
+                        case WEST: return WEST_ROUNDED;
+                        default: return Shapes.block();
+                    }
+                }
+            });
+
+    public static final DeferredBlock<Block> DECORATIONAL_BUCKET = register("decorational_bucket",
+            () -> new DecorationalBucket(BlockBehaviour.Properties.of()));
 
 
 

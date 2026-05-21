@@ -1,14 +1,20 @@
 package net.rk.thingamajigs.item;
 
 import net.minecraft.ChatFormatting;
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -16,6 +22,8 @@ import net.rk.thingamajigs.Thingamajigs;
 import net.rk.thingamajigs.block.TBlocks;
 import net.rk.thingamajigs.xtras.DecorationCategory;
 
+import javax.annotation.Nullable;
+import java.io.File;
 import java.util.List;
 
 @SuppressWarnings("deprecated")
@@ -363,5 +371,37 @@ public class TItems {
             () -> new BlockItem(TBlocks.THEATER_PROJECTOR.get(),new Item.Properties()));
     public static final DeferredItem<Item> CLEVER_BLACKBOARD = ITEMS.register("clever_blackboard",
             () -> new BlockItem(TBlocks.CLEVER_BLACKBOARD.get(),new Item.Properties()));
+
+    // 1.8.5
+    public static final DeferredItem<Item> PANORAMIC_CAMERA = ITEMS.register("panoramic_camera",
+            () -> new Item(new Item.Properties()){
+                @Override
+                public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand usedHand){
+                    if(level.isClientSide()){
+                        if(player != null && player.canUseGameMasterBlocks() && player.isCreative() && !player.getCooldowns().isOnCooldown(player.getItemInHand(usedHand).getItem())){
+                            try{
+                                File file = Minecraft.getInstance().gameDirectory.toPath().toFile();
+                                Minecraft.getInstance().grabPanoramixScreenshot(file,1024,1024);
+                                player.sendSystemMessage(Component.translatable("screenshot.success","panorama_*.png"));
+                            }
+                            catch (Exception e){
+                                player.sendSystemMessage(Component.translatable("screenshot.failure", "panorama_*.png"));
+                            }
+                            return InteractionResultHolder.consume(player.getItemInHand(usedHand));
+                        }
+                    }
+                    else{
+                        if(player != null && player.canUseGameMasterBlocks() && player.isCreative()){
+                            player.setYRot(0);
+                            player.setYBodyRot(0);
+                            player.setYHeadRot(0);
+                        }
+                        if(!player.getCooldowns().isOnCooldown(player.getItemInHand(usedHand).getItem())){
+                            player.getCooldowns().addCooldown(player.getItemInHand(usedHand).getItem(),400);
+                        }
+                    }
+                    return InteractionResultHolder.pass(player.getItemInHand(usedHand));
+                }
+            });
 }
 

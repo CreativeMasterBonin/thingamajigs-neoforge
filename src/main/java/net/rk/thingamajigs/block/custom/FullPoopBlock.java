@@ -1,5 +1,6 @@
 package net.rk.thingamajigs.block.custom;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -27,7 +28,7 @@ public class FullPoopBlock extends Block{
     @Override
     public void appendHoverText(ItemStack p_49816_, Item.TooltipContext p_339606_, List<Component> p_49818_, TooltipFlag p_49819_) {
         super.appendHoverText(p_49816_, p_339606_, p_49818_, p_49819_);
-        p_49818_.add(Component.translatable("block.full_poop_block.desc"));
+        p_49818_.add(Component.translatable("block.full_poop_block.desc").withStyle(ChatFormatting.GRAY));
     }
 
     @Override

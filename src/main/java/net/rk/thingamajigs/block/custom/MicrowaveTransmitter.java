@@ -67,6 +67,66 @@ public class MicrowaveTransmitter extends ThingamajigsDecorativeBlock{
             Block.box(0, 0, 0, 15, 8, 2)
     ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
+    public static final VoxelShape NORTH_ROUNDED = Stream.of(
+            Block.box(6, -16, 6, 10, -12, 10),
+            Block.box(4, -12, 4, 12, -4, 12),
+            Block.box(0, -4, 0, 16, 0, 16),
+            Block.box(-0.2, 0, 0, 1.8, 12, 6),
+            Block.box(14.2, 0, 0, 16.2, 12, 6),
+            Block.box(-0.2, 0, 6, 1.8, 10, 12),
+            Block.box(14.2, 0, 6, 16.2, 10, 12),
+            Block.box(-0.2, 0, 12, 1.8, 5, 15),
+            Block.box(14.2, 0, 12, 16.2, 5, 15),
+            Block.box(0, 12, -2, 16, 15, 5),
+            Block.box(0, 10, 5, 16, 13, 12),
+            Block.box(0, 0, 12, 16, 10, 16)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+    public static final VoxelShape EAST_ROUNDED = Stream.of(
+            Block.box(6, -16, 6, 10, -12, 10),
+            Block.box(4, -12, 4, 12, -4, 12),
+            Block.box(0, -4, 0, 16, 0, 16),
+            Block.box(10, 0, -0.1999999999999993, 16, 12, 1.7999999999999998),
+            Block.box(10, 0, 14.2, 16, 12, 16.2),
+            Block.box(4, 0, -0.1999999999999993, 10, 10, 1.7999999999999998),
+            Block.box(4, 0, 14.2, 10, 10, 16.2),
+            Block.box(1, 0, -0.1999999999999993, 4, 5, 1.7999999999999998),
+            Block.box(1, 0, 14.2, 4, 5, 16.2),
+            Block.box(11, 12, 0, 18, 15, 16),
+            Block.box(4, 10, 0, 11, 13, 16),
+            Block.box(0, 0, 0, 4, 10, 16)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+    public static final VoxelShape SOUTH_ROUNDED = Stream.of(
+            Block.box(6, -16, 6, 10, -12, 10),
+            Block.box(4, -12, 4, 12, -4, 12),
+            Block.box(0, -4, 0, 16, 0, 16),
+            Block.box(14.2, 0, 10, 16.2, 12, 16),
+            Block.box(-0.1999999999999993, 0, 10, 1.8000000000000007, 12, 16),
+            Block.box(14.2, 0, 4, 16.2, 10, 10),
+            Block.box(-0.1999999999999993, 0, 4, 1.8000000000000007, 10, 10),
+            Block.box(14.2, 0, 1, 16.2, 5, 4),
+            Block.box(-0.1999999999999993, 0, 1, 1.8000000000000007, 5, 4),
+            Block.box(0, 12, 11, 16, 15, 18),
+            Block.box(0, 10, 4, 16, 13, 11),
+            Block.box(0, 0, 0, 16, 10, 4)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+    public static final VoxelShape WEST_ROUNDED = Stream.of(
+            Block.box(6, -16, 6, 10, -12, 10),
+            Block.box(4, -12, 4, 12, -4, 12),
+            Block.box(0, -4, 0, 16, 0, 16),
+            Block.box(0, 0, 14.2, 6, 12, 16.2),
+            Block.box(0, 0, -0.1999999999999993, 6, 12, 1.8000000000000007),
+            Block.box(6, 0, 14.2, 12, 10, 16.2),
+            Block.box(6, 0, -0.1999999999999993, 12, 10, 1.8000000000000007),
+            Block.box(12, 0, 14.2, 15, 5, 16.2),
+            Block.box(12, 0, -0.1999999999999993, 15, 5, 1.8000000000000007),
+            Block.box(-2, 12, 0, 5, 15, 16),
+            Block.box(5, 10, 0, 12, 13, 16),
+            Block.box(12, 0, 0, 16, 10, 16)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
     public MicrowaveTransmitter(Properties properties) {
         super(properties.sound(SoundType.METAL).strength(2F,50F).noOcclusion());
         this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED,false));

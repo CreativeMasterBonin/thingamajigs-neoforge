@@ -375,6 +375,7 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.WAXED_OXIDIZED_COPPER_TABLE.get())
                 .add(TBlocks.IRON_TABLE.get())
                 .add(TBlocks.DIAMOND_TABLE.get())
+                .add(TBlocks.DECORATIONAL_BUCKET.get())
         ;
 
         tag(BlockTags.OCCLUDES_VIBRATION_SIGNALS)
@@ -657,6 +658,7 @@ public class TBlockTag extends BlockTagsProvider {
         ;
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(TBlocks.DECORATIONAL_BUCKET.get())
                 .add(TBlocks.GOAL.get())
                 .add(TBlocks.MYSTERIOUS_PILLAR.get())
                 .add(TBlocks.CHIMNEY.get())
@@ -1050,6 +1052,10 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.PHONE_GROUP_SELECTOR.get())
                 .add(TBlocks.PHONE_AXIS_SWITCH.get())
                 .add(TBlocks.PHONE_AXIS_SWITCH_RELAY.get())
+                .add(TBlocks.OLD_MICROWAVE_TRANSMITTER_OPAQUE.get())
+                .add(TBlocks.OLD_MICROWAVE_TRANSMITTER.get())
+                .add(TBlocks.OLD_MICROWAVE_REFLECTOR_ROUNDED.get())
+                .add(TBlocks.OLD_MICROWAVE_REFLECTOR_ROUNDED_OPAQUE.get())
                 .replace(false)
         ;
 
