@@ -560,6 +560,7 @@ public class TBlockTag extends BlockTagsProvider {
 
         // tool type mineables
         this.tag(BlockTags.MINEABLE_WITH_AXE)
+                .add(TBlocks.EASEL.get())
                 .add(TBlocks.TOWEL_STACK.get())
                 .add(TBlocks.POOL_TABLE.get())
                 .add(TBlocks.NEWSPAPER_DISPENSER.get())
@@ -658,6 +659,8 @@ public class TBlockTag extends BlockTagsProvider {
         ;
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(TBlocks.WHITE_CUBE_SHELF.get())
+                .add(TBlocks.EASEL.get())
                 .add(TBlocks.DECORATIONAL_BUCKET.get())
                 .add(TBlocks.GOAL.get())
                 .add(TBlocks.MYSTERIOUS_PILLAR.get())

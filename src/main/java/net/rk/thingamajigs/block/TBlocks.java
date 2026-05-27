@@ -44,6 +44,7 @@ import net.rk.thingamajigs.world.TTreeGrower;
 import net.rk.thingamajigs.xtras.TSoundEvent;
 import net.rk.thingamajigs.xtras.TSoundType;
 import net.rk.thingamajigs.xtras.TWeatheringCopperOther;
+import org.joml.Vector3f;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -3572,6 +3573,16 @@ public class TBlocks {
 
     public static final DeferredBlock<Block> DECORATIONAL_BUCKET = register("decorational_bucket",
             () -> new DecorationalBucket(BlockBehaviour.Properties.of()));
+
+    public static final DeferredBlock<Block> EASEL = register("easel",
+            () -> new Easel(BlockBehaviour.Properties.of()));
+
+    public static final DeferredBlock<Block> WHITE_CUBE_SHELF = register("white_cube_shelf",
+            () -> new FancyStorageDecoration(BlockBehaviour.Properties.of().strength(1f,10f)
+                    .sound(SoundType.STONE).mapColor(MapColor.SNOW).noOcclusion(),
+                    Optional.of(SoundEvents.CANDLE_HIT),
+                    "blockEntities.thingamajigs.fancy_storage_decoration.white_cube_shelf.name",
+                    true,new Vector3f(-1.0f,0.01f,-1.0f)));
 
 
 

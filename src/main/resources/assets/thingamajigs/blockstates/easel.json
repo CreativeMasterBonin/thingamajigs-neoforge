@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,half=lower": {
+      "model": "thingamajigs:block/easel_bottom",
+      "y": 270
+    },
+    "facing=north,half=lower": {
+      "model": "thingamajigs:block/easel_bottom",
+      "y": 180
+    },
+    "facing=south,half=lower": {
+      "model": "thingamajigs:block/easel_bottom"
+    },
+    "facing=west,half=lower": {
+      "model": "thingamajigs:block/easel_bottom",
+      "y": 90
+    },
+    "facing=east,half=upper": {
+      "model": "thingamajigs:block/easel_top",
+      "y": 270
+    },
+    "facing=north,half=upper": {
+      "model": "thingamajigs:block/easel_top",
+      "y": 180
+    },
+    "facing=south,half=upper": {
+      "model": "thingamajigs:block/easel_top"
+    },
+    "facing=west,half=upper": {
+      "model": "thingamajigs:block/easel_top",
+      "y": 90
+    }
+  }
+}

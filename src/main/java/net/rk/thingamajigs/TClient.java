@@ -254,6 +254,7 @@ public class TClient{
             BlockEntityRenderers.register(TBlockEntity.CAR_WASH_TIRE_SCRUBBER_BE.get(),CarWashTireScrubberBERenderer::new);
             BlockEntityRenderers.register(TBlockEntity.ULTRA_HD_TV.get(),UltraHDTVBERenderer::new);
             BlockEntityRenderers.register(TBlockEntity.DECORATIONAL_BUCKET_BE.get(),DecorationalBucketBERenderer::new);
+            BlockEntityRenderers.register(TBlockEntity.FANCY_STORAGE_DECORATION_BE.get(),FancyStorageDecorationBERenderer::new);
         }
         catch (Exception e){
             LogUtils.getLogger().error(e.getLocalizedMessage());
@@ -994,6 +995,7 @@ public class TClient{
             event.accept(TBlocks.WAXED_EXPOSED_COPPER_TABLE.get().asItem());
             event.accept(TBlocks.WAXED_WEATHERED_COPPER_TABLE.get().asItem());
             event.accept(TBlocks.WAXED_OXIDIZED_COPPER_TABLE.get().asItem());
+            //
             event.accept(TBlocks.IRON_TABLE.get().asItem());
             event.accept(TBlocks.GOLD_TABLE.get().asItem());
             event.accept(TBlocks.DIAMOND_TABLE.get().asItem());
@@ -1001,6 +1003,8 @@ public class TClient{
             event.accept(TBlocks.PRISMARINE_TABLE.get().asItem());
             event.accept(TBlocks.PURPUR_TABLE.get().asItem());
             event.accept(TBlocks.SCULK_TABLE.get().asItem());
+            // Shelving
+            event.accept(TBlocks.WHITE_CUBE_SHELF.get().asItem());
             event.accept(TBlocks.TRIPLE_SHELF.get().asItem());
             // chairs
             event.accept(TBlocks.BARBER_CHAIR.get().asItem());
@@ -1082,6 +1086,8 @@ public class TClient{
             event.accept(TBlocks.TOILET.get().asItem());
             event.accept(TBlocks.TOILET_PAPER.get().asItem());
             event.accept(TBlocks.TISSUE_BOX.get().asItem());
+            // Art supplies & stuff
+            event.accept(TBlocks.EASEL.get().asItem());
             // Toys & Kids Stuff
             event.accept(TBlocks.TOY_BOX.get().asItem());
             event.accept(TBlocks.WOOD_DUCK.get().asItem());

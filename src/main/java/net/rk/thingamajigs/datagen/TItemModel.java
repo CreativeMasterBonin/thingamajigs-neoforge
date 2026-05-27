@@ -94,6 +94,9 @@ public class TItemModel extends ItemModelProvider {
         fromModelMod(TBlocks.OLD_MICROWAVE_REFLECTOR_ROUNDED.get(),"block/old_microwave_reflector_rounded");
         fromModelMod(TBlocks.OLD_MICROWAVE_REFLECTOR_ROUNDED_OPAQUE.get(),"block/old_microwave_reflector_rounded_opaque");
         fromModelMod(TBlocks.DECORATIONAL_BUCKET.get(),"block/decorational_bucket");
+        fromModelMod(TBlocks.EASEL.get(),"item/easel_all");
+        fromModelMod(TBlocks.PORTABLE_DISH_WASHER.get(),"block/portable_dishwasher");
+        fromModelMod(TBlocks.WHITE_CUBE_SHELF.get(),"block/white_cube_shelf");
     }
 
     private ItemModelBuilder fromModelModItem(Item item, String source){

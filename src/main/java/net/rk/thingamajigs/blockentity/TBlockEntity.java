@@ -113,6 +113,11 @@ public class TBlockEntity {
                     .build(null)
     );
 
+    public static final Supplier<BlockEntityType<FancyStorageDecorationBE>> FANCY_STORAGE_DECORATION_BE = BLOCK_ENTITIES.register(
+            "fancy_storage_decoration_be",() -> BlockEntityType.Builder.of(FancyStorageDecorationBE::new,
+                TBlocks.WHITE_CUBE_SHELF.get()
+            ).build(null));
+
 
     public static void register(IEventBus eventBus){
         BLOCK_ENTITIES.register(eventBus);

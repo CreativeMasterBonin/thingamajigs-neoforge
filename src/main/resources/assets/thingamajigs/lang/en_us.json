@@ -1569,7 +1569,13 @@
   "block.thingamajigs.old_microwave_reflector_rounded_opaque": "Rounded Long Distance Phone Reflector (Opaque)",
   "item.thingamajigs.panoramic_camera": "Panoramic Camera",
   "block.thingamajigs.decorational_bucket": "Decorational Bucket",
+  "block.thingamajigs.easel": "Easel",
+  "block.thingamajigs.white_cube_shelf": "White Cube Shelf",
 
+
+
+  "blockEntities.thingamajigs.fancy_storage_decoration.white_cube_shelf.name": "White Cube Shelf",
+  "blockEntities.thingamajigs.fancy_storage_decoration.name": "Fancy Storage Decoration",
   "block.thingamajigs.weight_scale.weight_is": "Weight Is: %s",
   "config.client.thingamajigs.tab_theme.desc": "Creative Tab Theme",
   "config.client.thingamajigs.tab_theme.desc.tooltip": "The current creative tab theme",

@@ -5,13 +5,16 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.packs.VanillaBlockLoot;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
+import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.SlabType;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
@@ -24,10 +27,7 @@ import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.rk.thingamajigs.block.TBlocks;
-import net.rk.thingamajigs.block.custom.CheeseBlock;
-import net.rk.thingamajigs.block.custom.GlowingCheeseBlock;
-import net.rk.thingamajigs.block.custom.LockableDoor;
-import net.rk.thingamajigs.block.custom.ThrowSphereIntoRingMachine;
+import net.rk.thingamajigs.block.custom.*;
 import net.rk.thingamajigs.item.TItems;
 
 import java.util.ArrayList;
@@ -1228,7 +1228,8 @@ public class TLoot extends VanillaBlockLoot {
         this.dropSelf(TBlocks.OLD_MICROWAVE_REFLECTOR_ROUNDED_OPAQUE.get());
         this.dropSelf(TBlocks.DECORATIONAL_BUCKET.get());
 
-
+        this.add(TBlocks.EASEL.get(), block -> this.singularPropertyCondition(block,Easel.HALF,DoubleBlockHalf.LOWER));
+        this.dropSelf(TBlocks.WHITE_CUBE_SHELF.get());
 
         this.add(TBlocks.FAKE_FLUID_PUMP.get(),noDrop());
         // torches
@@ -1259,6 +1260,17 @@ public class TLoot extends VanillaBlockLoot {
 
         this.dropPottedContents(TBlocks.POTTED_BULBY_FLOWER.get());
         this.dropPottedContents(TBlocks.POTTED_DROOPY_FLOWER.get());
+    }
+
+    // from loot tables
+    public <T extends Comparable<T> & StringRepresentable> LootTable.Builder singularPropertyCondition(Block block,Property<T> property,T value) {
+        return LootTable.lootTable().withPool(
+                this.applyExplosionCondition(block,LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1.0f))
+                        .add(LootItem.lootTableItem(block)
+                                .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
+                                .setProperties(StatePropertiesPredicate.Builder.properties()
+                                        .hasProperty(property,value))))));
     }
 
     @Override
