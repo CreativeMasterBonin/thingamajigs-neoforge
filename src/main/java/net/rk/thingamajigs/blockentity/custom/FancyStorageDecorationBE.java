@@ -15,6 +15,8 @@ import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.rk.thingamajigs.blockentity.TBlockEntity;
 
+import java.util.Objects;
+
 public class FancyStorageDecorationBE extends RandomizableContainerBlockEntity {
     private NonNullList<ItemStack> items = NonNullList.withSize(54, ItemStack.EMPTY);
     private String containerNameTranslation = "blockEntities.thingamajigs.fancy_storage_decoration.name";
@@ -33,7 +35,6 @@ public class FancyStorageDecorationBE extends RandomizableContainerBlockEntity {
     }
 
     public void updateBlock(){
-        this.setChanged();
         if(this.getLevel() != null) {
             BlockState bs2 = this.getLevel().getBlockState(this.getBlockPos());
             this.getLevel().sendBlockUpdated(this.getBlockPos(), bs2, bs2, 3);
@@ -53,6 +54,17 @@ public class FancyStorageDecorationBE extends RandomizableContainerBlockEntity {
         CompoundTag ct = new CompoundTag();
         saveAdditional(ct,prov);
         return ct;
+    }
+
+    @Override
+    public void setChanged() {
+        if(this.level != null){
+            Objects.requireNonNull(getLevel()).blockEntityChanged(getBlockPos());
+            if (!getBlockState().isAir()) {
+                getLevel().updateNeighbourForOutputSignal(getBlockPos(),getBlockState().getBlock());
+            }
+            updateBlock();
+        }
     }
 
     @Override
