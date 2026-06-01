@@ -115,7 +115,7 @@ public class TBlockEntity {
 
     public static final Supplier<BlockEntityType<FancyStorageDecorationBE>> FANCY_STORAGE_DECORATION_BE = BLOCK_ENTITIES.register(
             "fancy_storage_decoration_be",() -> BlockEntityType.Builder.of(FancyStorageDecorationBE::new,
-                TBlocks.WHITE_CUBE_SHELF.get()
+                TBlocks.WHITE_CUBE_SHELF.get(),TBlocks.WHITE_SECTIONED_SHELF.get()
             ).build(null));
 
 

@@ -166,6 +166,9 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.NOT_QUITE.get())
                 .add(TBlocks.NETHER_CHISELED_BOOKSHELF.get())
                 .add(TBlocks.FRIDGE.get())
+                .add(TBlocks.TRIPLE_SHELF.get())
+                .add(TBlocks.WHITE_SECTIONED_SHELF.get())
+                .add(TBlocks.WHITE_CUBE_SHELF.get())
         ;
 
         tag(BlockTags.FENCE_GATES)
@@ -229,6 +232,7 @@ public class TBlockTag extends BlockTagsProvider {
         ;
 
         tag(BlockTags.IMPERMEABLE)
+                .add(TBlocks.RUBBER_DUCK.get())
                 .add(TBlocks.MYSTERIOUS_PILLAR.get())
                 .add(TBlocks.REFINED_THINGAMAJIG_BLOCK.get())
                 .add(TBlocks.GRATE.get())
@@ -659,6 +663,9 @@ public class TBlockTag extends BlockTagsProvider {
         ;
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(TBlocks.AIR_STATION.get())
+                .add(TBlocks.RUBBER_DUCK.get())
+                .add(TBlocks.WHITE_SECTIONED_SHELF.get())
                 .add(TBlocks.WHITE_CUBE_SHELF.get())
                 .add(TBlocks.EASEL.get())
                 .add(TBlocks.DECORATIONAL_BUCKET.get())

@@ -97,6 +97,9 @@ public class TItemModel extends ItemModelProvider {
         fromModelMod(TBlocks.EASEL.get(),"item/easel_all");
         fromModelMod(TBlocks.PORTABLE_DISH_WASHER.get(),"block/portable_dishwasher");
         fromModelMod(TBlocks.WHITE_CUBE_SHELF.get(),"block/white_cube_shelf");
+        fromModelMod(TBlocks.WHITE_SECTIONED_SHELF.get(),"block/white_sectioned_shelf");
+        fromModelMod(TBlocks.RUBBER_DUCK.get(),"block/rubber_duck");
+        fromModelMod(TBlocks.AIR_STATION.get(),"block/air_station");
     }
 
     private ItemModelBuilder fromModelModItem(Item item, String source){

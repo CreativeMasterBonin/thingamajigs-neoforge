@@ -13,20 +13,32 @@ import net.minecraft.world.inventory.ChestMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.rk.thingamajigs.block.custom.FancyStorageDecoration;
 import net.rk.thingamajigs.blockentity.TBlockEntity;
 
 import java.util.Objects;
 
 public class FancyStorageDecorationBE extends RandomizableContainerBlockEntity {
-    private NonNullList<ItemStack> items = NonNullList.withSize(54, ItemStack.EMPTY);
+    public NonNullList<ItemStack> items;
     private String containerNameTranslation = "blockEntities.thingamajigs.fancy_storage_decoration.name";
+    public final int itemContainerSize;
 
     public FancyStorageDecorationBE(BlockPos bp, BlockState bs) {
         super(TBlockEntity.FANCY_STORAGE_DECORATION_BE.get(), bp, bs);
+        this.itemContainerSize = 54;
+        this.items = NonNullList.withSize(itemContainerSize, ItemStack.EMPTY);
     }
 
+    // do not use
     public FancyStorageDecorationBE(BlockPos bp, BlockState bs, String name) {
         this(bp,bs);
+        this.containerNameTranslation = name;
+    }
+
+    public FancyStorageDecorationBE(BlockPos bp, BlockState bs, String name, int itemContainerSize) {
+        super(TBlockEntity.FANCY_STORAGE_DECORATION_BE.get(), bp, bs);
+        this.itemContainerSize = itemContainerSize;
+        this.items = NonNullList.withSize(this.itemContainerSize, ItemStack.EMPTY);
         this.containerNameTranslation = name;
     }
 
@@ -84,11 +96,14 @@ public class FancyStorageDecorationBE extends RandomizableContainerBlockEntity {
 
     @Override
     public AbstractContainerMenu createMenu(int cmi1, Inventory i) {
-        return ChestMenu.sixRows(cmi1, i, this);
+        if(this.getBlockState().getBlock() instanceof FancyStorageDecoration deco){
+            return deco.createMenu(cmi1,i,this);
+        }
+        return null;
     }
 
     @Override
-    public int getContainerSize(){return 54;}
+    public int getContainerSize(){return itemContainerSize;}
 
     @Override
     public void saveAdditional(CompoundTag tag, HolderLookup.Provider provider) {

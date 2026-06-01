@@ -755,6 +755,7 @@ public class TClient{
             event.accept(TBlocks.PAYPHONE_SEETHROUGH.get().asItem());
             event.accept(TBlocks.CAMPING_FUEL_CAN.get().asItem());
             event.accept(TBlocks.GAS_PUMP.get().asItem());
+            event.accept(TBlocks.AIR_STATION.get().asItem());
             event.accept(TBlocks.NEWSPAPER_DISPENSER.get().asItem());
             event.accept(TBlocks.RESTAURANT_TRASH_CAN.get().asItem());
             event.accept(TBlocks.DUMPSTER.get().asItem());
@@ -1005,6 +1006,7 @@ public class TClient{
             event.accept(TBlocks.SCULK_TABLE.get().asItem());
             // Shelving
             event.accept(TBlocks.WHITE_CUBE_SHELF.get().asItem());
+            event.accept(TBlocks.WHITE_SECTIONED_SHELF.get().asItem());
             event.accept(TBlocks.TRIPLE_SHELF.get().asItem());
             // chairs
             event.accept(TBlocks.BARBER_CHAIR.get().asItem());
@@ -1089,6 +1091,7 @@ public class TClient{
             // Art supplies & stuff
             event.accept(TBlocks.EASEL.get().asItem());
             // Toys & Kids Stuff
+            event.accept(TBlocks.RUBBER_DUCK.get().asItem());
             event.accept(TBlocks.TOY_BOX.get().asItem());
             event.accept(TBlocks.WOOD_DUCK.get().asItem());
             event.accept(TBlocks.WOOD_CAR.get().asItem());

@@ -1230,6 +1230,10 @@ public class TLoot extends VanillaBlockLoot {
 
         this.add(TBlocks.EASEL.get(), block -> this.singularPropertyCondition(block,Easel.HALF,DoubleBlockHalf.LOWER));
         this.dropSelf(TBlocks.WHITE_CUBE_SHELF.get());
+        this.dropSelf(TBlocks.WHITE_SECTIONED_SHELF.get());
+        this.dropSelf(TBlocks.RUBBER_DUCK.get());
+        this.dropSelf(TBlocks.AIR_STATION.get());
+
 
         this.add(TBlocks.FAKE_FLUID_PUMP.get(),noDrop());
         // torches

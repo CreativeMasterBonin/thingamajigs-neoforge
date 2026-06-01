@@ -3582,7 +3582,179 @@ public class TBlocks {
                     .sound(SoundType.STONE).mapColor(MapColor.SNOW).noOcclusion(),
                     Optional.of(SoundEvents.CANDLE_HIT),
                     "blockEntities.thingamajigs.fancy_storage_decoration.white_cube_shelf.name",
-                    true,new Vector3f(-1.0f,0.01f,-1.0f)));
+                    true,new Vector3f(-1.0f,0.01f,-1.0f),54){
+                @Override
+                public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+                    switch (state.getValue(FACING)){
+                        case NORTH -> {
+                            return NORTH_WHITE_CUBE;
+                        }
+                        case SOUTH -> {
+                            return SOUTH_WHITE_CUBE;
+                        }
+                        case EAST -> {
+                            return EAST_WHITE_CUBE;
+                        }
+                        case WEST -> {
+                            return WEST_WHITE_CUBE;
+                        }
+                        default -> {return Shapes.block();}
+                    }
+                }
+            });
+
+    public static final DeferredBlock<Block> WHITE_SECTIONED_SHELF = register("white_sectioned_shelf",
+            () -> new FancyStorageDecoration(BlockBehaviour.Properties.of().strength(1f,10f)
+                    .sound(SoundType.STONE).mapColor(MapColor.SNOW).noOcclusion(),
+                    Optional.of(SoundEvents.CANDLE_HIT),
+                    "blockEntities.thingamajigs.fancy_storage_decoration.white_sectioned_shelf.name",
+                    true,new Vector3f(0.0f,0.0f,0.0f),5){
+                @Override
+                public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+                    switch (state.getValue(FACING)){
+                        case NORTH -> {
+                            return NORTH_WHITE_SECTIONED;
+                        }
+                        case SOUTH -> {
+                            return SOUTH_WHITE_SECTIONED;
+                        }
+                        case EAST -> {
+                            return EAST_WHITE_SECTIONED;
+                        }
+                        case WEST -> {
+                            return WEST_WHITE_SECTIONED;
+                        }
+                        default -> {return Shapes.block();}
+                    }
+                }
+            });
+
+    public static final DeferredBlock<Block> RUBBER_DUCK = register("rubber_duck",
+            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW)
+                    .sound(SoundType.CANDLE).strength(0.75f,1f)){
+                public static final VoxelShape NORTH = Stream.of(
+                        Block.box(6, 0, 5, 10, 2, 11),
+                        Block.box(7, 2, 6, 9, 3, 8),
+                        Block.box(7, 3, 5, 9, 5, 8),
+                        Block.box(7, 3, 4, 9, 4, 5)
+                ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+                public static final VoxelShape EAST = Stream.of(
+                        Block.box(5, 0, 6, 11, 2, 10),
+                        Block.box(8, 2, 7, 10, 3, 9),
+                        Block.box(8, 3, 7, 11, 5, 9),
+                        Block.box(11, 3, 7, 12, 4, 9)
+                ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+                public static final VoxelShape SOUTH = Stream.of(
+                        Block.box(6, 0, 5, 10, 2, 11),
+                        Block.box(7, 2, 8, 9, 3, 10),
+                        Block.box(7, 3, 8, 9, 5, 11),
+                        Block.box(7, 3, 11, 9, 4, 12)
+                ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+                public static final VoxelShape WEST = Stream.of(
+                        Block.box(5, 0, 6, 11, 2, 10),
+                        Block.box(6, 2, 7, 8, 3, 9),
+                        Block.box(5, 3, 7, 8, 5, 9),
+                        Block.box(4, 3, 7, 5, 4, 9)
+                ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+                @Override
+                public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+                    switch (state.getValue(FACING)){
+                        case NORTH -> {
+                            return NORTH;
+                        }
+                        case SOUTH -> {
+                            return SOUTH;
+                        }
+                        case EAST -> {
+                            return EAST;
+                        }
+                        case WEST -> {
+                            return WEST;
+                        }
+                        default -> {
+                            return Shapes.block();
+                        }
+                    }
+                }
+            });
+
+    public static final DeferredBlock<Block> AIR_STATION = register("air_station",
+            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL)
+                    .strength(1f,15f).mapColor(MapColor.METAL)){
+                public static final VoxelShape NORTH = Stream.of(
+                        Block.box(0, 0, 0, 16, 2, 16),
+                        Block.box(2, 16, 2, 14, 31, 14),
+                        Block.box(2, 2, 2, 14, 16, 14),
+                        Block.box(0, 9, 7, 2, 25, 9),
+                        Block.box(0, 4, 6, 2, 9, 10),
+                        Block.box(14, 7, 7, 16, 25, 9),
+                        Block.box(14, 3, 7, 16, 7, 9),
+                        Block.box(4, 15, 1, 12, 21, 2),
+                        Block.box(4, 12, 1, 6, 14, 2),
+                        Block.box(10, 12, 1, 12, 14, 2)
+                ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+                public static final VoxelShape EAST = Stream.of(
+                        Block.box(0, 0, 0, 16, 2, 16),
+                        Block.box(2, 16, 2, 14, 31, 14),
+                        Block.box(2, 2, 2, 14, 16, 14),
+                        Block.box(7, 9, 0, 9, 25, 2),
+                        Block.box(6, 4, 0, 10, 9, 2),
+                        Block.box(7, 7, 14, 9, 25, 16),
+                        Block.box(7, 3, 14, 9, 7, 16),
+                        Block.box(14, 15, 4, 15, 21, 12),
+                        Block.box(14, 12, 4, 15, 14, 6),
+                        Block.box(14, 12, 10, 15, 14, 12)
+                ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+                public static final VoxelShape SOUTH = Stream.of(
+                        Block.box(0, 0, 0, 16, 2, 16),
+                        Block.box(2, 16, 2, 14, 31, 14),
+                        Block.box(2, 2, 2, 14, 16, 14),
+                        Block.box(14, 9, 7, 16, 25, 9),
+                        Block.box(14, 4, 6, 16, 9, 10),
+                        Block.box(0, 7, 7, 2, 25, 9),
+                        Block.box(0, 3, 7, 2, 7, 9),
+                        Block.box(4, 15, 14, 12, 21, 15),
+                        Block.box(10, 12, 14, 12, 14, 15),
+                        Block.box(4, 12, 14, 6, 14, 15)
+                ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+                public static final VoxelShape WEST = Stream.of(
+                        Block.box(0, 0, 0, 16, 2, 16),
+                        Block.box(2, 16, 2, 14, 31, 14),
+                        Block.box(2, 2, 2, 14, 16, 14),
+                        Block.box(7, 9, 14, 9, 25, 16),
+                        Block.box(6, 4, 14, 10, 9, 16),
+                        Block.box(7, 7, 0, 9, 25, 2),
+                        Block.box(7, 3, 0, 9, 7, 2),
+                        Block.box(1, 15, 4, 2, 21, 12),
+                        Block.box(1, 12, 10, 2, 14, 12),
+                        Block.box(1, 12, 4, 2, 14, 6)
+                ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+                @Override
+                public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+                    switch (state.getValue(FACING)){
+                        case NORTH -> {
+                            return NORTH;
+                        }
+                        case SOUTH -> {
+                            return SOUTH;
+                        }
+                        case EAST -> {
+                            return EAST;
+                        }
+                        case WEST -> {
+                            return WEST;
+                        }
+                        default -> {
+                            return Shapes.block();
+                        }
+                    }
+                }
+            });
 
 
 

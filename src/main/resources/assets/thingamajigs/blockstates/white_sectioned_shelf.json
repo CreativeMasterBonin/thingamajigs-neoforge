@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/white_sectioned_shelf",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/white_sectioned_shelf"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/white_sectioned_shelf",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/white_sectioned_shelf",
+      "y": 270
+    }
+  }
+}

@@ -4757,6 +4757,29 @@ public class TRecipe extends RecipeProvider {
                 .requires(TItems.RUBBER)
                 .unlockedBy("has_thingy",has(TItems.RUBBER))
                 .save(rc);
+        stonecutterAny(TBlocks.WHITE_CUBE_SHELF.asItem(),
+                Ingredient.of(TBlocks.WHITE_CUBE_SHELF.asItem()),
+                TBlocks.WHITE_SECTIONED_SHELF.get().asItem(),1)
+                .unlockedBy("has_thingy",InventoryChangeTrigger.TriggerInstance
+                        .hasItems(TBlocks.WHITE_CUBE_SHELF.asItem()))
+                .save(rc);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.RUBBER_DUCK.get().asItem(),4)
+                .requires(TItems.RUBBER)
+                .requires(TItems.RUBBER)
+                .requires(TItems.RUBBER)
+                .requires(Items.YELLOW_DYE)
+                .requires(Items.YELLOW_DYE)
+                .requires(TItems.TOY_COMPONENT)
+                .unlockedBy("has_thingy",has(TItems.RUBBER))
+                .save(rc);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.AIR_STATION.get().asItem(),1)
+                .requires(TItems.COMPUTER_COMPONENT)
+                .requires(TItems.INFRASTRUCTURE_COMPONENT)
+                .requires(Items.IRON_BLOCK)
+                .requires(TBlocks.SHOP_VACUUM.asItem())
+                .requires(TBlocks.AIRDUCT_VENT.asItem())
+                .unlockedBy("has_thingy",has(TItems.INFRASTRUCTURE_COMPONENT))
+                .save(rc);
     }
 
     public static RecipeBuilder stonecutterAny(Item requiredItem, Ingredient inputItem, Item result, int amt){

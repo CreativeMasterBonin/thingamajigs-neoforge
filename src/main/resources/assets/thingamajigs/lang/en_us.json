@@ -1571,9 +1571,13 @@
   "block.thingamajigs.decorational_bucket": "Decorational Bucket",
   "block.thingamajigs.easel": "Easel",
   "block.thingamajigs.white_cube_shelf": "White Cube Shelf",
+  "block.thingamajigs.white_sectioned_shelf": "White Sectioned Shelf",
+  "block.thingamajigs.rubber_duck": "Rubber Duck",
+  "block.thingamajigs.air_station": "Air Station",
 
 
 
+  "blockEntities.thingamajigs.fancy_storage_decoration.white_sectioned_shelf.name": "White Sectioned Shelf",
   "blockEntities.thingamajigs.fancy_storage_decoration.white_cube_shelf.name": "White Cube Shelf",
   "blockEntities.thingamajigs.fancy_storage_decoration.name": "Fancy Storage Decoration",
   "block.thingamajigs.weight_scale.weight_is": "Weight Is: %s",
