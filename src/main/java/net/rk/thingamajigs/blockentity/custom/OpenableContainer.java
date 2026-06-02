@@ -33,12 +33,12 @@ public class OpenableContainer extends RandomizableContainerBlockEntity {
     }
 
     @Override
-    protected Component getDefaultName() {
+    public Component getDefaultName() {
         return Component.translatable("blockEntities.openable_container.name");
     }
 
     @Override
-    protected AbstractContainerMenu createMenu(int i, Inventory inventory) {
+    public AbstractContainerMenu createMenu(int i, Inventory inventory) {
         return ChestMenu.sixRows(i, inventory, this);
     }
 

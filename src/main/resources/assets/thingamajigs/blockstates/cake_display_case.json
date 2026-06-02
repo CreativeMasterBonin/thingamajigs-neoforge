@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "has_cake=false": {
+      "model": "thingamajigs:block/cake_display_case_empty"
+    },
+    "has_cake=true": {
+      "model": "thingamajigs:block/cake_display_case_with_cake"
+    }
+  }
+}

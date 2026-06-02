@@ -1,0 +1,134 @@
+{
+	"format_version": "1.9.0",
+	"credit": "CreativeMasterBonin",
+	"textures": {
+		"0": "thingamajigs:block/extra_metal",
+		"1": "thingamajigs:block/concrete",
+		"2": "thingamajigs:block/aios/bowling_alley_lane_oiler_basic",
+		"particle": "thingamajigs:block/extra_metal"
+	},
+	"elements": [
+		{
+			"name": "base",
+			"from": [0, 0, 0],
+			"to": [16, 1, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [0, 15, 16, 16], "texture": "#0", "cullface": "north"},
+				"east": {"uv": [0, 0, 16, 1], "texture": "#0", "cullface": "east"},
+				"south": {"uv": [0, 15, 16, 16], "texture": "#0"},
+				"west": {"uv": [0, 0, 16, 1], "texture": "#0", "cullface": "west"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#0", "cullface": "down"}
+			}
+		},
+		{
+			"name": "leftpanel",
+			"from": [0, 1, 0],
+			"to": [1, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [15, 0, 16, 15], "texture": "#0", "cullface": "north"},
+				"south": {"uv": [15, 0, 16, 15], "texture": "#0", "cullface": "south"},
+				"west": {"uv": [0, 0, 16, 15], "texture": "#0", "cullface": "west"},
+				"up": {"uv": [0, 0, 1, 16], "texture": "#0", "cullface": "up"}
+			}
+		},
+		{
+			"name": "rightpanel",
+			"from": [15, 1, 0],
+			"to": [16, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 1, 15], "texture": "#0", "cullface": "north"},
+				"east": {"uv": [0, 0, 16, 15], "texture": "#0", "cullface": "east"},
+				"south": {"uv": [0, 0, 1, 15], "texture": "#0", "cullface": "south"},
+				"up": {"uv": [0, 0, 1, 16], "texture": "#0", "cullface": "up"}
+			}
+		},
+		{
+			"name": "toppanel",
+			"from": [1, 15, 2],
+			"to": [15, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [1, 1, 15, 2], "texture": "#1"},
+				"east": {"uv": [0, 1, 14, 2], "texture": "#missing"},
+				"south": {"uv": [1, 0, 15, 1], "texture": "#0", "cullface": "south"},
+				"west": {"uv": [0, 1, 14, 2], "texture": "#missing"},
+				"up": {"uv": [1, 1, 15, 15], "texture": "#0", "cullface": "up"},
+				"down": {"uv": [1, 1, 15, 15], "texture": "#1"}
+			}
+		},
+		{
+			"name": "backpanel",
+			"from": [1, 1, 14],
+			"to": [15, 15, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"south": {"uv": [1, 1, 15, 15], "texture": "#0", "cullface": "south"}
+			}
+		},
+		{
+			"name": "door",
+			"from": [1, 1, 0],
+			"to": [15, 16, 2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8.5, 1]},
+			"faces": {
+				"north": {"uv": [1, 0, 15, 15], "texture": "#0"},
+				"east": {"uv": [1, 0, 2, 15], "texture": "#0"},
+				"south": {"uv": [1, 0, 15, 15], "texture": "#1"},
+				"west": {"uv": [0, 0, 1, 15], "texture": "#0"},
+				"up": {"uv": [15, 0, 1, 2], "texture": "#0"}
+			}
+		},
+		{
+			"name": "lockpanel",
+			"from": [6, 5, -1],
+			"to": [10, 10, 2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 7.5, 0.5]},
+			"faces": {
+				"north": {"uv": [8.5, 12, 15.5, 16], "texture": "#2"},
+				"east": {"uv": [7, 5, 10, 10], "texture": "#0"},
+				"south": {"uv": [6, 0, 8, 2], "texture": "#2"},
+				"west": {"uv": [7, 5, 10, 10], "texture": "#0"},
+				"up": {"uv": [7, 5, 10, 9], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [7, 5, 10, 9], "rotation": 270, "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, 135, 0],
+			"translation": [0, 1.5, 0],
+			"scale": [0.2, 0.2, 0.2]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, 135, 0],
+			"translation": [0, 1.5, 0],
+			"scale": [0.2, 0.2, 0.2]
+		},
+		"firstperson_righthand": {
+			"rotation": [5, 135, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_lefthand": {
+			"rotation": [5, 135, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.2, 0.2, 0.2]
+		},
+		"gui": {
+			"rotation": [35, 135, 0],
+			"translation": [0, 0.25, 0],
+			"scale": [0.55, 0.55, 0.55]
+		},
+		"fixed": {
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"on_shelf": {
+			"rotation": [0, -180, 0]
+		}
+	}
+}

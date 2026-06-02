@@ -1574,9 +1574,12 @@
   "block.thingamajigs.white_sectioned_shelf": "White Sectioned Shelf",
   "block.thingamajigs.rubber_duck": "Rubber Duck",
   "block.thingamajigs.air_station": "Air Station",
+  "block.thingamajigs.safe": "Safe",
+  "block.thingamajigs.cake_display_case": "Cake Display Case",
 
 
 
+  "block.thingamajigs.safe.desc": "Sturdy and tough to break; explosions nullified",
   "blockEntities.thingamajigs.fancy_storage_decoration.white_sectioned_shelf.name": "White Sectioned Shelf",
   "blockEntities.thingamajigs.fancy_storage_decoration.white_cube_shelf.name": "White Cube Shelf",
   "blockEntities.thingamajigs.fancy_storage_decoration.name": "Fancy Storage Decoration",

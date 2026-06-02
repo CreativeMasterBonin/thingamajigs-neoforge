@@ -4780,6 +4780,22 @@ public class TRecipe extends RecipeProvider {
                 .requires(TBlocks.AIRDUCT_VENT.asItem())
                 .unlockedBy("has_thingy",has(TItems.INFRASTRUCTURE_COMPONENT))
                 .save(rc);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.SAFE.get().asItem(),1)
+                .requires(TItems.MISC_COMPONENT)
+                .requires(TItems.HOME_COMPONENT)
+                .requires(Tags.Items.CONCRETES)
+                .requires(TBlocks.CONCRETE_BRICKS)
+                .requires(Items.NETHERITE_INGOT)
+                .unlockedBy("has_thingy",has(TItems.HOME_COMPONENT))
+                .save(rc);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.CAKE_DISPLAY_CASE.get().asItem(),1)
+                .requires(TItems.MISC_COMPONENT)
+                .requires(Items.WHITE_DYE)
+                .requires(Items.STICK)
+                .requires(ItemTags.WOODEN_SLABS)
+                .requires(Items.SUGAR)
+                .unlockedBy("has_thingy",has(TItems.MISC_COMPONENT))
+                .save(rc);
     }
 
     public static RecipeBuilder stonecutterAny(Item requiredItem, Ingredient inputItem, Item result, int amt){

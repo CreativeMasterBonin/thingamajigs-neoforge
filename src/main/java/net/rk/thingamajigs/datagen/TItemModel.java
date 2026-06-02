@@ -100,6 +100,8 @@ public class TItemModel extends ItemModelProvider {
         fromModelMod(TBlocks.WHITE_SECTIONED_SHELF.get(),"block/white_sectioned_shelf");
         fromModelMod(TBlocks.RUBBER_DUCK.get(),"block/rubber_duck");
         fromModelMod(TBlocks.AIR_STATION.get(),"block/air_station");
+        fromModelMod(TBlocks.SAFE.get(),"block/safe_closed");
+        fromModelMod(TBlocks.CAKE_DISPLAY_CASE.get(),"block/cake_display_case_empty");
     }
 
     private ItemModelBuilder fromModelModItem(Item item, String source){

@@ -142,6 +142,7 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.NETHER_CHISELED_BOOKSHELF.get())
                 .add(TBlocks.NOT_QUITE.get())
                 .add(TBlocks.LOCKABLE_DOOR.get())
+                .add(TBlocks.SAFE.get())
         ;
 
         tag(BlockTags.ENCHANTMENT_POWER_PROVIDER)
@@ -169,6 +170,7 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.TRIPLE_SHELF.get())
                 .add(TBlocks.WHITE_SECTIONED_SHELF.get())
                 .add(TBlocks.WHITE_CUBE_SHELF.get())
+                .add(TBlocks.SAFE.get())
         ;
 
         tag(BlockTags.FENCE_GATES)
@@ -232,6 +234,7 @@ public class TBlockTag extends BlockTagsProvider {
         ;
 
         tag(BlockTags.IMPERMEABLE)
+                .add(TBlocks.SAFE.get())
                 .add(TBlocks.RUBBER_DUCK.get())
                 .add(TBlocks.MYSTERIOUS_PILLAR.get())
                 .add(TBlocks.REFINED_THINGAMAJIG_BLOCK.get())
@@ -297,6 +300,7 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.DARK_CRYSTAL_BLOCK.get())
                 .add(TBlocks.REINFORCED_GLASS.get())
                 .add(TBlocks.STRANGE_STATUE.get())
+                .add(TBlocks.SAFE.get())
         ;
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(TBlocks.MYSTERIOUS_PILLAR.get())
@@ -501,6 +505,7 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.GROUND_FULL_LANTERN.get())
                 .add(TBlocks.PAPER_LANTERN.get())
                 .add(TBlocks.RED_LANTERN.get())
+                .add(TBlocks.CAKE_DISPLAY_CASE.get())
         ;
 
         tag(BlockTags.WITHER_IMMUNE)
@@ -508,6 +513,7 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.REFINED_THINGAMAJIG_BLOCK.get())
                 .add(TBlocks.NETHER_CHISELED_BOOKSHELF.get())
                 .add(TBlocks.LOCKABLE_DOOR.get())
+                .add(TBlocks.SAFE.get())
         ;
 
         tag(BlockTags.WOODEN_BUTTONS)
@@ -663,6 +669,8 @@ public class TBlockTag extends BlockTagsProvider {
         ;
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(TBlocks.CAKE_DISPLAY_CASE.get())
+                .add(TBlocks.SAFE.get())
                 .add(TBlocks.AIR_STATION.get())
                 .add(TBlocks.RUBBER_DUCK.get())
                 .add(TBlocks.WHITE_SECTIONED_SHELF.get())

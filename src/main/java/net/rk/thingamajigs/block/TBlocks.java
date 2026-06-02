@@ -3755,6 +3755,10 @@ public class TBlocks {
                     }
                 }
             });
+    public static final DeferredBlock<Block> SAFE = register("safe",
+            () -> new Safe(BlockBehaviour.Properties.of()));
+    public static final DeferredBlock<Block> CAKE_DISPLAY_CASE = register("cake_display_case",
+            () -> new CakeDisplayCase(BlockBehaviour.Properties.of()));
 
 
 

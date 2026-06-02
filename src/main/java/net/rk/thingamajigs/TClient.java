@@ -905,6 +905,7 @@ public class TClient{
             event.accept(TBlocks.DOME_SECURITY_CAMERA.get().asItem());
             event.accept(TBlocks.CHAINLINK_FENCE.get().asItem());
             event.accept(TBlocks.SECURITY_METAL_DETECTOR.get().asItem());
+            event.accept(TBlocks.SAFE.get().asItem());
             // water management
             event.accept(TBlocks.CULVERT.get().asItem());
             event.accept(TBlocks.DIRT_CULVERT.get().asItem());
@@ -1153,6 +1154,7 @@ public class TClient{
             event.accept(TBlocks.BLUE_STRING_LIGHTS.get().asItem());
             // Food Related
             event.accept(TBlocks.FOOD_COOLER.get().asItem());
+            event.accept(TBlocks.CAKE_DISPLAY_CASE.get().asItem());
             event.accept(TBlocks.WINE_BOTTLE.get().asItem());
             event.accept(TBlocks.ROAST_TURKEY.get().asItem());
             event.accept(TBlocks.PIZZA.get().asItem());

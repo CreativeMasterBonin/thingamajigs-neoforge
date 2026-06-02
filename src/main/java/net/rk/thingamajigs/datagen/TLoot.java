@@ -1233,6 +1233,8 @@ public class TLoot extends VanillaBlockLoot {
         this.dropSelf(TBlocks.WHITE_SECTIONED_SHELF.get());
         this.dropSelf(TBlocks.RUBBER_DUCK.get());
         this.dropSelf(TBlocks.AIR_STATION.get());
+        this.dropSelf(TBlocks.SAFE.get());
+        this.dropSelf(TBlocks.CAKE_DISPLAY_CASE.get());
 
 
         this.add(TBlocks.FAKE_FLUID_PUMP.get(),noDrop());
