@@ -4796,6 +4796,11 @@ public class TRecipe extends RecipeProvider {
                 .requires(Items.SUGAR)
                 .unlockedBy("has_thingy",has(TItems.MISC_COMPONENT))
                 .save(rc);
+        stonecutterAny(TBlocks.CELL_TOWER_AMPLIFIER.asItem(),
+                Ingredient.of(TItems.PHONE_COMPONENT),
+                TBlocks.CELL_TOWER_AMPLIFIER.asItem(),1)
+                .unlockedBy("has_thingy",has(TItems.PHONE_COMPONENT))
+                .save(rc);
     }
 
     public static RecipeBuilder stonecutterAny(Item requiredItem, Ingredient inputItem, Item result, int amt){

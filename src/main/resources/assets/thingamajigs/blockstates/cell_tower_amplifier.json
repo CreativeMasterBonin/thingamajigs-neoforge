@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thingamajigs:block/cell_tower_amplifier",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thingamajigs:block/cell_tower_amplifier"
+    },
+    "facing=south": {
+      "model": "thingamajigs:block/cell_tower_amplifier",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thingamajigs:block/cell_tower_amplifier",
+      "y": 270
+    }
+  }
+}

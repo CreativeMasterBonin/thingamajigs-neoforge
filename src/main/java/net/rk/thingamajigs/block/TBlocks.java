@@ -3759,6 +3759,8 @@ public class TBlocks {
             () -> new Safe(BlockBehaviour.Properties.of()));
     public static final DeferredBlock<Block> CAKE_DISPLAY_CASE = register("cake_display_case",
             () -> new CakeDisplayCase(BlockBehaviour.Properties.of()));
+    public static final DeferredBlock<Block> CELL_TOWER_AMPLIFIER = register("cell_tower_amplifier",
+            () -> new VerticalPole(BlockBehaviour.Properties.ofFullCopy(CELL_TRANSMITTER.get())));
 
 
 

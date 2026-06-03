@@ -1,0 +1,15 @@
+{
+    "name": "entry.thingamajigs.cell_tower_components",
+    "icon": "thingamajigs:cell_multi_angled_transmitter",
+    "category": "thingamajigs:block",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "These components are used to create cell towers, which when all lined up, make up the over-the-air telephone system. In real life, these systems have changed many times, some systems lasted well after their expiration date. In Thingamajigs however, they are all still here."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Old systems used much more robust and bigger reflectors and other technology that has pretty much been abandonded. Before and during cellular transitions, there were internet landlines, and before those internet lines were just pure copper landlines, which had distinct sounds and specialized equipment to run it all, including big offices with racks and racks of equipment and wires. The phone transitions of each era were not distinct, but rather gradual. Thingamajigs has it all, whether copper wire-based or cellular!"
+        }
+    ]
+}

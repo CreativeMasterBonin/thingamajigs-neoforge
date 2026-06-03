@@ -1576,10 +1576,12 @@
   "block.thingamajigs.air_station": "Air Station",
   "block.thingamajigs.safe": "Safe",
   "block.thingamajigs.cake_display_case": "Cake Display Case",
+  "block.thingamajigs.cell_tower_amplifier": "Cell Tower Amplifier",
 
 
-
-  "block.thingamajigs.safe.desc": "Sturdy and tough to break; explosions nullified",
+  "painting.thingamajigs.mansion.title":"The Mansion",
+  "painting.thingamajigs.mansion.author":"CMB",
+  "block.thingamajigs.safe.desc": "Sturdy and tough to break; explosions nullified when locked",
   "blockEntities.thingamajigs.fancy_storage_decoration.white_sectioned_shelf.name": "White Sectioned Shelf",
   "blockEntities.thingamajigs.fancy_storage_decoration.white_cube_shelf.name": "White Cube Shelf",
   "blockEntities.thingamajigs.fancy_storage_decoration.name": "Fancy Storage Decoration",
@@ -1631,12 +1633,14 @@
   "category.thingamajigs.detail": "Details",
   "entry.thingamajigs.addonintro": "Introduction",
   "entry.thingamajigs.thinggood": "Thingamajigs 2 Goodies",
-  "entry.thingamajigs.thingrailroad": "Thingamajigs 2 Railroadways",
+  "entry.thingamajigs.thingrailroad": "Railroadways",
   "entry.thingamajigs.appliance": "Home Appliances and More",
   "entry.thingamajigs.history": "History Of The Mod",
   "entry.thingamajigs.cmb": "How To Say 'Bonin'",
   "entry.thingamajigs.plushies": "Plushies",
-  "entry.thingamajigs.thingroads": "Thingamajigs 2 Long Roads",
+  "entry.thingamajigs.thingroads": "Long Roads",
+  "entry.thingamajigs.cheese": "Cheese",
+  "entry.thingamajigs.tenth_cake": "Tenth Cake",
 
   "thingamajigs.subtitle.birds_perhaps": "Phone Call with Birds",
   "thingamajigs.subtitle.no_service": "Phone Call with Intercept Tone",

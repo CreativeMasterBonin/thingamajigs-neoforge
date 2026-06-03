@@ -669,6 +669,7 @@ public class TBlockTag extends BlockTagsProvider {
         ;
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(TBlocks.CELL_TOWER_AMPLIFIER.get())
                 .add(TBlocks.CAKE_DISPLAY_CASE.get())
                 .add(TBlocks.SAFE.get())
                 .add(TBlocks.AIR_STATION.get())

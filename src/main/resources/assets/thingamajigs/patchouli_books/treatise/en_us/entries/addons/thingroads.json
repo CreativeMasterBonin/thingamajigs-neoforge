@@ -5,11 +5,15 @@
     "pages": [
         {
             "type": "patchouli:text",
-            "text": "Adds back asphalt, paintbrushes and their patterns for roads."
+            "text": "Adds back asphalt, paintbrushes and their patterns for roads. Plus, dynamic road signs with 3 model types, completely data-driven."
         },
         {
             "type": "patchouli:text",
-            "text": "Due to the excessive amount of signs that could be added into the mod, they have not returned. Other mods may have to implement a better way of having limitless signs without using individual block ids and blockstates."
+            "text": "In 0.0.3+, Signs are Dynamically added through datapacks. Resourcepacks provide the textures for them. All players must have the resourcepack to see the sign (like with item component-based custom textures in vanilla)."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Paintbrushes have item components for length and pattern. Length is changed in the inventory with a right click, and shift right clicking blocks changes the pattern to be painted on blocks. Some can be directly applied to asphalt, changing it into that pattern asphalt, including slabs."
         },
         {
             "type": "patchouli:text",

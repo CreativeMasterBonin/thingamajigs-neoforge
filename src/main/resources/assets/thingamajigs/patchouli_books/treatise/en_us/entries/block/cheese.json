@@ -1,0 +1,15 @@
+{
+    "name": "entry.thingamajigs.cheese",
+    "icon": "thingamajigs:cheese",
+    "category": "thingamajigs:block",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Edible, and within four bites, is all gone. A glowing variant provides an easy way to get spotted by other players."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Fills hunger slowly, but never rots, so a plus in some regard."
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "name": "entry.thingamajigs.tenth_cake",
+    "icon": "thingamajigs:tenth_anniversary_cake",
+    "category": "thingamajigs:block",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "A special cake that was shown in a version of MC for a short time to celebrate the tenth anniversary of the game. The cake is like a normal cake, but with the number ten on top."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "This recreation of the cake is edible in one big bite, so save some room for it."
+        }
+    ]
+}

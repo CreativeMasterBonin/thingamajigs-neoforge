@@ -18,6 +18,10 @@
         {
             "type": "patchouli:text",
             "text": "Can be downloaded from the usual websites that Thingamajigs is from."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "NOTE: This mod was discontinued and replaced by Overpowered Mastery, which is a standalone mod with its own cool features. Hint: The WUBS are back, wands, and custom action spears with cool enchants and augments, and a custom crafting machine. For 1.21.8+ only."
         }
     ]
 }

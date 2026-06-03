@@ -1227,7 +1227,6 @@ public class TLoot extends VanillaBlockLoot {
         this.dropSelf(TBlocks.OLD_MICROWAVE_REFLECTOR_ROUNDED.get());
         this.dropSelf(TBlocks.OLD_MICROWAVE_REFLECTOR_ROUNDED_OPAQUE.get());
         this.dropSelf(TBlocks.DECORATIONAL_BUCKET.get());
-
         this.add(TBlocks.EASEL.get(), block -> this.singularPropertyCondition(block,Easel.HALF,DoubleBlockHalf.LOWER));
         this.dropSelf(TBlocks.WHITE_CUBE_SHELF.get());
         this.dropSelf(TBlocks.WHITE_SECTIONED_SHELF.get());
@@ -1235,6 +1234,8 @@ public class TLoot extends VanillaBlockLoot {
         this.dropSelf(TBlocks.AIR_STATION.get());
         this.dropSelf(TBlocks.SAFE.get());
         this.dropSelf(TBlocks.CAKE_DISPLAY_CASE.get());
+        this.dropSelf(TBlocks.CELL_TOWER_AMPLIFIER.get());
+
 
 
         this.add(TBlocks.FAKE_FLUID_PUMP.get(),noDrop());

@@ -568,6 +568,7 @@ public class TClient{
             event.accept(TBlocks.PHONE_AXIS_SWITCH_RELAY.get().asItem());
             event.accept(TBlocks.PHONE_CROSSBAR.get().asItem());
             event.accept(TBlocks.PHONE_GROUP_SELECTOR.get().asItem());
+            event.accept(TBlocks.CELL_TOWER_AMPLIFIER.get().asItem());
             event.accept(TBlocks.CELL_MULTI_ANGLED_TRANSMITTER.get().asItem());
             event.accept(TBlocks.CELL_MULTI_TRANSMITTER.get().asItem());
             event.accept(TBlocks.CELL_TRANSMITTER.get().asItem());

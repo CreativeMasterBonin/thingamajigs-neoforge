@@ -5,11 +5,11 @@
     "pages": [
         {
             "type": "patchouli:text",
-            "text": "Adds back railroad crossings and is an enhancement from the old versions. All crossing components are dynamic and move smoothly using block entities!"
+            "text": "Adds railroad crossing components and is an enhancement from the old versions of the features. All crossing components are dynamic and move smoothly using block entities!"
         },
         {
             "type": "patchouli:text",
-            "text": "Also, signs are now one kind of block entity that supports multiple angles, and a custom texture can be specified (if loaded with a resource pack, experimental)."
+            "text": "As of the Railroadways Update, 1.0.1, Thingamajigs is no longer required to run this addon. Enjoy the mod as standalone!"
         },
         {
             "type": "patchouli:text",
