@@ -1577,6 +1577,8 @@
   "block.thingamajigs.safe": "Safe",
   "block.thingamajigs.cake_display_case": "Cake Display Case",
   "block.thingamajigs.cell_tower_amplifier": "Cell Tower Amplifier",
+  "block.thingamajigs.fancy_gas_pump": "Fancy Gas Pump",
+  "block.thingamajigs.deluxe_arcade_machine": "Deluxe Arcade Machine",
 
 
   "painting.thingamajigs.mansion.title":"The Mansion",
@@ -1641,6 +1643,7 @@
   "entry.thingamajigs.thingroads": "Long Roads",
   "entry.thingamajigs.cheese": "Cheese",
   "entry.thingamajigs.tenth_cake": "Tenth Cake",
+  "entry.thingamajigs.cell_tower_components": "Cell Tower Components",
 
   "thingamajigs.subtitle.birds_perhaps": "Phone Call with Birds",
   "thingamajigs.subtitle.no_service": "Phone Call with Intercept Tone",

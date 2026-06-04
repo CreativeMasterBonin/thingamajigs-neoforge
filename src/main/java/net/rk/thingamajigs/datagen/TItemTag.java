@@ -119,5 +119,11 @@ public class TItemTag extends ItemTagsProvider{
                 .add(Items.HONEYCOMB_BLOCK)
                 .replace(false)
         ;
+
+        this.tag(TTag.BASIC_ARCADE_MACHINES)
+                .add(TBlocks.ARCADE_MACHINE.get().asItem())
+                .add(TBlocks.ARCADE_MACHINE_OPENABLE.get().asItem())
+                .replace(false)
+        ;
     }
 }

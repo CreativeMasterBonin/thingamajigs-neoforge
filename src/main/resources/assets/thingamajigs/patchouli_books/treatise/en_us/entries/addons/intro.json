@@ -9,11 +9,11 @@
         },
         {
             "type": "patchouli:text",
-            "text": "Two addons exist. Thingamajigs 2 Goodies, and Thingamajigs 2 Railroadways. Both require Thingamajigs as a base mod to function properly."
+            "text": "One addon exists, along with two-ish standalone mods. Thingamajigs 2 Goodies, Railroadways and Long Roads. Thingamajigs 2 Goodies is not updated anymore, but still requires Thingamajigs to run. Railroadways can be played without Thingamajigs (as of the Railroadways Update) and Long Roads 'will' be standalone (it is not as of this edition of the book)."
         },
         {
             "type": "patchouli:text",
-            "text": "Previously, all content was in Thingamajigs, but to reduce clutter and unwanted features, some features have been split from the main mod into their own separate addons."
+            "text": "Previously, all content was in Thingamajigs 1, but to reduce clutter and unwanted features in Thingamajigs 2, some features have been split from the main mod into their own separate addons (and have been expanded upon too, with QoL changes)."
         }
     ]
 }

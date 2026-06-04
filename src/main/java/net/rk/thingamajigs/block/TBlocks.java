@@ -25,6 +25,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
@@ -3761,6 +3762,91 @@ public class TBlocks {
             () -> new CakeDisplayCase(BlockBehaviour.Properties.of()));
     public static final DeferredBlock<Block> CELL_TOWER_AMPLIFIER = register("cell_tower_amplifier",
             () -> new VerticalPole(BlockBehaviour.Properties.ofFullCopy(CELL_TRANSMITTER.get())));
+    public static final DeferredBlock<Block> FANCY_GAS_PUMP = register("fancy_gas_pump",
+            () -> new FancyGasPump(BlockBehaviour.Properties.of()));
+    public static final DeferredBlock<Block> DELUXE_ARCADE_MACHINE = register("deluxe_arcade_machine",
+            () -> new DoubleHalfRotatedDecoration(BlockBehaviour.Properties.of()){
+                public static final VoxelShape NORTH_TOP = Stream.of(
+                        Block.box(15, 2, 0, 16, 13, 14),
+                        Block.box(0, 0, 14, 16, 12, 16),
+                        Block.box(0, 0, 0, 1, 2, 14),
+                        Block.box(0, 13, 0, 1, 16, 10),
+                        Block.box(15, 13, 0, 16, 16, 10),
+                        Block.box(15, 0, 0, 16, 2, 14),
+                        Block.box(0, 16, 0, 16, 18, 10),
+                        Block.box(0, 12, 0, 16, 13, 2),
+                        Block.box(0, 2, 0, 1, 13, 14),
+                        Block.box(2, 15, 3, 6, 16, 7),
+                        Block.box(10, 15, 3, 14, 16, 7),
+                        Block.box(0, 12, 10, 16, 16, 14)
+                ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+                public static final VoxelShape EAST_TOP = Stream.of(
+                        Block.box(2, 2, 15, 16, 13, 16),
+                        Block.box(0, 0, 0, 2, 12, 16),
+                        Block.box(2, 0, 0, 16, 2, 1),
+                        Block.box(6, 13, 0, 16, 16, 1),
+                        Block.box(6, 13, 15, 16, 16, 16),
+                        Block.box(2, 0, 15, 16, 2, 16),
+                        Block.box(6, 16, 0, 16, 18, 16),
+                        Block.box(14, 12, 0, 16, 13, 16),
+                        Block.box(2, 2, 0, 16, 13, 1),
+                        Block.box(9, 15, 2, 13, 16, 6),
+                        Block.box(9, 15, 10, 13, 16, 14),
+                        Block.box(2, 12, 0, 6, 16, 16)
+                ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+                public static final VoxelShape SOUTH_TOP = Stream.of(
+                        Block.box(0, 2, 2, 1, 13, 16),
+                        Block.box(0, 0, 0, 16, 12, 2),
+                        Block.box(15, 0, 2, 16, 2, 16),
+                        Block.box(15, 13, 6, 16, 16, 16),
+                        Block.box(0, 13, 6, 1, 16, 16),
+                        Block.box(0, 0, 2, 1, 2, 16),
+                        Block.box(0, 16, 6, 16, 18, 16),
+                        Block.box(0, 12, 14, 16, 13, 16),
+                        Block.box(15, 2, 2, 16, 13, 16),
+                        Block.box(10, 15, 9, 14, 16, 13),
+                        Block.box(2, 15, 9, 6, 16, 13),
+                        Block.box(0, 12, 2, 16, 16, 6)
+                ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+                public static final VoxelShape WEST_TOP = Stream.of(
+                        Block.box(0, 2, 0, 14, 13, 1),
+                        Block.box(14, 0, 0, 16, 12, 16),
+                        Block.box(0, 0, 15, 14, 2, 16),
+                        Block.box(0, 13, 15, 10, 16, 16),
+                        Block.box(0, 13, 0, 10, 16, 1),
+                        Block.box(0, 0, 0, 14, 2, 1),
+                        Block.box(0, 16, 0, 10, 18, 16),
+                        Block.box(0, 12, 0, 2, 13, 16),
+                        Block.box(0, 2, 15, 14, 13, 16),
+                        Block.box(3, 15, 10, 7, 16, 14),
+                        Block.box(3, 15, 2, 7, 16, 6),
+                        Block.box(10, 12, 0, 14, 16, 16)
+                ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+                @Override
+                public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+                    if(state.getValue(HALF) == DoubleBlockHalf.UPPER){
+                        switch (state.getValue(FACING)){
+                            case NORTH -> {
+                                return SOUTH_TOP;
+                            }
+                            case SOUTH -> {
+                                return NORTH_TOP;
+                            }
+                            case EAST -> {
+                                return WEST_TOP;
+                            }
+                            case WEST -> {
+                                return EAST_TOP;
+                            }
+                            default -> {return Shapes.block();}
+                        }
+                    }
+                    else{
+                        return Shapes.block();
+                    }
+                }
+            });
 
 
 

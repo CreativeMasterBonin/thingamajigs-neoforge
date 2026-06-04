@@ -4801,6 +4801,24 @@ public class TRecipe extends RecipeProvider {
                 TBlocks.CELL_TOWER_AMPLIFIER.asItem(),1)
                 .unlockedBy("has_thingy",has(TItems.PHONE_COMPONENT))
                 .save(rc);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS,TBlocks.FANCY_GAS_PUMP,4)
+                .requires(TItems.COMPUTER_COMPONENT)
+                .requires(TBlocks.GAS_PUMP.asItem())
+                .requires(TItems.RUBBER)
+                .requires(Tags.Items.DYES)
+                .requires(Items.BRUSH)
+                .requires(TBlocks.TRASH_CAN)
+                .unlockedBy("has_thingy",has(TBlocks.GAS_PUMP.asItem()))
+                .save(rc);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS,TBlocks.DELUXE_ARCADE_MACHINE,1)
+                .requires(TItems.ARCADE_COMPONENT)
+                .requires(TTag.BASIC_ARCADE_MACHINES)
+                .requires(Items.IRON_INGOT)
+                .requires(Tags.Items.GLASS_PANES)
+                .requires(Tags.Items.DYES)
+                .requires(TItems.RUBBER)
+                .unlockedBy("has_thingy",has(TBlocks.ARCADE_MACHINE.asItem()))
+                .save(rc);
     }
 
     public static RecipeBuilder stonecutterAny(Item requiredItem, Ingredient inputItem, Item result, int amt){

@@ -688,6 +688,7 @@ public class TClient{
             // arcade machines
             event.accept(TBlocks.ARCADE_MACHINE.get().asItem());
             event.accept(TBlocks.ARCADE_MACHINE_OPENABLE.get().asItem());
+            event.accept(TBlocks.DELUXE_ARCADE_MACHINE.get().asItem());
             event.accept(TBlocks.BASKETBALL_MACHINE.get().asItem());
             event.accept(TBlocks.PINBALL_MACHINE.get().asItem());
             event.accept(TBlocks.LIGHTUP_MACHINE.get().asItem());
@@ -756,6 +757,7 @@ public class TClient{
             event.accept(TBlocks.PAYPHONE_SEETHROUGH.get().asItem());
             event.accept(TBlocks.CAMPING_FUEL_CAN.get().asItem());
             event.accept(TBlocks.GAS_PUMP.get().asItem());
+            event.accept(TBlocks.FANCY_GAS_PUMP.get().asItem());
             event.accept(TBlocks.AIR_STATION.get().asItem());
             event.accept(TBlocks.NEWSPAPER_DISPENSER.get().asItem());
             event.accept(TBlocks.RESTAURANT_TRASH_CAN.get().asItem());

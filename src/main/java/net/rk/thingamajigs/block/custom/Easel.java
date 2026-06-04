@@ -149,6 +149,10 @@ public class Easel extends ThingamajigsDecorativeBlock {
             }
         }
         else{
+            if(player.isSecondaryUseActive()){
+                float randomPitchClient = 0.97f + level.getRandom().nextFloat() * 1.1f;
+                player.playSound(SoundEvents.VILLAGER_WORK_CARTOGRAPHER,1.0f,randomPitchClient);
+            }
             return InteractionResult.SUCCESS_NO_ITEM_USED;
         }
     }

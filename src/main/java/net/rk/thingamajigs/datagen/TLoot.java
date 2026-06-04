@@ -1235,6 +1235,9 @@ public class TLoot extends VanillaBlockLoot {
         this.dropSelf(TBlocks.SAFE.get());
         this.dropSelf(TBlocks.CAKE_DISPLAY_CASE.get());
         this.dropSelf(TBlocks.CELL_TOWER_AMPLIFIER.get());
+        this.dropSelf(TBlocks.FANCY_GAS_PUMP.get());
+        this.add(TBlocks.DELUXE_ARCADE_MACHINE.get(), block -> this.singularPropertyCondition(block,
+                DoubleHalfRotatedDecoration.HALF,DoubleBlockHalf.LOWER));
 
 
 

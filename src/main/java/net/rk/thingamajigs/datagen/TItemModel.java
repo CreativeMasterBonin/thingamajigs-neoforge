@@ -103,6 +103,8 @@ public class TItemModel extends ItemModelProvider {
         fromModelMod(TBlocks.SAFE.get(),"block/safe_closed");
         fromModelMod(TBlocks.CAKE_DISPLAY_CASE.get(),"block/cake_display_case_empty");
         fromModelMod(TBlocks.CELL_TOWER_AMPLIFIER.get(),"block/cell_tower_amplifier");
+        fromModelMod(TBlocks.FANCY_GAS_PUMP.get(),"block/fancy_gas_pump");
+        fromModelMod(TBlocks.DELUXE_ARCADE_MACHINE.get(),"item/deluxe_arcade_machine_held");
     }
 
     private ItemModelBuilder fromModelModItem(Item item, String source){

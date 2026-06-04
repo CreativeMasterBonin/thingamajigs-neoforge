@@ -31,6 +31,7 @@ public class TTag {
     public static final TagKey<Item> CHAIRS_ITEM = thingamajigsItemTag("chairs");
     public static final TagKey<Item> MYSTERIOUS_ITEMS = thingamajigsItemTag("mysterious_items");
     public static final TagKey<Item> PROTECTS_STATUES = thingamajigsItemTag("protects_statues");
+    public static final TagKey<Item> BASIC_ARCADE_MACHINES = thingamajigsItemTag("basic_arcade_machines");
     //public static final TagKey<Item> POLES_ITEM = thingamajigsItemTag("poles");
 
     public static final TagKey<Item> PAINT_BRUSHES = thingamajigsItemTag("paint_brushes");
