@@ -4794,6 +4794,7 @@ public class TRecipe extends RecipeProvider {
                 .requires(Items.STICK)
                 .requires(ItemTags.WOODEN_SLABS)
                 .requires(Items.SUGAR)
+                .requires(Items.GLASS)
                 .unlockedBy("has_thingy",has(TItems.MISC_COMPONENT))
                 .save(rc);
         stonecutterAny(TBlocks.CELL_TOWER_AMPLIFIER.asItem(),
@@ -4818,6 +4819,33 @@ public class TRecipe extends RecipeProvider {
                 .requires(Tags.Items.DYES)
                 .requires(TItems.RUBBER)
                 .unlockedBy("has_thingy",has(TBlocks.ARCADE_MACHINE.asItem()))
+                .save(rc);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.DAUNTING_STATUE.asItem(),1)
+                .requires(Items.COPPER_INGOT)
+                .requires(Items.OBSERVER)
+                .requires(Items.SPYGLASS)
+                .requires(TItems.MISC_COMPONENT)
+                .unlockedBy("has_thingy",has(TItems.MISC_COMPONENT))
+                .save(rc);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.WAXED_DAUNTING_STATUE.asItem(),1)
+                .requires(TBlocks.DAUNTING_STATUE.asItem())
+                .requires(Items.HONEYCOMB)
+                .unlockedBy("has_thingy",has(TBlocks.DAUNTING_STATUE.asItem()))
+                .save(rc);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.WAXED_EXPOSED_DAUNTING_STATUE.asItem(),1)
+                .requires(TBlocks.EXPOSED_DAUNTING_STATUE.asItem())
+                .requires(Items.HONEYCOMB)
+                .unlockedBy("has_thingy",has(TBlocks.EXPOSED_DAUNTING_STATUE.asItem()))
+                .save(rc);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.WAXED_WEATHERED_DAUNTING_STATUE.asItem(),1)
+                .requires(TBlocks.WEATHERED_DAUNTING_STATUE.asItem())
+                .requires(Items.HONEYCOMB)
+                .unlockedBy("has_thingy",has(TBlocks.WEATHERED_DAUNTING_STATUE.asItem()))
+                .save(rc);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.WAXED_OXIDIZED_DAUNTING_STATUE.asItem(),1)
+                .requires(TBlocks.OXIDIZED_DAUNTING_STATUE.asItem())
+                .requires(Items.HONEYCOMB)
+                .unlockedBy("has_thingy",has(TBlocks.OXIDIZED_DAUNTING_STATUE.asItem()))
                 .save(rc);
     }
 

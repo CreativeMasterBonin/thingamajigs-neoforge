@@ -10,6 +10,8 @@ import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.texture.OverlayTexture;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.client.model.data.ModelData;
 import net.rk.thingamajigs.TClient;
 import net.rk.thingamajigs.block.custom.CeilingFan;
@@ -56,5 +58,27 @@ public class CeilingFanBERenderer implements BlockEntityRenderer<CeilingFanBE> {
                 OverlayTexture.NO_OVERLAY,ModelData.EMPTY,RenderType.CUTOUT);
 
         poseStack.popPose();
+    }
+
+    @Override
+    public int getViewDistance() {
+        return 78;
+    }
+
+    @Override
+    public boolean shouldRenderOffScreen(CeilingFanBE blockEntity) {
+        return true;
+    }
+
+    @Override
+    public boolean shouldRender(CeilingFanBE be, Vec3 vec3) {
+        return Vec3.atCenterOf(be.getBlockPos()).multiply(2.0, 2.0, 2.0)
+                .closerThan(vec3.multiply(2.0, 2.0, 2.0), (double)this.getViewDistance());
+    }
+
+    @Override
+    public AABB getRenderBoundingBox(CeilingFanBE blockEntity) {
+        return new AABB(blockEntity.getBlockPos().getX() - 2, blockEntity.getBlockPos().getY() - 2, blockEntity.getBlockPos().getZ() - 2,
+                blockEntity.getBlockPos().getX() + 2, blockEntity.getBlockPos().getY() + 2, blockEntity.getBlockPos().getZ() + 2);
     }
 }

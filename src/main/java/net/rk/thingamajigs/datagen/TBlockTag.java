@@ -321,6 +321,14 @@ public class TBlockTag extends BlockTagsProvider {
         ;
 
         tag(BlockTags.NEEDS_STONE_TOOL)
+                .add(TBlocks.WAXED_DAUNTING_STATUE.get())
+                .add(TBlocks.WAXED_EXPOSED_DAUNTING_STATUE.get())
+                .add(TBlocks.WAXED_WEATHERED_DAUNTING_STATUE.get())
+                .add(TBlocks.WAXED_OXIDIZED_DAUNTING_STATUE.get())
+                .add(TBlocks.DAUNTING_STATUE.get())
+                .add(TBlocks.EXPOSED_DAUNTING_STATUE.get())
+                .add(TBlocks.WEATHERED_DAUNTING_STATUE.get())
+                .add(TBlocks.OXIDIZED_DAUNTING_STATUE.get())
                 .add(TBlocks.FURIOUS_STATUE.get())
                 .add(TBlocks.SORROW_STATUE.get())
                 .add(TBlocks.VALIANT_STATUE.get())
@@ -669,6 +677,14 @@ public class TBlockTag extends BlockTagsProvider {
         ;
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(TBlocks.WAXED_DAUNTING_STATUE.get())
+                .add(TBlocks.WAXED_EXPOSED_DAUNTING_STATUE.get())
+                .add(TBlocks.WAXED_WEATHERED_DAUNTING_STATUE.get())
+                .add(TBlocks.WAXED_OXIDIZED_DAUNTING_STATUE.get())
+                .add(TBlocks.DAUNTING_STATUE.get())
+                .add(TBlocks.EXPOSED_DAUNTING_STATUE.get())
+                .add(TBlocks.WEATHERED_DAUNTING_STATUE.get())
+                .add(TBlocks.OXIDIZED_DAUNTING_STATUE.get())
                 .add(TBlocks.DELUXE_ARCADE_MACHINE.get())
                 .add(TBlocks.FANCY_GAS_PUMP.get())
                 .add(TBlocks.CELL_TOWER_AMPLIFIER.get())

@@ -23,6 +23,9 @@ public interface TWeatheringCopperOther extends ChangeOverTimeBlock<TWeatheringC
                     .put(TBlocks.COPPER_TABLE.get(),TBlocks.EXPOSED_COPPER_TABLE.get())
                     .put(TBlocks.EXPOSED_COPPER_TABLE.get(),TBlocks.WEATHERED_COPPER_TABLE.get())
                     .put(TBlocks.WEATHERED_COPPER_TABLE.get(),TBlocks.OXIDIZED_COPPER_TABLE.get())
+                    .put(TBlocks.DAUNTING_STATUE.get(),TBlocks.EXPOSED_DAUNTING_STATUE.get())
+                    .put(TBlocks.EXPOSED_DAUNTING_STATUE.get(),TBlocks.WEATHERED_DAUNTING_STATUE.get())
+                    .put(TBlocks.WEATHERED_DAUNTING_STATUE.get(),TBlocks.OXIDIZED_DAUNTING_STATUE.get())
                     .build()
     );
     Supplier<BiMap<Block, Block>> PREVIOUS_BY_BLOCK = Suppliers.memoize(() -> NEXT_BY_BLOCK.get().inverse());

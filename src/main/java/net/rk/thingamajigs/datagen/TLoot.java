@@ -1239,6 +1239,15 @@ public class TLoot extends VanillaBlockLoot {
         this.add(TBlocks.DELUXE_ARCADE_MACHINE.get(), block -> this.singularPropertyCondition(block,
                 DoubleHalfRotatedDecoration.HALF,DoubleBlockHalf.LOWER));
 
+        this.dropSelf(TBlocks.DAUNTING_STATUE.get());
+        this.dropSelf(TBlocks.EXPOSED_DAUNTING_STATUE.get());
+        this.dropSelf(TBlocks.WEATHERED_DAUNTING_STATUE.get());
+        this.dropSelf(TBlocks.OXIDIZED_DAUNTING_STATUE.get());
+        this.dropSelf(TBlocks.WAXED_DAUNTING_STATUE.get());
+        this.dropSelf(TBlocks.WAXED_EXPOSED_DAUNTING_STATUE.get());
+        this.dropSelf(TBlocks.WAXED_WEATHERED_DAUNTING_STATUE.get());
+        this.dropSelf(TBlocks.WAXED_OXIDIZED_DAUNTING_STATUE.get());
+
 
 
         this.add(TBlocks.FAKE_FLUID_PUMP.get(),noDrop());

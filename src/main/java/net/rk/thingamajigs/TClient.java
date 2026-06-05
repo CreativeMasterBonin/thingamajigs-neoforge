@@ -1191,6 +1191,14 @@ public class TClient{
             event.accept(TItems.STRANGE_STATUE.get());
             event.accept(TBlocks.DUCK_STATUE.get().asItem());
             event.accept(TBlocks.VALIANT_STATUE.get().asItem());
+            event.accept(TBlocks.DAUNTING_STATUE.get().asItem());
+            event.accept(TBlocks.EXPOSED_DAUNTING_STATUE.get().asItem());
+            event.accept(TBlocks.WEATHERED_DAUNTING_STATUE.get().asItem());
+            event.accept(TBlocks.OXIDIZED_DAUNTING_STATUE.get().asItem());
+            event.accept(TBlocks.WAXED_DAUNTING_STATUE.get().asItem());
+            event.accept(TBlocks.WAXED_EXPOSED_DAUNTING_STATUE.get().asItem());
+            event.accept(TBlocks.WAXED_WEATHERED_DAUNTING_STATUE.get().asItem());
+            event.accept(TBlocks.WAXED_OXIDIZED_DAUNTING_STATUE.get().asItem());
             event.accept(TBlocks.TRI_CANDLE_HOLDER_BLOCK.get().asItem());
             event.accept(TBlocks.REINDEER_WALL_HEAD.get().asItem());
             event.accept(TBlocks.WARDEN_TROPHY.get().asItem());

@@ -19,6 +19,7 @@ public class TConfig{
     // values for config
     public static ModConfigSpec.IntValue maxThingamajigsStackSize;
     public static ModConfigSpec.BooleanValue moneyExchangeEnabled;
+    public static ModConfigSpec.BooleanValue windChargeDauntingStatue;
     public static ModConfigSpec.BooleanValue blueTabs;
     public static ModConfigSpec.EnumValue<Theme> tabTheme;
 
@@ -70,6 +71,10 @@ public class TConfig{
                 .translation("config.server.thingamajigs.money_exchange_enabled.desc")
                 .worldRestart()
                 .define("moneyExchangeEnabled",true);
+        windChargeDauntingStatue = SERVER
+                .translation("config.server.thingamajigs.daunting_statue_redirecting.desc")
+                .worldRestart()
+                .define("windChargeDauntingStatue",false);
     }
 
     public static void regServer(ModContainer cont){

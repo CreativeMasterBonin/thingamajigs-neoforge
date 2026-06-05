@@ -12,6 +12,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -33,13 +34,15 @@ public class CustomLeavesBlock extends Block implements SimpleWaterloggedBlock, 
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
     public static final IntegerProperty DISTANCE = IntegerProperty.create("distance", 1, 12);
+    public static final BooleanProperty SNOWY = BlockStateProperties.SNOWY;
 
     public CustomLeavesBlock(Properties p) {
         super(p.mapColor(MapColor.PLANT).strength(0.2f).randomTicks());
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(DISTANCE, 1)
                 .setValue(PERSISTENT, false)
-                .setValue(WATERLOGGED, false));
+                .setValue(WATERLOGGED, false)
+                .setValue(SNOWY,false));
     }
 
     @Override
@@ -53,10 +56,10 @@ public class CustomLeavesBlock extends Block implements SimpleWaterloggedBlock, 
     }
 
     @Override
-    public void randomTick(BlockState bs, ServerLevel sl, BlockPos bp, RandomSource rs) {
-        if (this.decaythis(bs)) {
-            dropResources(bs, sl, bp);
-            sl.removeBlock(bp, false);
+    public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
+        if (this.decaythis(state)) {
+            dropResources(state, level, pos);
+            level.removeBlock(pos, false);
         }
     }
 
@@ -92,15 +95,38 @@ public class CustomLeavesBlock extends Block implements SimpleWaterloggedBlock, 
     }
 
     @Override
-    public BlockState updateShape(BlockState bs, Direction dir, BlockState bs2, LevelAccessor la, BlockPos bp, BlockPos bp2) {
-        if (bs.getValue(WATERLOGGED)) {
-            la.scheduleTick(bp, Fluids.WATER, Fluids.WATER.getTickDelay(la));
+    public void neighborChanged(BlockState state, Level level, BlockPos pos, Block neighborBlock, BlockPos neighborPos, boolean movedByPiston) {
+        if((level.getBlockState(pos.above()).is(Blocks.SNOW) || level.getBlockState(pos.above()).is(Blocks.SNOW_BLOCK) || level.getBlockState(pos.above()).is(Blocks.POWDER_SNOW)) && !state.getValue(SNOWY)){
+            level.setBlock(pos,state.setValue(SNOWY,true),3);
+            return;
         }
-        int i = getDistanceAtV(bs2) + 1;
-        if (i != 1 || bs.getValue(DISTANCE) != i) {
-            la.scheduleTick(bp, this, 1);
+        else if(!(level.getBlockState(pos.above()).is(Blocks.SNOW) || level.getBlockState(pos.above()).is(Blocks.SNOW_BLOCK) || level.getBlockState(pos.above()).is(Blocks.POWDER_SNOW)) && state.getValue(SNOWY)){
+            level.setBlock(pos,state.setValue(SNOWY,false),3);
+            return;
         }
-        return bs;
+    }
+
+    public void snowyUpdate(BlockState state, Direction facing, BlockState facingState){
+        if(facing == Direction.UP){
+            if(facingState.getBlock() == Blocks.SNOW || facingState.getBlock() == Blocks.SNOW_BLOCK || facingState.getBlock() == Blocks.POWDER_SNOW){
+                state.setValue(SNOWY,true);
+            }
+            else{
+                state.setValue(SNOWY,false);
+            }
+        }
+    }
+
+    @Override
+    public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos) {
+        if (state.getValue(WATERLOGGED)) {
+            level.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
+        }
+        int i = getDistanceAtV(facingState) + 1;
+        if (i != 1 || state.getValue(DISTANCE) != i) {
+            level.scheduleTick(currentPos, this, 1);
+        }
+        return state;
     }
 
 
@@ -150,7 +176,7 @@ public class CustomLeavesBlock extends Block implements SimpleWaterloggedBlock, 
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(DISTANCE, PERSISTENT, WATERLOGGED);
+        builder.add(DISTANCE, PERSISTENT, WATERLOGGED,SNOWY);
     }
 
     public BlockState getStateForPlacement(BlockPlaceContext bpc) {

@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
+    "snowy=false": {
       "model": "thingamajigs:block/rubber_leaves"
+    },
+    "snowy=true": {
+      "model": "thingamajigs:block/snowy_rubber_leaves"
     }
   }
 }

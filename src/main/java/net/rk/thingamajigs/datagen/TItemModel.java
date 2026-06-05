@@ -22,15 +22,11 @@ public class TItemModel extends ItemModelProvider {
     protected void registerModels() {
         simpleCustomBlock(TBlocks.BRAMBLE,"block/plants/bramble");
         defaultCustomSimple(TBlocks.POTTED_BRAMBLE.get(),"plants/bramble");
-        //simpleCustomBlock(TBlocks.CURVED_MONITOR,"item/curved_monitor");
 
         simple(TItems.MUSIC_COMPONENT);
         fromModelMod(TBlocks.SECURITY_METAL_DETECTOR.get(),"block/security_metal_detector");
         fromModelMod(TBlocks.TRIPLE_SHELF.get(),"block/triple_shelf");
         fromModelMod(TBlocks.MYSTERIOUS_PILLAR.get(),"block/pillar/mysterious_standing");
-        //simpleCustomBlock(TBlocks.CLEVER_BLACKBOARD,"item/clever_blackboard");
-        //simpleCustomBlock(TBlocks.UMBRELLA,"item/umbrella");
-        //simpleCustomBlock(TBlocks.THEATER_PROJECTOR,"item/theater_projector");
         fromModelMod(TBlocks.SUPERMARKET_CONVEYOR.get(),"block/supermarket_conveyor");
         fromModelMod(TBlocks.STRING_BASS.get(),"block/string_bass");
         fromModelMod(TBlocks.BASS_DRUM.get(),"block/bass_drum");
@@ -105,6 +101,15 @@ public class TItemModel extends ItemModelProvider {
         fromModelMod(TBlocks.CELL_TOWER_AMPLIFIER.get(),"block/cell_tower_amplifier");
         fromModelMod(TBlocks.FANCY_GAS_PUMP.get(),"block/fancy_gas_pump");
         fromModelMod(TBlocks.DELUXE_ARCADE_MACHINE.get(),"item/deluxe_arcade_machine_held");
+        fromModelMod(TBlocks.CEILING_FAN.get(),"block/ceiling_fan");
+        fromModelMod(TBlocks.DAUNTING_STATUE.get(),"block/statue/daunting_statue");
+        fromModelMod(TBlocks.EXPOSED_DAUNTING_STATUE.get(),"block/statue/exposed_daunting_statue");
+        fromModelMod(TBlocks.WEATHERED_DAUNTING_STATUE.get(),"block/statue/weathered_daunting_statue");
+        fromModelMod(TBlocks.OXIDIZED_DAUNTING_STATUE.get(),"block/statue/oxidized_daunting_statue");
+        fromModelMod(TBlocks.WAXED_DAUNTING_STATUE.get(),"block/statue/daunting_statue");
+        fromModelMod(TBlocks.WAXED_EXPOSED_DAUNTING_STATUE.get(),"block/statue/exposed_daunting_statue");
+        fromModelMod(TBlocks.WAXED_WEATHERED_DAUNTING_STATUE.get(),"block/statue/weathered_daunting_statue");
+        fromModelMod(TBlocks.WAXED_OXIDIZED_DAUNTING_STATUE.get(),"block/statue/oxidized_daunting_statue");
     }
 
     private ItemModelBuilder fromModelModItem(Item item, String source){

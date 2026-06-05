@@ -3848,6 +3848,23 @@ public class TBlocks {
                 }
             });
 
+    public static final DeferredBlock<Block> DAUNTING_STATUE = register("daunting_statue",
+            () -> new DauntingStatue(TWeatheringCopperOther.State.UNAFFECTED,BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE)));
+    public static final DeferredBlock<Block> EXPOSED_DAUNTING_STATUE = register("exposed_daunting_statue",
+            () -> new DauntingStatue(TWeatheringCopperOther.State.EXPOSED,BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_LIGHT_GRAY)));
+    public static final DeferredBlock<Block> WEATHERED_DAUNTING_STATUE = register("weathered_daunting_statue",
+            () -> new DauntingStatue(TWeatheringCopperOther.State.WEATHERED,BlockBehaviour.Properties.of().mapColor(MapColor.WARPED_STEM)));
+    public static final DeferredBlock<Block> OXIDIZED_DAUNTING_STATUE = register("oxidized_daunting_statue",
+            () -> new DauntingStatue(TWeatheringCopperOther.State.OXIDIZED,BlockBehaviour.Properties.of().mapColor(MapColor.WARPED_NYLIUM)));
+    public static final DeferredBlock<Block> WAXED_DAUNTING_STATUE = register("waxed_daunting_statue",
+            () -> new WaxedDauntingStatue(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE)));
+    public static final DeferredBlock<Block> WAXED_EXPOSED_DAUNTING_STATUE = register("waxed_exposed_daunting_statue",
+            () -> new WaxedDauntingStatue(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_LIGHT_GRAY)));
+    public static final DeferredBlock<Block> WAXED_WEATHERED_DAUNTING_STATUE = register("waxed_weathered_daunting_statue",
+            () -> new WaxedDauntingStatue(BlockBehaviour.Properties.of().mapColor(MapColor.WARPED_STEM)));
+    public static final DeferredBlock<Block> WAXED_OXIDIZED_DAUNTING_STATUE = register("waxed_oxidized_daunting_statue",
+            () -> new WaxedDauntingStatue(BlockBehaviour.Properties.of().mapColor(MapColor.WARPED_NYLIUM)));
+
 
 
     // test features
