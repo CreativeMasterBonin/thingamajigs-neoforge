@@ -62,10 +62,17 @@ public class TClient{
     public static ModelResourceLocation uhdTVLocation = new ModelResourceLocation(
             ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
             "oversized/uhd_tv"),ModelResourceLocation.STANDALONE_VARIANT);
+    public static final String blockLocation = "block/";
+    public static ModelResourceLocation ceilingFanBlade = new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
+            blockLocation + "ceiling_fan_blade"),ModelResourceLocation.STANDALONE_VARIANT);
+    public static ModelResourceLocation ceilingFanConnector = new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
+            blockLocation + "ceiling_fan_connector"),ModelResourceLocation.STANDALONE_VARIANT);
 
     public void registerAdditionalModels(ModelEvent.RegisterAdditional event){
         // other
         event.register(uhdTVLocation);
+        event.register(ceilingFanBlade);
+        event.register(ceilingFanConnector);
         // car brush wash bases
         event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
                 carWashCustomModelBaseLocation + "spinning_brush_base"),ModelResourceLocation.STANDALONE_VARIANT));
@@ -255,6 +262,7 @@ public class TClient{
             BlockEntityRenderers.register(TBlockEntity.ULTRA_HD_TV.get(),UltraHDTVBERenderer::new);
             BlockEntityRenderers.register(TBlockEntity.DECORATIONAL_BUCKET_BE.get(),DecorationalBucketBERenderer::new);
             BlockEntityRenderers.register(TBlockEntity.FANCY_STORAGE_DECORATION_BE.get(),FancyStorageDecorationBERenderer::new);
+            BlockEntityRenderers.register(TBlockEntity.CEILING_FAN_BE.get(),CeilingFanBERenderer::new);
         }
         catch (Exception e){
             LogUtils.getLogger().error(e.getLocalizedMessage());

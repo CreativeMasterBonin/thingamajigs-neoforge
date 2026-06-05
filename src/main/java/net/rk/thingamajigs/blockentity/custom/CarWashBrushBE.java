@@ -15,25 +15,6 @@ import net.rk.thingamajigs.blockentity.TBlockEntity;
 public class CarWashBrushBE extends BlockEntity {
     public float yAngle = 0.0f;
     public float extensionAngle = 0.0f;
-    // unneeded, so unused
-    /*public BrushState currentState = BrushState.RETRACTED;
-    public enum BrushState implements StringRepresentable {
-        RETRACTED("retracted"),
-        EXTENDING("extending"),
-        EXTENDED("extended"),
-        RETRACTING("retracting");
-
-        private final String name;
-
-        BrushState(String name){
-            this.name = name;
-        }
-
-        @Override
-        public String getSerializedName() {
-            return name;
-        }
-    }*/
 
     public CarWashBrushBE(BlockPos pos, BlockState blockState) {
         super(TBlockEntity.CAR_WASH_BRUSH_BE.get(), pos, blockState);

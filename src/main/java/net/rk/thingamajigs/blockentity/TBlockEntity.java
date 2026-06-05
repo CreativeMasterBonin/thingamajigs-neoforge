@@ -118,6 +118,11 @@ public class TBlockEntity {
                 TBlocks.WHITE_CUBE_SHELF.get(),TBlocks.WHITE_SECTIONED_SHELF.get()
             ).build(null));
 
+    public static final Supplier<BlockEntityType<CeilingFanBE>> CEILING_FAN_BE = BLOCK_ENTITIES.register(
+            "ceiling_fan_be",() -> BlockEntityType.Builder.of(CeilingFanBE::new,
+                    TBlocks.CEILING_FAN.get()
+            ).build(null));
+
 
     public static void register(IEventBus eventBus){
         BLOCK_ENTITIES.register(eventBus);

@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": {"model":  "thingamajigs:block/ceiling_fan"}
+    "": {"model":  "thingamajigs:block/ceiling_fan_base"}
   }
 }
