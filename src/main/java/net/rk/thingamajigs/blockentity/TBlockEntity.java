@@ -30,7 +30,7 @@ public class TBlockEntity {
     public static final Supplier<BlockEntityType<MailboxBE>> MAILBOX_BLOCK_ENTITY =
             BLOCK_ENTITIES.register(
                     "mailbox", () -> BlockEntityType.Builder.of(
-                            MailboxBE::new,TBlocks.MAILBOX.get()
+                            MailboxBE::new,TBlocks.MAILBOX.get(),TBlocks.GREY_MAILBOX.get(),TBlocks.BLACK_MAILBOX.get()
                     ).build(null));
 
     public static final Supplier<BlockEntityType<ItemDisplayBE>> ITEM_DISPLAY_BE = BLOCK_ENTITIES.register(

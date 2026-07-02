@@ -7,19 +7,19 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.rk.thingamajigs.block.TBlocks;
 import net.rk.thingamajigs.blockentity.TBlockEntity;
 import net.rk.thingamajigs.menu.MailboxMenu;
 
 public class MailboxBE extends RandomizableContainerBlockEntity{
     private NonNullList<ItemStack> items = NonNullList.withSize(5, ItemStack.EMPTY);
 
-    public MailboxBE(BlockPos pos, BlockState state) {
-        super(TBlockEntity.MAILBOX_BLOCK_ENTITY.get(), pos, state);
-    }
+    public MailboxBE(BlockPos pos, BlockState state){super(TBlockEntity.MAILBOX_BLOCK_ENTITY.get(), pos, state);}
 
     @Override
     protected void loadAdditional(CompoundTag compoundTag, HolderLookup.Provider prov) {
@@ -61,5 +61,11 @@ public class MailboxBE extends RandomizableContainerBlockEntity{
     @Override
     public int getContainerSize() {
         return 5;
+    }
+
+    @Override
+    public boolean stillValid(Player player){
+        BlockState bs = player.level().getBlockState(this.getBlockPos());
+        return (bs.is(TBlocks.MAILBOX.get()) || bs.is(TBlocks.GREY_MAILBOX.get()) || bs.is(TBlocks.BLACK_MAILBOX.get())) && player.canInteractWithBlock(this.getBlockPos(),7);
     }
 }
