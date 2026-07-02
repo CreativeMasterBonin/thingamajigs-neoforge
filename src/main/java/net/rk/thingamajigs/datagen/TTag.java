@@ -45,6 +45,21 @@ public class TTag {
     public static final TagKey<Biome> RIVER_PLANTS_SUPPORTED = thingamajigsBiomeTag("river_plants_supported");
     public static final TagKey<Biome> CAN_SPAWN_JUNGLE_PLANTS = thingamajigsBiomeTag("can_spawn_jungle_plants");
 
+    // for the physics mods
+    public static final TagKey<Block> PHYSICS_HEAVY =
+            BlockTags.create(ResourceLocation.fromNamespaceAndPath("sable","heavy"));
+    public static final TagKey<Block> PHYSICS_SUPER_HEAVY =
+            BlockTags.create(ResourceLocation.fromNamespaceAndPath("sable","super_heavy"));
+    public static final TagKey<Block> PHYSICS_LIGHT =
+            BlockTags.create(ResourceLocation.fromNamespaceAndPath("sable","light"));
+    public static final TagKey<Block> PHYSICS_SUPER_LIGHT =
+            BlockTags.create(ResourceLocation.fromNamespaceAndPath("sable","super_light"));
+    public static final TagKey<Block> PHYSICS_BOUNCY =
+            BlockTags.create(ResourceLocation.fromNamespaceAndPath("sable","bouncy"));
+    // for other physics mods related
+    public static final TagKey<Block> PHYSICS_C_HANDLES =
+            BlockTags.create(ResourceLocation.fromNamespaceAndPath("simulated","handles"));
+
     public static TagKey<Biome> thingamajigsBiomeTag(String name){
         return TagKey.create(Registries.BIOME,ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,name));
     }

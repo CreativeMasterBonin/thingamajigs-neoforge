@@ -1,0 +1,65 @@
+{
+	"format_version": "1.9.0",
+	"credit": "CreativeMasterBonin",
+	"textures": {
+		"0": "thingamajigs:block/steel",
+		"1": "thingamajigs:block/extra_metal",
+		"particle": "thingamajigs:block/steel"
+	},
+	"elements": [
+		{
+			"from": [0, 4, 13],
+			"to": [16, 7, 15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 5.5, 14]},
+			"faces": {
+				"north": {"uv": [0, 12, 16, 15], "texture": "#0"},
+				"east": {"uv": [0, 12, 2, 15], "texture": "#0"},
+				"south": {"uv": [0, 13, 16, 16], "texture": "#1"},
+				"west": {"uv": [14, 12, 16, 15], "texture": "#0"},
+				"up": {"uv": [0, 0, 16, 2], "texture": "#1"},
+				"down": {"uv": [0, 1, 16, 3], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, -15, 0],
+			"translation": [0.75, 2, -2],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, -15, 0],
+			"translation": [0.75, 2, -2],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, -35, 0],
+			"translation": [1.25, 4.25, 0.75],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, -35, 0],
+			"translation": [1.25, 4.25, 0.75],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"ground": {
+			"translation": [0, 2.25, -2.5],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"gui": {
+			"rotation": [35, 135, 0],
+			"translation": [-2.75, -0.5, 0],
+			"scale": [0.7, 0.7, 0.7]
+		},
+		"head": {
+			"translation": [0, 5.25, -18.25],
+			"scale": [1, 2, 2]
+		},
+		"fixed": {
+			"translation": [0, 2.5, -5.5]
+		},
+		"on_shelf": {
+			"translation": [0, 0, -8.75]
+		}
+	}
+}

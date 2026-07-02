@@ -25,6 +25,8 @@ public class DataGenerators{
 
         // paintings are all premade-data driven jsons now
 
+        generator.addProvider(event.includeClient(),new TSound(packOutput,event.getExistingFileHelper()));
+
 
         generator.addProvider(event.includeServer(), new LootTableProvider(packOutput, Collections.emptySet(),
                 List.of(new LootTableProvider.SubProviderEntry(TLoot::new,LootContextParamSets.BLOCK)),lookupProvider));

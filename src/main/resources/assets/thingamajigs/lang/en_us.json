@@ -1587,7 +1587,9 @@
   "block.thingamajigs.waxed_exposed_daunting_statue": "Waxed Exposed Daunting Statue",
   "block.thingamajigs.waxed_weathered_daunting_statue": "Waxed Weathered Daunting Statue",
   "block.thingamajigs.waxed_oxidized_daunting_statue": "Waxed Oxidized Daunting Statue",
+  "block.thingamajigs.grab_bar": "Grab Bar",
 
+  "thingamajigs.subtitle.static": "Pure Noise Hisses",
   "config.server.thingamajigs.daunting_statue_redirecting.desc.tooltip": "Daunting Statues redirect wind charges, with some consequences of course...",
   "config.server.thingamajigs.daunting_statue_redirecting.desc": "Statue Redirecting Abilities",
   "painting.thingamajigs.mansion.title":"The Mansion",

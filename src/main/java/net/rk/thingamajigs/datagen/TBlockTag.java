@@ -677,6 +677,7 @@ public class TBlockTag extends BlockTagsProvider {
         ;
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(TBlocks.GRAB_BAR.get())
                 .add(TBlocks.WAXED_DAUNTING_STATUE.get())
                 .add(TBlocks.WAXED_EXPOSED_DAUNTING_STATUE.get())
                 .add(TBlocks.WAXED_WEATHERED_DAUNTING_STATUE.get())
@@ -1102,6 +1103,41 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(Blocks.MYCELIUM)
                 .addTag(Tags.Blocks.VILLAGER_FARMLANDS)
                 .replace(false)
+        ;
+
+        // modded tags
+        tag(TTag.PHYSICS_SUPER_HEAVY)
+                .add(TBlocks.YELLOW_BOWLING_BALL.get())
+                .add(TBlocks.BLUE_BOWLING_BALL.get())
+                .add(TBlocks.BROWN_BOWLING_BALL.get())
+                .add(TBlocks.GREEN_BOWLING_BALL.get())
+                .add(TBlocks.LIME_BOWLING_BALL.get())
+                .add(TBlocks.PINK_BOWLING_BALL.get())
+                .add(TBlocks.PURPLE_BOWLING_BALL.get())
+                .add(TBlocks.LIGHT_BLUE_BOWLING_BALL.get())
+                .add(TBlocks.MYSTERIOUS_PILLAR.get())
+        ;
+        tag(TTag.PHYSICS_HEAVY)
+                .add(TBlocks.LOVE_COUCH.get())
+                .add(TBlocks.LOVE_SEAT.get())
+        ;
+        tag(TTag.PHYSICS_LIGHT)
+                .add(TBlocks.MYSTERIOUS_ONE_COUCH.get())
+        ;
+        tag(TTag.PHYSICS_SUPER_LIGHT)
+                .add(TBlocks.NOT_QUITE.get())
+                .add(TBlocks.TENNIS_RACKET.get())
+                .add(TBlocks.TENNIS_BALL.get())
+                .add(TBlocks.BASKETBALL.get())
+                .add(TBlocks.SOCCER_BALL.get())
+        ;
+        tag(TTag.PHYSICS_BOUNCY)
+                .add(TBlocks.TENNIS_BALL.get())
+                .add(TBlocks.BASKETBALL.get())
+                .add(TBlocks.SOCCER_BALL.get())
+        ;
+        tag(TTag.PHYSICS_C_HANDLES)
+                .add(TBlocks.GRAB_BAR.get())
         ;
     }
 

@@ -46,15 +46,6 @@ public class TSoundEvent{
     public static final Supplier<SoundEvent> POOP_STEP = SOUND_EVENTS.register("poop_step",
             () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID, "poop_step")));
 
-    public static final Supplier<SoundEvent> MECH_BELL_ONE = SOUND_EVENTS.register("mech_bell_one",
-            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID, "mech_bell_one")));
-    public static final Supplier<SoundEvent> MECH_BELL_TWO = SOUND_EVENTS.register("mech_bell_two",
-            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID, "mech_bell_two")));
-    public static final Supplier<SoundEvent> EBELL_ONE = SOUND_EVENTS.register("ebell_one",
-            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID, "ebell_one")));
-    public static final Supplier<SoundEvent> EBELL_TWO = SOUND_EVENTS.register("ebell_two",
-            () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID, "ebell_two")));
-
     public static final Supplier<SoundEvent> MOBILE_BEEP = SOUND_EVENTS.register("mobile_beep",
             () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID, "mobile_beep")));
 

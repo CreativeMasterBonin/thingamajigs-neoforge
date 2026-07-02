@@ -4847,6 +4847,13 @@ public class TRecipe extends RecipeProvider {
                 .requires(Items.HONEYCOMB)
                 .unlockedBy("has_thingy",has(TBlocks.OXIDIZED_DAUNTING_STATUE.asItem()))
                 .save(rc);
+        // 1.8.6
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.GRAB_BAR.asItem(),3)
+                .requires(TBlocks.STRAIGHT_HORIZONTAL_POLE.asItem())
+                .requires(Items.IRON_INGOT)
+                .requires(TItems.HEALTH_COMPONENT)
+                .unlockedBy("has_thingy",has(TBlocks.STRAIGHT_HORIZONTAL_POLE.asItem()))
+                .save(rc);
     }
 
     public static RecipeBuilder stonecutterAny(Item requiredItem, Ingredient inputItem, Item result, int amt){

@@ -110,6 +110,7 @@ public class TItemModel extends ItemModelProvider {
         fromModelMod(TBlocks.WAXED_EXPOSED_DAUNTING_STATUE.get(),"block/statue/exposed_daunting_statue");
         fromModelMod(TBlocks.WAXED_WEATHERED_DAUNTING_STATUE.get(),"block/statue/weathered_daunting_statue");
         fromModelMod(TBlocks.WAXED_OXIDIZED_DAUNTING_STATUE.get(),"block/statue/oxidized_daunting_statue");
+        fromModelMod(TBlocks.GRAB_BAR.get(),"block/grab_bar/hand_bar_unconnected");
     }
 
     private ItemModelBuilder fromModelModItem(Item item, String source){

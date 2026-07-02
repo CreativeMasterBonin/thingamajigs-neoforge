@@ -3865,6 +3865,10 @@ public class TBlocks {
     public static final DeferredBlock<Block> WAXED_OXIDIZED_DAUNTING_STATUE = register("waxed_oxidized_daunting_statue",
             () -> new WaxedDauntingStatue(BlockBehaviour.Properties.of().mapColor(MapColor.WARPED_NYLIUM)));
 
+    // 1.8.6 additions
+    public static final DeferredBlock<Block> GRAB_BAR = register("grab_bar",
+            () -> new GrabBar(BlockBehaviour.Properties.of()));
+
 
 
     // test features
