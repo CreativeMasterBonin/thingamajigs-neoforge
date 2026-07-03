@@ -79,7 +79,7 @@ public class CarWashTireScrubber extends BaseEntityBlock implements SimpleWaterl
     }
 
     public void neighborChanged(BlockState state, Level level, BlockPos pos, Block block, BlockPos fromPos, boolean isMoving) {
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             boolean isLit = state.getValue(LIT);
             if (isLit != level.hasNeighborSignal(pos)) {
                 if (isLit) {
@@ -169,6 +169,6 @@ public class CarWashTireScrubber extends BaseEntityBlock implements SimpleWaterl
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType) {
         return createTickerHelper(blockEntityType, TBlockEntity.CAR_WASH_TIRE_SCRUBBER_BE.get(),
-                level.isClientSide ? CarWashTireScrubberBE::clientTick : null);
+                level.isClientSide() ? CarWashTireScrubberBE::clientTick : null);
     }
 }

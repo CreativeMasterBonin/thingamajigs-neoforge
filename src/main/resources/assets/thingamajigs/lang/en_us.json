@@ -1589,6 +1589,7 @@
   "block.thingamajigs.waxed_oxidized_daunting_statue": "Waxed Oxidized Daunting Statue",
   "block.thingamajigs.grab_bar": "Grab Bar",
   "block.thingamajigs.urinal": "Urinal",
+  "block.thingamajigs.tube_man": "Tube Man",
 
   "thingamajigs.subtitle.static": "Pure Noise Hisses",
   "config.server.thingamajigs.daunting_statue_redirecting.desc.tooltip": "Daunting Statues redirect wind charges, with some consequences of course...",

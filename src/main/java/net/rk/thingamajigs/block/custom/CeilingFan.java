@@ -144,6 +144,6 @@ public class CeilingFan extends BaseEntityBlock implements SimpleWaterloggedBloc
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType) {
         return createTickerHelper(blockEntityType, TBlockEntity.CEILING_FAN_BE.get(),
-                level.isClientSide ? CeilingFanBE::clientTick : null);
+                level.isClientSide() ? CeilingFanBE::clientTick : null);
     }
 }

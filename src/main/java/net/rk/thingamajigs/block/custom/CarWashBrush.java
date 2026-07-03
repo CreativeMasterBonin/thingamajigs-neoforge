@@ -117,6 +117,6 @@ public class CarWashBrush extends BaseEntityBlock {
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType) {
         return createTickerHelper(blockEntityType, TBlockEntity.CAR_WASH_BRUSH_BE.get(),
-                level.isClientSide ? CarWashBrushBE::clientTick : null);
+                level.isClientSide() ? CarWashBrushBE::clientTick : null);
     }
 }

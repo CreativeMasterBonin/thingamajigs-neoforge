@@ -4859,6 +4859,13 @@ public class TRecipe extends RecipeProvider {
                 TBlocks.URINAL.asItem(),1)
                 .unlockedBy("has_thingy",has(TBlocks.TOILET.asItem()))
                 .save(rc);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.TUBE_MAN_DECO.asItem(),1)
+                .requires(Items.BLUE_WOOL)
+                .requires(Items.BLUE_WOOL)
+                .requires(TBlocks.AIR_STATION.get())
+                .requires(TItems.MISC_COMPONENT)
+                .unlockedBy("has_thingy",has(TItems.MISC_COMPONENT))
+                .save(rc);
     }
 
     public static RecipeBuilder stonecutterAny(Item requiredItem, Ingredient inputItem, Item result, int amt){

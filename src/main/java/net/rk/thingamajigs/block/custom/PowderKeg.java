@@ -65,7 +65,7 @@ public class PowderKeg extends Block{
 
     @Override
     public BlockState playerWillDestroy(Level pLevel, BlockPos pPos, BlockState pState, Player pPlayer) {
-        if(!pLevel.isClientSide && !pPlayer.isCreative() && pPlayer.mayInteract(pLevel,pPos)){
+        if(!pLevel.isClientSide() && !pPlayer.isCreative() && pPlayer.mayInteract(pLevel,pPos)){
             double x = (double)pPos.getX();
             double y = (double)pPos.getY();
             double z = (double)pPos.getZ();
@@ -79,7 +79,7 @@ public class PowderKeg extends Block{
 
     @Override
     public void onCaughtFire(BlockState state, Level level, BlockPos pos, @Nullable Direction direction, @Nullable LivingEntity igniter) {
-        if(!level.isClientSide){
+        if(!level.isClientSide()){
             double x = (double)pos.getX();
             double y = (double)pos.getY();
             double z = (double)pos.getZ();
@@ -95,7 +95,7 @@ public class PowderKeg extends Block{
     protected InteractionResult useWithoutItem(BlockState bs, Level l, BlockPos bp, Player ply, BlockHitResult bhr) {
         ItemStack iih = ply.getMainHandItem();
 
-        if(!l.isClientSide){
+        if(!l.isClientSide()){
             if(ply.mayInteract(l,bp)){
                 if(iih.is(Items.BLAZE_POWDER) && !bs.getValue(VOLATILE)){
                     l.setBlock(bp,bs.setValue(VOLATILE,true),3);

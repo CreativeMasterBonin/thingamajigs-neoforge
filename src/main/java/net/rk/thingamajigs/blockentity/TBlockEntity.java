@@ -123,6 +123,11 @@ public class TBlockEntity {
                     TBlocks.CEILING_FAN.get()
             ).build(null));
 
+    public static final Supplier<BlockEntityType<TubeManDecoBE>> TUBE_MAN_DECO_BE = BLOCK_ENTITIES.register(
+            "tube_man_deco_be",() -> BlockEntityType.Builder.of(TubeManDecoBE::new,
+                    TBlocks.TUBE_MAN_DECO.get()
+            ).build(null));
+
 
     public static void register(IEventBus eventBus){
         BLOCK_ENTITIES.register(eventBus);

@@ -54,7 +54,7 @@ public class Urinal extends Toilet{
 
     @Override
     public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
-        if(level.isClientSide){
+        if(level.isClientSide()){
             if(player.getItemInHand(hand).isEmpty()){
                 return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
             }

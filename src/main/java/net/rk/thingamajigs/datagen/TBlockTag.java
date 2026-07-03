@@ -102,6 +102,7 @@ public class TBlockTag extends BlockTagsProvider {
         ;
 
         tag(BlockTags.DAMPENS_VIBRATIONS)
+                .add(TBlocks.TUBE_MAN_DECO.get())
                 .add(TBlocks.MYSTERIOUS_PILLAR.get())
                 .add(TBlocks.REFINED_THINGAMAJIG_BLOCK.get())
                 .add(TBlocks.MINIGOLF_GRASS_BLOCK.get())
@@ -206,6 +207,7 @@ public class TBlockTag extends BlockTagsProvider {
         ;
 
         tag(BlockTags.HOGLIN_REPELLENTS)
+                .add(TBlocks.TUBE_MAN_DECO.get())
                 .add(TBlocks.MYSTERIOUS_PILLAR.get())
                 .add(TBlocks.REFINED_THINGAMAJIG_BLOCK.get())
                 .add(TBlocks.COFFIN.get())
@@ -234,6 +236,7 @@ public class TBlockTag extends BlockTagsProvider {
         ;
 
         tag(BlockTags.IMPERMEABLE)
+                .add(TBlocks.TUBE_MAN_DECO.get())
                 .add(TBlocks.SAFE.get())
                 .add(TBlocks.RUBBER_DUCK.get())
                 .add(TBlocks.MYSTERIOUS_PILLAR.get())
@@ -395,6 +398,7 @@ public class TBlockTag extends BlockTagsProvider {
         ;
 
         tag(BlockTags.OCCLUDES_VIBRATION_SIGNALS)
+                .add(TBlocks.TUBE_MAN_DECO.get())
                 .add(TBlocks.MYSTERIOUS_PILLAR.get())
                 .add(TBlocks.REFINED_THINGAMAJIG_BLOCK.get())
                 .add(TBlocks.MINIGOLF_GRASS_BLOCK.get())
@@ -423,6 +427,7 @@ public class TBlockTag extends BlockTagsProvider {
         ;
 
         tag(BlockTags.PIGLIN_REPELLENTS)
+                .add(TBlocks.TUBE_MAN_DECO.get())
                 .add(TBlocks.MYSTERIOUS_PILLAR.get())
                 .add(TBlocks.REFINED_THINGAMAJIG_BLOCK.get())
                 .add(TBlocks.COFFIN.get())
@@ -504,6 +509,7 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.ROUND_BUSH.get())
                 .add(TBlocks.BULBLET.get())
                 .add(TBlocks.WISPY_WEED.get())
+                .add(TBlocks.TUBE_MAN_DECO.get())
         ;
 
         tag(BlockTags.WALL_POST_OVERRIDE)
@@ -677,6 +683,7 @@ public class TBlockTag extends BlockTagsProvider {
         ;
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(TBlocks.TUBE_MAN_DECO.get())
                 .add(TBlocks.URINAL.get())
                 .add(TBlocks.GRAB_BAR.get())
                 .add(TBlocks.WAXED_DAUNTING_STATUE.get())
@@ -1131,6 +1138,7 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.TENNIS_BALL.get())
                 .add(TBlocks.BASKETBALL.get())
                 .add(TBlocks.SOCCER_BALL.get())
+                .add(TBlocks.TUBE_MAN_DECO.get())
         ;
         tag(TTag.PHYSICS_BOUNCY)
                 .add(TBlocks.TENNIS_BALL.get())

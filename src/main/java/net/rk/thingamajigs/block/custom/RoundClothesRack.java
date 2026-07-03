@@ -91,7 +91,7 @@ public class RoundClothesRack extends ThingamajigsDecorativeBlock{
     }
 
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult bhr) {
-        if(level.isClientSide) {
+        if(level.isClientSide()) {
             return InteractionResult.SUCCESS;
         }
         else{

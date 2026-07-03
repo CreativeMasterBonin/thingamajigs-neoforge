@@ -129,7 +129,7 @@ public class LoveCouch extends ThingamajigsDecorativeBlock{
             double c = pos.getZ() + 1.0D;
             AABB aabb = new AABB(pos.getX(),pos.getY(),pos.getZ(),a,b,c);
 
-            if(!level.isClientSide){
+            if(!level.isClientSide()){
                 List<Chair> chairs = level.getEntitiesOfClass(Chair.class, aabb);
                 if(chairs.isEmpty()){
                     Chair ce = new Chair(level,pos,bs.getValue(FACING));

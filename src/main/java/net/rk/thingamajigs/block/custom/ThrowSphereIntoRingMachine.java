@@ -307,7 +307,7 @@ public class ThrowSphereIntoRingMachine extends ThingamajigsDecorativeBlock{
     @Override
     public void setPlacedBy(Level level, BlockPos blockPos, BlockState blockState, @Nullable LivingEntity entity, ItemStack itemStack) {
         super.setPlacedBy(level,blockPos,blockState,entity,itemStack);
-        if(!level.isClientSide){
+        if(!level.isClientSide()){
             BlockPos bp = blockPos.relative(blockState.getValue(FACING));
             switch (blockState.getValue(FACING)){
                 case NORTH -> {

@@ -138,7 +138,7 @@ public class Toilet extends ToggledStateBlock{
             AABB aabb = new AABB(pos.getX(),pos.getY(),pos.getZ(),a,b,c);
 
             if(!player.isShiftKeyDown()){
-                if(!level.isClientSide){
+                if(!level.isClientSide()){
                     //
                     List<net.rk.thingamajigs.entity.custom.Toilet> toilets = level.getEntitiesOfClass(net.rk.thingamajigs.entity.custom.Toilet.class, aabb);
                     if(toilets.isEmpty()){
@@ -150,7 +150,7 @@ public class Toilet extends ToggledStateBlock{
                 }
             }
             else{
-                if(level.isClientSide){
+                if(level.isClientSide()){
                     BlockState bs2 = bs.cycle(TOGGLED);
                     level.playLocalSound(pos,SoundEvents.BUCKET_FILL, SoundSource.PLAYERS,0.5F,1.0F,false);
                     return InteractionResult.SUCCESS;

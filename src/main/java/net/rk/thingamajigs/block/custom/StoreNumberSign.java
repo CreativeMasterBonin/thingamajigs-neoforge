@@ -40,7 +40,7 @@ public class StoreNumberSign extends Block{
 
     @Override
     protected InteractionResult useWithoutItem(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, BlockHitResult bhr) {
-        if (!pLevel.isClientSide){
+        if (!pLevel.isClientSide()){
             if(pPlayer.getUsedItemHand() == InteractionHand.MAIN_HAND && pPlayer.isShiftKeyDown()){
                 int type = pState.getValue(TYPE);
                 if(type >= 9){

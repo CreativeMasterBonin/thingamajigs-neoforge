@@ -80,7 +80,7 @@ public class LavaLamp extends Block implements SimpleWaterloggedBlock{
         ItemStack itemstack = player.getItemInHand(hand);
         boolean successfullyDyed = false; // controls whether we hear a sound and update the block or not
 
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             if(player.getAbilities().mayBuild == true){
                 if(itemstack.getItem() == Items.RED_DYE){
                     level.setBlock(blockPos,blockState.setValue(TYPE,0),0);

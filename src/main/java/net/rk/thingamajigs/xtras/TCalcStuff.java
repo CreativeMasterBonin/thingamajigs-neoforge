@@ -15,6 +15,11 @@ public class TCalcStuff {
         return random.nextDouble(max - min + 1) + min;
     }
 
+    public static int nextIntBetweenInclusive(int min, int max) {
+        Random random = new Random();
+        return random.nextInt(max - min + 1) + min;
+    }
+
     /**
      * Converts degrees (e.g. 45 or 180) to radians (e.g. 0.1 or 1.2)
      * @param degrees The degrees (from -360 to 360 is the preferred use-case)

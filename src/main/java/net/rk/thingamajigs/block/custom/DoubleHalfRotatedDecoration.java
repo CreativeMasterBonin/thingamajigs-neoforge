@@ -71,7 +71,7 @@ public class DoubleHalfRotatedDecoration extends ThingamajigsDecorativeBlock{
     }
 
     public BlockState playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
-        if (!level.isClientSide && (player.isCreative() || !player.hasCorrectToolForDrops(state, level, pos))) {
+        if (!level.isClientSide() && (player.isCreative() || !player.hasCorrectToolForDrops(state, level, pos))) {
             preventBottomDrops(level,pos,state,player);
         }
         return super.playerWillDestroy(level, pos, state, player);

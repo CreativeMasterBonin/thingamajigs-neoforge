@@ -152,7 +152,7 @@ public class BasicMailbox extends BaseEntityBlock{
                 }
             }
         }
-        return ItemInteractionResult.sidedSuccess(level.isClientSide);
+        return ItemInteractionResult.sidedSuccess(level.isClientSide());
     }
 
     @Nullable

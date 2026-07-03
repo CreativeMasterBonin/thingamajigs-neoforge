@@ -1250,6 +1250,7 @@ public class TLoot extends VanillaBlockLoot {
         // 1.8.6
         this.dropSelf(TBlocks.GRAB_BAR.get());
         this.dropSelf(TBlocks.URINAL.get());
+        this.dropSelf(TBlocks.TUBE_MAN_DECO.get());
 
 
 

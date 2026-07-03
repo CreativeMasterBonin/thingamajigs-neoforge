@@ -48,7 +48,7 @@ public class FireHydrant extends ThingamajigsDecorativeBlock{
     public InteractionResult useWithoutItem(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, BlockHitResult pHit) {
         boolean finished = false;
         ItemStack playerItem = pPlayer.getItemInHand(pPlayer.getUsedItemHand());
-        if(!pLevel.isClientSide){
+        if(!pLevel.isClientSide()){
             if(playerItem.is(TItems.KEY.asItem())){
                 Direction dir = pState.getValue(FACING);
                 if(dir == Direction.NORTH){

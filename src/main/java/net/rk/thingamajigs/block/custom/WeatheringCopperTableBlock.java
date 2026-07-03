@@ -143,7 +143,7 @@ public class WeatheringCopperTableBlock extends ConnectedTableBlock implements T
             player.swing(hand);
             return InteractionResult.CONSUME;
         }
-        return InteractionResult.sidedSuccess(level.isClientSide);
+        return InteractionResult.sidedSuccess(level.isClientSide());
     }
 
     public void applyWaxItemToBlock(BlockState bs, Level lvl, BlockPos bp){

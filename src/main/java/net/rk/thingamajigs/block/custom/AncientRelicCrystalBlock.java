@@ -41,7 +41,7 @@ public class AncientRelicCrystalBlock extends Block{
 
     @Override
     public void onProjectileHit(Level lvl, BlockState bs, BlockHitResult bhr, Projectile prjt) {
-        if (!lvl.isClientSide) {
+        if (!lvl.isClientSide()) {
             BlockPos blockpos = bhr.getBlockPos();
             lvl.playSound(null, blockpos, SoundEvents.AMETHYST_BLOCK_HIT, SoundSource.BLOCKS, 1.0F, 0.5F + lvl.random.nextFloat() * 1.2F);
             lvl.playSound(null, blockpos, SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.BLOCKS, 1.0F, 0.5F + lvl.random.nextFloat() * 1.2F);

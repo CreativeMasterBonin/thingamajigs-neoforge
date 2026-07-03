@@ -59,6 +59,7 @@ public class TClient{
     }
 
     public static final String carWashCustomModelBaseLocation = "bases/car_wash_components/";
+    public static final String tubeManCustomModelBaseLocation = "bases/tube_man_components/";
     public static ModelResourceLocation uhdTVLocation = new ModelResourceLocation(
             ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
             "oversized/uhd_tv"),ModelResourceLocation.STANDALONE_VARIANT);
@@ -68,11 +69,29 @@ public class TClient{
     public static ModelResourceLocation ceilingFanConnector = new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
             blockLocation + "ceiling_fan_connector"),ModelResourceLocation.STANDALONE_VARIANT);
 
+    public static ModelResourceLocation tubeManBase = ModelResourceLocation.standalone(
+            ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,tubeManCustomModelBaseLocation + "tube_man_base")
+    );
+    public static ModelResourceLocation tubeManBaseCompressed = ModelResourceLocation.standalone(
+            ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,tubeManCustomModelBaseLocation + "tube_man_base_compressed")
+    );
+    public static ModelResourceLocation tubeManBodySection = ModelResourceLocation.standalone(
+            ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,tubeManCustomModelBaseLocation + "tube_man_body_section")
+    );
+    public static ModelResourceLocation tubeManHeadSection = ModelResourceLocation.standalone(
+            ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,tubeManCustomModelBaseLocation + "tube_man_head_section")
+    );
+
     public void registerAdditionalModels(ModelEvent.RegisterAdditional event){
         // other
         event.register(uhdTVLocation);
         event.register(ceilingFanBlade);
         event.register(ceilingFanConnector);
+        // tube man
+        event.register(tubeManBase);
+        event.register(tubeManBaseCompressed);
+        event.register(tubeManBodySection);
+        event.register(tubeManHeadSection);
         // car brush wash bases
         event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
                 carWashCustomModelBaseLocation + "spinning_brush_base"),ModelResourceLocation.STANDALONE_VARIANT));
@@ -263,6 +282,8 @@ public class TClient{
             BlockEntityRenderers.register(TBlockEntity.DECORATIONAL_BUCKET_BE.get(),DecorationalBucketBERenderer::new);
             BlockEntityRenderers.register(TBlockEntity.FANCY_STORAGE_DECORATION_BE.get(),FancyStorageDecorationBERenderer::new);
             BlockEntityRenderers.register(TBlockEntity.CEILING_FAN_BE.get(),CeilingFanBERenderer::new);
+            // 1.8.6
+            BlockEntityRenderers.register(TBlockEntity.TUBE_MAN_DECO_BE.get(),TubeManDecoBERenderer::new);
         }
         catch (Exception e){
             LogUtils.getLogger().error(e.getLocalizedMessage());
@@ -713,10 +734,14 @@ public class TClient{
             // Water Park
             event.accept(TBlocks.WATER_SLIDE.get().asItem());
             event.accept(TBlocks.DIVING_BOARD.get().asItem());
-            // Commercial Use
+            // Commercial Use (start)
             event.accept(TBlocks.MALE_BATHROOM_SIGN.get().asItem());
             event.accept(TBlocks.FEMALE_BATHROOM_SIGN.get().asItem());
             event.accept(TBlocks.BOTH_BATHROOM_SIGN.get().asItem());
+            // commercial bathroom
+            event.accept(TBlocks.URINAL.get().asItem());
+            event.accept(TBlocks.GRAB_BAR.get().asItem());
+            //
             event.accept(TBlocks.BARBER_POLE.get().asItem());
             event.accept(TBlocks.BARBER_HAIR_DRYER.get().asItem());
             event.accept(TBlocks.CHANGE_MACHINE.get().asItem());
@@ -771,6 +796,7 @@ public class TClient{
             event.accept(TBlocks.RESTAURANT_TRASH_CAN.get().asItem());
             event.accept(TBlocks.DUMPSTER.get().asItem());
             event.accept(TBlocks.TRASH_BAG.get().asItem());
+            // end commercial use
             // theater stuff
             event.accept(TItems.THEATER_PROJECTOR.get().asItem());
             event.accept(TBlocks.THEATER_SEAT.get().asItem());
@@ -1137,6 +1163,7 @@ public class TClient{
             event.accept(TBlocks.STANDARD_GRAVESTONE.get().asItem());
             event.accept(TBlocks.PLACARD_GRAVESTONE.get().asItem());
             // Other
+            event.accept(TBlocks.TUBE_MAN_DECO.get().asItem());
             event.accept(TItems.UMBRELLA.get().asItem());
             event.accept(TBlocks.CHIMNEY.get().asItem());
             event.accept(TItems.ANIMATED_ICE_RINK.get().asItem());

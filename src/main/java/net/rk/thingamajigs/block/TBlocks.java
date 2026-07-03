@@ -40,6 +40,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.rk.thingamajigs.Thingamajigs;
 import net.rk.thingamajigs.block.custom.*;
+import net.rk.thingamajigs.blockentity.custom.TubeManDeco;
 import net.rk.thingamajigs.item.TItems;
 import net.rk.thingamajigs.world.TTreeGrower;
 import net.rk.thingamajigs.xtras.TSoundEvent;
@@ -3870,6 +3871,8 @@ public class TBlocks {
             () -> new GrabBar(BlockBehaviour.Properties.of()));
     public static final DeferredBlock<Block> URINAL = register("urinal",
             () -> new Urinal(BlockBehaviour.Properties.of()));
+    public static final DeferredBlock<Block> TUBE_MAN_DECO = register("tube_man",
+            () -> new TubeManDeco(BlockBehaviour.Properties.of()));
 
 
 

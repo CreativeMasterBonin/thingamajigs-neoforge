@@ -108,6 +108,6 @@ public class UltraHDTV extends BaseEntityBlock implements SimpleWaterloggedBlock
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType) {
         return createTickerHelper(blockEntityType, TBlockEntity.ULTRA_HD_TV.get(),
-                level.isClientSide ? UltraHDTVBE::clientTick : null);
+                level.isClientSide() ? UltraHDTVBE::clientTick : null);
     }
 }

@@ -67,7 +67,7 @@ public class AnimatedIceRink extends BaseEntityBlock implements SimpleWaterlogge
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if(level.isClientSide){
+        if(level.isClientSide()){
             return InteractionResult.SUCCESS;
         }
         else{
@@ -106,6 +106,6 @@ public class AnimatedIceRink extends BaseEntityBlock implements SimpleWaterlogge
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level lvl, BlockState bs, BlockEntityType<T> bet) {
         return createTickerHelper(bet, TBlockEntity.ANIMATED_ICE_RINK.get(),
-                lvl.isClientSide ? AnimatedIceRinkBE::clientTick : AnimatedIceRinkBE::serverTick);
+                lvl.isClientSide() ? AnimatedIceRinkBE::clientTick : AnimatedIceRinkBE::serverTick);
     }
 }

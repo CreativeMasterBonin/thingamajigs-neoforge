@@ -154,7 +154,7 @@ public class AnimatedDeer extends BaseEntityBlock implements SimpleWaterloggedBl
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if(level.isClientSide){
+        if(level.isClientSide()){
             return InteractionResult.SUCCESS;
         }
         else{
@@ -200,6 +200,6 @@ public class AnimatedDeer extends BaseEntityBlock implements SimpleWaterloggedBl
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType) {
         return createTickerHelper(blockEntityType, TBlockEntity.ANIMATED_DEER_BE.get(),
-                level.isClientSide ? AnimatedDeerBE::clientTick : AnimatedDeerBE::serverTick);
+                level.isClientSide() ? AnimatedDeerBE::clientTick : AnimatedDeerBE::serverTick);
     }
 }

@@ -164,7 +164,7 @@ public class WeatheringCopperChairBlock extends Block implements TWeatheringCopp
             double c = pos.getZ() + 1.0D;
             AABB aabb = new AABB(pos.getX(),pos.getY(),pos.getZ(),a,b,c);
 
-            if(!level.isClientSide){
+            if(!level.isClientSide()){
 
                 List<Chair> chairs = level.getEntitiesOfClass(Chair.class, aabb);
                 if(chairs.isEmpty()){

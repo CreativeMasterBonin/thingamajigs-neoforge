@@ -54,7 +54,7 @@ public class LibraryStool extends ThingamajigsDecorativeBlock{
             double c = pos.getZ() + 1.0D;
             AABB aabb = new AABB(pos.getX(),pos.getY(),pos.getZ(),a,b,c);
 
-            if(!level.isClientSide){
+            if(!level.isClientSide()){
                 List<Stool> chairs = level.getEntitiesOfClass(Stool.class, aabb);
                 if(chairs.isEmpty()){
                     Stool ce = new Stool(level,pos,bs.getValue(FACING));
