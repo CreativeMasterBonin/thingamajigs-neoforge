@@ -1249,6 +1249,7 @@ public class TLoot extends VanillaBlockLoot {
         this.dropSelf(TBlocks.WAXED_OXIDIZED_DAUNTING_STATUE.get());
         // 1.8.6
         this.dropSelf(TBlocks.GRAB_BAR.get());
+        this.dropSelf(TBlocks.URINAL.get());
 
 
 

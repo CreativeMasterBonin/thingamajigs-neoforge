@@ -11,6 +11,7 @@ public class TProperties{
     public static final IntegerProperty AMOUNT_FOUR = IntegerProperty.create("amount",1,4);
 
     public static final EnumProperty<ConnectedSide> CONNECTED_SIDE = EnumProperty.create("connected_side",ConnectedSide.class);
+    public static final BooleanProperty REVERSED = BooleanProperty.create("reversed");
 
     public enum ConnectedSide implements StringRepresentable {
         UNCONNECTED("unconnected"),

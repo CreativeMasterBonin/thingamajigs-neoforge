@@ -4854,6 +4854,11 @@ public class TRecipe extends RecipeProvider {
                 .requires(TItems.HEALTH_COMPONENT)
                 .unlockedBy("has_thingy",has(TBlocks.STRAIGHT_HORIZONTAL_POLE.asItem()))
                 .save(rc);
+        stonecutterAny(TBlocks.URINAL.asItem(),
+                Ingredient.of(TBlocks.TOILET.asItem()),
+                TBlocks.URINAL.asItem(),1)
+                .unlockedBy("has_thingy",has(TBlocks.TOILET.asItem()))
+                .save(rc);
     }
 
     public static RecipeBuilder stonecutterAny(Item requiredItem, Ingredient inputItem, Item result, int amt){

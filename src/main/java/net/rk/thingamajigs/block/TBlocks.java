@@ -3868,6 +3868,8 @@ public class TBlocks {
     // 1.8.6 additions
     public static final DeferredBlock<Block> GRAB_BAR = register("grab_bar",
             () -> new GrabBar(BlockBehaviour.Properties.of()));
+    public static final DeferredBlock<Block> URINAL = register("urinal",
+            () -> new Urinal(BlockBehaviour.Properties.of()));
 
 
 

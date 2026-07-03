@@ -1,33 +1,33 @@
 {
   "variants": {
     "facing=east,enabled=false": {
-      "model": "thingamajigs:custom/toilet_empty",
+      "model": "thingamajigs:block/toilets/toilet_empty",
       "y": 90
     },
     "facing=north,enabled=false": {
-      "model": "thingamajigs:custom/toilet_empty"
+      "model": "thingamajigs:block/toilets/toilet_empty"
     },
     "facing=south,enabled=false": {
-      "model": "thingamajigs:custom/toilet_empty",
+      "model": "thingamajigs:block/toilets/toilet_empty",
       "y": 180
     },
     "facing=west,enabled=false": {
-      "model": "thingamajigs:custom/toilet_empty",
+      "model": "thingamajigs:block/toilets/toilet_empty",
       "y": 270
     },
     "facing=east,enabled=true": {
-      "model": "thingamajigs:custom/toilet_full",
+      "model": "thingamajigs:block/toilets/toilet_full",
       "y": 90
     },
     "facing=north,enabled=true": {
-      "model": "thingamajigs:custom/toilet_full"
+      "model": "thingamajigs:block/toilets/toilet_full"
     },
     "facing=south,enabled=true": {
-      "model": "thingamajigs:custom/toilet_full",
+      "model": "thingamajigs:block/toilets/toilet_full",
       "y": 180
     },
     "facing=west,enabled=true": {
-      "model": "thingamajigs:custom/toilet_full",
+      "model": "thingamajigs:block/toilets/toilet_full",
       "y": 270
     }
   }

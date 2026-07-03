@@ -1,5 +1,5 @@
 {
-  "parent": "thingamajigs:custom/toilet_full",
+  "parent": "thingamajigs:block/toilets/toilet_full",
   "gui_light": "side",
   "display": {
     "firstperson_righthand": {

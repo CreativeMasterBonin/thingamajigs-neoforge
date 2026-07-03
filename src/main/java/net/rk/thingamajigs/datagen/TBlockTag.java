@@ -677,6 +677,7 @@ public class TBlockTag extends BlockTagsProvider {
         ;
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(TBlocks.URINAL.get())
                 .add(TBlocks.GRAB_BAR.get())
                 .add(TBlocks.WAXED_DAUNTING_STATUE.get())
                 .add(TBlocks.WAXED_EXPOSED_DAUNTING_STATUE.get())

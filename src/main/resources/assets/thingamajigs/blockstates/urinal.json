@@ -1,0 +1,67 @@
+{
+  "variants": {
+    "facing=east,reversed=false,enabled=false": {
+      "model": "thingamajigs:block/toilets/urinal",
+      "y": 90
+    },
+    "facing=north,reversed=false,enabled=false": {
+      "model": "thingamajigs:block/toilets/urinal"
+    },
+    "facing=south,reversed=false,enabled=false": {
+      "model": "thingamajigs:block/toilets/urinal",
+      "y": 180
+    },
+    "facing=west,reversed=false,enabled=false": {
+      "model": "thingamajigs:block/toilets/urinal",
+      "y": 270
+    },
+
+    "facing=east,reversed=false,enabled=true": {
+      "model": "thingamajigs:block/toilets/classic_urinal",
+      "y": 90
+    },
+    "facing=north,reversed=false,enabled=true": {
+      "model": "thingamajigs:block/toilets/classic_urinal"
+    },
+    "facing=south,reversed=false,enabled=true": {
+      "model": "thingamajigs:block/toilets/classic_urinal",
+      "y": 180
+    },
+    "facing=west,reversed=false,enabled=true": {
+      "model": "thingamajigs:block/toilets/classic_urinal",
+      "y": 270
+    },
+
+    "facing=east,reversed=true,enabled=false": {
+      "model": "thingamajigs:block/toilets/urinal_left",
+      "y": 90
+    },
+    "facing=north,reversed=true,enabled=false": {
+      "model": "thingamajigs:block/toilets/urinal_left"
+    },
+    "facing=south,reversed=true,enabled=false": {
+      "model": "thingamajigs:block/toilets/urinal_left",
+      "y": 180
+    },
+    "facing=west,reversed=true,enabled=false": {
+      "model": "thingamajigs:block/toilets/urinal_left",
+      "y": 270
+    },
+    
+    "facing=east,reversed=true,enabled=true": {
+      "model": "thingamajigs:block/toilets/classic_urinal_left",
+      "y": 90
+    },
+    "facing=north,reversed=true,enabled=true": {
+      "model": "thingamajigs:block/toilets/classic_urinal_left"
+    },
+    "facing=south,reversed=true,enabled=true": {
+      "model": "thingamajigs:block/toilets/classic_urinal_left",
+      "y": 180
+    },
+    "facing=west,reversed=true,enabled=true": {
+      "model": "thingamajigs:block/toilets/classic_urinal_left",
+      "y": 270
+    }
+  }
+}
