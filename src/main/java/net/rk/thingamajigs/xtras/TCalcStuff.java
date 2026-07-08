@@ -37,4 +37,43 @@ public class TCalcStuff {
     public static float radiansToDegrees(float radians){
         return (radians * 180 / Mth.PI);
     }
+
+
+    /**
+     * Converts a value from its old range to a new range (floats)
+     * @param value The input float to change its value relative to another range
+     * @param oldMin The old range minimum
+     * @param oldMax The old range maximum
+     * @param newMin The new range minimum
+     * @param newMax The new range maximum
+     * @return The converted float value
+     */
+    public static float convertFloatRangeToOther(float value,float oldMin,float oldMax,float newMin,float newMax){
+        if(oldMin == oldMax){
+            return -1.0f;
+        }
+        if(newMin == newMax){
+            return -1.0f;
+        }
+        return ((value - oldMin) / (oldMax - oldMin)) * (newMax - newMin) + newMin;
+    }
+
+    /**
+     * Converts a value from its old range to a new range (integers)
+     * @param value The input int to change its value relative to another range
+     * @param oldMin The old range minimum
+     * @param oldMax The old range maximum
+     * @param newMin The new range minimum
+     * @param newMax The new range maximum
+     * @return The converted int value
+     */
+    public static int convertIntRangeToOther(int value,int oldMin,int oldMax,int newMin,int newMax){
+        if(oldMin == oldMax){
+            return -1;
+        }
+        if(newMin == newMax){
+            return -1;
+        }
+        return ((value - oldMin) / (oldMax - oldMin)) * (newMax - newMin) + newMin;
+    }
 }

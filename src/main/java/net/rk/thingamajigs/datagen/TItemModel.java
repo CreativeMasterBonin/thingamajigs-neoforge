@@ -113,6 +113,8 @@ public class TItemModel extends ItemModelProvider {
         fromModelMod(TBlocks.GRAB_BAR.get(),"block/grab_bar/hand_bar_unconnected");
         fromModelMod(TBlocks.URINAL.get(),"block/toilets/urinal");
         fromModelMod(TBlocks.TUBE_MAN_DECO.get(),"bases/tube_man_components/tube_man_base_compressed");
+        fromModelMod(TBlocks.BLUEYBOX.get(),"block/blueybox");
+        flatHandheldItem(TItems.DEBIT_CARD.asItem(),"debit_card");
     }
 
     private ItemModelBuilder fromModelModItem(Item item, String source){
@@ -129,6 +131,12 @@ public class TItemModel extends ItemModelProvider {
         return withExistingParent(block.asItem().toString(),
                 ResourceLocation.withDefaultNamespace("item/handheld")).texture("layer0",
                 ResourceLocation.fromNamespaceAndPath("thingamajigs","block/" + name));
+    }
+
+    public ItemModelBuilder flatHandheldItem(Item item, String name){
+        return withExistingParent(item.asItem().toString(),
+                ResourceLocation.withDefaultNamespace("item/handheld")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath("thingamajigs","item/" + name));
     }
 
     public ItemModelBuilder flatHandheldRod(Block block, String name){

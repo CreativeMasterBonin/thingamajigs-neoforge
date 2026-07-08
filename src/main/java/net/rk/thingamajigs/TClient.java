@@ -13,6 +13,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.ColorResolver;
 import net.minecraft.world.level.FoliageColor;
@@ -360,7 +361,9 @@ public class TClient{
             // money system items
             event.accept(TItems.COIN);
             event.accept(TItems.MONEY);
-            //event.accept(TItems.DEBIT_CARD);
+            ItemStack debitCardReady = new ItemStack(TItems.DEBIT_CARD.asItem());
+            debitCardReady.set(Thingamajigs.MONEY,0);
+            event.accept(debitCardReady);
             // refinement and other recipe items
             // rubber tree stuff
             event.accept(TBlocks.RUBBER_SAPLING.get().asItem());

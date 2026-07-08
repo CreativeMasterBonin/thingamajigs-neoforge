@@ -216,9 +216,9 @@ public class TBlocks {
     public static final DeferredBlock<Block> BLUEYBOX = register("blueybox",
             () -> new BlueyBox(BlockBehaviour.Properties.of().sound(SoundType.NETHERITE_BLOCK).lightLevel(s -> 12)));
     public static final DeferredBlock<Block> BLUE_SODA_MACHINE = register("blue_soda_machine",
-            () -> new DoubleTallDecorationBlock(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).lightLevel(s -> 12)));
+            () -> new SodaVendingMachine(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).lightLevel(s -> 12)));
     public static final DeferredBlock<Block> RED_SODA_MACHINE = register("red_soda_machine",
-            () -> new DoubleTallDecorationBlock(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).lightLevel(s -> 12)));
+            () -> new SodaVendingMachine(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).lightLevel(s -> 12)));
     public static final DeferredBlock<Block> CASH_REGISTER = register("cash_register",
             () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.NETHERITE_BLOCK).lightLevel(s -> 5)){
                 public static final VoxelShape NORTH = Stream.of(

@@ -22,6 +22,7 @@ public class TConfig{
     public static ModConfigSpec.BooleanValue windChargeDauntingStatue;
     public static ModConfigSpec.BooleanValue blueTabs;
     public static ModConfigSpec.EnumValue<Theme> tabTheme;
+    public static ModConfigSpec.IntValue maxMoneyOnDebitCards;
 
     public enum Theme implements StringRepresentable {
         GREEN("green"),
@@ -75,6 +76,10 @@ public class TConfig{
                 .translation("config.server.thingamajigs.daunting_statue_redirecting.desc")
                 .worldRestart()
                 .define("windChargeDauntingStatue",false);
+        maxMoneyOnDebitCards = SERVER
+                .translation("config.server.thingamajigs.max_money_on_debit_cards.desc")
+                .worldRestart()
+                .defineInRange("maxMoneyOnDebitCards",128000,100,Integer.MAX_VALUE);
     }
 
     public static void regServer(ModContainer cont){

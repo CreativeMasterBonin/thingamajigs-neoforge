@@ -4866,6 +4866,14 @@ public class TRecipe extends RecipeProvider {
                 .requires(TItems.MISC_COMPONENT)
                 .unlockedBy("has_thingy",has(TItems.MISC_COMPONENT))
                 .save(rc);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TItems.DEBIT_CARD.asItem(),1)
+                .requires(Items.GHAST_TEAR)
+                .requires(TItems.MISC_COMPONENT)
+                .requires(TItems.COMPUTER_COMPONENT)
+                .requires(Items.BLACK_CANDLE)
+                .requires(Items.AMETHYST_SHARD)
+                .unlockedBy("has_thingy",has(TItems.MISC_COMPONENT))
+                .save(rc);
     }
 
     public static RecipeBuilder stonecutterAny(Item requiredItem, Ingredient inputItem, Item result, int amt){

@@ -1354,6 +1354,7 @@
 
 
   "item.thingamajigs.debit_card.stored_money.title": "Money Stored: %s",
+  "item.thingamajigs.debit_card.insufficient_funds": "Insufficient Funds, you need: %s, but have %s",
   "item.thingamajigs.money": "Money",
   "item.thingamajigs.coin": "Coin",
   "item.thingamajigs.debit_card": "Debit Card",
@@ -1591,9 +1592,16 @@
   "block.thingamajigs.urinal": "Urinal",
   "block.thingamajigs.tube_man": "Tube Man",
 
+  "item.thingamajigs.debit_card.exceeding_wealth": "Card is overflowing with money!",
+  "message.thingamajigs.debit_card.changed_balance": "Balance was: %s and now is: %s",
+  "message.thingamajigs.debit_card.balance": "Balance Of Debit Card Is: %s",
+  "item.thingamajigs.debit_card.desc.inactive": "Right click to activate your debit card",
+  "message.thingamajigs.debit_card.activated": "Debit Card Activated!",
   "thingamajigs.subtitle.static": "Pure Noise Hisses",
   "config.server.thingamajigs.daunting_statue_redirecting.desc.tooltip": "Daunting Statues redirect wind charges, with some consequences of course...",
   "config.server.thingamajigs.daunting_statue_redirecting.desc": "Statue Redirecting Abilities",
+  "config.server.thingamajigs.max_money_on_debit_cards.desc.tooltip": "The max amount of money that can be stored on Debit Cards",
+  "config.server.thingamajigs.max_money_on_debit_cards.desc": "Max Money On Debit Cards",
   "painting.thingamajigs.mansion.title":"The Mansion",
   "painting.thingamajigs.mansion.author":"CMB",
   "block.thingamajigs.safe.desc": "Sturdy and tough to break; explosions nullified when locked",

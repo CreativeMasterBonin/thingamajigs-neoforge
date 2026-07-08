@@ -1,9 +1,14 @@
 package net.rk.thingamajigs;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.core.Registry;
+import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.codec.ByteBufCodecs;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.ExtraCodecs;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -36,14 +41,21 @@ public class Thingamajigs {
             .title(Component.translatable("itemGroup.thingamajigs"))
             .withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
             .icon(() -> TItems.THINGAMAJIG.get().getDefaultInstance())
-            //.backgroundTexture(ResourceLocation.fromNamespaceAndPath("thingamajigs","textures/gui/thingamajigsitems.png"))
             .build());
+
+    private static final DeferredRegister<DataComponentType<?>> DATA_COMPONENTS = DeferredRegister.createDataComponents(Registries.DATA_COMPONENT_TYPE,Thingamajigs.MODID);
+
+    public static final DeferredHolder<DataComponentType<?>,DataComponentType<Integer>> MONEY = DATA_COMPONENTS.register("money",
+            () -> DataComponentType.<Integer>builder()
+                    .persistent(ExtraCodecs.intRange(0,Integer.MAX_VALUE))
+                    .networkSynchronized(ByteBufCodecs.VAR_INT).build());
 
     public Thingamajigs(IEventBus modEventBus, ModContainer modContainer){
         modEventBus.addListener(this::commonSetup);
         TConfig.register(modContainer);
 
         modEventBus.addListener(Handler::register);
+        DATA_COMPONENTS.register(modEventBus);
         TParticles.register(modEventBus);
         TSoundEvent.register(modEventBus);
         TBlocks.BLOCKS.register(modEventBus);

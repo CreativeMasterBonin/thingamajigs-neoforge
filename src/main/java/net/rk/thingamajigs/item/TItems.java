@@ -403,5 +403,9 @@ public class TItems {
                     return InteractionResultHolder.pass(player.getItemInHand(usedHand));
                 }
             });
+
+    // 1.8.7
+    public static final DeferredItem<Item> DEBIT_CARD = ITEMS.register("debit_card",
+            () -> new DebitCard(new Item.Properties()));
 }
 
