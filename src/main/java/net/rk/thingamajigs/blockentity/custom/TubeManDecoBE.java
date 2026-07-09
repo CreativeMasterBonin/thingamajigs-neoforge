@@ -8,13 +8,20 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.rk.thingamajigs.blockentity.TBlockEntity;
+import net.rk.thingamajigs.xtras.TCalcStuff;
 
 public class TubeManDecoBE extends BlockEntity {
     public float yAngle = 0.0f;
     public DyeColor color = DyeColor.BLUE;
+    public float randomOffset = 0.0f;
 
     public TubeManDecoBE(BlockPos pos, BlockState blockState) {
         super(TBlockEntity.TUBE_MAN_DECO_BE.get(), pos, blockState);
+        randomOffset = TCalcStuff.nextFloatBetweenInclusive(2.11f,3.29f);
+    }
+
+    public float getRandomOffset(){
+        return this.randomOffset;
     }
 
     public void updateBlock(){
@@ -46,6 +53,7 @@ public class TubeManDecoBE extends BlockEntity {
     public void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         tag.putFloat("y_angle",yAngle);
         tag.putInt("color",color.getId());
+        tag.putFloat("random_offset",randomOffset);
     }
 
     @Override
@@ -55,6 +63,9 @@ public class TubeManDecoBE extends BlockEntity {
         }
         if(tag.contains("color")){
             color = DyeColor.byId(tag.getInt("color"));
+        }
+        if(tag.contains("random_offset")){
+            randomOffset = tag.getFloat("random_offset");
         }
     }
 }

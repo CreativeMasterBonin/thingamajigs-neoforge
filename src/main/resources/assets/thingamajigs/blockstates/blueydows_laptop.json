@@ -1,18 +1,51 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "thingamajigs:custom/blueydows_laptop",
+    "facing=east,version=0": {
+      "model": "thingamajigs:block/laptop/blueydows_laptop_off",
       "y": 90
     },
-    "facing=north": {
-      "model": "thingamajigs:custom/blueydows_laptop"
+    "facing=north,version=0": {
+      "model": "thingamajigs:block/laptop/blueydows_laptop_off"
     },
-    "facing=south": {
-      "model": "thingamajigs:custom/blueydows_laptop",
+    "facing=south,version=0": {
+      "model": "thingamajigs:block/laptop/blueydows_laptop_off",
       "y": 180
     },
-    "facing=west": {
-      "model": "thingamajigs:custom/blueydows_laptop",
+    "facing=west,version=0": {
+      "model": "thingamajigs:block/laptop/blueydows_laptop_off",
+      "y": 270
+    },
+
+
+    "facing=east,version=1": {
+      "model": "thingamajigs:block/laptop/blueydows_laptop_retcon",
+      "y": 90
+    },
+    "facing=north,version=1": {
+      "model": "thingamajigs:block/laptop/blueydows_laptop_retcon"
+    },
+    "facing=south,version=1": {
+      "model": "thingamajigs:block/laptop/blueydows_laptop_retcon",
+      "y": 180
+    },
+    "facing=west,version=1": {
+      "model": "thingamajigs:block/laptop/blueydows_laptop_retcon",
+      "y": 270
+    },
+
+    "facing=east,version=2": {
+      "model": "thingamajigs:block/laptop/blueydows_laptop",
+      "y": 90
+    },
+    "facing=north,version=2": {
+      "model": "thingamajigs:block/laptop/blueydows_laptop"
+    },
+    "facing=south,version=2": {
+      "model": "thingamajigs:block/laptop/blueydows_laptop",
+      "y": 180
+    },
+    "facing=west,version=2": {
+      "model": "thingamajigs:block/laptop/blueydows_laptop",
       "y": 270
     }
   }

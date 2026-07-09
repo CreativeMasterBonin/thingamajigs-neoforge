@@ -64,8 +64,9 @@ public class TubeManDecoBERenderer implements BlockEntityRenderer<TubeManDecoBE>
                     1.0f,1.0f,1.0f,packedLight,packedOverlay, ModelData.EMPTY, RenderType.SOLID);
 
             poseStack.translate(0,0.25,0);
-            poseStack.rotateAround(Axis.ZP.rotationDegrees((-4.0f - Mth.sin(Util.getMillis() / 320f) + 4.0f) * 7.0f),0.5f,-0.2f,0.5f);
-            poseStack.rotateAround(Axis.XP.rotationDegrees((-4.0f - Mth.sin(Util.getMillis() / 625f) + 4.0f) * 6.0f),0.5f,-0.2f,0.5f);
+
+            poseStack.rotateAround(Axis.ZP.rotationDegrees((-4.0f - Mth.sin(Util.getMillis() / 320f) + 4.0f) * (3.0f * tubeManDecoBE.getRandomOffset() - 1.0f)),0.5f,-0.2f,0.5f);
+            poseStack.rotateAround(Axis.XP.rotationDegrees((-4.0f - Mth.sin(Util.getMillis() / 625f) + 4.0f) * (2.0f * tubeManDecoBE.getRandomOffset() - 2.0f)),0.5f,-0.2f,0.5f);
             if(tubeManDecoBE.color == DyeColor.BLUE){
                 this.blockRenderer.renderModel(poseStack.last(),multiBufferSource.getBuffer(Sheets.solidBlockSheet()),null,
                         manager.getModel(TClient.tubeManBodySection),
@@ -77,9 +78,11 @@ public class TubeManDecoBERenderer implements BlockEntityRenderer<TubeManDecoBE>
                         1.0f,1.0f,1.0f,packedLight,packedOverlay, ModelData.EMPTY, RenderType.SOLID);
             }
 
+            float clampedCosMid = (-3.0f - Mth.cos(Util.getMillis() / 495f) + 3.0f) * (3.0f + tubeManDecoBE.getRandomOffset() * 2.1f);
+
             poseStack.translate(0,1,0);
-            poseStack.rotateAround(Axis.ZP.rotationDegrees((-2.0f - Mth.sin(Util.getMillis() / 475f) + 2.0f) * 4.0f),0.5f,0,0.5f);
-            poseStack.rotateAround(Axis.XP.rotationDegrees((-3.0f - Mth.sin(Util.getMillis() / 495f) + 3.0f) * 10.0f),0.5f,0,0.5f);
+            poseStack.rotateAround(Axis.ZP.rotationDegrees((-2.0f - Mth.sin(Util.getMillis() / 475f) + 2.0f) * (4.0f + tubeManDecoBE.getRandomOffset() * 3.0f)),0.5f,0,0.5f);
+            poseStack.rotateAround(Axis.XP.rotationDegrees(Mth.clamp(clampedCosMid,-15.0f,15.0f)),0.5f,0,0.5f);
             if(tubeManDecoBE.color == DyeColor.BLUE){
                 this.blockRenderer.renderModel(poseStack.last(),multiBufferSource.getBuffer(Sheets.solidBlockSheet()),null,
                         manager.getModel(TClient.tubeManBodySection),
@@ -94,6 +97,20 @@ public class TubeManDecoBERenderer implements BlockEntityRenderer<TubeManDecoBE>
             poseStack.translate(0,1,0);
             poseStack.rotateAround(Axis.ZP.rotationDegrees((-4.0f - Mth.sin(Util.getMillis() / 210f)) + 4.0f),0.5f,0,0.5f);
             poseStack.rotateAround(Axis.XP.rotationDegrees((-5.0f - Mth.sin(Util.getMillis() / 202f) + 5.0f) * 3.0f),0.5f,0,0.5f);
+
+            float clampedCosHeadSelectionZ = (-tubeManDecoBE.getRandomOffset() * 32.0f)
+                    - Mth.cos(Util.getMillis() / 100f)
+                    + (tubeManDecoBE.getRandomOffset() * 32.0f);
+
+            float clampedCosHeadSelectionX = (-tubeManDecoBE.getRandomOffset() * 32.0f)
+                    - Mth.cos(Util.getMillis() / 100f)
+                    + (tubeManDecoBE.getRandomOffset() * 32.0f);
+
+            poseStack.rotateAround(Axis.ZP.rotationDegrees(Mth.clamp(clampedCosHeadSelectionZ,-15.0f,15.0f)),
+                    0.5f,0.5f,0.5f);
+            poseStack.rotateAround(Axis.XP.rotationDegrees(Mth.clamp(clampedCosHeadSelectionX,-15.0f,15.0f)),
+                    0.5f,0.5f,0.5f);
+
             if(tubeManDecoBE.color == DyeColor.BLUE){
                 this.blockRenderer.renderModel(poseStack.last(),multiBufferSource.getBuffer(Sheets.solidBlockSheet()),null,
                         manager.getModel(TClient.tubeManHeadSection),
@@ -108,9 +125,9 @@ public class TubeManDecoBERenderer implements BlockEntityRenderer<TubeManDecoBE>
             poseStack.translate(1,-0.5,0.25);
             poseStack.rotateAround(Axis.ZP.rotationDegrees(90),0.5f,0.5f,0.5f);
             poseStack.scale(0.5f,1.2f,0.5f);
-            poseStack.rotateAround(Axis.XP.rotationDegrees((-13.0f - Mth.sin(Util.getMillis() / 300f) + 13.0f) * 9.0f),0.5f,0.5f,0.5f);
-            poseStack.rotateAround(Axis.ZP.rotationDegrees((-13.0f - Mth.sin(Util.getMillis() / 370f) + 13.0f) * 5.0f),0.5f,0.5f,0.5f);
-            poseStack.rotateAround(Axis.YP.rotationDegrees((-5.0f - Mth.sin(Util.getMillis() / 190f) + 5.0f) * 4.0f),0.5f,0.5f,0.5f);
+            poseStack.rotateAround(Axis.XP.rotationDegrees((-13.0f - Mth.sin(Util.getMillis() / 300f) + 13.0f) * (9.0f + tubeManDecoBE.getRandomOffset())),0.5f,0.5f,0.5f);
+            poseStack.rotateAround(Axis.ZP.rotationDegrees((-13.0f - Mth.sin(Util.getMillis() / 370f) + 13.0f) * (5.0f - tubeManDecoBE.getRandomOffset())),0.5f,0.5f,0.5f);
+            poseStack.rotateAround(Axis.YP.rotationDegrees((-5.0f - Mth.sin(Util.getMillis() / 190f) + 5.0f) * (4.0f + tubeManDecoBE.getRandomOffset())),0.5f,0.5f,0.5f);
             if(tubeManDecoBE.color == DyeColor.BLUE){
                 this.blockRenderer.renderModel(poseStack.last(),multiBufferSource.getBuffer(Sheets.solidBlockSheet()),null,
                         manager.getModel(TClient.tubeManBodySection),

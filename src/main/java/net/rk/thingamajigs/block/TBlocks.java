@@ -319,11 +319,11 @@ public class TBlocks {
     public static final DeferredBlock<Block> ANTENNA = register("antenna",
             () -> new DoubleTallDecorationBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL)));
     public static final DeferredBlock<Block> BLUEYTOSH_LAPTOP = register("blueytosh_laptop",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL).noCollission()));
+            () -> new BlueyLaptopComputer(BlockBehaviour.Properties.of().sound(SoundType.METAL).noCollission()));
     public static final DeferredBlock<Block> BLUEYTOSH_LAPTOP_OLD = register("blueytosh_laptop_old",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL).noCollission()));
+            () -> new BlueyLaptopComputer(BlockBehaviour.Properties.of().sound(SoundType.METAL).noCollission()));
     public static final DeferredBlock<Block> BLUEYDOWS_LAPTOP = register("blueydows_laptop",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL).noCollission()));
+            () -> new BlueyLaptopComputer(BlockBehaviour.Properties.of().sound(SoundType.METAL).noCollission()));
     public static final DeferredBlock<Block> TOASTER = register("toaster",
             () -> new Toaster(BlockBehaviour.Properties.of().sound(SoundType.LANTERN)));
     public static final DeferredBlock<Block> MICROWAVE = register("microwave",

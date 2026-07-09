@@ -44,4 +44,9 @@ public class WaterSlide extends ThingamajigsDecorativeBlock{
             return super.getVisualShape(bs,bg,bp,cc);
         }
     }
+
+    @Override
+    public float getFriction() {
+        return 0.9f;
+    }
 }
