@@ -12,11 +12,15 @@ import net.minecraft.client.renderer.block.ModelBlockRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.resources.model.ModelManager;
+import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.client.model.data.ModelData;
 import net.rk.thingamajigs.TClient;
+import net.rk.thingamajigs.Thingamajigs;
 import net.rk.thingamajigs.blockentity.custom.TubeManDeco;
 import net.rk.thingamajigs.blockentity.custom.TubeManDecoBE;
 
@@ -42,6 +46,18 @@ public class TubeManDecoBERenderer implements BlockEntityRenderer<TubeManDecoBE>
         poseStack.rotateAround(Axis.YP.rotationDegrees(tubeManDecoBE.yAngle),0.5f,0.5f,0.5f);
         poseStack.translate(0,0,0);
 
+        ModelResourceLocation compressedModel = ModelResourceLocation.standalone(
+                ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
+                        TClient.tubeManCustomModelBaseLocation + tubeManDecoBE.color.getName() + "_tube_man_base_compressed"));
+
+        ModelResourceLocation bodyModel = ModelResourceLocation.standalone(
+                ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
+                        TClient.tubeManCustomModelBaseLocation + tubeManDecoBE.color.getName() + "_tube_man_body_section"));
+
+        ModelResourceLocation headModel = ModelResourceLocation.standalone(
+                ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
+                        TClient.tubeManCustomModelBaseLocation + tubeManDecoBE.color.getName() + "_tube_man_head_section"));
+
         if(tubeManDecoBE.getBlockState().getValue(TubeManDeco.TOGGLED)){
             this.blockRenderer.renderModel(poseStack.last(),multiBufferSource.getBuffer(Sheets.solidBlockSheet()),null,
                     manager.getModel(TClient.tubeManBase),
@@ -50,23 +66,44 @@ public class TubeManDecoBERenderer implements BlockEntityRenderer<TubeManDecoBE>
             poseStack.translate(0,0.25,0);
             poseStack.rotateAround(Axis.ZP.rotationDegrees((-4.0f - Mth.sin(Util.getMillis() / 320f) + 4.0f) * 7.0f),0.5f,-0.2f,0.5f);
             poseStack.rotateAround(Axis.XP.rotationDegrees((-4.0f - Mth.sin(Util.getMillis() / 625f) + 4.0f) * 6.0f),0.5f,-0.2f,0.5f);
-            this.blockRenderer.renderModel(poseStack.last(),multiBufferSource.getBuffer(Sheets.solidBlockSheet()),null,
-                    manager.getModel(TClient.tubeManBodySection),
-                    1.0f,1.0f,1.0f,packedLight,packedOverlay, ModelData.EMPTY, RenderType.SOLID);
+            if(tubeManDecoBE.color == DyeColor.BLUE){
+                this.blockRenderer.renderModel(poseStack.last(),multiBufferSource.getBuffer(Sheets.solidBlockSheet()),null,
+                        manager.getModel(TClient.tubeManBodySection),
+                        1.0f,1.0f,1.0f,packedLight,packedOverlay, ModelData.EMPTY, RenderType.SOLID);
+            }
+            else{
+                this.blockRenderer.renderModel(poseStack.last(),multiBufferSource.getBuffer(Sheets.solidBlockSheet()),null,
+                        manager.getModel(bodyModel),
+                        1.0f,1.0f,1.0f,packedLight,packedOverlay, ModelData.EMPTY, RenderType.SOLID);
+            }
 
             poseStack.translate(0,1,0);
             poseStack.rotateAround(Axis.ZP.rotationDegrees((-2.0f - Mth.sin(Util.getMillis() / 475f) + 2.0f) * 4.0f),0.5f,0,0.5f);
             poseStack.rotateAround(Axis.XP.rotationDegrees((-3.0f - Mth.sin(Util.getMillis() / 495f) + 3.0f) * 10.0f),0.5f,0,0.5f);
-            this.blockRenderer.renderModel(poseStack.last(),multiBufferSource.getBuffer(Sheets.solidBlockSheet()),null,
-                    manager.getModel(TClient.tubeManBodySection),
-                    1.0f,1.0f,1.0f,packedLight,packedOverlay, ModelData.EMPTY, RenderType.SOLID);
+            if(tubeManDecoBE.color == DyeColor.BLUE){
+                this.blockRenderer.renderModel(poseStack.last(),multiBufferSource.getBuffer(Sheets.solidBlockSheet()),null,
+                        manager.getModel(TClient.tubeManBodySection),
+                        1.0f,1.0f,1.0f,packedLight,packedOverlay, ModelData.EMPTY, RenderType.SOLID);
+            }
+            else{
+                this.blockRenderer.renderModel(poseStack.last(),multiBufferSource.getBuffer(Sheets.solidBlockSheet()),null,
+                        manager.getModel(bodyModel),
+                        1.0f,1.0f,1.0f,packedLight,packedOverlay, ModelData.EMPTY, RenderType.SOLID);
+            }
 
             poseStack.translate(0,1,0);
             poseStack.rotateAround(Axis.ZP.rotationDegrees((-4.0f - Mth.sin(Util.getMillis() / 210f)) + 4.0f),0.5f,0,0.5f);
             poseStack.rotateAround(Axis.XP.rotationDegrees((-5.0f - Mth.sin(Util.getMillis() / 202f) + 5.0f) * 3.0f),0.5f,0,0.5f);
-            this.blockRenderer.renderModel(poseStack.last(),multiBufferSource.getBuffer(Sheets.solidBlockSheet()),null,
-                    manager.getModel(TClient.tubeManHeadSection),
-                    1.0f,1.0f,1.0f,packedLight,packedOverlay, ModelData.EMPTY, RenderType.SOLID);
+            if(tubeManDecoBE.color == DyeColor.BLUE){
+                this.blockRenderer.renderModel(poseStack.last(),multiBufferSource.getBuffer(Sheets.solidBlockSheet()),null,
+                        manager.getModel(TClient.tubeManHeadSection),
+                        1.0f,1.0f,1.0f,packedLight,packedOverlay, ModelData.EMPTY, RenderType.SOLID);
+            }
+            else{
+                this.blockRenderer.renderModel(poseStack.last(),multiBufferSource.getBuffer(Sheets.solidBlockSheet()),null,
+                        manager.getModel(headModel),
+                        1.0f,1.0f,1.0f,packedLight,packedOverlay, ModelData.EMPTY, RenderType.SOLID);
+            }
 
             poseStack.translate(1,-0.5,0.25);
             poseStack.rotateAround(Axis.ZP.rotationDegrees(90),0.5f,0.5f,0.5f);
@@ -74,20 +111,41 @@ public class TubeManDecoBERenderer implements BlockEntityRenderer<TubeManDecoBE>
             poseStack.rotateAround(Axis.XP.rotationDegrees((-13.0f - Mth.sin(Util.getMillis() / 300f) + 13.0f) * 9.0f),0.5f,0.5f,0.5f);
             poseStack.rotateAround(Axis.ZP.rotationDegrees((-13.0f - Mth.sin(Util.getMillis() / 370f) + 13.0f) * 5.0f),0.5f,0.5f,0.5f);
             poseStack.rotateAround(Axis.YP.rotationDegrees((-5.0f - Mth.sin(Util.getMillis() / 190f) + 5.0f) * 4.0f),0.5f,0.5f,0.5f);
-            this.blockRenderer.renderModel(poseStack.last(),multiBufferSource.getBuffer(Sheets.solidBlockSheet()),null,
-                    manager.getModel(TClient.tubeManBodySection),
-                    1.0f,1.0f,1.0f,packedLight,packedOverlay, ModelData.EMPTY, RenderType.SOLID);
+            if(tubeManDecoBE.color == DyeColor.BLUE){
+                this.blockRenderer.renderModel(poseStack.last(),multiBufferSource.getBuffer(Sheets.solidBlockSheet()),null,
+                        manager.getModel(TClient.tubeManBodySection),
+                        1.0f,1.0f,1.0f,packedLight,packedOverlay, ModelData.EMPTY, RenderType.SOLID);
+            }
+            else{
+                this.blockRenderer.renderModel(poseStack.last(),multiBufferSource.getBuffer(Sheets.solidBlockSheet()),null,
+                        manager.getModel(bodyModel),
+                        1.0f,1.0f,1.0f,packedLight,packedOverlay, ModelData.EMPTY, RenderType.SOLID);
+            }
 
             poseStack.translate(0,1.5,0);
             poseStack.rotateAround(Axis.YP.rotationDegrees((-5.0f - Mth.sin(Util.getMillis() / 170f) + 5.0f) * 8.0f),0.5f,0.5f,0.5f);
-            this.blockRenderer.renderModel(poseStack.last(),multiBufferSource.getBuffer(Sheets.solidBlockSheet()),null,
-                    manager.getModel(TClient.tubeManBodySection),
-                    1.0f,1.0f,1.0f,packedLight,packedOverlay, ModelData.EMPTY, RenderType.SOLID);
+            if(tubeManDecoBE.color == DyeColor.BLUE){
+                this.blockRenderer.renderModel(poseStack.last(),multiBufferSource.getBuffer(Sheets.solidBlockSheet()),null,
+                        manager.getModel(TClient.tubeManBodySection),
+                        1.0f,1.0f,1.0f,packedLight,packedOverlay, ModelData.EMPTY, RenderType.SOLID);
+            }
+            else{
+                this.blockRenderer.renderModel(poseStack.last(),multiBufferSource.getBuffer(Sheets.solidBlockSheet()),null,
+                        manager.getModel(bodyModel),
+                        1.0f,1.0f,1.0f,packedLight,packedOverlay, ModelData.EMPTY, RenderType.SOLID);
+            }
         }
         else{
-            this.blockRenderer.renderModel(poseStack.last(),multiBufferSource.getBuffer(Sheets.solidBlockSheet()),null,
-                    manager.getModel(TClient.tubeManBaseCompressed),
-                    1.0f,1.0f,1.0f,packedLight,packedOverlay, ModelData.EMPTY, RenderType.SOLID);
+            if(tubeManDecoBE.color == DyeColor.BLUE){
+                this.blockRenderer.renderModel(poseStack.last(),multiBufferSource.getBuffer(Sheets.solidBlockSheet()),null,
+                        manager.getModel(TClient.tubeManBaseCompressed),
+                        1.0f,1.0f,1.0f,packedLight,packedOverlay, ModelData.EMPTY, RenderType.SOLID);
+            }
+            else{
+                this.blockRenderer.renderModel(poseStack.last(),multiBufferSource.getBuffer(Sheets.solidBlockSheet()),null,
+                        manager.getModel(compressedModel),
+                        1.0f,1.0f,1.0f,packedLight,packedOverlay, ModelData.EMPTY, RenderType.SOLID);
+            }
         }
 
         poseStack.popPose();

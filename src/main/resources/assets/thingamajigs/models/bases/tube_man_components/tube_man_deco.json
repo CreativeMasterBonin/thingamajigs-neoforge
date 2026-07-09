@@ -2,6 +2,6 @@
 	"format_version": "1.9.0",
 	"credit": "CreativeMasterBonin",
 	"textures": {
-		"particle": "thingamajigs:block/aios/blue_tube_man_side"
+		"particle": "thingamajigs:block/aios/tube_man/blue_tube_man_side"
 	}
 }

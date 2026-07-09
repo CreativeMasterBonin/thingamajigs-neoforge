@@ -271,9 +271,9 @@ public class TBlocks {
                 }
             });
     public static final DeferredBlock<Block> BLUE_VENDING_MACHINE = register("blue_vending_machine",
-            () -> new VendingMachine(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).lightLevel(s -> 12)));
+            () -> new SnackVendingMachine(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).lightLevel(s -> 12)));
     public static final DeferredBlock<Block> RED_VENDING_MACHINE = register("red_vending_machine",
-            () -> new VendingMachine(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).lightLevel(s -> 12)));
+            () -> new SnackVendingMachine(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).lightLevel(s -> 12)));
     public static final DeferredBlock<Block> COFFEE_MACHINE = register("coffee_machine",
             () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.LANTERN)));
     public static final DeferredBlock<Block> PAYPHONE = register("payphone",

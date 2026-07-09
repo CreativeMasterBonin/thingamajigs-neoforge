@@ -13,6 +13,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.ColorResolver;
@@ -93,6 +94,24 @@ public class TClient{
         event.register(tubeManBaseCompressed);
         event.register(tubeManBodySection);
         event.register(tubeManHeadSection);
+
+        for(DyeColor tubeManMRL : DyeColor.values()){
+            if(!tubeManMRL.equals(DyeColor.BLUE)){
+                event.register(new ModelResourceLocation(
+                        ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
+                                tubeManCustomModelBaseLocation + tubeManMRL.getName() + "_tube_man_base_compressed"),
+                        ModelResourceLocation.STANDALONE_VARIANT));
+                event.register(new ModelResourceLocation(
+                        ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
+                                tubeManCustomModelBaseLocation + tubeManMRL.getName() + "_tube_man_head_section"),
+                        ModelResourceLocation.STANDALONE_VARIANT));
+                event.register(new ModelResourceLocation(
+                        ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
+                                tubeManCustomModelBaseLocation + tubeManMRL.getName() + "_tube_man_body_section"),
+                        ModelResourceLocation.STANDALONE_VARIANT));
+            }
+        }
+
         // car brush wash bases
         event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
                 carWashCustomModelBaseLocation + "spinning_brush_base"),ModelResourceLocation.STANDALONE_VARIANT));

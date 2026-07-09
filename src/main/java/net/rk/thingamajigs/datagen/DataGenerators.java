@@ -25,6 +25,9 @@ public class DataGenerators{
 
         // paintings are all premade-data driven jsons now
 
+        // mob effect tags
+        generator.addProvider(event.includeServer(),new TMobEffectTag(packOutput,lookupProvider,event.getExistingFileHelper()));
+
         generator.addProvider(event.includeClient(),new TSound(packOutput,event.getExistingFileHelper()));
 
 

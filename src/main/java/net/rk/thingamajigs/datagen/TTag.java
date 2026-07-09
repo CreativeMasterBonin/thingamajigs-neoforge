@@ -6,6 +6,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
@@ -45,6 +46,9 @@ public class TTag {
     public static final TagKey<Biome> RIVER_PLANTS_SUPPORTED = thingamajigsBiomeTag("river_plants_supported");
     public static final TagKey<Biome> CAN_SPAWN_JUNGLE_PLANTS = thingamajigsBiomeTag("can_spawn_jungle_plants");
 
+    // effect tags
+    public static final TagKey<MobEffect> DISALLOWED_IN_VENDING_MACHINES = thingamajigsMobEffectTag("disallowed_in_vending_machines");
+
     // for the physics mods
     public static final TagKey<Block> PHYSICS_HEAVY =
             BlockTags.create(ResourceLocation.fromNamespaceAndPath("sable","heavy"));
@@ -74,6 +78,14 @@ public class TTag {
 
     private static TagKey<Item> thingamajigsItemTag(String name){
         return ItemTags.create(ResourceLocation.fromNamespaceAndPath("thingamajigs", name));
+    }
+
+    public static TagKey<MobEffect> thingamajigsMobEffectTag(String name){
+        return TagKey.create(Registries.MOB_EFFECT,ResourceLocation.fromNamespaceAndPath("thingamajigs", name));
+    }
+
+    public static TagKey<MobEffect> commonMobEffectTag(String name){
+        return TagKey.create(Registries.MOB_EFFECT,ResourceLocation.fromNamespaceAndPath("c", name));
     }
 
     // default tag registry

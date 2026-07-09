@@ -6,6 +6,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
+import net.rk.thingamajigs.item.TItems;
 
 public interface VendingAble{
     /**
@@ -28,5 +29,9 @@ public interface VendingAble{
             ItemEntity product = new ItemEntity(level,pos.x,pos.y,pos.z,itemStack,deltaMovement.x,deltaMovement.y,deltaMovement.z);
             level.addFreshEntity(product);
         }
+    }
+
+    public default int purchaseMoneyAmount(ItemStack itemStack){
+        return 1;
     }
 }

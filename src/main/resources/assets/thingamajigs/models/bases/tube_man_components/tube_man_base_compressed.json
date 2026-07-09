@@ -3,8 +3,8 @@
 	"credit": "CreativeMasterBonin",
 	"textures": {
 		"0": "block/blast_furnace_top",
-		"2": "thingamajigs:block/aios/blue_tube_man",
-		"3": "thingamajigs:block/aios/blue_tube_man_side",
+		"2": "thingamajigs:block/aios/tube_man/blue_tube_man",
+		"3": "thingamajigs:block/aios/tube_man/blue_tube_man_side",
 		"particle": "block/blast_furnace_top"
 	},
 	"elements": [

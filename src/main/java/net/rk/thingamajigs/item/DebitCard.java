@@ -17,6 +17,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.rk.thingamajigs.Thingamajigs;
 import net.rk.thingamajigs.block.custom.ATMBlock;
+import net.rk.thingamajigs.block.custom.SodaVendingMachine;
 import net.rk.thingamajigs.xtras.TCalcStuff;
 import net.rk.thingamajigs.xtras.TConfig;
 
@@ -56,6 +57,7 @@ public class DebitCard extends Item {
     }
 
     public boolean setMoney(Player player, ItemStack stack, int moneyChangeAmount){
+        // FIX: unaccounted condition of plenty of money and can't add more, but for some reason cannot extract money either even if it should be possible to
         if(stack.has(MONEY_COMPONENT)){
             if(getMoney(stack) + moneyChangeAmount < 0){
                 player.displayClientMessage(Component.translatable("item.thingamajigs.debit_card.insufficient_funds",moneyChangeAmount,getMoney(stack)).withStyle(ChatFormatting.RED),true);
@@ -125,6 +127,10 @@ public class DebitCard extends Item {
         Player player = context.getPlayer();
         ItemStack offhandStack = player.getOffhandItem();
         InteractionHand hand = player.getUsedItemHand();
+
+        if(lookingAtState.getBlock() instanceof SodaVendingMachine){
+            return InteractionResult.CONSUME;
+        }
 
         if(!itemInHand.has(MONEY_COMPONENT)){
             return InteractionResult.PASS;
