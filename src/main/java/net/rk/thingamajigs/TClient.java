@@ -777,6 +777,8 @@ public class TClient{
             event.accept(TBlocks.BLUE_SODA_MACHINE.get().asItem());
             event.accept(TBlocks.RED_VENDING_MACHINE.get().asItem());
             event.accept(TBlocks.BLUE_VENDING_MACHINE.get().asItem());
+            event.accept(TBlocks.PIZZA_VENDING_MACHINE.get().asItem());
+            event.accept(TBlocks.ICECREAM_VENDING_MACHINE.get().asItem());
             event.accept(TBlocks.OPEN_SIGN.get().asItem());
             event.accept(TBlocks.OPEN_SIGN_ALT.get().asItem());
             event.accept(TBlocks.OPEN_SIGN_ALT_TWO.get().asItem());

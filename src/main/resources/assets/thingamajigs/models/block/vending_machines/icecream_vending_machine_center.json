@@ -1,0 +1,101 @@
+{
+	"format_version": "1.9.0",
+	"credit": "CreativeMasterBonin",
+	"texture_size": [128, 128],
+	"textures": {
+		"0": "thingamajigs:block/aios/icecream_vending_machine",
+		"particle": "thingamajigs:block/bowling_alley_floor_base"
+	},
+	"elements": [
+		{
+			"name": "bottomleft",
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 1.75, 2], "texture": "#0", "cullface": "north"},
+				"south": {"uv": [0, 0, 1.75, 2], "texture": "#0", "cullface": "south"},
+				"down": {"uv": [8, 4, 6, 6], "texture": "#0", "cullface": "down"}
+			}
+		},
+		{
+			"name": "roofleft",
+			"from": [0, 30, -7],
+			"to": [16, 32, 0],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 31, -3.5]},
+			"faces": {
+				"north": {"uv": [4, 2.25, 6, 2.5], "texture": "#0"},
+				"up": {"uv": [9, 7.375, 7.5, 6.5], "texture": "#0"},
+				"down": {"uv": [7, 8, 5, 8.875], "texture": "#0"}
+			}
+		},
+		{
+			"name": "topbackpanel",
+			"from": [0, 16, 16],
+			"to": [16, 32, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6, 24, 16]},
+			"faces": {
+				"south": {"uv": [0, 4, 2, 6], "texture": "#0"}
+			}
+		},
+		{
+			"name": "toproof",
+			"from": [0, 32, 0],
+			"to": [16, 32, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 32, 8]},
+			"faces": {
+				"up": {"uv": [9, 8, 7.5, 6], "texture": "#0"},
+				"down": {"uv": [1.5, 8, 0, 10], "texture": "#0"}
+			}
+		},
+		{
+			"name": "pillarmid",
+			"from": [0, 16, 0],
+			"to": [16, 31, 4],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 23.5, 2]},
+			"faces": {
+				"north": {"uv": [0, 4, 2, 6], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [5, 135, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [5, 135, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"firstperson_righthand": {
+			"rotation": [5, 135, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"firstperson_lefthand": {
+			"rotation": [5, 135, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.15, 0.15, 0.15]
+		},
+		"gui": {
+			"rotation": [35, 135, 0],
+			"translation": [0, -2, 0],
+			"scale": [0.3, 0.3, 0.3]
+		},
+		"head": {
+			"translation": [0, -15.5, 0],
+			"scale": [2, 2, 2]
+		},
+		"fixed": {
+			"translation": [0, -4, -1.5],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"on_shelf": {
+			"rotation": [0, -180, 0],
+			"translation": [0, 0, -0.75],
+			"scale": [0.5, 0.5, 0.5]
+		}
+	}
+}

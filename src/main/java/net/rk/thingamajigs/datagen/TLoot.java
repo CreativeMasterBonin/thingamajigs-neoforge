@@ -4,13 +4,11 @@ import net.minecraft.advancements.critereon.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.packs.VanillaBlockLoot;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
@@ -19,8 +17,6 @@ import net.minecraft.world.level.block.state.properties.SlabType;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.*;
-import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
-import net.minecraft.world.level.storage.loot.functions.EnchantRandomlyFunction;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.*;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
@@ -1238,7 +1234,6 @@ public class TLoot extends VanillaBlockLoot {
         this.dropSelf(TBlocks.FANCY_GAS_PUMP.get());
         this.add(TBlocks.DELUXE_ARCADE_MACHINE.get(), block -> this.singularPropertyCondition(block,
                 DoubleHalfRotatedDecoration.HALF,DoubleBlockHalf.LOWER));
-
         this.dropSelf(TBlocks.DAUNTING_STATUE.get());
         this.dropSelf(TBlocks.EXPOSED_DAUNTING_STATUE.get());
         this.dropSelf(TBlocks.WEATHERED_DAUNTING_STATUE.get());
@@ -1247,13 +1242,7 @@ public class TLoot extends VanillaBlockLoot {
         this.dropSelf(TBlocks.WAXED_EXPOSED_DAUNTING_STATUE.get());
         this.dropSelf(TBlocks.WAXED_WEATHERED_DAUNTING_STATUE.get());
         this.dropSelf(TBlocks.WAXED_OXIDIZED_DAUNTING_STATUE.get());
-        // 1.8.6
-        this.dropSelf(TBlocks.GRAB_BAR.get());
-        this.dropSelf(TBlocks.URINAL.get());
-        this.dropSelf(TBlocks.TUBE_MAN_DECO.get());
-
-
-
+        // other
         this.add(TBlocks.FAKE_FLUID_PUMP.get(),noDrop());
         // torches
         this.dropOther(TBlocks.WALL_CLEAR_BULB.get(), TItems.CLEAR_BULB_ITEM);
@@ -1283,6 +1272,14 @@ public class TLoot extends VanillaBlockLoot {
 
         this.dropPottedContents(TBlocks.POTTED_BULBY_FLOWER.get());
         this.dropPottedContents(TBlocks.POTTED_DROOPY_FLOWER.get());
+
+
+        // 1.8.6
+        this.dropSelf(TBlocks.GRAB_BAR.get());
+        this.dropSelf(TBlocks.URINAL.get());
+        this.dropSelf(TBlocks.TUBE_MAN_DECO.get());
+        this.dropSelf(TBlocks.PIZZA_VENDING_MACHINE.get());
+        this.dropSelf(TBlocks.ICECREAM_VENDING_MACHINE.get());
     }
 
     // from loot tables

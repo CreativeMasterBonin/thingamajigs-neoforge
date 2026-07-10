@@ -1,0 +1,67 @@
+{
+  "variants": {
+    "facing=east,connected_side=unconnected": {
+      "model": "thingamajigs:block/vending_machines/pizza_vending_machine_unconnected",
+      "y": 90
+    },
+    "facing=north,connected_side=unconnected": {
+      "model": "thingamajigs:block/vending_machines/pizza_vending_machine_unconnected"
+    },
+    "facing=south,connected_side=unconnected": {
+      "model": "thingamajigs:block/vending_machines/pizza_vending_machine_unconnected",
+      "y": 180
+    },
+    "facing=west,connected_side=unconnected": {
+      "model": "thingamajigs:block/vending_machines/pizza_vending_machine_unconnected",
+      "y": 270
+    },
+
+    "facing=east,connected_side=left": {
+      "model": "thingamajigs:block/vending_machines/pizza_vending_machine_left",
+      "y": 90
+    },
+    "facing=north,connected_side=left": {
+      "model": "thingamajigs:block/vending_machines/pizza_vending_machine_left"
+    },
+    "facing=south,connected_side=left": {
+      "model": "thingamajigs:block/vending_machines/pizza_vending_machine_left",
+      "y": 180
+    },
+    "facing=west,connected_side=left": {
+      "model": "thingamajigs:block/vending_machines/pizza_vending_machine_left",
+      "y": 270
+    },
+
+    "facing=east,connected_side=right": {
+      "model": "thingamajigs:block/vending_machines/pizza_vending_machine_right",
+      "y": 90
+    },
+    "facing=north,connected_side=right": {
+      "model": "thingamajigs:block/vending_machines/pizza_vending_machine_right"
+    },
+    "facing=south,connected_side=right": {
+      "model": "thingamajigs:block/vending_machines/pizza_vending_machine_right",
+      "y": 180
+    },
+    "facing=west,connected_side=right": {
+      "model": "thingamajigs:block/vending_machines/pizza_vending_machine_right",
+      "y": 270
+    },
+
+    "facing=east,connected_side=center": {
+      "model": "thingamajigs:block/vending_machines/pizza_vending_machine_center",
+      "y": 90
+    },
+    "facing=north,connected_side=center": {
+      "model": "thingamajigs:block/vending_machines/pizza_vending_machine_center"
+    },
+    "facing=south,connected_side=center": {
+      "model": "thingamajigs:block/vending_machines/pizza_vending_machine_center",
+      "y": 180
+    },
+    "facing=west,connected_side=center": {
+      "model": "thingamajigs:block/vending_machines/pizza_vending_machine_center",
+      "y": 270
+    }
+  }
+}

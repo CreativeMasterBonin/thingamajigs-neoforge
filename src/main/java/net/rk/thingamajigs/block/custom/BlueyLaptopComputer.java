@@ -16,7 +16,7 @@ public class BlueyLaptopComputer extends ThingamajigsDecorativeBlock {
     public static final IntegerProperty VERSION = IntegerProperty.create("version",0,2);
 
     public BlueyLaptopComputer(Properties p){
-        super(p);
+        super(p.noCollission());
     }
 
     @Override

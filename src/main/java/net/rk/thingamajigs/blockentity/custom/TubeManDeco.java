@@ -1,9 +1,11 @@
 package net.rk.thingamajigs.blockentity.custom;
 
 import com.mojang.serialization.MapCodec;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -13,13 +15,16 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.Arrow;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.ThrownTrident;
 import net.minecraft.world.item.DyeItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.BlockGetter;
@@ -46,6 +51,8 @@ import net.rk.thingamajigs.xtras.TCalcStuff;
 import net.rk.thingamajigs.xtras.TSoundEvent;
 import org.jetbrains.annotations.Nullable;
 import org.joml.Vector3f;
+
+import java.util.List;
 
 public class TubeManDeco extends BaseEntityBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
@@ -123,6 +130,13 @@ public class TubeManDeco extends BaseEntityBlock implements SimpleWaterloggedBlo
                     else{
                         tubeMan.yAngle += 90.0f;
                     }
+                    // hurt item in hand
+                    if(player.getUsedItemHand() == InteractionHand.MAIN_HAND){
+                        player.getItemInHand(hand).hurtAndBreak(1,player, EquipmentSlot.MAINHAND);
+                    }
+                    else if(player.getUsedItemHand() == InteractionHand.OFF_HAND){
+                        player.getItemInHand(hand).hurtAndBreak(1,player,EquipmentSlot.OFFHAND);
+                    }
                     tubeMan.updateBlock();
                 }
                 return ItemInteractionResult.SUCCESS;
@@ -132,8 +146,10 @@ public class TubeManDeco extends BaseEntityBlock implements SimpleWaterloggedBlo
                 if(tubeMan != null){
                     if(tubeMan.color != dyeItem.getDyeColor()){
                         tubeMan.color = dyeItem.getDyeColor();
-                        player.getItemInHand(hand).shrink(1);
-                        int color = dyeItem.getDyeColor().getFireworkColor();
+                        if(!player.hasInfiniteMaterials()){ // check for instabuild ability
+                            player.getItemInHand(hand).shrink(1);
+                        }
+                        int color = dyeItem.getDyeColor().getTextureDiffuseColor(); // use diffuse color
                         int red = FastColor.ARGB32.red(color);
                         int green = FastColor.ARGB32.green(color);
                         int blue = FastColor.ARGB32.blue(color);
@@ -195,5 +211,10 @@ public class TubeManDeco extends BaseEntityBlock implements SimpleWaterloggedBlo
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         FluidState fluidstate = context.getLevel().getFluidState(context.getClickedPos());
         return this.defaultBlockState().setValue(WATERLOGGED, fluidstate.getType() == Fluids.WATER).setValue(TOGGLED,false);
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        tooltipComponents.add(Component.translatable("block.thingamajigs.tube_man.desc").withStyle(ChatFormatting.GRAY));
     }
 }

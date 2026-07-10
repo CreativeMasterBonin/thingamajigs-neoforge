@@ -77,6 +77,8 @@ public class DebitCard extends Item {
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         if(stack.has(MONEY_COMPONENT)){
+            tooltipComponents.add(Component.translatable("item.thingamajigs.debit_card.desc.activated")
+                    .withStyle(ChatFormatting.GRAY));
             if(getMoney(stack) <= 0){
                 tooltipComponents.add(Component.translatable("item.thingamajigs.debit_card.stored_money.title",getMoney(stack))
                         .withStyle(ChatFormatting.RED));

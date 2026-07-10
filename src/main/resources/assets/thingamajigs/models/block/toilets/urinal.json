@@ -2,6 +2,7 @@
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"render_type": "cutout",
+	"ambientocclusion": false,
 	"textures": {
 		"particle": "block/white_concrete",
 		"1_0": "block/white_concrete",

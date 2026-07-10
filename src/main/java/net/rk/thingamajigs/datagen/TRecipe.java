@@ -4874,6 +4874,22 @@ public class TRecipe extends RecipeProvider {
                 .requires(Items.AMETHYST_SHARD)
                 .unlockedBy("has_thingy",has(TItems.MISC_COMPONENT))
                 .save(rc);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.PIZZA_VENDING_MACHINE.get().asItem(),1)
+                .requires(TBlocks.RED_VENDING_MACHINE.get().asItem())
+                .requires(Items.RED_CONCRETE)
+                .requires(TItems.APPLIANCE_COMPONENT)
+                .requires(TItems.MISC_COMPONENT)
+                .requires(TBlocks.PIZZA_BOX.asItem())
+                .unlockedBy("has_thingy",has(TBlocks.PIZZA_BOX.asItem()))
+                .save(rc);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.ICECREAM_VENDING_MACHINE.get().asItem(),1)
+                .requires(TBlocks.BLUE_VENDING_MACHINE.get().asItem())
+                .requires(Items.BLUE_CONCRETE)
+                .requires(TItems.APPLIANCE_COMPONENT)
+                .requires(TItems.MISC_COMPONENT)
+                .requires(Items.POWDER_SNOW_BUCKET)
+                .unlockedBy("has_thingy",has(Items.POWDER_SNOW_BUCKET))
+                .save(rc);
     }
 
     public static RecipeBuilder stonecutterAny(Item requiredItem, Ingredient inputItem, Item result, int amt){

@@ -6,7 +6,6 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -36,7 +35,6 @@ public class DirectionalConnectedSideBlock extends Block implements SimpleWaterl
         this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH)
                 .setValue(WATERLOGGED,false).setValue(CONNECTED_SIDE, TProperties.ConnectedSide.UNCONNECTED));
     }
-
 
     @Override
     public void neighborChanged(BlockState state, Level level, BlockPos pos, Block neighborBlock, BlockPos neighborPos, boolean movedByPiston) {

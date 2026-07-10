@@ -319,11 +319,11 @@ public class TBlocks {
     public static final DeferredBlock<Block> ANTENNA = register("antenna",
             () -> new DoubleTallDecorationBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL)));
     public static final DeferredBlock<Block> BLUEYTOSH_LAPTOP = register("blueytosh_laptop",
-            () -> new BlueyLaptopComputer(BlockBehaviour.Properties.of().sound(SoundType.METAL).noCollission()));
+            () -> new BlueyLaptopComputer(BlockBehaviour.Properties.of().sound(SoundType.METAL)));
     public static final DeferredBlock<Block> BLUEYTOSH_LAPTOP_OLD = register("blueytosh_laptop_old",
-            () -> new BlueyLaptopComputer(BlockBehaviour.Properties.of().sound(SoundType.METAL).noCollission()));
+            () -> new BlueyLaptopComputer(BlockBehaviour.Properties.of().sound(SoundType.METAL)));
     public static final DeferredBlock<Block> BLUEYDOWS_LAPTOP = register("blueydows_laptop",
-            () -> new BlueyLaptopComputer(BlockBehaviour.Properties.of().sound(SoundType.METAL).noCollission()));
+            () -> new BlueyLaptopComputer(BlockBehaviour.Properties.of().sound(SoundType.METAL)));
     public static final DeferredBlock<Block> TOASTER = register("toaster",
             () -> new Toaster(BlockBehaviour.Properties.of().sound(SoundType.LANTERN)));
     public static final DeferredBlock<Block> MICROWAVE = register("microwave",
@@ -3873,6 +3873,10 @@ public class TBlocks {
             () -> new Urinal(BlockBehaviour.Properties.of()));
     public static final DeferredBlock<Block> TUBE_MAN_DECO = register("tube_man",
             () -> new TubeManDeco(BlockBehaviour.Properties.of()));
+    public static final DeferredBlock<Block> PIZZA_VENDING_MACHINE = register("pizza_vending_machine",
+            () -> new PizzaVendingMachine(BlockBehaviour.Properties.of()));
+    public static final DeferredBlock<Block> ICECREAM_VENDING_MACHINE = register("icecream_vending_machine",
+            () -> new IceCreamVendingMachine(BlockBehaviour.Properties.of()));
 
 
 

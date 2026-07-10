@@ -236,6 +236,7 @@ public class TBlockTag extends BlockTagsProvider {
         ;
 
         tag(BlockTags.IMPERMEABLE)
+                .add(TBlocks.PIZZA_VENDING_MACHINE.get())
                 .add(TBlocks.TUBE_MAN_DECO.get())
                 .add(TBlocks.SAFE.get())
                 .add(TBlocks.RUBBER_DUCK.get())
@@ -683,6 +684,8 @@ public class TBlockTag extends BlockTagsProvider {
         ;
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(TBlocks.ICECREAM_VENDING_MACHINE.get())
+                .add(TBlocks.PIZZA_VENDING_MACHINE.get())
                 .add(TBlocks.TUBE_MAN_DECO.get())
                 .add(TBlocks.URINAL.get())
                 .add(TBlocks.GRAB_BAR.get())
