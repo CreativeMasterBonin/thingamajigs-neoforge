@@ -5,10 +5,12 @@ import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.ExtraCodecs;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.Container;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionResult;
@@ -20,16 +22,14 @@ import net.minecraft.world.inventory.ChestMenu;
 import net.minecraft.world.inventory.HopperMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.BlockAndTintGetter;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
@@ -39,12 +39,13 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.rk.thingamajigs.blockentity.custom.FancyStorageDecorationBE;
 import org.jetbrains.annotations.Nullable;
 import org.joml.Vector3f;
+import org.joml.Vector3fc;
 
 import java.util.Optional;
 import java.util.stream.Stream;
 
 public class FancyStorageDecoration extends BaseEntityBlock implements SimpleWaterloggedBlock {
-    public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
+    public static final EnumProperty<Direction> FACING = HorizontalDirectionalBlock.FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public final SoundEvent OPEN_CONTAINER_SOUND;
     public final boolean usesCustomModel;
@@ -136,13 +137,13 @@ public class FancyStorageDecoration extends BaseEntityBlock implements SimpleWat
 
 
 
-    public FancyStorageDecoration(Properties p, Optional<SoundEvent> openContainerSound, String translatableName, boolean usesCustomModel, Vector3f offsets, int containerSize){
+    public FancyStorageDecoration(Properties p, Optional<SoundEvent> openContainerSound, String translatableName, boolean usesCustomModel, Vector3fc offsets, int containerSize){
         super(p);
         this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, false));
         this.OPEN_CONTAINER_SOUND = openContainerSound.orElse(SoundEvents.WOODEN_TRAPDOOR_OPEN);
         this.usesCustomModel = false;
         this.translatableName = translatableName;
-        this.offsets = offsets;
+        this.offsets = new Vector3f(offsets.x(),offsets.y(),offsets.z());
         this.containerSize = containerSize;
     }
 
@@ -174,17 +175,6 @@ public class FancyStorageDecoration extends BaseEntityBlock implements SimpleWat
     }
 
     @Override
-    public void onRemove(BlockState bs, Level lvl, BlockPos bp, BlockState bs2, boolean boo1) {
-        if(bs.getBlock() != bs2.getBlock()){
-            BlockEntity blockEntity = lvl.getBlockEntity(bp);
-            if(blockEntity instanceof FancyStorageDecorationBE fancyStorageDecorationBE){
-                Containers.dropContents(lvl,bp,fancyStorageDecorationBE);
-            }
-        }
-        super.onRemove(bs,lvl,bp,bs2,boo1);
-    }
-
-    @Override
     protected InteractionResult useWithoutItem(BlockState bs, Level l, BlockPos bp, Player pl, BlockHitResult bhr) {
         if(l.isClientSide()){
             return InteractionResult.SUCCESS;
@@ -195,7 +185,8 @@ public class FancyStorageDecoration extends BaseEntityBlock implements SimpleWat
                 l.playSound(null,bp, OPEN_CONTAINER_SOUND, SoundSource.BLOCKS,0.75f,1.0f);
                 pl.openMenu(fancyStorageDecorationBE,bp);
                 pl.swing(pl.getUsedItemHand());
-                PiglinAi.angerNearbyPiglins(pl, true); // if it is visible, it makes sense they can see it too
+                if(l instanceof ServerLevel serverLevel)
+                    PiglinAi.angerNearbyPiglins(serverLevel,pl,true); // if it is visible, it makes sense they can see it too
                 return InteractionResult.CONSUME;
             }
             else{
@@ -218,7 +209,7 @@ public class FancyStorageDecoration extends BaseEntityBlock implements SimpleWat
     @Override
     public RenderShape getRenderShape(BlockState bs) {
         if(usesCustomModel){
-            return RenderShape.ENTITYBLOCK_ANIMATED;
+            return RenderShape.INVISIBLE;
         }
         else{
             return RenderShape.MODEL;
@@ -247,10 +238,10 @@ public class FancyStorageDecoration extends BaseEntityBlock implements SimpleWat
     }
 
     @Override
-    public BlockState updateShape(BlockState bs, Direction dir, BlockState bs2, LevelAccessor lvla, BlockPos bp1, BlockPos bp2) {
-        if(bs.getValue(WATERLOGGED)){
-            lvla.scheduleTick(bp1,Fluids.WATER,Fluids.WATER.getTickDelay(lvla));
+    protected BlockState updateShape(BlockState blockState, LevelReader reader, ScheduledTickAccess access, BlockPos pos, Direction dir, BlockPos pos2, BlockState blockState2, RandomSource source) {
+        if(blockState.getValue(WATERLOGGED)){
+            access.scheduleTick(pos,Fluids.WATER,Fluids.WATER.getTickDelay(reader));
         }
-        return super.updateShape(bs,dir,bs2,lvla,bp1,bp2);
+        return super.updateShape(blockState,reader,access,pos,dir,pos2,blockState2,source);
     }
 }

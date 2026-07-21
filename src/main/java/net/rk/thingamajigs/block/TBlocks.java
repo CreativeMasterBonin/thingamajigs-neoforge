@@ -4,7 +4,10 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
@@ -113,7 +116,7 @@ public class TBlocks {
     public static final DeferredBlock<Block> GROUND_CLEAR_BULB = registerBlockWithoutItem("standing_clear_bulb",
             () -> new NoParticlesTorchBlock(ParticleTypes.FLAME,BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).lightLevel(s -> 12)){
                 @Override
-                public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader level, BlockPos pos, Player player) {
+                public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData, Player player) {
                     return TItems.CLEAR_BULB_ITEM.asItem().getDefaultInstance();
                 }
             });
@@ -121,7 +124,7 @@ public class TBlocks {
             () -> new NoParticlesWallTorchBlock(ParticleTypes.FLAME,BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).lightLevel(s -> 12))
             {
                 @Override
-                public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader level, BlockPos pos, Player player) {
+                public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData, Player player) {
                     return TItems.CLEAR_BULB_ITEM.asItem().getDefaultInstance();
                 }
             });
@@ -130,7 +133,7 @@ public class TBlocks {
             () -> new NoParticlesTorchBlock(ParticleTypes.FLAME,BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).lightLevel(s -> 12))
             {
                 @Override
-                public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader level, BlockPos pos, Player player) {
+                public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData, Player player) {
                     return TItems.FULL_BULB_ITEM.asItem().getDefaultInstance();
                 }
             });
@@ -138,7 +141,7 @@ public class TBlocks {
             () -> new NoParticlesWallTorchBlock(ParticleTypes.FLAME,BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).lightLevel(s -> 12))
             {
                 @Override
-                public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader level, BlockPos pos, Player player) {
+                public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData, Player player) {
                     return TItems.FULL_BULB_ITEM.asItem().getDefaultInstance();
                 }
             });
@@ -147,7 +150,7 @@ public class TBlocks {
             () -> new TorchBlock(ParticleTypes.FLAME,BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).lightLevel(s -> 12))
             {
                 @Override
-                public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader level, BlockPos pos, Player player) {
+                public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData, Player player) {
                     return TItems.CLEAR_LANTERN_ITEM.asItem().getDefaultInstance();
                 }
             });
@@ -155,7 +158,7 @@ public class TBlocks {
             () -> new WallTorchBlock(ParticleTypes.FLAME,BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).lightLevel(s -> 12))
             {
                 @Override
-                public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader level, BlockPos pos, Player player) {
+                public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData, Player player) {
                     return TItems.CLEAR_LANTERN_ITEM.asItem().getDefaultInstance();
                 }
             });
@@ -164,7 +167,7 @@ public class TBlocks {
             () -> new NoParticlesTorchBlock(ParticleTypes.FLAME,BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).lightLevel(s -> 12))
             {
                 @Override
-                public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader level, BlockPos pos, Player player) {
+                public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData, Player player) {
                     return TItems.FULL_LANTERN_ITEM.asItem().getDefaultInstance();
                 }
             });
@@ -172,7 +175,7 @@ public class TBlocks {
             () -> new NoParticlesWallTorchBlock(ParticleTypes.FLAME,BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).lightLevel(s -> 12))
             {
                 @Override
-                public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader level, BlockPos pos, Player player) {
+                public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData, Player player) {
                     return TItems.FULL_LANTERN_ITEM.asItem().getDefaultInstance();
                 }
             });
@@ -3374,17 +3377,22 @@ public class TBlocks {
                     .strength(3.0f)){
                 @Override
                 public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {list.add(Component.translatable("statue.thingamajigs.author.cmb").withStyle(ChatFormatting.BLUE));}
-            });
+            }); // TODO: finish
     public static final DeferredBlock<Block> SOCCER_BALL = register("soccer_ball",
-            () -> new DecorativeSportBall(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK)));
+            () -> new DecorativeSportBall(BlockBehaviour.Properties.of()
+                    .setId(makeResourceKey("soccer_ball")).mapColor(MapColor.COLOR_BLACK)));
     public static final DeferredBlock<Block> BASKETBALL = register("basketball",
-            () -> new DecorativeSportBall(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE)));
+            () -> new DecorativeSportBall(BlockBehaviour.Properties.of()
+                    .setId(makeResourceKey("basketball")).mapColor(MapColor.COLOR_ORANGE)));
     public static final DeferredBlock<Block> TENNIS_BALL = register("tennis_ball",
-            () -> new TennisBall(BlockBehaviour.Properties.of()));
+            () -> new TennisBall(BlockBehaviour.Properties.of()
+                    .setId(makeResourceKey("tennis_ball"))));
     public static final DeferredBlock<Block> TENNIS_NET = register("tennis_net",
-            () -> new TennisNet(BlockBehaviour.Properties.of()));
+            () -> new TennisNet(BlockBehaviour.Properties.of()
+                    .setId(makeResourceKey("tennis_net"))));
     public static final DeferredBlock<Block> TENNIS_RACKET = register("tennis_racket",
             () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of()
+                    .setId(makeResourceKey("tennis_racket"))
                     .sound(SoundType.CANDLE).instabreak()){
                 @Override
                 public VoxelShape getShape(BlockState state, BlockGetter getter, BlockPos pos, CollisionContext context) {
@@ -3392,7 +3400,8 @@ public class TBlocks {
                 }
             });
     public static final DeferredBlock<Block> PHONE_CROSSBAR = register("phone_crossbar",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of()){
+            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of()
+                    .setId(makeResourceKey("phone_crossbar"))){
                 public static final VoxelShape NORTH = Block.box(0, 0, 0, 16, 16, 10);
                 public static final VoxelShape EAST = Block.box(6, 0, 0, 16, 16, 16);
                 public static final VoxelShape SOUTH = Block.box(0, 0, 6, 16, 16, 16);
@@ -3421,9 +3430,11 @@ public class TBlocks {
             });
     public static final DeferredBlock<Block> STAINLESS_WASHER = register("stainless_washer",
             () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of()
+                    .setId(makeResourceKey("stainless_washer"))
                     .sound(SoundType.METAL)));
     public static final DeferredBlock<Block> WEIGHT_SCALE = register("weight_scale",
-            () -> new WeightScale(BlockBehaviour.Properties.of()){
+            () -> new WeightScale(BlockBehaviour.Properties.of()
+                    .setId(makeResourceKey("weight_scale"))){
                 public static final VoxelShape ALL = Block.box(
                         0.0D, 0.0D, 0.0D,
                         16.0D, 2.0D, 16.0D);
@@ -3433,7 +3444,8 @@ public class TBlocks {
                 }
             });
     public static final DeferredBlock<Block> PHONE_GROUP_SELECTOR = register("phone_group_selector",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL)){
+            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL)
+                    .setId(makeResourceKey("phone_group_selector"))){
                 public static final VoxelShape NORTH = Block.box(0, 0, 0, 16, 16, 10);
                 public static final VoxelShape EAST = Block.box(6, 0, 0, 16, 16, 16);
                 public static final VoxelShape SOUTH = Block.box(0, 0, 6, 16, 16, 16);
@@ -3461,13 +3473,16 @@ public class TBlocks {
                 }
             });
     public static final DeferredBlock<Block> PHONE_AXIS_SWITCH = register("phone_axis_switch",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL)));
+            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL)
+                    .setId(makeResourceKey("phone_axis_switch"))));
     public static final DeferredBlock<Block> PHONE_AXIS_SWITCH_RELAY = register("phone_axis_switch_relay",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL)));
+            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL)
+                    .setId(makeResourceKey("phone_axis_switch_relay"))));
 
     // 1.8.5
     public static final DeferredBlock<Block> DELUXE_CAT_TREE = register("deluxe_cat_tree",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.WOOD)){
+            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.WOOD)
+                    .setId(makeResourceKey("deluxe_cat_tree"))){
                 public static final VoxelShape NORTH = Stream.of(
                         Block.box(-8, 0, 0, 8, 1, 16),
                         Block.box(8, 0, 0, 24, 1, 16),
@@ -3545,9 +3560,11 @@ public class TBlocks {
             });
 
     public static final DeferredBlock<Block> OLD_MICROWAVE_TRANSMITTER_OPAQUE = register("old_microwave_transmitter_opaque",
-            () -> new MicrowaveTransmitter(BlockBehaviour.Properties.of().sound(SoundType.METAL)));
+            () -> new MicrowaveTransmitter(BlockBehaviour.Properties.of().sound(SoundType.METAL)
+                    .setId(makeResourceKey("old_microwave_transmitter_opaque"))));
     public static final DeferredBlock<Block> OLD_MICROWAVE_REFLECTOR_ROUNDED = register("old_microwave_reflector_rounded",
-            () -> new MicrowaveTransmitter(BlockBehaviour.Properties.of().sound(SoundType.METAL)){
+            () -> new MicrowaveTransmitter(BlockBehaviour.Properties.of().sound(SoundType.METAL)
+                    .setId(makeResourceKey("old_microwave_reflector_rounded"))){
                 @Override
                 public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext ctx) {
                     switch(state.getValue(FACING)){
@@ -3560,7 +3577,8 @@ public class TBlocks {
                 }
             });
     public static final DeferredBlock<Block> OLD_MICROWAVE_REFLECTOR_ROUNDED_OPAQUE = register("old_microwave_reflector_rounded_opaque",
-            () -> new MicrowaveTransmitter(BlockBehaviour.Properties.of().sound(SoundType.METAL)){
+            () -> new MicrowaveTransmitter(BlockBehaviour.Properties.of().sound(SoundType.METAL)
+                    .setId(makeResourceKey("old_microwave_reflector_rounded_opaque"))){
                 @Override
                 public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext ctx) {
                     switch(state.getValue(FACING)){
@@ -3574,13 +3592,14 @@ public class TBlocks {
             });
 
     public static final DeferredBlock<Block> DECORATIONAL_BUCKET = register("decorational_bucket",
-            () -> new DecorationalBucket(BlockBehaviour.Properties.of()));
+            () -> new DecorationalBucket(BlockBehaviour.Properties.of().setId(makeResourceKey("decorational_bucket"))));
 
     public static final DeferredBlock<Block> EASEL = register("easel",
-            () -> new Easel(BlockBehaviour.Properties.of()));
+            () -> new Easel(BlockBehaviour.Properties.of().setId(makeResourceKey("easel"))));
 
     public static final DeferredBlock<Block> WHITE_CUBE_SHELF = register("white_cube_shelf",
-            () -> new FancyStorageDecoration(BlockBehaviour.Properties.of().strength(1f,10f)
+            () -> new FancyStorageDecoration(BlockBehaviour.Properties.of()
+                    .setId(makeResourceKey("white_cube_shelf")).strength(1f,10f)
                     .sound(SoundType.STONE).mapColor(MapColor.SNOW).noOcclusion(),
                     Optional.of(SoundEvents.CANDLE_HIT),
                     "blockEntities.thingamajigs.fancy_storage_decoration.white_cube_shelf.name",
@@ -3607,7 +3626,8 @@ public class TBlocks {
 
     public static final DeferredBlock<Block> WHITE_SECTIONED_SHELF = register("white_sectioned_shelf",
             () -> new FancyStorageDecoration(BlockBehaviour.Properties.of().strength(1f,10f)
-                    .sound(SoundType.STONE).mapColor(MapColor.SNOW).noOcclusion(),
+                    .sound(SoundType.STONE).mapColor(MapColor.SNOW).noOcclusion()
+                    .setId(makeResourceKey("white_sectioned_shelf")),
                     Optional.of(SoundEvents.CANDLE_HIT),
                     "blockEntities.thingamajigs.fancy_storage_decoration.white_sectioned_shelf.name",
                     true,new Vector3f(0.0f,0.0f,0.0f),5){
@@ -3633,7 +3653,8 @@ public class TBlocks {
 
     public static final DeferredBlock<Block> RUBBER_DUCK = register("rubber_duck",
             () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW)
-                    .sound(SoundType.CANDLE).strength(0.75f,1f)){
+                    .sound(SoundType.CANDLE).strength(0.75f,1f)
+                    .setId(makeResourceKey("rubber_duck"))){
                 public static final VoxelShape NORTH = Stream.of(
                         Block.box(6, 0, 5, 10, 2, 11),
                         Block.box(7, 2, 6, 9, 3, 8),
@@ -3686,7 +3707,8 @@ public class TBlocks {
 
     public static final DeferredBlock<Block> AIR_STATION = register("air_station",
             () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL)
-                    .strength(1f,15f).mapColor(MapColor.METAL)){
+                    .strength(1f,15f).mapColor(MapColor.METAL)
+                    .setId(makeResourceKey("air_station"))){
                 public static final VoxelShape NORTH = Stream.of(
                         Block.box(0, 0, 0, 16, 2, 16),
                         Block.box(2, 16, 2, 14, 31, 14),
@@ -3758,15 +3780,20 @@ public class TBlocks {
                 }
             });
     public static final DeferredBlock<Block> SAFE = register("safe",
-            () -> new Safe(BlockBehaviour.Properties.of()));
+            () -> new Safe(BlockBehaviour.Properties.of()
+                    .setId(makeResourceKey("safe"))));
     public static final DeferredBlock<Block> CAKE_DISPLAY_CASE = register("cake_display_case",
-            () -> new CakeDisplayCase(BlockBehaviour.Properties.of()));
+            () -> new CakeDisplayCase(BlockBehaviour.Properties.of()
+                    .setId(makeResourceKey("cake_display_case"))));
     public static final DeferredBlock<Block> CELL_TOWER_AMPLIFIER = register("cell_tower_amplifier",
-            () -> new VerticalPole(BlockBehaviour.Properties.ofFullCopy(CELL_TRANSMITTER.get())));
+            () -> new VerticalPole(BlockBehaviour.Properties.ofFullCopy(CELL_TRANSMITTER.get())
+                    .setId(makeResourceKey("cell_tower_amplifier"))));
     public static final DeferredBlock<Block> FANCY_GAS_PUMP = register("fancy_gas_pump",
-            () -> new FancyGasPump(BlockBehaviour.Properties.of()));
+            () -> new FancyGasPump(BlockBehaviour.Properties.of()
+                    .setId(makeResourceKey("fancy_gas_pump"))));
     public static final DeferredBlock<Block> DELUXE_ARCADE_MACHINE = register("deluxe_arcade_machine",
-            () -> new DoubleHalfRotatedDecoration(BlockBehaviour.Properties.of()){
+            () -> new DoubleHalfRotatedDecoration(BlockBehaviour.Properties.of()
+                    .setId(makeResourceKey("deluxe_arcade_machine"))){
                 public static final VoxelShape NORTH_TOP = Stream.of(
                         Block.box(15, 2, 0, 16, 13, 14),
                         Block.box(0, 0, 14, 16, 12, 16),
@@ -3850,39 +3877,59 @@ public class TBlocks {
             });
 
     public static final DeferredBlock<Block> DAUNTING_STATUE = register("daunting_statue",
-            () -> new DauntingStatue(TWeatheringCopperOther.State.UNAFFECTED,BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE)));
+            () -> new DauntingStatue(TWeatheringCopperOther.State.UNAFFECTED,BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE)
+                    .setId(makeResourceKey("daunting_statue"))));
     public static final DeferredBlock<Block> EXPOSED_DAUNTING_STATUE = register("exposed_daunting_statue",
-            () -> new DauntingStatue(TWeatheringCopperOther.State.EXPOSED,BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_LIGHT_GRAY)));
+            () -> new DauntingStatue(TWeatheringCopperOther.State.EXPOSED,BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_LIGHT_GRAY)
+                    .setId(makeResourceKey("exposed_daunting_statue"))));
     public static final DeferredBlock<Block> WEATHERED_DAUNTING_STATUE = register("weathered_daunting_statue",
-            () -> new DauntingStatue(TWeatheringCopperOther.State.WEATHERED,BlockBehaviour.Properties.of().mapColor(MapColor.WARPED_STEM)));
+            () -> new DauntingStatue(TWeatheringCopperOther.State.WEATHERED,BlockBehaviour.Properties.of().mapColor(MapColor.WARPED_STEM)
+                    .setId(makeResourceKey("weathered_daunting_statue"))));
     public static final DeferredBlock<Block> OXIDIZED_DAUNTING_STATUE = register("oxidized_daunting_statue",
-            () -> new DauntingStatue(TWeatheringCopperOther.State.OXIDIZED,BlockBehaviour.Properties.of().mapColor(MapColor.WARPED_NYLIUM)));
+            () -> new DauntingStatue(TWeatheringCopperOther.State.OXIDIZED,BlockBehaviour.Properties.of().mapColor(MapColor.WARPED_NYLIUM)
+                    .setId(makeResourceKey("oxidized_daunting_statue"))));
     public static final DeferredBlock<Block> WAXED_DAUNTING_STATUE = register("waxed_daunting_statue",
-            () -> new WaxedDauntingStatue(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE)));
+            () -> new WaxedDauntingStatue(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE)
+                    .setId(makeResourceKey("waxed_daunting_statue"))));
     public static final DeferredBlock<Block> WAXED_EXPOSED_DAUNTING_STATUE = register("waxed_exposed_daunting_statue",
-            () -> new WaxedDauntingStatue(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_LIGHT_GRAY)));
+            () -> new WaxedDauntingStatue(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_LIGHT_GRAY)
+                    .setId(makeResourceKey("waxed_exposed_daunting_statue"))));
     public static final DeferredBlock<Block> WAXED_WEATHERED_DAUNTING_STATUE = register("waxed_weathered_daunting_statue",
-            () -> new WaxedDauntingStatue(BlockBehaviour.Properties.of().mapColor(MapColor.WARPED_STEM)));
+            () -> new WaxedDauntingStatue(BlockBehaviour.Properties.of().mapColor(MapColor.WARPED_STEM)
+                    .setId(makeResourceKey("waxed_weathered_daunting_statue"))));
     public static final DeferredBlock<Block> WAXED_OXIDIZED_DAUNTING_STATUE = register("waxed_oxidized_daunting_statue",
-            () -> new WaxedDauntingStatue(BlockBehaviour.Properties.of().mapColor(MapColor.WARPED_NYLIUM)));
+            () -> new WaxedDauntingStatue(BlockBehaviour.Properties.of().mapColor(MapColor.WARPED_NYLIUM)
+                    .setId(makeResourceKey("waxed_oxidized_daunting_statue"))));
 
     // 1.8.6 additions
     public static final DeferredBlock<Block> GRAB_BAR = register("grab_bar",
-            () -> new GrabBar(BlockBehaviour.Properties.of()));
+            () -> new GrabBar(BlockBehaviour.Properties.of()
+                    .setId(makeResourceKey("grab_bar"))));
     public static final DeferredBlock<Block> URINAL = register("urinal",
-            () -> new Urinal(BlockBehaviour.Properties.of()));
+            () -> new Urinal(BlockBehaviour.Properties.of()
+                    .setId(makeResourceKey("urinal"))));
     public static final DeferredBlock<Block> TUBE_MAN_DECO = register("tube_man",
-            () -> new TubeManDeco(BlockBehaviour.Properties.of()));
+            () -> new TubeManDeco(BlockBehaviour.Properties.of()
+                    .setId(makeResourceKey("tube_man"))));
     public static final DeferredBlock<Block> PIZZA_VENDING_MACHINE = register("pizza_vending_machine",
-            () -> new PizzaVendingMachine(BlockBehaviour.Properties.of()));
+            () -> new PizzaVendingMachine(BlockBehaviour.Properties.of()
+                    .setId(makeResourceKey("pizza_vending_machine"))));
     public static final DeferredBlock<Block> ICECREAM_VENDING_MACHINE = register("icecream_vending_machine",
-            () -> new IceCreamVendingMachine(BlockBehaviour.Properties.of()));
+            () -> new IceCreamVendingMachine(BlockBehaviour.Properties.of()
+                    .setId(makeResourceKey("icecream_vending_machine"))));
 
 
 
     // test features
     public static final DeferredBlock<Block> FAKE_FLUID_PUMP = register("fake_fluid_pump",
-            () -> new FakeFluidPump(BlockBehaviour.Properties.of()));
+            () -> new FakeFluidPump(BlockBehaviour.Properties.of()
+                    .setId(makeResourceKey("fake_fluid_pump"))));
+
+
+    // make a resource key to identify the block in the registry (required)
+    public static ResourceKey<Block> makeResourceKey(String name){
+        return ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(Thingamajigs.MODID,name));
+    }
 
     private static DeferredBlock<Block> register(String name, Supplier<Block> block) {
         DeferredBlock<Block> blk = BLOCKS.register(name,block);

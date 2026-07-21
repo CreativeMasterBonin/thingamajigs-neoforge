@@ -5,6 +5,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BucketItem;
@@ -91,7 +92,7 @@ public class DecorationalBucket extends BaseEntityBlock implements SimpleWaterlo
     }
 
     @Override
-    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+    protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         if(!level.isClientSide()){
             if(player.getItemInHand(hand).getItem() instanceof BucketItem bucketItem){
                 try{
@@ -115,13 +116,13 @@ public class DecorationalBucket extends BaseEntityBlock implements SimpleWaterlo
                     }
                 }
                 catch (Exception e){
-                    return ItemInteractionResult.FAIL;
+                    return InteractionResult.FAIL;
                 }
             }
         }
         else{
-            return ItemInteractionResult.SUCCESS;
+            return InteractionResult.SUCCESS;
         }
-        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+        return InteractionResult.PASS;
     }
 }

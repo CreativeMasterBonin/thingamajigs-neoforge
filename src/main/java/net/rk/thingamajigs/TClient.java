@@ -1,34 +1,26 @@
 package net.rk.thingamajigs;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BiomeColors;
-import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.core.BlockPos;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.BlockItem;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.ColorResolver;
 import net.minecraft.world.level.FoliageColor;
-import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.*;
-import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
+import net.neoforged.neoforge.client.model.standalone.SimpleUnbakedStandaloneModel;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.rk.thingamajigs.block.TBlocks;
 import net.rk.thingamajigs.blockentity.TBlockEntity;
@@ -39,7 +31,6 @@ import net.rk.thingamajigs.render.*;
 import net.rk.thingamajigs.render.model.*;
 import net.rk.thingamajigs.screen.DJLaserLightScreen;
 import net.rk.thingamajigs.screen.MailboxScreen;
-import net.rk.thingamajigs.xtras.TColors;
 import net.rk.thingamajigs.xtras.TParticles;
 import net.rk.thingamajigs.xtras.particletypes.*;
 
@@ -62,98 +53,38 @@ public class TClient{
 
     public static final String carWashCustomModelBaseLocation = "bases/car_wash_components/";
     public static final String tubeManCustomModelBaseLocation = "bases/tube_man_components/";
-    public static ModelResourceLocation uhdTVLocation = new ModelResourceLocation(
-            ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
-            "oversized/uhd_tv"),ModelResourceLocation.STANDALONE_VARIANT);
-    public static final String blockLocation = "block/";
-    public static ModelResourceLocation ceilingFanBlade = new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
-            blockLocation + "ceiling_fan_blade"),ModelResourceLocation.STANDALONE_VARIANT);
-    public static ModelResourceLocation ceilingFanConnector = new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
-            blockLocation + "ceiling_fan_connector"),ModelResourceLocation.STANDALONE_VARIANT);
 
-    public static ModelResourceLocation tubeManBase = ModelResourceLocation.standalone(
-            ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,tubeManCustomModelBaseLocation + "tube_man_base")
-    );
-    public static ModelResourceLocation tubeManBaseCompressed = ModelResourceLocation.standalone(
-            ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,tubeManCustomModelBaseLocation + "tube_man_base_compressed")
-    );
-    public static ModelResourceLocation tubeManBodySection = ModelResourceLocation.standalone(
-            ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,tubeManCustomModelBaseLocation + "tube_man_body_section")
-    );
-    public static ModelResourceLocation tubeManHeadSection = ModelResourceLocation.standalone(
-            ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,tubeManCustomModelBaseLocation + "tube_man_head_section")
-    );
-
-    public void registerAdditionalModels(ModelEvent.RegisterAdditional event){
-        // other
-        event.register(uhdTVLocation);
-        event.register(ceilingFanBlade);
-        event.register(ceilingFanConnector);
-        // tube man
-        event.register(tubeManBase);
-        event.register(tubeManBaseCompressed);
-        event.register(tubeManBodySection);
-        event.register(tubeManHeadSection);
-
-        for(DyeColor tubeManMRL : DyeColor.values()){
-            if(!tubeManMRL.equals(DyeColor.BLUE)){
-                event.register(new ModelResourceLocation(
-                        ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
-                                tubeManCustomModelBaseLocation + tubeManMRL.getName() + "_tube_man_base_compressed"),
-                        ModelResourceLocation.STANDALONE_VARIANT));
-                event.register(new ModelResourceLocation(
-                        ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
-                                tubeManCustomModelBaseLocation + tubeManMRL.getName() + "_tube_man_head_section"),
-                        ModelResourceLocation.STANDALONE_VARIANT));
-                event.register(new ModelResourceLocation(
-                        ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
-                                tubeManCustomModelBaseLocation + tubeManMRL.getName() + "_tube_man_body_section"),
-                        ModelResourceLocation.STANDALONE_VARIANT));
-            }
-        }
-
-        // car brush wash bases
-        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
-                carWashCustomModelBaseLocation + "spinning_brush_base"),ModelResourceLocation.STANDALONE_VARIANT));
-        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
-                carWashCustomModelBaseLocation + "spinning_short_brush_base"),ModelResourceLocation.STANDALONE_VARIANT));
-        // tire scrubber
-        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
-                carWashCustomModelBaseLocation + "tire_scrubber_base"),ModelResourceLocation.STANDALONE_VARIANT));
-        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
-                carWashCustomModelBaseLocation + "tire_scrubber_blade"),ModelResourceLocation.STANDALONE_VARIANT));
-        // mitter curtains
-        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
-                carWashCustomModelBaseLocation + "mitter_curtain"),ModelResourceLocation.STANDALONE_VARIANT));
-        // mixed car brush
-        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
-                carWashCustomModelBaseLocation + "spinning_mixed_brush_blade"),ModelResourceLocation.STANDALONE_VARIANT));
-        // blue car brush
-        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
-                carWashCustomModelBaseLocation + "spinning_brush_long_blade"),ModelResourceLocation.STANDALONE_VARIANT));
-        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
-                carWashCustomModelBaseLocation + "spinning_brush_medium_blade"),ModelResourceLocation.STANDALONE_VARIANT));
-        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
-                carWashCustomModelBaseLocation + "spinning_brush_short_blade"),ModelResourceLocation.STANDALONE_VARIANT));
-        // red car brush
-        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
-                carWashCustomModelBaseLocation + "spinning_red_brush_long_blade"),ModelResourceLocation.STANDALONE_VARIANT));
-        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
-                carWashCustomModelBaseLocation + "spinning_red_brush_medium_blade"),ModelResourceLocation.STANDALONE_VARIANT));
-        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
-                carWashCustomModelBaseLocation + "spinning_red_brush_short_blade"),ModelResourceLocation.STANDALONE_VARIANT));
-        // yellow car brush
-        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
-                carWashCustomModelBaseLocation + "spinning_yellow_brush_long_blade"),ModelResourceLocation.STANDALONE_VARIANT));
-        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
-                carWashCustomModelBaseLocation + "spinning_yellow_brush_medium_blade"),ModelResourceLocation.STANDALONE_VARIANT));
-        event.register(new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(Thingamajigs.MODID,
-                carWashCustomModelBaseLocation + "spinning_yellow_brush_short_blade"),ModelResourceLocation.STANDALONE_VARIANT));
+    public void registerAdditionalModels(ModelEvent.RegisterStandalone event){
+        event.register(TStandaloneModelKeys.UHD_TV_MODEL_KEY,
+                SimpleUnbakedStandaloneModel.quadCollection(
+                        Identifier.fromNamespaceAndPath(Thingamajigs.MODID,
+                                "oversized/uhd_tv")
+                ));
+        event.register(TStandaloneModelKeys.TUBE_MAN_BASE_MODEL_KEY,
+                SimpleUnbakedStandaloneModel.quadCollection(
+                        Identifier.fromNamespaceAndPath(Thingamajigs.MODID,
+                                tubeManCustomModelBaseLocation + "tube_man_base")
+                ));
+        event.register(TStandaloneModelKeys.TUBE_MAN_BASE_COMPRESSED_MODEL_KEY,
+                SimpleUnbakedStandaloneModel.quadCollection(
+                        Identifier.fromNamespaceAndPath(Thingamajigs.MODID,
+                                tubeManCustomModelBaseLocation + "tube_man_base_compressed")
+                ));
+        event.register(TStandaloneModelKeys.TUBE_MAN_BODY_MODEL_KEY,
+                SimpleUnbakedStandaloneModel.quadCollection(
+                        Identifier.fromNamespaceAndPath(Thingamajigs.MODID,
+                                tubeManCustomModelBaseLocation + "tube_man_body_section")
+                ));
+        event.register(TStandaloneModelKeys.TUBE_MAN_HEAD_SECTION_MODEL_KEY,
+                SimpleUnbakedStandaloneModel.quadCollection(
+                        Identifier.fromNamespaceAndPath(Thingamajigs.MODID,
+                                tubeManCustomModelBaseLocation + "tube_man_head_section")
+                ));
     }
 
-    public void setupItemColors(RegisterColorHandlersEvent.Item event){
-        event.register((itemStack,i) -> {
-                    BlockState bs = ((BlockItem)itemStack.getItem()).getBlock().defaultBlockState();
+    public void setupItemColors(RegisterColorHandlersEvent.ItemTintSources event){
+        /*event.register((itemStack,i) -> {
+                    BlockState bs = ((BlockItem)itemStack).getBlock().defaultBlockState();
                     return Minecraft.getInstance().getBlockColors().getColor(bs,null,null,i);
                 },
                 TBlocks.FLOWERING_LILY_PAD.get(),
@@ -216,13 +147,13 @@ public class TClient{
         );
         event.register((itemStack,i) -> TColors.getColorFromList(11),
                 TBlocks.PINK_GLOW_BLOCK.get().asItem()
-        );
+        );*/
     }
 
     public void setupBlockColors(RegisterColorHandlersEvent.Block event){
         event.register((blockState,tintGetter,blockPos,i) ->
                         tintGetter != null && blockPos != null ?
-                                BiomeColors.getAverageFoliageColor(tintGetter,blockPos) : FoliageColor.getDefaultColor(),
+                                BiomeColors.getAverageFoliageColor(tintGetter,blockPos) : FoliageColor.FOLIAGE_EVERGREEN,
                 TBlocks.FLOWERING_LILY_PAD.get(),
                 TBlocks.TRIPLE_LILY_PAD.get(),
                 TBlocks.RUBBER_LEAVES.get()
@@ -230,7 +161,7 @@ public class TClient{
 
         event.register((blockstate, tintget,bpos,i) ->
                 tintget != null && bpos != null ?
-                BiomeColors.getAverageGrassColor(tintget,bpos) : FoliageColor.getEvergreenColor(),
+                BiomeColors.getAverageGrassColor(tintget,bpos) : FoliageColor.FOLIAGE_EVERGREEN,
                 TBlocks.ROUND_BUSH.get(),
                 TBlocks.WISPY_WEED.get(),
                 TBlocks.BULBLET.get()
@@ -238,7 +169,7 @@ public class TClient{
 
         event.register((blockState,tintGetter,blockPos,i) ->
                         tintGetter != null && blockPos != null ?
-                                customGetColor(tintGetter,blockPos,BiomeColors.WATER_COLOR_RESOLVER) : FoliageColor.getDefaultColor(),
+                                customGetColor(tintGetter,blockPos,BiomeColors.WATER_COLOR_RESOLVER) : FoliageColor.FOLIAGE_DEFAULT,
                 TBlocks.COLORED_GLASS.get()
         );
     }
@@ -311,20 +242,18 @@ public class TClient{
     }
 
     public void setupRenderTypes(){
-        ItemBlockRenderTypes.setRenderLayer(TBlocks.ROUND_BUSH.get(),RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(TBlocks.BULBLET.get(),RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(TBlocks.WISPY_WEED.get(),RenderType.cutout());
+
     }
 
     public void setupClientExtensions(RegisterClientExtensionsEvent event){
-        event.registerItem(new IClientItemExtensions(){
+        /*event.registerItem(new IClientItemExtensions(){
             @Override
             public BlockEntityWithoutLevelRenderer getCustomRenderer() {
                 return new TBEWLR(Minecraft.getInstance().getBlockEntityRenderDispatcher(),Minecraft.getInstance().getEntityModels());
             }
         },TItems.ANIMATED_ICE_RINK.asItem(),TItems.ANIMATED_DEER.asItem(),TItems.FOOTBALL_GOAL.asItem(),
                 TItems.CLEVER_BLACKBOARD.asItem(),TItems.CURVED_MONITOR.asItem(),TItems.THEATER_PROJECTOR.asItem(),
-                TItems.UMBRELLA.asItem());
+                TItems.UMBRELLA.asItem());*/
     }
 
     public void addCreative(BuildCreativeModeTabContentsEvent event) {
