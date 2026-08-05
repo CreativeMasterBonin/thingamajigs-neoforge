@@ -61,10 +61,15 @@ public class CeilingFanBE extends BlockEntity {
     }
 
     public static void clientTick(Level level, BlockPos pos, BlockState blockState, CeilingFanBE be){
-        if(level.getBlockState(pos).getValue(CeilingFan.TOGGLED)){
-            be.yAngle += 1.7f;
-            be.yAngle = Mth.clamp(be.yAngle,0.0f,360.0f);
-            if(be.yAngle >= 360.0f){
+        // weird crashes were happening here (in-production), so a check was added
+        if(level.getBlockState(pos).getBlock() instanceof CeilingFan && level.getBlockState(pos).hasProperty(CeilingFan.TOGGLED)) {
+            if (level.getBlockState(pos).getValue(CeilingFan.TOGGLED)) {
+                be.yAngle += 1.7f;
+                be.yAngle = Mth.clamp(be.yAngle, 0.0f, 360.0f);
+                if (be.yAngle >= 360.0f) {
+                    be.yAngle = 0.0f;
+                }
+            } else {
                 be.yAngle = 0.0f;
             }
         }

@@ -65,7 +65,8 @@ public class CeilingFan extends BaseEntityBlock implements SimpleWaterloggedBloc
     }
 
     @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+    public void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        super.createBlockStateDefinition(builder);
         builder.add(WATERLOGGED,TOGGLED);
     }
 
