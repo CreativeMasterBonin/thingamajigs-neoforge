@@ -2,20 +2,33 @@ package net.rk.thingamajigs.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Pose;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.rk.thingamajigs.xtras.TCalcStuff;
 
 import java.util.stream.Stream;
 
@@ -80,6 +93,43 @@ public class CustomBedBlock extends Block{
             default:
                 return COMMON_SHAPE;
         }
+    }
+
+    @Override
+    public void updateEntityAfterFallOn(BlockGetter level, Entity entity) {
+        if(entity.isSuppressingBounce()){
+            super.updateEntityAfterFallOn(level,entity);
+        }
+        else{
+            if (entity.getDeltaMovement().y < 0.0) {
+                entity.setDeltaMovement(entity.getDeltaMovement().x, -entity.getDeltaMovement().y * 0.6600000262260437 * (entity instanceof LivingEntity ? 1.1 : 0.9), entity.getDeltaMovement().z);
+            }
+        }
+    }
+
+    @Override
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        if(!level.isClientSide()){
+            if (player.isPassenger()) {
+                player.stopRiding();
+            }
+            if(player.getHealth() < player.getMaxHealth() / 2 && !player.isInvulnerable()){
+                player.addEffect(new MobEffectInstance(MobEffects.HEAL,1,1,false,false));
+                if(level instanceof ServerLevel serverLevel){
+                    serverLevel.sendParticles(ParticleTypes.HEART,pos.getX() + 0.5D,pos.getY() + 0.25,pos.getZ() + 0.5D,1,0D,0D,0D,0.25D);
+                }
+            }
+            player.setDeltaMovement(Vec3.ZERO);
+            player.hasImpulse = true;
+            return InteractionResult.SUCCESS;
+        }
+        else{
+            if(player.getHealth() < player.getMaxHealth() / 2 && !player.isInvulnerable()){
+                player.playSound(SoundEvents.ILLUSIONER_CAST_SPELL,0.57f, TCalcStuff.nextFloatBetweenInclusive(0.97f,1.0f));
+                return InteractionResult.SUCCESS;
+            }
+        }
+        return InteractionResult.PASS;
     }
 
     @Override

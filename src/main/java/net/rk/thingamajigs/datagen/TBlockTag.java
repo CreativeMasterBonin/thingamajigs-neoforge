@@ -81,6 +81,29 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.WAXED_OXIDIZED_COPPER_TABLE.get())
         ;
 
+        tag(TTag.POLES)
+                .add(TBlocks.LIGHT_POLE.get())
+                .add(TBlocks.HOLDER_POLE.get())
+                .add(TBlocks.STRAIGHT_POLE.get())
+                .add(TBlocks.STRAIGHT_HORIZONTAL_POLE.get())
+                .add(TBlocks.L_POLE.get())
+                .add(TBlocks.L_ONLY_POLE.get())
+                .add(TBlocks.VERTICAL_AXIS_POLE.get())
+                .add(TBlocks.AXIS_POLE.get())
+                .add(TBlocks.PLUS_POLE.get())
+                .add(TBlocks.THREE_WAY_POLE.get())
+                .add(TBlocks.TL_CONNECTOR.get())
+                .add(TBlocks.T_POLE.get())
+                .add(TBlocks.T_POLE_B.get())
+                .add(TBlocks.T_POLE_C.get())
+                .add(TBlocks.VERTICAL_T_POLE.get())
+                .add(TBlocks.TRI_POLE.get())
+                .add(TBlocks.TRI_POLE_B.get())
+                .add(TBlocks.T_HORZ_ONLY_POLE.get())
+                .add(TBlocks.ALL_WAY_POLE.get())
+                .add(TBlocks.VERTICAL_POLE_REDSTONE.get())
+        ;
+
         tag(TTag.VERTICAL_REDSTONE_BLOCKS)
                 .add(TBlocks.VERTICAL_POLE_REDSTONE.get())
         ;

@@ -20,7 +20,7 @@ public class TTag {
     public static final TagKey<Block> VERTICAL_REDSTONE_BLOCKS = thingamajigsBlockTag("vertical_redstone_blocks");
     public static final TagKey<Block> RR_CANTILEVERS = thingamajigsBlockTag("rr_cantilevers");
     public static final TagKey<Block> RAILROAD_CROSSING_BELLS = thingamajigsBlockTag("railroad_crossing_bells");
-    //public static final TagKey<Block> POLES = thingamajigsBlockTag("poles");
+    public static final TagKey<Block> POLES = thingamajigsBlockTag("poles");
 
     public static final TagKey<Block> CHAIRS = thingamajigsBlockTag("chairs");
     public static final TagKey<Block> TABLES = thingamajigsBlockTag("tables");
