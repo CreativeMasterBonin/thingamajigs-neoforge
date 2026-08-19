@@ -2,10 +2,15 @@ package net.rk.thingamajigs.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.util.Mth;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -98,6 +103,29 @@ public class DivingBoard extends ThingamajigsDecorativeBlock{
                 return EAST;
             default:
                 return Shapes.block();
+        }
+    }
+
+    @Override
+    public float getJumpFactor() {
+        return 1.72f;
+    }
+
+    @Override
+    public void fallOn(Level level, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
+        if(entity.isSuppressingBounce()){
+            super.fallOn(level,state,pos,entity,fallDistance);
+        }
+        else{
+            entity.causeFallDamage(fallDistance,0.0f,level.damageSources().fall());
+        }
+    }
+
+    @Override
+    public void updateEntityAfterFallOn(BlockGetter level, Entity entity) {
+        Vec3 vec3 = entity.getDeltaMovement();
+        if (vec3.y < 0.0) {
+            entity.setDeltaMovement(vec3.x, -vec3.y * ((entity instanceof LivingEntity ? 0.5 : 0.35) + (Mth.clamp(entity.fallDistance,1,12)) * 0.31f), vec3.z);
         }
     }
 }

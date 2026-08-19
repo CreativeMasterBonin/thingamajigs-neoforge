@@ -9,6 +9,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.rk.thingamajigs.block.custom.AnimatedIceRink;
 import net.rk.thingamajigs.blockentity.TBlockEntity;
 
 public class AnimatedIceRinkBE extends BlockEntity {
@@ -56,22 +57,24 @@ public class AnimatedIceRinkBE extends BlockEntity {
 
     public static void serverTick(Level slvl, BlockPos sbp, BlockState sbs, AnimatedIceRinkBE sbe){
         ++sbe.ticks;
-        if(slvl.getBlockState(sbp).getValue(BlockStateProperties.ENABLED)){
-            sbe.rinkAngle = Mth.lerp(sbe.ticks / 132.0f,0.0f,1.0f);
-            sbe.ferrisAngle = Mth.lerp(sbe.ticks / 72.0f,0.0f,1.0f);
-        }
-        else{
-            if(sbe.rinkAngle > 0){
-                sbe.rinkAngle -= 0.01f;
+        if(sbs.getBlock() instanceof AnimatedIceRink){
+            if(slvl.getBlockState(sbp).getValue(BlockStateProperties.ENABLED)){
+                sbe.rinkAngle = Mth.lerp(sbe.ticks / 132.0f,0.0f,1.0f);
+                sbe.ferrisAngle = Mth.lerp(sbe.ticks / 72.0f,0.0f,1.0f);
             }
             else{
-                sbe.rinkAngle = 0;
-            }
-            if(sbe.ferrisAngle > 0){
-                sbe.ferrisAngle -= 0.01f;
-            }
-            else{
-                sbe.ferrisAngle = 0;
+                if(sbe.rinkAngle > 0){
+                    sbe.rinkAngle -= 0.01f;
+                }
+                else{
+                    sbe.rinkAngle = 0;
+                }
+                if(sbe.ferrisAngle > 0){
+                    sbe.ferrisAngle -= 0.01f;
+                }
+                else{
+                    sbe.ferrisAngle = 0;
+                }
             }
         }
         if(sbe.ticks > 32767){
@@ -81,22 +84,24 @@ public class AnimatedIceRinkBE extends BlockEntity {
 
     public static void clientTick(Level lvl, BlockPos bp, BlockState bs, AnimatedIceRinkBE be){
         ++be.ticks;
-        if(lvl.getBlockState(bp).getValue(BlockStateProperties.ENABLED)){
-            be.rinkAngle = Mth.lerp(be.ticks / 132.0f,0.0f,1.0f);
-            be.ferrisAngle = Mth.lerp(be.ticks / 72.0f,0.0f,1.0f);
-        }
-        else{
-            if(be.rinkAngle > 0){
-                be.rinkAngle -= 0.001f;
+        if(bs.getBlock() instanceof AnimatedIceRink){
+            if(lvl.getBlockState(bp).getValue(BlockStateProperties.ENABLED)){
+                be.rinkAngle = Mth.lerp(be.ticks / 132.0f,0.0f,1.0f);
+                be.ferrisAngle = Mth.lerp(be.ticks / 72.0f,0.0f,1.0f);
             }
             else{
-                be.rinkAngle = 0;
-            }
-            if(be.ferrisAngle > 0){
-                be.ferrisAngle -= 0.001f;
-            }
-            else{
-                be.ferrisAngle = 0;
+                if(be.rinkAngle > 0){
+                    be.rinkAngle -= 0.001f;
+                }
+                else{
+                    be.rinkAngle = 0;
+                }
+                if(be.ferrisAngle > 0){
+                    be.ferrisAngle -= 0.001f;
+                }
+                else{
+                    be.ferrisAngle = 0;
+                }
             }
         }
         if(be.ticks > 32767){

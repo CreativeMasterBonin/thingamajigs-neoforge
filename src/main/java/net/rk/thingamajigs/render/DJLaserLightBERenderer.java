@@ -3,6 +3,7 @@ package net.rk.thingamajigs.render;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
+import net.minecraft.Util;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
@@ -32,7 +33,7 @@ public class DJLaserLightBERenderer implements BlockEntityRenderer<DJLaserLightB
             float horz_multi = be.hMulti;
             float vert_multi = be.vMulti;
 
-            float ftick = (float)be.ticks;
+            float ftick = (float)be.ticks + parttick; // fixed laggy animation
 
             // test code that was rejected as it didn't allow for multiple lasers
             /*

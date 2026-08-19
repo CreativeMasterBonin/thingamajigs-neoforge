@@ -9,6 +9,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.rk.thingamajigs.block.custom.AnimatedDeer;
 import net.rk.thingamajigs.blockentity.TBlockEntity;
 
 public class AnimatedDeerBE extends BlockEntity{
@@ -76,16 +77,18 @@ public class AnimatedDeerBE extends BlockEntity{
 
     public static void serverTick(Level slvl, BlockPos sbp, BlockState sbs, AnimatedDeerBE sbe){
         ++sbe.ticks;
-        if(sbs.getValue(BlockStateProperties.ENABLED)){
-            float f = Mth.sin(sbe.ticks / 72.0f) / 2.0f;
-            sbe.headAngle = (f + 0.35f) * -1.0f;
-            sbe.gearAngle += 0.02f;
-        }
-        else{
-            if(sbe.headAngle > 0.1f){
-                sbe.headAngle -= 0.1f;
+        if(sbs.getBlock() instanceof AnimatedDeer){
+            if(sbs.getValue(BlockStateProperties.ENABLED)){
+                float f = Mth.sin(sbe.ticks / 72.0f) / 2.0f;
+                sbe.headAngle = (f + 0.35f) * -1.0f;
+                sbe.gearAngle += 0.02f;
             }
-            sbe.gearAngle = 0.0f;
+            else{
+                if(sbe.headAngle > 0.1f){
+                    sbe.headAngle -= 0.1f;
+                }
+                sbe.gearAngle = 0.0f;
+            }
         }
         if(sbe.ticks > 32767){
             sbe.ticks = 0;
@@ -94,16 +97,18 @@ public class AnimatedDeerBE extends BlockEntity{
 
     public static void clientTick(Level lvl, BlockPos bp, BlockState bs, AnimatedDeerBE be){
         ++be.ticks;
-        if(bs.getValue(BlockStateProperties.ENABLED)){
-            float f = Mth.sin(be.ticks / 72.0f) / 2.0f;
-            be.headAngle = (f + 0.35f) * -1.0f;
-            be.gearAngle += 0.02f;
-        }
-        else{
-            if(be.headAngle > 0.1f){
-                be.headAngle -= 0.1f;
+        if(bs.getBlock() instanceof AnimatedDeer){
+            if(bs.getValue(BlockStateProperties.ENABLED)){
+                float f = Mth.sin(be.ticks / 72.0f) / 2.0f;
+                be.headAngle = (f + 0.35f) * -1.0f;
+                be.gearAngle += 0.02f;
             }
-            be.gearAngle = 0.0f;
+            else{
+                if(be.headAngle > 0.1f){
+                    be.headAngle -= 0.1f;
+                }
+                be.gearAngle = 0.0f;
+            }
         }
         if(be.ticks > 32767){
             be.ticks = 0;

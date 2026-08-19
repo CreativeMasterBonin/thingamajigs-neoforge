@@ -1,6 +1,7 @@
 {
+	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
-    "ambientocclusion": false,
+	"ambientocclusion": false,
 	"textures": {
 		"0": "thingamajigs:block/parts/blueytosh_dt",
 		"2": "thingamajigs:block/parts/blueytosh_keyboard_on",
@@ -34,5 +35,11 @@
 				"down": {"uv": [0, 0, 16, 1], "texture": "#3"}
 			}
 		}
-	]
+	],
+	"display": {
+		"fixed": {
+			"rotation": [-28, 0, 0],
+			"translation": [0, 0, -6]
+		}
+	}
 }

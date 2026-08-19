@@ -172,22 +172,22 @@ public class DauntingStatue extends Podium implements TWeatheringCopperOther {
             switch (state.getValue(FACING)){
                 case NORTH -> {
                     windCharge.setPos(pos.north().getX(),pos.above().north().getY(),pos.north().getZ());
-                    windCharge.setDeltaMovement(0,-0.01,-0.8);
+                    windCharge.setDeltaMovement(0,0.01,-0.8);
                     break;
                 }
                 case SOUTH -> {
                     windCharge.setPos(pos.south().getX(),pos.above().south().getY(),pos.south().getZ());
-                    windCharge.setDeltaMovement(0,-0.01,0.8);
+                    windCharge.setDeltaMovement(0,0.01,0.8);
                     break;
                 }
                 case EAST -> {
                     windCharge.setPos(pos.east().getX(),pos.above().east().getY(),pos.east().getZ());
-                    windCharge.setDeltaMovement(0.8,-0.01,0);
+                    windCharge.setDeltaMovement(0.8,0.01,0);
                     break;
                 }
                 case WEST -> {
                     windCharge.setPos(pos.west().getX(),pos.above().west().getY(),pos.west().getZ());
-                    windCharge.setDeltaMovement(-0.8,-0.01,0);
+                    windCharge.setDeltaMovement(-0.8,0.01,0);
                     break;
                 }
             }
@@ -248,22 +248,22 @@ public class DauntingStatue extends Podium implements TWeatheringCopperOther {
                 }
                 switch (state.getValue(FACING)){
                     case NORTH -> {
-                        windCharge.setPos(pos.north().getX(),pos.above().north().getY(),pos.north().getZ());
+                        windCharge.setPos(pos.north().getX(),pos.above().north().getY(),pos.north().getZ() + 0.5D);
                         windCharge.setDeltaMovement(0,-0.01,-0.5);
                         break;
                     }
                     case SOUTH -> {
-                        windCharge.setPos(pos.south().getX(),pos.above().south().getY(),pos.south().getZ());
+                        windCharge.setPos(pos.south().getX(),pos.above().south().getY(),pos.south().getZ() - 0.5D);
                         windCharge.setDeltaMovement(0,-0.01,0.5);
                         break;
                     }
                     case EAST -> {
-                        windCharge.setPos(pos.east().getX(),pos.above().east().getY(),pos.east().getZ());
+                        windCharge.setPos(pos.east().getX() - 0.5D,pos.above().east().getY(),pos.east().getZ());
                         windCharge.setDeltaMovement(0.5,-0.01,0);
                         break;
                     }
                     case WEST -> {
-                        windCharge.setPos(pos.west().getX(),pos.above().west().getY(),pos.west().getZ());
+                        windCharge.setPos(pos.west().getX() + 0.5D,pos.above().west().getY(),pos.west().getZ());
                         windCharge.setDeltaMovement(-0.5,-0.01,0);
                         break;
                     }

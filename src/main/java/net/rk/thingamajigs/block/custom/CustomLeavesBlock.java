@@ -29,7 +29,7 @@ import net.neoforged.neoforge.common.IShearable;
 import java.util.OptionalInt;
 
 @SuppressWarnings("deprecated")
-public class CustomLeavesBlock extends Block implements SimpleWaterloggedBlock, IShearable{
+public class CustomLeavesBlock extends Block implements SimpleWaterloggedBlock, IShearable {
     public static final BooleanProperty PERSISTENT = BlockStateProperties.PERSISTENT;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
@@ -175,7 +175,7 @@ public class CustomLeavesBlock extends Block implements SimpleWaterloggedBlock, 
         return bs.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(bs);
     }
 
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+    public void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(DISTANCE, PERSISTENT, WATERLOGGED,SNOWY);
     }
 

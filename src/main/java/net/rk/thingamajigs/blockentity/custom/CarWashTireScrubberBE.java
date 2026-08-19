@@ -61,14 +61,16 @@ public class CarWashTireScrubberBE extends BlockEntity {
     }
 
     public static void clientTick(Level lvl, BlockPos bp, BlockState bs, CarWashTireScrubberBE tireScrubber){
-        if(bs.getValue(BlockStateProperties.LIT)){
-            tireScrubber.rotation += 24.1f;
-            if(tireScrubber.rotation >= 360.0f || tireScrubber.rotation <= -360.0f){
+        if(bs.hasProperty(BlockStateProperties.LIT)){
+            if(bs.getValue(BlockStateProperties.LIT)){
+                tireScrubber.rotation += 24.1f;
+                if(tireScrubber.rotation >= 360.0f || tireScrubber.rotation <= -360.0f){
+                    tireScrubber.rotation = 0.0f;
+                }
+            }
+            else{
                 tireScrubber.rotation = 0.0f;
             }
-        }
-        else{
-            tireScrubber.rotation = 0.0f;
         }
     }
 }

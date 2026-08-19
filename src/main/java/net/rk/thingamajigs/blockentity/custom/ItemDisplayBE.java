@@ -151,9 +151,15 @@ public class ItemDisplayBE extends BlockEntity implements RandomizableContainer,
             ++be.rot;
             be.hidePose = false;
         }
+        if(be.ticks >= 32767){
+            be.ticks = 0;
+        }
     }
 
     public static void serverTick(Level slvl, BlockPos sbp, BlockState sbs, ItemDisplayBE sbe){
         ++sbe.ticks;
+        if(sbe.ticks >= 32767){
+            sbe.ticks = 0;
+        }
     }
 }

@@ -16,6 +16,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
@@ -24,6 +25,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.rk.thingamajigs.xtras.TCalcStuff;
 
 @SuppressWarnings("deprecated")
 public class GlowingCheeseBlock extends Block{
@@ -57,49 +59,45 @@ public class GlowingCheeseBlock extends Block{
     @Override
     protected InteractionResult useWithoutItem(BlockState bs, Level lvl, BlockPos bp, Player pl, BlockHitResult bhr) {
         ItemStack itemstack = pl.getItemInHand(pl.getUsedItemHand());
-        //
-        if(lvl.isClientSide()) {
-            if (eatGlowing(lvl, bp, bs, pl).consumesAction()) {
-                return InteractionResult.SUCCESS;
+
+        if(itemstack.isEmpty()){
+            if(lvl.isClientSide()){
+                if(pl.canEat(true)){
+                    if(lvl.getBlockState(bp).hasProperty(FULLNESS)){
+                        if(lvl.getBlockState(bp).getValue(FULLNESS) >= 3){
+                            pl.playSound(SoundEvents.GENERIC_EAT,0.75f, TCalcStuff.nextFloatBetweenInclusive(0.97f,1.1f));
+                        }
+                        else{
+                            pl.playSound(SoundEvents.GENERIC_EAT,0.75f, TCalcStuff.nextFloatBetweenInclusive(0.94f,0.98f));
+                        }
+                    }
+                    return InteractionResult.SUCCESS;
+                }
             }
-            //
-            if (itemstack.isEmpty()) {
-                return InteractionResult.CONSUME;
+            else{
+                if(pl.canEat(true)){
+                    pl.getFoodData().eat(1,1);
+                    lvl.gameEvent(pl, GameEvent.EAT,bp);
+                    if(!pl.hasEffect(MobEffects.GLOWING)){
+                        pl.addEffect(new MobEffectInstance(
+                                MobEffects.GLOWING, 1200,
+                                0, true, false,false));
+                        pl.displayClientMessage(Component.translatable("block.thingamajigs.glowing_cheese.you_glow_now"),true);
+                    }
+                    if(lvl.getBlockState(bp).hasProperty(FULLNESS)){
+                        if(lvl.getBlockState(bp).getValue(FULLNESS).intValue() >= 3){
+                            lvl.setBlock(bp, Blocks.AIR.defaultBlockState(),3);
+                            lvl.gameEvent(pl,GameEvent.BLOCK_DESTROY,bp);
+                        }
+                        else{
+                            lvl.setBlock(bp,bs.cycle(FULLNESS),3);
+                        }
+                    }
+                    return InteractionResult.CONSUME;
+                }
             }
         }
-
-        if(!pl.hasEffect(MobEffects.GLOWING)){
-            pl.addEffect(new MobEffectInstance(
-                    MobEffects.GLOWING, 1500,
-                    0, true, false,false));
-            pl.displayClientMessage(Component.translatable("block.thingamajigs.glowing_cheese.you_glow_now"),true);
-        }
-        return eatGlowing(lvl, bp, bs, pl);
-    }
-
-    private static InteractionResult eatGlowing(LevelAccessor lvla, BlockPos bp, BlockState bs, Player pl) {
-        if (!pl.canEat(false)) {
-            return InteractionResult.PASS;
-        }
-        else {
-            pl.awardStat(Stats.EAT_CAKE_SLICE);
-            pl.getFoodData().eat(1, 0.5F);
-
-            int i = bs.getValue(FULLNESS);
-            lvla.gameEvent(pl, GameEvent.EAT, bp);
-
-            float sfxPitch = lvla.getRandom().nextFloat() + 0.25F;
-            lvla.playSound(pl,bp, SoundEvents.GENERIC_EAT, SoundSource.PLAYERS,0.25F,(float)sfxPitch);
-
-            if (i < 3) {
-                lvla.setBlock(bp, bs.setValue(FULLNESS, i + 1), 3);
-            }
-            else {
-                lvla.removeBlock(bp, false);
-                lvla.gameEvent(pl, GameEvent.BLOCK_DESTROY, bp);
-            }
-            return InteractionResult.SUCCESS;
-        }
+        return InteractionResult.PASS;
     }
 
     @Override

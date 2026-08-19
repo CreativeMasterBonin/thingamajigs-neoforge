@@ -3878,8 +3878,6 @@ public class TBlocks {
     public static final DeferredBlock<Block> ICECREAM_VENDING_MACHINE = register("icecream_vending_machine",
             () -> new IceCreamVendingMachine(BlockBehaviour.Properties.of()));
 
-
-
     // test features
     public static final DeferredBlock<Block> FAKE_FLUID_PUMP = register("fake_fluid_pump",
             () -> new FakeFluidPump(BlockBehaviour.Properties.of()));

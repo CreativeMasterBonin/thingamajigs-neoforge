@@ -134,40 +134,48 @@ public class DJLaserLightBE extends BlockEntity {
 
     public static void serverTick(Level slvl, BlockPos sbp, BlockState sbs, DJLaserLightBE sbe){
         ++sbe.ticks;
+        if(sbe.ticks >= 32767){
+            sbe.ticks = 0;
+        }
     }
 
     public static void clientTick(Level lvl, BlockPos bp, BlockState bs, DJLaserLightBE be){
         ++be.ticks;
-        if(!be.getLevel().hasNearbyAlivePlayer((double)bp.getX() + 0.5, (double)bp.getY() + 0.5, (double)bp.getZ() + 0.5, 32)){
-            be.hidePose = true;
+        if(bs.getBlock() instanceof DJLaserLight){
+            if(!be.getLevel().hasNearbyAlivePlayer((double)bp.getX() + 0.5, (double)bp.getY() + 0.5, (double)bp.getZ() + 0.5, 32)){
+                be.hidePose = true;
+            }
+            else{
+                try{
+                    be.convertStrToColorInt(be.colorstr);
+                }
+                catch (Exception e){
+                    be.colorstr = "FFFFFF";
+                    be.convertStrToColorInt("FFFFFF");
+                }
+                be.hidePose = !bs.getValue(DJLaserLight.ON);
+                switch(bs.getValue(DJLaserLight.FACING)){
+                    case NORTH ->{
+                        be.angle = 0;
+                        return;
+                    }
+                    case SOUTH ->{
+                        be.angle = 180;
+                        return;
+                    }
+                    case EAST ->{
+                        be.angle = 90;
+                        return;
+                    }
+                    case WEST ->{
+                        be.angle = 270;
+                        return;
+                    }
+                }
+            }
         }
-        else{
-            try{
-                be.convertStrToColorInt(be.colorstr);
-            }
-            catch (Exception e){
-                be.colorstr = "FFFFFF";
-                be.convertStrToColorInt("FFFFFF");
-            }
-            be.hidePose = !bs.getValue(DJLaserLight.ON);
-            switch(bs.getValue(DJLaserLight.FACING)){
-                case NORTH ->{
-                    be.angle = 0;
-                    return;
-                }
-                case SOUTH ->{
-                    be.angle = 180;
-                    return;
-                }
-                case EAST ->{
-                    be.angle = 90;
-                    return;
-                }
-                case WEST ->{
-                    be.angle = 270;
-                    return;
-                }
-            }
+        if(be.ticks >= 32767){
+            be.ticks = 0;
         }
     }
 }

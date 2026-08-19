@@ -1,6 +1,7 @@
 package net.rk.thingamajigs;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.GraphicsStatus;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
