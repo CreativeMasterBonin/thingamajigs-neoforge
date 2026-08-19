@@ -3878,6 +3878,31 @@ public class TBlocks {
     public static final DeferredBlock<Block> ICECREAM_VENDING_MACHINE = register("icecream_vending_machine",
             () -> new IceCreamVendingMachine(BlockBehaviour.Properties.of()));
 
+    // 1.8.9 additions
+    public static final DeferredBlock<Block> ELECTRIC_HOSPITAL_BED = register("electric_hospital_bed",
+            () -> new CustomBedBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.METAL)){
+                @Override
+                public VoxelShape getShape(BlockState state, BlockGetter lvl, BlockPos pos, CollisionContext ctx) {
+                    switch(state.getValue(FACING)){
+                        case NORTH -> {
+                            return NORTH_ELECTRIC_SHAPE;
+                        }
+                        case SOUTH -> {
+                            return SOUTH_ELECTRIC_SHAPE;
+                        }
+                        case EAST -> {
+                            return EAST_ELECTRIC_SHAPE;
+                        }
+                        case WEST -> {
+                            return WEST_ELECTRIC_SHAPE;
+                        }
+                        default -> {
+                            return Shapes.block();
+                        }
+                    }
+                }
+            });
+
     // test features
     public static final DeferredBlock<Block> FAKE_FLUID_PUMP = register("fake_fluid_pump",
             () -> new FakeFluidPump(BlockBehaviour.Properties.of()));

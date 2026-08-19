@@ -1168,6 +1168,7 @@ public class TClient{
             // Hospital and Health
             event.accept(TBlocks.HOSPITAL_COVER.get().asItem());
             event.accept(TBlocks.HOSPITAL_BED.get().asItem());
+            event.accept(TBlocks.ELECTRIC_HOSPITAL_BED.get().asItem());
             event.accept(TBlocks.HOSPITAL_COMPUTER.get().asItem());
             event.accept(TBlocks.HEART_MONITOR.get().asItem());
             event.accept(TBlocks.IV.get().asItem());

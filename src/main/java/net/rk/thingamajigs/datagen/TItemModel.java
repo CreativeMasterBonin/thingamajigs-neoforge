@@ -115,6 +115,8 @@ public class TItemModel extends ItemModelProvider {
         fromModelMod(TBlocks.TUBE_MAN_DECO.get(),"bases/tube_man_components/tube_man_base_compressed");
         fromModelMod(TBlocks.BLUEYBOX.get(),"block/blueybox");
         flatHandheldItem(TItems.DEBIT_CARD.asItem(),"debit_card");
+        fromModelMod(TBlocks.HOSPITAL_BED.get(),"block/hospital_bed");
+        fromModelMod(TBlocks.ELECTRIC_HOSPITAL_BED.get(),"block/electric_hospital_bed");
     }
 
     private ItemModelBuilder fromModelModItem(Item item, String source){

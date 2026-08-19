@@ -1594,6 +1594,7 @@
   "block.thingamajigs.tube_man": "Tube Man",
   "block.thingamajigs.pizza_vending_machine": "Pizza Vending Machine",
   "block.thingamajigs.icecream_vending_machine": "Ice Cream Vending Machine",
+  "block.thingamajigs.electric_hospital_bed": "Electric Hospital Bed",
 
 
   "item.thingamajigs.debit_card.desc.activated": "Use this on an ATM with money in the offhand, adding funds, allowing exchanges with certain blocks",

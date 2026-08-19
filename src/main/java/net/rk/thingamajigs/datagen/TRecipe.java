@@ -4890,6 +4890,16 @@ public class TRecipe extends RecipeProvider {
                 .requires(Items.POWDER_SNOW_BUCKET)
                 .unlockedBy("has_thingy",has(Items.POWDER_SNOW_BUCKET))
                 .save(rc);
+        // 1.8.9
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.ELECTRIC_HOSPITAL_BED.get().asItem(),1)
+                .requires(TBlocks.HOSPITAL_BED.get().asItem())
+                .requires(Items.BLUE_WOOL)
+                .requires(Items.BLUE_WOOL)
+                .requires(Items.IRON_INGOT)
+                .requires(Items.REDSTONE)
+                .requires(TItems.COMPUTER_COMPONENT)
+                .unlockedBy("has_thingy",has(TBlocks.HOSPITAL_BED.get().asItem()))
+                .save(rc);
     }
 
     public static RecipeBuilder stonecutterAny(Item requiredItem, Ingredient inputItem, Item result, int amt){

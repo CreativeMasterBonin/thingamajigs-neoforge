@@ -1,12 +1,13 @@
 {
+	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
-    "ambientocclusion": false,
-    "render_type": "cutout",
+	"ambientocclusion": false,
+	"render_type": "cutout",
 	"textures": {
 		"0": "thingamajigs:block/hos_bed_top",
 		"2": "thingamajigs:block/hos_bed_bottom",
-		"3": "minecraft:block/oak_planks",
-		"particle": "#2"
+		"3": "block/oak_planks",
+		"particle": "thingamajigs:block/hos_bed_bottom"
 	},
 	"elements": [
 		{
@@ -424,6 +425,51 @@
 			}
 		}
 	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, 165, 0],
+			"translation": [0.25, 1.75, 1],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, 165, 0],
+			"translation": [0.25, 1.75, 1],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"firstperson_righthand": {
+			"rotation": [35, 135, -25],
+			"translation": [7, 2, -2],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_lefthand": {
+			"rotation": [35, 135, -25],
+			"translation": [7, 2, -2],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"ground": {
+			"translation": [0, 3, -2],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"gui": {
+			"rotation": [37, 157, 0],
+			"translation": [-1.25, -0.25, 0],
+			"scale": [0.45, 0.45, 0.45]
+		},
+		"head": {
+			"translation": [0, 9.25, -4],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"fixed": {
+			"rotation": [-90, 0, 0],
+			"translation": [0, -2.75, -1.75],
+			"scale": [0.35, 0.35, 0.35]
+		},
+		"on_shelf": {
+			"rotation": [90, -180, 0],
+			"translation": [0, 0, -1.5],
+			"scale": [0.35, 0.35, 0.35]
+		}
+	},
 	"groups": [
 		0,
 		1,

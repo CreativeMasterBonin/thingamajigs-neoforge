@@ -1280,6 +1280,9 @@ public class TLoot extends VanillaBlockLoot {
         this.dropSelf(TBlocks.TUBE_MAN_DECO.get());
         this.dropSelf(TBlocks.PIZZA_VENDING_MACHINE.get());
         this.dropSelf(TBlocks.ICECREAM_VENDING_MACHINE.get());
+
+        // 1.8.9
+        this.dropSelf(TBlocks.ELECTRIC_HOSPITAL_BED.get());
     }
 
     // from loot tables
