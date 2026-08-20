@@ -1348,7 +1348,7 @@
   "item.thingamajigs.debit_card.empty_card": "The card is empty.",
   "item.thingamajigs.debit_card.card_add_funds": "Added funds: %s",
   "item.thingamajigs.debit_card.card_take_funds": "Took funds: %s",
-  "block.thingamajigs.item_displayer.desc": "Place in item in and watch it spin slowly, endlessly, perfectly.",
+  "block.thingamajigs.item_displayer.desc": "Place an item in and watch it spin slowly, endlessly, perfectly.",
   "block.thingamajigs.ped_signal_alt.desc": "Automatically changes states when it's timer is up.",
   "thingamajigs.subtitle.error": "Error Sound Plays",
   "message.thingamajigs.bad_action.need_giant_mod": "Error: This feature requires the Giant Spawn mod to function.",
