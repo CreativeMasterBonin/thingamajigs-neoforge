@@ -16,12 +16,12 @@ public class FakeFluidPump extends Block{
     }
 
     @Override
-    protected void onPlace(BlockState bs, Level lvl, BlockPos bp, BlockState bs2, boolean b1) {
+    public void onPlace(BlockState bs, Level lvl, BlockPos bp, BlockState bs2, boolean b1) {
         lvl.scheduleTick(bp,this,5, TickPriority.EXTREMELY_LOW);
     }
 
     @Override
-    protected void tick(BlockState bs, ServerLevel sl, BlockPos bp, RandomSource rs) {
+    public void tick(BlockState bs, ServerLevel sl, BlockPos bp, RandomSource rs) {
         boolean belowLava = sl.getBlockState(bp.below()).is(Blocks.LAVA);
         boolean north = sl.getBlockState(bp.north()).is(Blocks.LAVA);
         boolean south = sl.getBlockState(bp.south()).is(Blocks.LAVA);

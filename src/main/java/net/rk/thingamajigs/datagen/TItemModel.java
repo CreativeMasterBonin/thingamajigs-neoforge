@@ -117,6 +117,8 @@ public class TItemModel extends ItemModelProvider {
         flatHandheldItem(TItems.DEBIT_CARD.asItem(),"debit_card");
         fromModelMod(TBlocks.HOSPITAL_BED.get(),"block/hospital_bed");
         fromModelMod(TBlocks.ELECTRIC_HOSPITAL_BED.get(),"block/electric_hospital_bed");
+        fromModelMod(TBlocks.PHONE_STEP_SELECTORS_GROUP.get(),"block/phone_step_selectors_group");
+        fromModelMod(TBlocks.MINIGOLF_FLAG.get(),"block/minigolf_flags/red_minigolf_flag");
     }
 
     private ItemModelBuilder fromModelModItem(Item item, String source){

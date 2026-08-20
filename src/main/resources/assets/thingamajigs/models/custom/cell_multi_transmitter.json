@@ -1,10 +1,11 @@
 {
+	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"ambientocclusion": false,
 	"textures": {
 		"0": "thingamajigs:block/extra_metal",
 		"1": "thingamajigs:block/parts/cell_tower_bolt",
-        "particle": "thingamajigs:block/extra_metal"
+		"particle": "thingamajigs:block/extra_metal"
 	},
 	"elements": [
 		{
@@ -47,8 +48,8 @@
 			}
 		},
 		{
-			"from": [11.75, 0, 5.75],
-			"to": [15.75, 16, 9.75],
+			"from": [11.75, 0, 6],
+			"to": [15.75, 16, 10],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 7.75]},
 			"faces": {
 				"north": {"uv": [0, 0, 1, 1], "texture": "#1"},
@@ -73,8 +74,8 @@
 			}
 		},
 		{
-			"from": [6, 0, 11.5],
-			"to": [10, 16, 15.5],
+			"from": [6, 0, 12],
+			"to": [10, 16, 16],
 			"rotation": {"angle": 0, "axis": "y", "origin": [7, 8, 7.75]},
 			"faces": {
 				"north": {"uv": [0, 0, 1, 1], "texture": "#1"},
@@ -87,7 +88,7 @@
 		},
 		{
 			"from": [7.2, 7, 8.5],
-			"to": [8.7, 9, 11.5],
+			"to": [8.7, 9, 12.5],
 			"rotation": {"angle": 0, "axis": "y", "origin": [7, 8, 7.75]},
 			"faces": {
 				"north": {"uv": [7, 10, 9, 12], "texture": "#0"},
@@ -99,8 +100,8 @@
 			}
 		},
 		{
-			"from": [0.25, 0, 5.75],
-			"to": [4.25, 16, 9.75],
+			"from": [0.25, 0, 6],
+			"to": [4.25, 16, 10],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 7.75]},
 			"faces": {
 				"north": {"uv": [0, 0, 1, 1], "texture": "#1"},

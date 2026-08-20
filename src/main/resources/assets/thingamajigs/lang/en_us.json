@@ -1595,8 +1595,11 @@
   "block.thingamajigs.pizza_vending_machine": "Pizza Vending Machine",
   "block.thingamajigs.icecream_vending_machine": "Ice Cream Vending Machine",
   "block.thingamajigs.electric_hospital_bed": "Electric Hospital Bed",
+  "block.thingamajigs.phone_step_selectors_group": "Phone Step-Selectors Group",
 
 
+  "block.thingamajigs.weight_scale.desc": "Shift-right-click to show total inventory weight",
+  "block.thingamajigs.round_clothes_rack.desc": "Shift-right-click to show/hide clothing",
   "item.thingamajigs.debit_card.desc.activated": "Use this on an ATM with money in the offhand, adding funds, allowing exchanges with certain blocks",
   "block.thingamajigs.urinal.desc": "Use an axe to switch pipe placement, and shears to change design",
   "block.thingamajigs.tube_man.desc": "Use an axe to rotate and dyes to color it; Shift-right click to inflate and deflate",

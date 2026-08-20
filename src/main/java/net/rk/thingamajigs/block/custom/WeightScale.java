@@ -1,19 +1,30 @@
 package net.rk.thingamajigs.block.custom;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.phys.BlockHitResult;
 
+import java.util.List;
+
 public class WeightScale extends ThingamajigsDecorativeBlock{
     public WeightScale(Properties p) {
         super(p.sound(SoundType.LANTERN).noOcclusion().instrument(NoteBlockInstrument.BASS));
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        tooltipComponents.add(Component.translatable("block.thingamajigs.weight_scale.desc")
+                .withStyle(ChatFormatting.GRAY));
     }
 
     @Override

@@ -2,6 +2,9 @@ package net.rk.thingamajigs.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.tags.BiomeTags;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
@@ -15,6 +18,7 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.neoforged.neoforge.common.Tags;
 
 @SuppressWarnings("deprecated")
 public class Thermometer extends ThingamajigsDecorativeBlock{
@@ -25,8 +29,24 @@ public class Thermometer extends ThingamajigsDecorativeBlock{
     public static BooleanProperty ACTIVE = BlockStateProperties.ENABLED;
 
     public Thermometer(Properties properties) {
-        super(properties.strength(0.87F,1F).sound(SoundType.COPPER).noCollission());
+        super(properties.strength(0.87F,1F).sound(SoundType.COPPER).noCollission().randomTicks());
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(ACTIVE, false).setValue(WATERLOGGED, false));
+    }
+
+    @Override
+    public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
+        if(level.isInWorldBounds(pos) && state.getBlock() instanceof Thermometer){
+            if(level.getBiome(pos).is(Tags.Biomes.IS_COLD) || level.getBiome(pos).is(Tags.Biomes.IS_ICY)){
+                if(!state.getValue(ACTIVE)){
+                    level.setBlock(pos,state.setValue(ACTIVE,true),3);
+                }
+            }
+            else{
+                if(state.getValue(ACTIVE)){
+                    level.setBlock(pos,state.setValue(ACTIVE,false),3);
+                }
+            }
+        }
     }
 
     @Override

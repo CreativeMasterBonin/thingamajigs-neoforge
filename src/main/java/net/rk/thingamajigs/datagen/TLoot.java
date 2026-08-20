@@ -1283,6 +1283,7 @@ public class TLoot extends VanillaBlockLoot {
 
         // 1.8.9
         this.dropSelf(TBlocks.ELECTRIC_HOSPITAL_BED.get());
+        this.dropSelf(TBlocks.PHONE_STEP_SELECTORS_GROUP.get());
     }
 
     // from loot tables

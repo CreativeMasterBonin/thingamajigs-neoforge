@@ -4900,6 +4900,14 @@ public class TRecipe extends RecipeProvider {
                 .requires(TItems.COMPUTER_COMPONENT)
                 .unlockedBy("has_thingy",has(TBlocks.HOSPITAL_BED.get().asItem()))
                 .save(rc);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.PHONE_STEP_SELECTORS_GROUP.get().asItem(),1)
+                .requires(TBlocks.PHONE_GROUP_SELECTOR.get().asItem())
+                .requires(Items.REPEATER)
+                .requires(Items.LEVER)
+                .requires(Items.LEVER)
+                .requires(Items.REDSTONE)
+                .unlockedBy("has_thingy",has(TBlocks.PHONE_GROUP_SELECTOR.get().asItem()))
+                .save(rc);
     }
 
     public static RecipeBuilder stonecutterAny(Item requiredItem, Ingredient inputItem, Item result, int amt){
