@@ -17,6 +17,10 @@
         },
         {
             "type": "patchouli:text",
+            "text": "Version 1.0.1+ removes the requirement for Thingamajigs to be installed to play Long Roads, so it can be enjoyed standalone."
+        },
+        {
+            "type": "patchouli:text",
             "text": "Can be downloaded from the usual websites that Thingamajigs is from."
         }
     ]

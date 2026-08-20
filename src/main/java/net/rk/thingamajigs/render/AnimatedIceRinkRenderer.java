@@ -1,6 +1,7 @@
 package net.rk.thingamajigs.render;
 
 import com.mojang.blaze3d.vertex.PoseStack;
+import net.minecraft.Util;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
@@ -15,6 +16,7 @@ import org.joml.Quaternionf;
 
 public class AnimatedIceRinkRenderer implements BlockEntityRenderer<AnimatedIceRinkBE> {
     public AnimatedIceRinkModel model;
+    public static final ResourceLocation animatedIceRinkAll = ResourceLocation.parse("thingamajigs:textures/entity/animated_snow_rink.png");
 
     public AnimatedIceRinkRenderer(BlockEntityRendererProvider.Context ctx){
         this.model = new AnimatedIceRinkModel(ctx.bakeLayer(AnimatedIceRinkModel.ICE_RINK_ALL));
@@ -43,24 +45,32 @@ public class AnimatedIceRinkRenderer implements BlockEntityRenderer<AnimatedIceR
             }
         }
 
-        // is it on? if so, show the animation, otherwise, smoothly slow it down to zero speed
-        this.model.setupAnim(iceRinkBE);
+        float gearAngle = partialTick + Util.getMillis() / 37.0f;
+
+        // show the animation if on
+        if(iceRinkBE.getBlockState().hasProperty(AnimatedIceRink.TOGGLED)){
+            if(iceRinkBE.getBlockState().getValue(AnimatedIceRink.TOGGLED)){
+                this.model.setupAnim(iceRinkBE,gearAngle / 132.0f,gearAngle / 72.0f);
+            }
+            else{
+                this.model.noAnim();
+            }
+        }
         this.model.main.render(poseStack,bufferSource.getBuffer(
-                RenderType.entityCutout(
-                        ResourceLocation.parse("thingamajigs:textures/entity/animated_snow_rink.png"))),
+                RenderType.entityCutout(animatedIceRinkAll)),
                 packedLight,packedOverlay);
         poseStack.popPose();
     }
 
     @Override
     public int getViewDistance() {
-        return 32;
+        return 30;
     }
 
     @Override
     public boolean shouldRender(AnimatedIceRinkBE blockEntity, Vec3 cameraPos) {
-        return Vec3.atCenterOf(blockEntity.getBlockPos()).multiply(2, 2, 2)
-                .closerThan(cameraPos.multiply(2, 2, 2), (double)this.getViewDistance());
+        return Vec3.atCenterOf(blockEntity.getBlockPos()).multiply(2, 1, 2)
+                .closerThan(cameraPos.multiply(2, 1, 2), (double)this.getViewDistance());
     }
 
 }

@@ -1,0 +1,46 @@
+{
+    "name": "entry.thingamajigs.old_phone_network_components",
+    "icon": "thingamajigs:phone_step_selectors_group",
+    "category": "thingamajigs:block",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "In the Celluar Towers treatise book entry, some things were mentioned; copper wires and the associated old phone stuff. Copper wires from various places used to lead to places called 'central offices', and connected to a lot of telephone equipment. Some of the components found in these buildings can be crafted in Thingamajigs, which will allow you to have your own central offices!"
+        },
+        {
+            "type": "patchouli:image",
+            "images": ["thingamajigs:textures/gui/representation_phone_co.png"],
+            "title": "A Central Office",
+            "border": true
+        },
+        {
+            "type": "patchouli:text",
+            "text": "The first phone system types in the mod are step-by-step. Each little click makes a connection in the copper network. Type a digit, get a click. You can 'hear the progress'. Thingamajigs has some representations of this kind of network, but not all the components that made it tick."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "thingamajigs:phone_group_selector",
+            "recipe2": "thingamajigs:phone_step_selectors_group",
+            "title": "Step Switches"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "The second phone system type represented in this mod is the XY type. It revolves around two axes of movement. This has an instant effect on sound and calling itself. Thingamajigs has two key pieces of this equipment type represented."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "thingamajigs:phone_axis_switch",
+            "recipe2": "thingamajigs:phone_axis_switch_relay",
+            "title": "Axis Switches"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "The third phone system type is of course the crossbar type. As suggested by its' name, it uses bars. Later versions of this kind of switching equipment could even have three states for bars to be in."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe" : "thingamajigs:phone_crossbar",
+            "title": "Crossbar Switches"
+        }
+    ]
+}

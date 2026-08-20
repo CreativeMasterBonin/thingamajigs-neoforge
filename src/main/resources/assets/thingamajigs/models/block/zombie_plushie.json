@@ -1,10 +1,11 @@
 {
+	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
-    "ambientocclusion": false,
-    "render_type": "cutout",
+	"ambientocclusion": false,
+	"render_type": "cutout",
 	"textures": {
 		"0": "thingamajigs:block/bluey_zombie",
-		"particle": "#0"
+		"particle": "thingamajigs:block/bluey_zombie"
 	},
 	"elements": [
 		{
@@ -82,7 +83,7 @@
 				"east": {"uv": [0, 2, 2, 4], "texture": "#0"},
 				"south": {"uv": [6, 2, 8, 4], "texture": "#0"},
 				"west": {"uv": [4, 2, 6, 4], "texture": "#0"},
-				"up": {"uv": [2, 0, 4, 2], "texture": "#0"},
+				"up": {"uv": [2, 2, 4, 0], "texture": "#0"},
 				"down": {"uv": [4, 0, 6, 2], "texture": "#0"}
 			}
 		}

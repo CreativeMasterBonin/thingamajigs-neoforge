@@ -17,8 +17,6 @@ public class AnimatedIceRinkBE extends BlockEntity {
     public int ticks;
     public float yAngle = 0.0f;
     public boolean custom = false;
-    public float ferrisAngle = 0;
-    public float rinkAngle = 0;
 
     public AnimatedIceRinkBE(BlockPos pos, BlockState blockState) {
         super(TBlockEntity.ANIMATED_ICE_RINK.get(), pos, blockState);
@@ -39,8 +37,6 @@ public class AnimatedIceRinkBE extends BlockEntity {
     protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         tag.putFloat("y_angle",yAngle);
         tag.putBoolean("custom_settings",custom);
-        tag.putFloat("ferris_angle",ferrisAngle);
-        tag.putFloat("rink_angle",rinkAngle);
     }
 
     @Override
@@ -49,13 +45,9 @@ public class AnimatedIceRinkBE extends BlockEntity {
             yAngle = tag.getFloat("y_angle");
         if(tag.contains("custom_settings"))
             custom = tag.getBoolean("custom_settings");
-        if(tag.contains("ferris_angle"))
-            ferrisAngle = tag.getFloat("ferris_angle");
-        if(tag.contains("rink_angle"))
-            rinkAngle = tag.getFloat("rink_angle");
     }
 
-    public static void serverTick(Level slvl, BlockPos sbp, BlockState sbs, AnimatedIceRinkBE sbe){
+    /*public static void serverTick(Level slvl, BlockPos sbp, BlockState sbs, AnimatedIceRinkBE sbe){
         ++sbe.ticks;
         if(sbs.getBlock() instanceof AnimatedIceRink){
             if(slvl.getBlockState(sbp).getValue(BlockStateProperties.ENABLED)){
@@ -107,5 +99,5 @@ public class AnimatedIceRinkBE extends BlockEntity {
         if(be.ticks > 32767){
             be.ticks = 0;
         }
-    }
+    }*/
 }

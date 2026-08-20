@@ -120,7 +120,7 @@ public class AnimatedIceRinkModel extends Model {
         return LayerDefinition.create(meshdefinition, 64, 64);
     }
 
-    public void setupAnim(AnimatedIceRinkBE iceRinkBE){
+    public void setupAnim(AnimatedIceRinkBE iceRinkBE,float rinkAngle,float ferrisAngle){
         this.person1.xScale = 0.002f;
         this.person2.xScale = 0.002f;
         this.person3.xScale = 0.002f;
@@ -137,8 +137,8 @@ public class AnimatedIceRinkModel extends Model {
         // PI is a good angle for the x axis, as it aligns with block edges
         this.main.xRot = Mth.PI;
         // angles are used here
-        this.movingrink.yRot = iceRinkBE.rinkAngle * -1.0f;
-        this.movingwheel.zRot = iceRinkBE.ferrisAngle * -1.0f;
+        this.movingrink.yRot = rinkAngle * -1.0f;
+        this.movingwheel.zRot = ferrisAngle * -1.0f;
     }
 
     public void noAnim(){

@@ -1,0 +1,35 @@
+{
+    "name": "entry.thingamajigs.vending_machines",
+    "icon": "thingamajigs:blue_vending_machine",
+    "category": "thingamajigs:block",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Vending machines can be used to gain instant satisfaction, in any form of item; for a price of course. Thingamajigs adds some vending machines of various types."
+        },
+        {
+            "type": "patchouli:image",
+            "images": ["thingamajigs:textures/gui/vending_machines_linedup.png"],
+            "title": "Vending Machines",
+            "border": true
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "thingamajigs:red_vending_machine",
+            "recipe2": "thingamajigs:blue_vending_machine",
+            "title": "Snack Machines"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "thingamajigs:red_soda_machine",
+            "recipe2": "thingamajigs:blue_soda_machine",
+            "title": "Soda Machines"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "thingamajigs:icecream_vending_machine",
+            "recipe2": "thingamajigs:pizza_vending_machine",
+            "title": "Other Machines"
+        }
+    ]
+}

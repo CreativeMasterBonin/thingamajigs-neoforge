@@ -1665,6 +1665,7 @@
   "block.thingamajigs.openable_container.accessible": "Storage can now be accessed",
   "blockEntities.openable_container.name": "Storage",
   "block.thingamajigs.animated_deer.desc": "Use Axes to change mode or use the Deer Head to toggle antlers",
+  "block.thingamajigs.animated_deer.secondary_desc": "Use gems to set an ideal angle for the head and milk buckets to reset it",
   "thingamajigs.subtitle.plastic_shuffling": "Plastic shuffles",
   "block.thingamajigs.ball_pit.desc": "Run through perfectly healthy plastic spheres!",
   "block.thingamajigs.umbrella.desc": "Customizable with commands; faces player when placed normally, and can be dyed",
@@ -1719,5 +1720,7 @@
   "thingamajigs.subtitle.rattle_hit": "Instrument rattles",
 
   "block.thingamajigs.fake_fluid_pump": "Fake Fluid Pump",
-  "thingamajigs.configuration.General.button": "General"
+  "thingamajigs.configuration.General.button": "General",
+  "entry.thingamajigs.old_phone_network_components": "The Phone C.O.",
+  "entry.thingamajigs.vending_machines": "Vending Machines"
 }

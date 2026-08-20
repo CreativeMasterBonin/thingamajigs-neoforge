@@ -1,6 +1,7 @@
 {
 	"format_version": "1.9.0",
 	"credit": "CreativeMasterBonin",
+	"render_type": "cutout",
 	"textures": {
 		"0": "thingamajigs:block/extra_metal",
 		"1": "block/blue_wool",

@@ -36,6 +36,7 @@ import net.neoforged.neoforge.common.Tags;
 import net.rk.thingamajigs.block.TBlocks;
 import net.rk.thingamajigs.blockentity.TBlockEntity;
 import net.rk.thingamajigs.blockentity.custom.AnimatedDeerBE;
+import net.rk.thingamajigs.xtras.TCalcStuff;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -88,6 +89,8 @@ public class AnimatedDeer extends BaseEntityBlock implements SimpleWaterloggedBl
     @Override
     public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         tooltipComponents.add(Component.translatable("block.thingamajigs.animated_deer.desc")
+                .withStyle(ChatFormatting.GRAY));
+        tooltipComponents.add(Component.translatable("block.thingamajigs.animated_deer.secondary_desc")
                 .withStyle(ChatFormatting.GRAY));
     }
 
@@ -153,8 +156,22 @@ public class AnimatedDeer extends BaseEntityBlock implements SimpleWaterloggedBl
     }
 
     @Override
-    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         if(level.isClientSide()){
+            ItemStack stack = player.getItemInHand(player.getUsedItemHand());
+            if(stack.is(TBlocks.REINDEER_WALL_HEAD.asItem()) || stack.is(Tags.Items.RODS_WOODEN) || stack.is(ItemTags.AXES) || stack.is(Tags.Items.GEMS) || stack.is(Tags.Items.BUCKETS_MILK)){
+                player.playSound(SoundEvents.CALCITE_HIT,0.75f, TCalcStuff.nextFloatBetweenInclusive(0.97f,1.1f));
+            }
+            else if(stack.isEmpty()){
+                if(state.hasProperty(ENABLED)){
+                    if(state.getValue(ENABLED)){
+                        player.playSound(SoundEvents.CHERRY_WOOD_BUTTON_CLICK_OFF,0.75f,1.0f);
+                    }
+                    else{
+                        player.playSound(SoundEvents.CHERRY_WOOD_BUTTON_CLICK_ON,0.75f,1.0f);
+                    }
+                }
+            }
             return InteractionResult.SUCCESS;
         }
         else{
@@ -193,13 +210,34 @@ public class AnimatedDeer extends BaseEntityBlock implements SimpleWaterloggedBl
                     return InteractionResult.SUCCESS;
                 }
             }
+            else if(player.getItemInHand(player.getUsedItemHand()).is(Tags.Items.GEMS)){
+                if(be instanceof AnimatedDeerBE deer){
+                    // set ideal angle with gem item
+                    if(deer.alternateMovement){
+                        deer.offsetAngle = 3.05f;
+                    }
+                    else{
+                        deer.offsetAngle = 22.2f;
+                    }
+                    deer.updateBlock();
+                    return InteractionResult.SUCCESS;
+                }
+            }
+            else if(player.getItemInHand(player.getUsedItemHand()).is(Tags.Items.BUCKETS_MILK)){
+                if(be instanceof AnimatedDeerBE deer){
+                    // reset angle to default with milk
+                    deer.offsetAngle = 0.0f;
+                    deer.updateBlock();
+                    return InteractionResult.SUCCESS;
+                }
+            }
         }
         return InteractionResult.SUCCESS_NO_ITEM_USED;
     }
 
-    @Override
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType) {
+
+    /*public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType) {
         return createTickerHelper(blockEntityType, TBlockEntity.ANIMATED_DEER_BE.get(),
                 level.isClientSide() ? AnimatedDeerBE::clientTick : AnimatedDeerBE::serverTick);
-    }
+    }*/
 }

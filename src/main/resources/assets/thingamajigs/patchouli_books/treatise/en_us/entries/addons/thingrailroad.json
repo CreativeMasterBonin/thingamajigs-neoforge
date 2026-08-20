@@ -13,6 +13,10 @@
         },
         {
             "type": "patchouli:text",
+            "text": "Railroadways contains a lot of underused or forgotten railroading equipment types, so try them all. Not just that, but version 1.0.2+ adds linkable components and the controller to link them to, allowing wireless functionality."
+        },
+        {
+            "type": "patchouli:text",
             "text": "Can be downloaded from the usual websites that Thingamajigs is from."
         }
     ]

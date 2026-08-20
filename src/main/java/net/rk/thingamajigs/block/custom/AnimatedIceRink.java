@@ -68,6 +68,16 @@ public class AnimatedIceRink extends BaseEntityBlock implements SimpleWaterlogge
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         if(level.isClientSide()){
+            if(player.getItemInHand(player.getUsedItemHand()).isEmpty()){
+                if(state.hasProperty(TOGGLED)){
+                    if(state.getValue(TOGGLED)){
+                        player.playSound(SoundEvents.CHERRY_WOOD_BUTTON_CLICK_OFF,0.5f,1.0f);
+                    }
+                    else{
+                        player.playSound(SoundEvents.CHERRY_WOOD_BUTTON_CLICK_ON,0.5f,1.0f);
+                    }
+                }
+            }
             return InteractionResult.SUCCESS;
         }
         else{
@@ -102,10 +112,8 @@ public class AnimatedIceRink extends BaseEntityBlock implements SimpleWaterlogge
         return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite())
                 .setValue(WATERLOGGED, fluidstate.getType() == Fluids.WATER).setValue(TOGGLED,false);
     }
-
-    @Override
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level lvl, BlockState bs, BlockEntityType<T> bet) {
+    /*public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level lvl, BlockState bs, BlockEntityType<T> bet) {
         return createTickerHelper(bet, TBlockEntity.ANIMATED_ICE_RINK.get(),
                 lvl.isClientSide() ? AnimatedIceRinkBE::clientTick : AnimatedIceRinkBE::serverTick);
-    }
+    }*/
 }

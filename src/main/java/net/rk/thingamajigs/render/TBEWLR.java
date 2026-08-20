@@ -2,6 +2,7 @@ package net.rk.thingamajigs.render;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
+import net.minecraft.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.client.model.geom.ModelLayerLocation;
@@ -110,14 +111,14 @@ public class TBEWLR extends BlockEntityWithoutLevelRenderer {
             poseStack.scale(1f,1f,1f);
             poseStack.translate(0.5,-1.35,0.5);
             VertexConsumer vc = mbs.getBuffer(RenderType.entityCutout(ICE_RINK_LOC.getModel()));
-            this.iceRinkModel.noAnim();
+            this.iceRinkModel.setupAnim(null, Util.getMillis() / 6932.0f,Util.getMillis() / 3172.0f);
             this.iceRinkModel.main.render(poseStack,vc,i,i1);
             poseStack.popPose();
         }
         else if(itemStack.is(TItems.ANIMATED_DEER.get())){
             poseStack.pushPose();
             VertexConsumer vc = mbs.getBuffer(RenderType.entityCutout(ANIMATED_DEER_LOC.getModel()));
-            this.animatedDeerModel.setupAnim(animatedDeerBE);
+            this.animatedDeerModel.setupAnim(animatedDeerBE,0.0f);
             this.animatedDeerModel.main.render(poseStack,vc,
                     i,i1);
             poseStack.popPose();

@@ -11,6 +11,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 import net.rk.thingamajigs.blockentity.custom.AnimatedDeerBE;
 
+@SuppressWarnings("unused")
 public class AnimatedDeerModel extends Model {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
             ResourceLocation.parse("thingamajigs:textures/entity/animated_deer.png"), "main");
@@ -75,8 +76,8 @@ public class AnimatedDeerModel extends Model {
         return LayerDefinition.create(meshdefinition, 64, 64);
     }
 
-    public void setupAnim(AnimatedDeerBE blockEntity){
-        this.main.xRot = 0.0f;
+    public void setupAnim(AnimatedDeerBE blockEntity,float angle){
+        /*this.main.xRot = 0.0f;
 
         this.neck.xRot = blockEntity.headAngle;
         this.head.xRot = 0.231f;
@@ -84,7 +85,8 @@ public class AnimatedDeerModel extends Model {
         this.motor.zRot = 0.0f;
 
         this.gear.xRot = blockEntity.gearAngle;
-        this.rod.xRot = blockEntity.headAngle / 4.3571f * -1.0f;
+        this.rod.xRot = blockEntity.headAngle / 4.3571f * -1.0f;*/
+        this.neck.xRot = angle;
     }
 
     public void setupAnimAlt(AnimatedDeerBE blockEntity){

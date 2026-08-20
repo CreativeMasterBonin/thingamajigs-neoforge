@@ -21,6 +21,12 @@ public class AnimatedDeerBE extends BlockEntity{
     public float gearAngle = 0.0f;
     public boolean showAntlers = false;
     public boolean alternateMovement = false;
+    public float offsetAngle = 0.0f;
+    public float partialTickDivider = 1935.0f;
+
+    public float getPartialTickDivider(){
+        return partialTickDivider;
+    }
 
     public AnimatedDeerBE(BlockPos pos, BlockState blockState) {
         super(TBlockEntity.ANIMATED_DEER_BE.get(), pos, blockState);
@@ -56,9 +62,10 @@ public class AnimatedDeerBE extends BlockEntity{
     protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         tag.putFloat("y_angle",yAngle);
         tag.putBoolean("custom",custom);
-        tag.putFloat("head_angle",headAngle);
         tag.putBoolean("show_antlers",showAntlers);
         tag.putBoolean("alternate_movement",alternateMovement);
+        tag.putFloat("offset_angle",offsetAngle);
+        tag.putFloat("partial_tick_divider",Mth.clamp(partialTickDivider,1.0f,Float.MAX_VALUE));
     }
 
     @Override
@@ -67,12 +74,15 @@ public class AnimatedDeerBE extends BlockEntity{
             yAngle = tag.getFloat("y_angle");
         if(tag.contains("custom"))
             custom = tag.getBoolean("custom");
-        if(tag.contains("head_angle"))
-            headAngle = tag.getFloat("head_angle");
         if(tag.contains("show_antlers"))
             showAntlers = tag.getBoolean("show_antlers");
         if(tag.contains("alternate_movement"))
             alternateMovement = tag.getBoolean("alternate_movement");
+        if(tag.contains("offset_angle"))
+            offsetAngle = tag.getFloat("offset_angle");
+        if(tag.contains("partial_tick_divider")){
+            partialTickDivider = Mth.clamp(tag.getFloat("partial_tick_divider"),1.0f,Float.MAX_VALUE);
+        }
     }
 
     public static void serverTick(Level slvl, BlockPos sbp, BlockState sbs, AnimatedDeerBE sbe){
