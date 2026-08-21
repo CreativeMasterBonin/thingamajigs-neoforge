@@ -1,15 +1,17 @@
 {
+	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
-    "ambientocclusion": false,
-    "render_type": "cutout",
+	"ambientocclusion": false,
+	"render_type": "cutout",
 	"textures": {
-		"0": "minecraft:block/candle",
-		"1": "minecraft:block/black_terracotta",
+		"0": "thingamajigs:block/parts/lamp_shade_off",
+		"1": "block/black_terracotta",
 		"2": "thingamajigs:block/torches/clear_bulb",
-		"particle": "#1"
+		"particle": "block/black_terracotta"
 	},
 	"elements": [
 		{
+			"name": "base",
 			"from": [5, 0, 5],
 			"to": [11, 1, 11],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0.5, 8]},
@@ -19,10 +21,11 @@
 				"south": {"uv": [0, 0, 6, 1], "texture": "#1"},
 				"west": {"uv": [0, 0, 6, 1], "texture": "#1"},
 				"up": {"uv": [0, 0, 6, 6], "texture": "#1"},
-				"down": {"uv": [0, 0, 6, 6], "texture": "#1"}
+				"down": {"uv": [0, 0, 6, 6], "texture": "#1", "cullface": "down"}
 			}
 		},
 		{
+			"name": "pole",
 			"from": [7.5, 1, 7.5],
 			"to": [8.5, 27, 8.5],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 14, 8]},
@@ -35,58 +38,65 @@
 			}
 		},
 		{
+			"name": "lampshade",
 			"from": [3.5, 27, 3.5],
 			"to": [12.5, 32, 12.5],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 29.5, 8]},
 			"faces": {
-				"north": {"uv": [0, 8, 2, 13], "texture": "#0"},
-				"east": {"uv": [0, 8, 2, 13], "texture": "#0"},
-				"south": {"uv": [0, 8, 2, 13], "texture": "#0"},
-				"west": {"uv": [0, 8, 2, 13], "texture": "#0"},
-				"down": {"uv": [0, 14, 2, 16], "texture": "#0"}
+				"north": {"uv": [0, 3, 9, 8], "texture": "#0"},
+				"east": {"uv": [9, 3, 0, 8], "texture": "#0"},
+				"south": {"uv": [0, 3, 9, 8], "texture": "#0"},
+				"west": {"uv": [9, 3, 0, 8], "texture": "#0"},
+				"down": {"uv": [0, 13, 3, 16], "texture": "#0"}
 			}
 		},
 		{
+			"name": "northw",
 			"from": [3.5, 27, 3.5],
 			"to": [12.5, 32, 3.5],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 29.5, 8]},
 			"faces": {
-				"south": {"uv": [0, 8, 2, 13], "texture": "#0"}
+				"south": {"uv": [9, 9, 0, 14], "texture": "#0"}
 			}
 		},
 		{
+			"name": "westw",
 			"from": [3.5, 27, 3.5],
 			"to": [3.5, 32, 12.5],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 29.5, 8]},
 			"faces": {
-				"east": {"uv": [0, 8, 2, 13], "texture": "#0"}
+				"east": {"uv": [0, 9, 9, 14], "texture": "#0"}
 			}
 		},
 		{
+			"name": "southw",
 			"from": [3.5, 27, 12.5],
 			"to": [12.5, 32, 12.5],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 29.5, 8]},
 			"faces": {
-				"north": {"uv": [0, 8, 2, 13], "texture": "#0"}
+				"north": {"uv": [9, 9, 0, 14], "texture": "#0"}
 			}
 		},
 		{
+			"name": "eastw",
 			"from": [12.5, 27, 3.5],
 			"to": [12.5, 32, 12.5],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 29.5, 8]},
 			"faces": {
-				"west": {"uv": [0, 8, 2, 13], "texture": "#0"}
+				"west": {"uv": [0, 9, 9, 14], "texture": "#0"}
 			}
 		},
 		{
+			"name": "topbot",
 			"from": [3.5, 27, 3.5],
 			"to": [12.5, 27, 12.5],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 27, 8]},
 			"faces": {
-				"up": {"uv": [0, 6, 2, 8], "texture": "#0"}
+				"up": {"uv": [0, 13, 3, 16], "texture": "#0"}
 			}
 		},
 		{
+			"name": "bulb2",
 			"from": [6, 27, 8],
 			"to": [10, 31, 8],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 29, 8]},
@@ -96,6 +106,7 @@
 			}
 		},
 		{
+			"name": "bulb",
 			"from": [8, 27, 6],
 			"to": [8, 31, 10],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 29, 8]},

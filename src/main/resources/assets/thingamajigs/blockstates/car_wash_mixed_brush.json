@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "thingamajigs:custom/car_wash_mixed_brush"
+      "model": "thingamajigs:block/car_wash_brush_mixed"
     }
   }
 }

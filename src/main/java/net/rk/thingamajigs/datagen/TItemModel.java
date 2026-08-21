@@ -119,6 +119,11 @@ public class TItemModel extends ItemModelProvider {
         fromModelMod(TBlocks.ELECTRIC_HOSPITAL_BED.get(),"block/electric_hospital_bed");
         fromModelMod(TBlocks.PHONE_STEP_SELECTORS_GROUP.get(),"block/phone_step_selectors_group");
         fromModelMod(TBlocks.MINIGOLF_FLAG.get(),"block/minigolf_flags/red_minigolf_flag");
+        fromModelMod(TBlocks.CAR_WASH_BLUE_BRUSH.get(),"block/car_wash_brush_blue");
+        fromModelMod(TBlocks.CAR_WASH_RED_BRUSH.get(),"block/car_wash_brush_red");
+        fromModelMod(TBlocks.CAR_WASH_YELLOW_BRUSH.get(),"block/car_wash_brush_yellow");
+        fromModelMod(TBlocks.CAR_WASH_MITTER_CURTAIN.get(),"block/car_wash_mitter_curtain");
+        fromModelMod(TBlocks.CAR_WASH_MIXED_BRUSH.get(),"block/car_wash_brush_mixed");
     }
 
     private ItemModelBuilder fromModelModItem(Item item, String source){

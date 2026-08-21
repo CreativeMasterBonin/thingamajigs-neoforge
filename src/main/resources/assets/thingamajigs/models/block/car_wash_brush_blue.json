@@ -5,7 +5,7 @@
 	"render_type": "cutout",
 	"textures": {
 		"0": "thingamajigs:block/extra_metal",
-		"1": "block/red_wool",
+		"1": "block/blue_wool",
 		"particle": "thingamajigs:block/extra_metal"
 	},
 	"elements": [
