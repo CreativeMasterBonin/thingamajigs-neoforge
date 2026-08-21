@@ -1,14 +1,18 @@
 package net.rk.thingamajigs.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.Level;
@@ -28,6 +32,8 @@ import net.rk.thingamajigs.blockentity.custom.CurvedMonitorBE;
 import net.rk.thingamajigs.xtras.TCalcStuff;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
+
 public class CurvedMonitor extends BaseEntityBlock implements SimpleWaterloggedBlock{
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
@@ -38,6 +44,12 @@ public class CurvedMonitor extends BaseEntityBlock implements SimpleWaterloggedB
                 .noOcclusion());
         this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH)
                 .setValue(WATERLOGGED, false));
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        tooltipComponents.add(Component.translatable("block.thingamajigs.curved_monitor.desc")
+                .withStyle(ChatFormatting.GRAY));
     }
 
     @Override

@@ -1597,7 +1597,8 @@
   "block.thingamajigs.electric_hospital_bed": "Electric Hospital Bed",
   "block.thingamajigs.phone_step_selectors_group": "Phone Step-Selectors Group",
 
-
+  "block.thingamajigs.thermometer.desc": "Changes to hot or cold depending on biome temperature",
+  "block.thingamajigs.curved_monitor.desc": "Right-click with shears or wrenches to toggle keyboard visibility",
   "block.thingamajigs.weight_scale.desc": "Shift-right-click to show total inventory weight",
   "block.thingamajigs.round_clothes_rack.desc": "Shift-right-click to show/hide clothing",
   "item.thingamajigs.debit_card.desc.activated": "Use this on an ATM with money in the offhand, adding funds, allowing exchanges with certain blocks",
