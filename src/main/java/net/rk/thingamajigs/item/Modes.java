@@ -7,9 +7,10 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
+import net.rk.thingamajigs.blockentity.custom.CustomizableCopyingDecoBE;
 
 public class Modes {
-    /*public static final Mode ROTATE_X = new Mode("rotate_x") {
+    public static final Mode ROTATE_X = new Mode("rotate_x") {
         @Override
         public void performModeTask(ItemStack stack, Level level, BlockPos pos, Player player) {
             CustomizableCopyingDecoBE customDeco = (CustomizableCopyingDecoBE) level.getBlockEntity(pos);
@@ -224,5 +225,5 @@ public class Modes {
                         .withStyle(ChatFormatting.WHITE),true);
             }
         }
-    };*/
+    };
 }

@@ -4142,6 +4142,15 @@ public class TBlocks {
             });
 
     // 1.9.0
+    public static final DeferredBlock<Block> OLD_LEGENDARY_COMPUTER = register("old_legendary_computer",
+            () -> new UsableComputer(BlockBehaviour.Properties.of().strength(1f,10f)
+                    .sound(SoundType.LANTERN).mapColor(MapColor.TERRACOTTA_WHITE)));
+    public static final DeferredBlock<Block> CUSTOMIZABLE_COPYING_DECO = register("customizable_copying_deco",
+            () -> new CustomizableCopyingDeco(BlockBehaviour.Properties.of().strength(0.75f)
+                    .sound(SoundType.STONE).mapColor(MapColor.STONE)));
+    public static final DeferredBlock<Block> FALL_WREATH = register("fall_wreath",
+            () -> new Wreath(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_LEAVES).sound(SoundType.SWEET_BERRY_BUSH).noCollission()));
+
 
 
     // test features

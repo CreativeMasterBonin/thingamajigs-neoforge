@@ -128,6 +128,11 @@ public class TBlockEntity {
                     TBlocks.TUBE_MAN_DECO.get()
             ).build(null));
 
+    public static final Supplier<BlockEntityType<CustomizableCopyingDecoBE>> CUSTOMIZABLE_COPYING_DECO_BE = BLOCK_ENTITIES.register(
+            "customizable_copying_deco_be",() -> BlockEntityType.Builder.of(CustomizableCopyingDecoBE::new,
+                    TBlocks.CUSTOMIZABLE_COPYING_DECO.get()
+            ).build(null));
+
 
     public static void register(IEventBus eventBus){
         BLOCK_ENTITIES.register(eventBus);
