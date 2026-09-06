@@ -180,6 +180,30 @@ public class GeneralUseShapes {
                 Block.box(3, 8, 7, 5, 10, 9),
                 Block.box(5, 7, 6, 13, 17, 10)
         ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+        public static final VoxelShape NORTH_BOX = Stream.of(
+                Block.box(6, 13, 3, 10, 17, 13),
+                Block.box(7, 14, 0, 9, 16, 3),
+                Block.box(5, 6, 15, 11, 12, 16),
+                Block.box(7, 9.5, 10.37868, 9, 13.5, 15.37868)
+        ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+        public static final VoxelShape EAST_BOX = Stream.of(
+                Block.box(3, 13, 6, 13, 17, 10),
+                Block.box(13, 14, 7, 16, 16, 9),
+                Block.box(0, 6, 5, 1, 12, 11),
+                Block.box(0.6213200000000008, 9.5, 7, 5.621320000000001, 13.5, 9)
+        ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+        public static final VoxelShape SOUTH_BOX = Stream.of(
+                Block.box(6, 13, 3, 10, 17, 13),
+                Block.box(7, 14, 13, 9, 16, 16),
+                Block.box(5, 6, 0, 11, 12, 1),
+                Block.box(7, 9.5, 0.6213200000000008, 9, 13.5, 5.621320000000001)
+        ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+        public static final VoxelShape WEST_BOX = Stream.of(
+                Block.box(3, 13, 6, 13, 17, 10),
+                Block.box(0, 14, 7, 3, 16, 9),
+                Block.box(15, 6, 5, 16, 12, 11),
+                Block.box(10.37868, 9.5, 7, 15.37868, 13.5, 9)
+        ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
     }
 
     public static final VoxelShape PEDESTRIAN_FLASHER_LIGHTS_NORTH = Shapes.join(
@@ -195,4 +219,5 @@ public class GeneralUseShapes {
             Block.box(7, 0, 7, 9, 16, 9),BooleanOp.OR);
 
     public static final VoxelShape OLD_FAX_MACHINE_ALL = Block.box(0,0,0,16,6,16);
+
 }

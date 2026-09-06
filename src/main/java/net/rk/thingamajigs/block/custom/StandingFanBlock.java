@@ -2,6 +2,7 @@ package net.rk.thingamajigs.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -74,6 +75,11 @@ public class StandingFanBlock extends ToggledStateBlock{
             Block.box(2, 29, 3, 4, 30, 13),
             Block.box(2, 31, 4, 4, 32, 12)
     ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+    @Override
+    public boolean collisionExtendsVertically(BlockState state, BlockGetter level, BlockPos pos, Entity collidingEntity) {
+        return true;
+    }
 
     public StandingFanBlock(Properties p) {
         super(p);

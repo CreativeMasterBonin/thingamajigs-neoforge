@@ -125,5 +125,12 @@ public class TItemTag extends ItemTagsProvider{
                 .add(TBlocks.ARCADE_MACHINE_OPENABLE.get().asItem())
                 .replace(false)
         ;
+
+        this.tag(TTag.GRASSES_FOR_CRAFTING)
+                .add(Items.SHORT_GRASS.asItem())
+                .add(Items.TALL_GRASS.asItem())
+                .add(Items.SEAGRASS.asItem())
+                .replace(false)
+        ;
     }
 }

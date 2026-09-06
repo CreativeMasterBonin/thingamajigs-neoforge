@@ -26,6 +26,11 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.rk.thingamajigs.block.TBlocks;
+import net.rk.thingamajigs.xtras.GeneralUseShapes;
 
 import java.util.List;
 
@@ -103,5 +108,28 @@ public class SecurityCameraMultidirectional extends Block{
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+    }
+
+    @Override
+    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext ctx) {
+        if(state.is(TBlocks.SECURE_SECURITY_CAMERA.get())){
+            switch (state.getValue(FACING)){
+                case NORTH->{return GeneralUseShapes.CameraShapes.NORTH_SECURE;}
+                case SOUTH->{return GeneralUseShapes.CameraShapes.SOUTH_SECURE;}
+                case EAST->{return GeneralUseShapes.CameraShapes.EAST_SECURE;}
+                case WEST->{return GeneralUseShapes.CameraShapes.WEST_SECURE;}
+                default -> {return Shapes.block();}
+            }
+        }
+        else if(state.is(TBlocks.FILM_SECURITY_CAMERA.get())){
+            switch (state.getValue(FACING)){
+                case NORTH->{return GeneralUseShapes.CameraShapes.NORTH_FILM;}
+                case SOUTH->{return GeneralUseShapes.CameraShapes.SOUTH_FILM;}
+                case EAST->{return GeneralUseShapes.CameraShapes.EAST_FILM;}
+                case WEST->{return GeneralUseShapes.CameraShapes.WEST_FILM;}
+                default -> {return Shapes.block();}
+            }
+        }
+        return Shapes.block();
     }
 }

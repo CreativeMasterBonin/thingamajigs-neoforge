@@ -24,10 +24,10 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import java.util.stream.Stream;
 
 @SuppressWarnings("deprecated")
-public class Wreath extends Block implements SimpleWaterloggedBlock{
-    public static final MapCodec<Wreath> CHRISTMAS_WREATH_MAP_CODEC = Block.simpleCodec(Wreath::new);
+public class WreathBlock extends Block implements SimpleWaterloggedBlock{
+    public static final MapCodec<WreathBlock> CHRISTMAS_WREATH_MAP_CODEC = Block.simpleCodec(WreathBlock::new);
     @Override
-    public MapCodec<Wreath> codec() {return CHRISTMAS_WREATH_MAP_CODEC;}
+    public MapCodec<WreathBlock> codec() {return CHRISTMAS_WREATH_MAP_CODEC;}
 
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
@@ -72,7 +72,7 @@ public class Wreath extends Block implements SimpleWaterloggedBlock{
             Block.box(14, 4, 1, 16, 12, 3)
     ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
-    public Wreath(Properties p) {
+    public WreathBlock(Properties p) {
         super(p.noOcclusion().strength(1F));
         this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, Boolean.FALSE));
     }

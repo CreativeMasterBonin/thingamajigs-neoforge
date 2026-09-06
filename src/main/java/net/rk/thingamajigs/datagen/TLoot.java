@@ -1267,23 +1267,23 @@ public class TLoot extends VanillaBlockLoot {
         // rubber leaves
         this.add(TBlocks.RUBBER_LEAVES.get(),
                 thing -> this.createRubberLeavesDrops(thing,TBlocks.RUBBER_SAPLING.get(),NORMAL_LEAVES_SAPLING_CHANCES));
-
         this.dropSelf(TBlocks.DROOPY_FLOWER.get());
-
         this.dropPottedContents(TBlocks.POTTED_BULBY_FLOWER.get());
         this.dropPottedContents(TBlocks.POTTED_DROOPY_FLOWER.get());
-
-
         // 1.8.6
         this.dropSelf(TBlocks.GRAB_BAR.get());
         this.dropSelf(TBlocks.URINAL.get());
         this.dropSelf(TBlocks.TUBE_MAN_DECO.get());
         this.dropSelf(TBlocks.PIZZA_VENDING_MACHINE.get());
         this.dropSelf(TBlocks.ICECREAM_VENDING_MACHINE.get());
-
         // 1.8.9
         this.dropSelf(TBlocks.ELECTRIC_HOSPITAL_BED.get());
         this.dropSelf(TBlocks.PHONE_STEP_SELECTORS_GROUP.get());
+
+        // 1.9.0
+        this.dropSelf(TBlocks.OLD_LEGENDARY_COMPUTER.get());
+        this.dropSelf(TBlocks.CUSTOMIZABLE_COPYING_DECO.get());
+        this.dropSelf(TBlocks.FALL_WREATH.get());
     }
 
     // from loot tables

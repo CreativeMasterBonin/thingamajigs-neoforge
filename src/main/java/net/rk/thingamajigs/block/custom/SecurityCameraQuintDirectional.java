@@ -26,6 +26,11 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.rk.thingamajigs.block.TBlocks;
+import net.rk.thingamajigs.xtras.GeneralUseShapes;
 
 import java.util.List;
 
@@ -103,5 +108,19 @@ public class SecurityCameraQuintDirectional extends Block{
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+    }
+
+    @Override
+    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext ctx) {
+        if(state.is(TBlocks.BOX_SECURITY_CAMERA.get())){
+            switch (state.getValue(FACING)){
+                case NORTH->{return GeneralUseShapes.CameraShapes.NORTH_BOX;}
+                case SOUTH->{return GeneralUseShapes.CameraShapes.SOUTH_BOX;}
+                case EAST->{return GeneralUseShapes.CameraShapes.EAST_BOX;}
+                case WEST->{return GeneralUseShapes.CameraShapes.WEST_BOX;}
+                default -> {return Shapes.block();}
+            }
+        }
+        return Shapes.block();
     }
 }

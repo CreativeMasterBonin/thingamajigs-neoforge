@@ -20,8 +20,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.ticks.TickPriority;
+import net.rk.thingamajigs.xtras.GeneralUseShapes;
 import net.rk.thingamajigs.xtras.TSoundEvent;
 
 import java.util.List;
@@ -44,15 +46,15 @@ public class BeepingFireAlarm extends RedstoneLampBlock{
         Direction direction = pState.getValue(FACING);
         switch(direction){
             case NORTH:
-                return NORTH_SHAPE;
+                return GeneralUseShapes.BEEPING_FIRE_ALARM_NORTH_SHAPE;
             case SOUTH:
-                return SOUTH_SHAPE;
+                return GeneralUseShapes.BEEPING_FIRE_ALARM_SOUTH_SHAPE;
             case EAST:
-                return EAST_SHAPE;
+                return GeneralUseShapes.BEEPING_FIRE_ALARM_EAST_SHAPE;
             case WEST:
-                return WEST_SHAPE;
+                return GeneralUseShapes.BEEPING_FIRE_ALARM_WEST_SHAPE;
             default:
-                return NORTH_SHAPE;
+                return Shapes.block();
         }
     }
 

@@ -16,8 +16,11 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
+import net.rk.thingamajigs.xtras.GeneralUseShapes;
 import net.rk.thingamajigs.xtras.TColors;
 import org.joml.Vector3f;
 
@@ -28,6 +31,11 @@ public class CarWashMultiFoamSprayer extends RedstoneLampBlock{
     public CarWashMultiFoamSprayer(Properties p) {
         super(p.strength(1F,20F).sound(SoundType.METAL).noOcclusion().noCollission());
         this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH).setValue(LIT, false));
+    }
+
+    @Override
+    protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+        return GeneralUseShapes.CAR_WASH_COMPONENT_BOX_ALL;
     }
 
     @OnlyIn(Dist.CLIENT)

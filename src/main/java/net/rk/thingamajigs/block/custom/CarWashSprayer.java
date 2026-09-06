@@ -13,6 +13,9 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.rk.thingamajigs.xtras.GeneralUseShapes;
 import net.rk.thingamajigs.xtras.TCalcStuff;
 import net.rk.thingamajigs.xtras.TParticles;
 
@@ -24,6 +27,11 @@ public class CarWashSprayer extends RedstoneLampBlock{
     public CarWashSprayer(Properties p) {
         super(p.strength(1F,20F).sound(SoundType.METAL).noOcclusion().noCollission().randomTicks());
         this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH).setValue(LIT, false));
+    }
+
+    @Override
+    protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+        return GeneralUseShapes.CAR_WASH_COMPONENT_BOX_ALL;
     }
 
     public static final List<SoundEvent> waterSounds = List.of(

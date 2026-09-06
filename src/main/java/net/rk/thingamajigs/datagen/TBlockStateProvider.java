@@ -55,14 +55,25 @@ public class TBlockStateProvider extends BlockStateProvider{
         rotatedThingamajigsDecoration(TBlocks.PHONE_GROUP_SELECTOR.get(),"thingamajigs:block/phone_group_selector");
         rotatedThingamajigsDecoration(TBlocks.PHONE_AXIS_SWITCH.get(),"thingamajigs:block/phone_axis_switch");
         rotatedThingamajigsDecoration(TBlocks.PHONE_AXIS_SWITCH_RELAY.get(),"thingamajigs:block/phone_axis_switch_relay");
+        // 1.9.0
+        rotatedThingamajigsDecoration(TBlocks.CHRISTMAS_WREATH.get(),"thingamajigs:block/christmas_wreath");
+        rotatedThingamajigsDecoration(TBlocks.OLD_LEGENDARY_COMPUTER.get(),"thingamajigs:block/old_legendary_computer");
+        thingamajigsDecoration(TBlocks.CUSTOMIZABLE_COPYING_DECO.get(),"thingamajigs:block/customizable_copying_deco");
+        rotatedThingamajigsDecoration(TBlocks.FALL_WREATH.get(),"thingamajigs:block/fall_wreath");
+    }
 
-        /*
-        rotatedThingamajigsDecoration(TBlocks.STAINLESS_WASHER.get(),"thingamajigs:block/stainless_washer");
-        rotatedThingamajigsDecoration(TBlocks.WEIGHT_SCALE.get(),"thingamajigs:block/weight_scale");
-        rotatedThingamajigsDecoration(TBlocks.PHONE_GROUP_SELECTOR.get(),"thingamajigs:block/phone_group_selector");
-        rotatedThingamajigsDecoration(TBlocks.PHONE_AXIS_SWITCH.get(),"thingamajigs:block/phone_axis_switch");
-        rotatedThingamajigsDecoration(TBlocks.PHONE_AXIS_SWITCH_RELAY.get(),"thingamajigs:block/phone_axis_switch_relay");
-         */
+    public void thingamajigsDecoration(Block block,String modelLocation){
+        getVariantBuilder(block).forAllStates(state -> {
+            ModelFile file = new ModelFile(ResourceLocation.tryParse(modelLocation)) {
+                @Override
+                protected boolean exists() {
+                    return true;
+                }
+            };
+            return ConfiguredModel.builder().modelFile(file)
+                    .uvLock(false)
+                    .build();
+        });
     }
 
     public void rotatedThingamajigsDecoration(Block block, String modelLocation){

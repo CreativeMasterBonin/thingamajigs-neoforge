@@ -4908,6 +4908,53 @@ public class TRecipe extends RecipeProvider {
                 .requires(Items.REDSTONE)
                 .unlockedBy("has_thingy",has(TBlocks.PHONE_GROUP_SELECTOR.get().asItem()))
                 .save(rc);
+
+        // 1.9.0
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.OLD_LEGENDARY_COMPUTER.get().asItem(),1)
+                .requires(TBlocks.OLD_FLAT_COMPUTER.get().asItem())
+                .requires(TBlocks.BLUEYTOSH_STUDIO.get().asItem())
+                .requires(Items.CHISELED_BOOKSHELF)
+                .unlockedBy("has_thingy",has(TBlocks.OLD_FLAT_COMPUTER.get().asItem()))
+                .save(rc);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.CUSTOMIZABLE_COPYING_DECO.get().asItem(),1)
+                .requires(TBlocks.NOT_QUITE.get().asItem())
+                .requires(Items.SLIME_BALL)
+                .requires(Items.GLOW_ITEM_FRAME)
+                .unlockedBy("has_thingy",has(TBlocks.NOT_QUITE.get().asItem()))
+                .save(rc);
+        /*ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TItems.CUSTOMIZATION_TOOL.get().asItem(),1)
+                .requires(TItems.THINGAMAJIG.get().asItem())
+                .requires(TItems.THINGAMAJIG.get().asItem())
+                .requires(TItems.THINGAMAJIG.get().asItem())
+                .requires(ItemTags.PICKAXES)
+                .requires(Tags.Items.CONCRETES)
+                .unlockedBy("has_thingy",has(TItems.THINGAMAJIG.get().asItem()))
+                .save(rc);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TItems.RENDERING_TOOL.get().asItem(),1)
+                .requires(TItems.THINGAMAJIG.get().asItem())
+                .requires(TItems.THINGAMAJIG.get().asItem())
+                .requires(TItems.THINGAMAJIG.get().asItem())
+                .requires(Tags.Items.GLASS_PANES)
+                .requires(Tags.Items.GLASS_BLOCKS_TINTED)
+                .unlockedBy("has_thingy",has(TItems.THINGAMAJIG.get().asItem()))
+                .save(rc);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TItems.RANDOMIZE_AND_RESET_TOOL.get().asItem(),1)
+                .requires(TItems.THINGAMAJIG.get().asItem())
+                .requires(TItems.THINGAMAJIG.get().asItem())
+                .requires(TItems.THINGAMAJIG.get().asItem())
+                .requires(Tags.Items.DYES_GREEN)
+                .requires(Items.SHORT_GRASS)
+                .unlockedBy("has_thingy",has(TItems.THINGAMAJIG.get().asItem()))
+                .save(rc);*/
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.FALL_WREATH.get().asItem(),1)
+                .requires(ItemTags.LEAVES)
+                .requires(Tags.Items.DYES_RED)
+                .requires(Tags.Items.DYES_ORANGE)
+                .requires(Tags.Items.DYES_YELLOW)
+                .requires(TItems.THINGAMAJIG.get())
+                .unlockedBy("has_thingy",has(ItemTags.LEAVES))
+                .save(rc);
     }
 
     public static RecipeBuilder stonecutterAny(Item requiredItem, Ingredient inputItem, Item result, int amt){

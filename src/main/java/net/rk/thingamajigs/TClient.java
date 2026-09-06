@@ -376,6 +376,8 @@ public class TClient{
             event.accept(TItems.HEALTH_COMPONENT);
             event.accept(TItems.TOY_COMPONENT);
             event.accept(TItems.MUSIC_COMPONENT);
+            // customizable items and blocks
+            event.accept(TBlocks.CUSTOMIZABLE_COPYING_DECO.asItem());
             // items continued
             event.accept(TItems.KEY);
             // money system items
@@ -859,6 +861,7 @@ public class TClient{
             event.accept(TBlocks.RGB_PC_CONTROLS.get().asItem());
             event.accept(TBlocks.DVD_PLAYER.get().asItem());
             event.accept(TBlocks.VHS_PLAYER.get().asItem());
+            event.accept(TBlocks.OLD_LEGENDARY_COMPUTER.asItem());
             event.accept(TBlocks.CORNER_COMPUTER.get().asItem());
             event.accept(TBlocks.CORNER_COMPUTER_WM.get().asItem());
             event.accept(TBlocks.OLD_PC.get().asItem());
@@ -1196,6 +1199,8 @@ public class TClient{
             event.accept(TItems.ANIMATED_ICE_RINK.get().asItem());
             event.accept(TBlocks.SNOW_MACHINE.get().asItem());
             event.accept(TBlocks.BALL_PIT.get().asItem());
+            // Seasonal (Fall/Autumn)
+            event.accept(TBlocks.FALL_WREATH.asItem());
             // Seasonal (Christmas)
             event.accept(TBlocks.CHRISTMAS_FIREPLACE.get().asItem());
             event.accept(TBlocks.SLEIGH.get().asItem());

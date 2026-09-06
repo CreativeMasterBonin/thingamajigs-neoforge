@@ -1324,7 +1324,7 @@ public class TBlocks {
     public static final DeferredBlock<Block> CHRISTMAS_TREE = register("christmas_tree",
             () -> new ChristmasTree(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(1.25F,10F).sound(SoundType.AZALEA_LEAVES).noOcclusion().lightLevel(s -> 10)));
     public static final DeferredBlock<Block> CHRISTMAS_WREATH = register("christmas_wreath",
-            () -> new Wreath(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).sound(SoundType.AZALEA_LEAVES).noCollission()));
+            () -> new WreathBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).sound(SoundType.AZALEA_LEAVES).noCollission()));
     public static final DeferredBlock<Block> AMBER_STRING_LIGHTS = register("amber_string_lights",
             () -> new FlatWallPlaneBlock(BlockBehaviour.Properties.of().instabreak().sound(SoundType.LADDER).noCollission().lightLevel(s -> 3)
                     .hasPostProcess(TBlocks::always).emissiveRendering(TBlocks::always)));
@@ -4141,6 +4141,7 @@ public class TBlocks {
                 }
             });
 
+
     // 1.9.0
     public static final DeferredBlock<Block> OLD_LEGENDARY_COMPUTER = register("old_legendary_computer",
             () -> new UsableComputer(BlockBehaviour.Properties.of().strength(1f,10f)
@@ -4149,7 +4150,7 @@ public class TBlocks {
             () -> new CustomizableCopyingDeco(BlockBehaviour.Properties.of().strength(0.75f)
                     .sound(SoundType.STONE).mapColor(MapColor.STONE)));
     public static final DeferredBlock<Block> FALL_WREATH = register("fall_wreath",
-            () -> new Wreath(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_LEAVES).sound(SoundType.SWEET_BERRY_BUSH).noCollission()));
+            () -> new WreathBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_LEAVES).sound(SoundType.SWEET_BERRY_BUSH).noCollission()));
 
 
 

@@ -124,6 +124,12 @@ public class TItemModel extends ItemModelProvider {
         fromModelMod(TBlocks.CAR_WASH_YELLOW_BRUSH.get(),"block/car_wash_brush_yellow");
         fromModelMod(TBlocks.CAR_WASH_MITTER_CURTAIN.get(),"block/car_wash_mitter_curtain");
         fromModelMod(TBlocks.CAR_WASH_MIXED_BRUSH.get(),"block/car_wash_brush_mixed");
+
+        // 1.9.0
+        fromModelMod(TBlocks.CHRISTMAS_WREATH.get(),"block/christmas_wreath");
+        fromModelMod(TBlocks.OLD_LEGENDARY_COMPUTER.get(),"block/old_legendary_computer");
+        fromModelMod(TBlocks.CUSTOMIZABLE_COPYING_DECO.get(),"block/customizable_copying_deco");
+        fromModelMod(TBlocks.FALL_WREATH.get(),"block/fall_wreath");
     }
 
     private ItemModelBuilder fromModelModItem(Item item, String source){

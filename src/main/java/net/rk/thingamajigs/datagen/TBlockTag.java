@@ -1,6 +1,5 @@
 package net.rk.thingamajigs.datagen;
 
-import com.jcraft.jorbis.Block;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -195,6 +194,7 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.WHITE_SECTIONED_SHELF.get())
                 .add(TBlocks.WHITE_CUBE_SHELF.get())
                 .add(TBlocks.SAFE.get())
+                .add(TBlocks.CUSTOMIZABLE_COPYING_DECO.get())
         ;
 
         tag(BlockTags.FENCE_GATES)
@@ -284,6 +284,7 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.RUNICSTONE_BRICKS.get())
                 .add(TBlocks.EXPOSED_RUNICSTONE_BLOCK.get())
                 .add(TBlocks.BARREL_KEG.get())
+                .add(TBlocks.CUSTOMIZABLE_COPYING_DECO.get())
         ;
 
         tag(BlockTags.INFINIBURN_OVERWORLD)
@@ -534,6 +535,8 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.BULBLET.get())
                 .add(TBlocks.WISPY_WEED.get())
                 .add(TBlocks.TUBE_MAN_DECO.get())
+                .add(TBlocks.CHRISTMAS_WREATH.get())
+                .add(TBlocks.FALL_WREATH.get())
         ;
 
         tag(BlockTags.WALL_POST_OVERRIDE)
@@ -687,6 +690,8 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.ROUND_BUSH.get())
                 .add(TBlocks.BULBLET.get())
                 .add(TBlocks.WISPY_WEED.get())
+                .add(TBlocks.CHRISTMAS_WREATH.get())
+                .add(TBlocks.FALL_WREATH.get())
                 .replace(false)
         ;
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
@@ -707,6 +712,8 @@ public class TBlockTag extends BlockTagsProvider {
         ;
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(TBlocks.OLD_LEGENDARY_COMPUTER.get())
+                .add(TBlocks.CUSTOMIZABLE_COPYING_DECO.get())
                 .add(TBlocks.PHONE_STEP_SELECTORS_GROUP.get())
                 .add(TBlocks.ELECTRIC_HOSPITAL_BED.get())
                 .add(TBlocks.ICECREAM_VENDING_MACHINE.get())
@@ -1152,13 +1159,35 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.PURPLE_BOWLING_BALL.get())
                 .add(TBlocks.LIGHT_BLUE_BOWLING_BALL.get())
                 .add(TBlocks.MYSTERIOUS_PILLAR.get())
+                .add(TBlocks.FANCY_GAS_PUMP.get())
         ;
         tag(TTag.PHYSICS_HEAVY)
                 .add(TBlocks.LOVE_COUCH.get())
                 .add(TBlocks.LOVE_SEAT.get())
+                .add(TBlocks.VALIANT_STATUE.get())
+                .add(TBlocks.SORROW_STATUE.get())
+                .add(TBlocks.SPECIAL_STATUE.get())
+                .add(TBlocks.STRANGE_STATUE.get())
+                .add(TBlocks.BONDING_STATUE.get())
+                .add(TBlocks.CATCHING_STATUE.get())
+                .add(TBlocks.FURIOUS_STATUE.get())
+                .add(TBlocks.PARTICULAR_STATUE.get())
+                .add(TBlocks.DUCK_STATUE.get())
+                .add(TBlocks.DAUNTING_STATUE.get())
+                .add(TBlocks.EXPOSED_DAUNTING_STATUE.get())
+                .add(TBlocks.WEATHERED_DAUNTING_STATUE.get())
+                .add(TBlocks.OXIDIZED_DAUNTING_STATUE.get())
+                .add(TBlocks.WAXED_DAUNTING_STATUE.get())
+                .add(TBlocks.WAXED_EXPOSED_DAUNTING_STATUE.get())
+                .add(TBlocks.WAXED_WEATHERED_DAUNTING_STATUE.get())
+                .add(TBlocks.WAXED_OXIDIZED_DAUNTING_STATUE.get())
         ;
         tag(TTag.PHYSICS_LIGHT)
                 .add(TBlocks.MYSTERIOUS_ONE_COUCH.get())
+                .add(TBlocks.PIZZA.get())
+                .add(TBlocks.PIZZA_BOX.get())
+                .add(TBlocks.WINE_BOTTLE.get())
+                .add(TBlocks.RUBBER_DUCK.get())
         ;
         tag(TTag.PHYSICS_SUPER_LIGHT)
                 .add(TBlocks.NOT_QUITE.get())
@@ -1167,11 +1196,27 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.BASKETBALL.get())
                 .add(TBlocks.SOCCER_BALL.get())
                 .add(TBlocks.TUBE_MAN_DECO.get())
+                .add(TBlocks.CUSTOMIZABLE_COPYING_DECO.get())
+                .add(TBlocks.CHRISTMAS_WREATH.get())
+                .add(TBlocks.FALL_WREATH.get())
+                .add(TBlocks.CHRISTMAS_LIGHTS.get())
+                .add(TBlocks.CHRISTMAS_LIGHTS_ALT.get())
+                .add(TBlocks.SMALL_CHRISTMAS_TREE.get())
+                .add(TBlocks.REINDEER_PLUSHY.get())
+                .add(TBlocks.MRPUPPY.get())
+                .add(TBlocks.ZOMBIE_PLUSHIE.get())
+                .add(TBlocks.STEVE_PLUSHY.get())
+                .add(TBlocks.CREEPER_PLUSHY.get())
+                .add(TBlocks.SNOWMAN_PLUSHY.get())
+                .add(TBlocks.BLUEMAN_STATUE.get())
+                .add(TBlocks.SNOWMAN_BLUEMAN_STATUE.get())
         ;
         tag(TTag.PHYSICS_BOUNCY)
                 .add(TBlocks.TENNIS_BALL.get())
                 .add(TBlocks.BASKETBALL.get())
                 .add(TBlocks.SOCCER_BALL.get())
+                .add(TBlocks.CHEESE_BLOCK.get())
+                .add(TBlocks.GLOWING_CHEESE_BLOCK.get())
         ;
         tag(TTag.PHYSICS_C_HANDLES)
                 .add(TBlocks.GRAB_BAR.get())
