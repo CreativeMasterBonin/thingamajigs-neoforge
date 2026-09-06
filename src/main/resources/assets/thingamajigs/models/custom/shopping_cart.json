@@ -1,9 +1,10 @@
 {
+	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"ambientocclusion": false,
-    "render_type": "translucent",
+	"render_type": "translucent",
 	"textures": {
-		"0": "minecraft:block/black_concrete",
+		"0": "block/black_concrete",
 		"1": "thingamajigs:block/aios/shopping_cart",
 		"2": "thingamajigs:block/giant_grate",
 		"particle": "thingamajigs:block/aios/shopping_cart"
@@ -119,9 +120,9 @@
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 7.5, -3.5]},
 			"faces": {
 				"north": {"uv": [0, 0, 9.90625, 4.34375], "texture": "#2"},
-				"east": {"uv": [0, 0, 9.90625, 4.34375], "texture": "#2"},
+				"east": {"uv": [0, 0, 0.59375, 4.34375], "texture": "#2"},
 				"south": {"uv": [0, 0, 9.90625, 4.34375], "texture": "#2"},
-				"west": {"uv": [0, 0, 9.90625, 4.34375], "texture": "#2"}
+				"west": {"uv": [0, 0, 0.59375, 4.34375], "texture": "#2"}
 			}
 		},
 		{
@@ -130,9 +131,9 @@
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 7.5, 19.5]},
 			"faces": {
 				"north": {"uv": [0, 0, 9.90625, 4.34375], "texture": "#2"},
-				"east": {"uv": [0, 0, 9.90625, 4.34375], "texture": "#2"},
+				"east": {"uv": [0, 0, 0.59375, 4.34375], "texture": "#2"},
 				"south": {"uv": [0, 0, 9.90625, 4.34375], "texture": "#2"},
-				"west": {"uv": [0, 0, 9.90625, 4.34375], "texture": "#2"}
+				"west": {"uv": [0, 0, 0.59375, 4.34375], "texture": "#2"}
 			}
 		},
 		{
@@ -140,9 +141,9 @@
 			"to": [1, 15, 19],
 			"rotation": {"angle": 0, "axis": "y", "origin": [1, 11, 3.5]},
 			"faces": {
-				"north": {"uv": [0, 0, 9.90625, 4.34375], "texture": "#2"},
+				"north": {"uv": [0, 0, 0.59375, 4.34375], "texture": "#2"},
 				"east": {"uv": [0, 0, 9.90625, 4.34375], "texture": "#2"},
-				"south": {"uv": [0, 0, 9.90625, 4.34375], "texture": "#2"},
+				"south": {"uv": [0, 0, 0.59375, 4.34375], "texture": "#2"},
 				"west": {"uv": [0, 0, 9.90625, 4.34375], "texture": "#2"}
 			}
 		},
@@ -151,9 +152,9 @@
 			"to": [16, 15, 19],
 			"rotation": {"angle": 0, "axis": "y", "origin": [16, 11, 3.5]},
 			"faces": {
-				"north": {"uv": [0, 0, 9.90625, 4.34375], "texture": "#2"},
+				"north": {"uv": [0, 0, 0.59375, 4.34375], "texture": "#2"},
 				"east": {"uv": [0, 0, 9.90625, 4.34375], "texture": "#2"},
-				"south": {"uv": [0, 0, 9.90625, 4.34375], "texture": "#2"},
+				"south": {"uv": [0, 0, 0.59375, 4.34375], "texture": "#2"},
 				"west": {"uv": [0, 0, 9.90625, 4.34375], "texture": "#2"}
 			}
 		},

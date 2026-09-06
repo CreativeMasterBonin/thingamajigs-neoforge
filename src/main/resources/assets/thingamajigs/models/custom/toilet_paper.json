@@ -1,10 +1,11 @@
 {
+	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
-    "render_type": "cutout",
+	"render_type": "cutout",
 	"textures": {
 		"0": "thingamajigs:block/aios/paper_towel",
-		"1": "minecraft:block/oak_log_top",
-        "particle": "thingamajigs:block/aios/paper_towel"
+		"1": "block/oak_log_top",
+		"particle": "thingamajigs:block/aios/paper_towel"
 	},
 	"elements": [
 		{
@@ -34,7 +35,8 @@
 			"rotation": {"angle": 0, "axis": "y", "origin": [12, 20, 20]},
 			"faces": {
 				"north": {"uv": [10, 12, 12, 14], "texture": "#1"},
-				"south": {"uv": [10, 12, 12, 14], "texture": "#1"},
+				"east": {"uv": [5, 12, 7, 10], "texture": "#1"},
+				"south": {"uv": [10, 12, 12, 14], "texture": "#1", "cullface": "south"},
 				"west": {"uv": [5, 10, 7, 12], "texture": "#1"},
 				"up": {"uv": [12, 12, 14, 14], "texture": "#1"},
 				"down": {"uv": [10, 14, 12, 16], "texture": "#1"}
@@ -47,7 +49,8 @@
 			"faces": {
 				"north": {"uv": [10, 12, 12, 14], "texture": "#1"},
 				"east": {"uv": [5, 10, 7, 12], "texture": "#1"},
-				"south": {"uv": [10, 12, 12, 14], "texture": "#1"},
+				"south": {"uv": [10, 12, 12, 14], "texture": "#1", "cullface": "south"},
+				"west": {"uv": [5, 12, 7, 10], "texture": "#1"},
 				"up": {"uv": [12, 12, 14, 14], "rotation": 180, "texture": "#1"},
 				"down": {"uv": [10, 14, 12, 16], "rotation": 180, "texture": "#1"}
 			}

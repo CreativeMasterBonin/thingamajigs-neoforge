@@ -1,0 +1,135 @@
+{
+	"format_version": "1.9.0",
+	"credit": "CreativeMasterBonin",
+	"texture_size": [64, 64],
+	"textures": {
+		"0": "thingamajigs:block/aios/old_legendary_computer",
+		"particle": "#0"
+	},
+	"elements": [
+		{
+			"name": "keyboard",
+			"from": [0, 0, 0],
+			"to": [20, 2, 6],
+			"rotation": {"angle": 0, "axis": "y", "origin": [10, 1, 3]},
+			"faces": {
+				"north": {"uv": [5, 10.5, 10, 11], "texture": "#0"},
+				"east": {"uv": [7.75, 11, 9.25, 11.5], "texture": "#0"},
+				"south": {"uv": [10, 10.5, 15, 11], "texture": "#0"},
+				"west": {"uv": [11, 8, 12.5, 8.5], "texture": "#0"},
+				"up": {"uv": [11, 7.5, 6, 6], "texture": "#0"},
+				"down": {"uv": [11, 7.5, 6, 9], "texture": "#0"}
+			}
+		},
+		{
+			"name": "base",
+			"from": [-4, 0, 9],
+			"to": [20, 3, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 1.5, 12.5]},
+			"faces": {
+				"north": {"uv": [5, 9, 11, 9.75], "texture": "#0"},
+				"east": {"uv": [5, 11, 6.75, 11.75], "texture": "#0"},
+				"south": {"uv": [5, 9.75, 11, 10.5], "texture": "#0"},
+				"west": {"uv": [11, 6, 12.75, 6.75], "texture": "#0"},
+				"down": {"uv": [12, 4.25, 6, 6], "texture": "#0"}
+			}
+		},
+		{
+			"name": "monitorandboards",
+			"from": [-4, 3, 6],
+			"to": [20, 15, 16],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 9, 11]},
+			"faces": {
+				"north": {"uv": [0, 0, 6, 3], "texture": "#0"},
+				"east": {"uv": [0, 8.5, 2.5, 11.5], "texture": "#0"},
+				"south": {"uv": [0, 3, 6, 6], "texture": "#0"},
+				"west": {"uv": [2.5, 8.5, 5, 11.5], "texture": "#0"},
+				"up": {"uv": [6, 8.5, 0, 6], "texture": "#0"},
+				"down": {"uv": [12, 0, 6, 2.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "rightbasefoot",
+			"from": [-4, 0, 6],
+			"to": [-2, 2, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-3, 1, 7.5]},
+			"faces": {
+				"north": {"uv": [1.75, 11.5, 2.25, 12], "texture": "#0"},
+				"east": {"uv": [11, 9.5, 11.75, 10], "texture": "#0"},
+				"west": {"uv": [11, 10, 11.75, 10.5], "texture": "#0"},
+				"up": {"uv": [10.75, 11.75, 10.25, 11], "texture": "#0"},
+				"down": {"uv": [11.25, 11, 10.75, 11.75], "texture": "#0"}
+			}
+		},
+		{
+			"name": "leftbasefoot",
+			"from": [18, 0, 6],
+			"to": [20, 2, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [19, 1, 7.5]},
+			"faces": {
+				"north": {"uv": [2.75, 11.5, 3.25, 12], "texture": "#0"},
+				"east": {"uv": [11.25, 11, 12, 11.5], "texture": "#0"},
+				"west": {"uv": [0, 11.5, 0.75, 12], "texture": "#0"},
+				"up": {"uv": [1.25, 12.25, 0.75, 11.5], "texture": "#0"},
+				"down": {"uv": [1.75, 11.5, 1.25, 12.25], "texture": "#0"}
+			}
+		},
+		{
+			"name": "mouse",
+			"from": [-4, 0, 0],
+			"to": [0, 2, 5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-2, 1, 2.5]},
+			"faces": {
+				"north": {"uv": [5, 8.5, 6, 9], "texture": "#0"},
+				"south": {"uv": [9.25, 11, 10.25, 11.5], "texture": "#0"},
+				"west": {"uv": [11, 9, 12.25, 9.5], "texture": "#0"},
+				"up": {"uv": [7.75, 12.25, 6.75, 11], "texture": "#0"},
+				"down": {"uv": [12, 6.75, 11, 8], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, 135, 0],
+			"translation": [0, 1.5, 0],
+			"scale": [0.2, 0.2, 0.2]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, 135, 0],
+			"translation": [0, 1.5, 0],
+			"scale": [0.2, 0.2, 0.2]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 135, 0],
+			"translation": [-0.25, 2.25, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 135, 0],
+			"translation": [-0.25, 2.25, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"ground": {
+			"translation": [0, 3.75, 0],
+			"scale": [0.15, 0.15, 0.15]
+		},
+		"gui": {
+			"rotation": [35, 135, 0],
+			"translation": [-0.25, 0.25, 0],
+			"scale": [0.45, 0.45, 0.45]
+		},
+		"head": {
+			"translation": [0, 10.25, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"fixed": {
+			"translation": [0, 0, -0.75],
+			"scale": [0.7, 0.7, 0.7]
+		},
+		"on_shelf": {
+			"rotation": [0, 180, 0],
+			"translation": [0, 0, -2.25],
+			"scale": [0.7, 0.7, 0.7]
+		}
+	}
+}
