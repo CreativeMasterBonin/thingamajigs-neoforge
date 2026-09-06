@@ -30,14 +30,13 @@ public class AlarmedDoor extends DoorBlock{
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(OPEN, false).setValue(HINGE, DoorHingeSide.LEFT).setValue(POWERED, false).setValue(HALF, DoubleBlockHalf.LOWER));
     }
 
-    // we want the door to play an alarm sound every (certain amount of) ticks that are called
-    // this is a ticking loop! Do not place a billion of these doors!
+    // the door must play a sound every nth tick (when open)
     @Override
     public void tick(BlockState bs, ServerLevel slvl, BlockPos bp, RandomSource rs) {
         if(!slvl.isClientSide()){
             if(bs.getValue(OPEN)){
                 slvl.playSound(null,bp,TSoundEvent.BEEP.get(), SoundSource.BLOCKS,1.0F,1.0F);
-                slvl.scheduleTick(bp,bs.getBlock(),45, TickPriority.LOW);
+                slvl.scheduleTick(bp,bs.getBlock(),45, TickPriority.VERY_LOW);
             }
         }
     }
@@ -45,7 +44,7 @@ public class AlarmedDoor extends DoorBlock{
     @Override
     public void onPlace(BlockState bs, Level lvl, BlockPos bp, BlockState bsOri, boolean bo1) {
         if(!lvl.isClientSide()){
-            lvl.scheduleTick(bp,bs.getBlock(),45,TickPriority.LOW);
+            lvl.scheduleTick(bp,bs.getBlock(),45,TickPriority.VERY_LOW);
         }
     }
 
@@ -62,21 +61,20 @@ public class AlarmedDoor extends DoorBlock{
     }
 
     @Override
-    public void neighborChanged(BlockState p_52776_, Level p_52777_, BlockPos p_52778_, Block p_52779_, BlockPos p_52780_, boolean p_52781_) {
-        boolean flag = p_52777_.hasNeighborSignal(p_52778_) || p_52777_.hasNeighborSignal(p_52778_.relative(p_52776_.getValue(HALF) == DoubleBlockHalf.LOWER ? Direction.UP : Direction.DOWN));
-        if (!this.defaultBlockState().is(p_52779_) && flag != p_52776_.getValue(POWERED)) {
-            if (flag != p_52776_.getValue(OPEN)) {
-                p_52777_.gameEvent((Entity)null, flag ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, p_52778_);
+    public void neighborChanged(BlockState state, Level level, BlockPos p_52778_, Block p_52779_, BlockPos p_52780_, boolean p_52781_) {
+        boolean flag = level.hasNeighborSignal(p_52778_) || level.hasNeighborSignal(p_52778_.relative(state.getValue(HALF) == DoubleBlockHalf.LOWER ? Direction.UP : Direction.DOWN));
+        if (!this.defaultBlockState().is(p_52779_) && flag != state.getValue(POWERED)) {
+            if (flag != state.getValue(OPEN)) {
+                level.gameEvent((Entity)null, flag ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, p_52778_);
             }
             //
-            if(p_52776_.getValue(OPEN)){
-                p_52777_.playSound(null,p_52778_, SoundEvents.IRON_DOOR_CLOSE,SoundSource.BLOCKS,1.0F,1.0F);
+            if(state.getValue(OPEN)){
+                level.playSound(null,p_52778_, SoundEvents.IRON_DOOR_CLOSE,SoundSource.BLOCKS,0.5f,1.0F);
             }
             else{
-                p_52777_.playSound(null,p_52778_,SoundEvents.IRON_DOOR_OPEN,SoundSource.BLOCKS,1.0F,1.0F);
+                level.playSound(null,p_52778_,SoundEvents.IRON_DOOR_OPEN,SoundSource.BLOCKS,0.5f,1.0F);
             }
-            p_52777_.setBlock(p_52778_, p_52776_.setValue(POWERED, flag).setValue(OPEN, flag), 2);
+            level.setBlock(p_52778_, state.setValue(POWERED, flag).setValue(OPEN, flag), 2);
         }
-
     }
 }

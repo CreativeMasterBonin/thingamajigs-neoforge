@@ -8,6 +8,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
@@ -40,6 +41,11 @@ public class PizzaVendingMachine extends DirectionalConnectedSideBlock implement
                 .setValue(CONNECTED_SIDE, TProperties.ConnectedSide.UNCONNECTED)
                 .setValue(WATERLOGGED,false)
         );
+    }
+
+    @Override
+    public boolean collisionExtendsVertically(BlockState state, BlockGetter level, BlockPos pos, Entity collidingEntity) {
+        return true;
     }
 
     @Override

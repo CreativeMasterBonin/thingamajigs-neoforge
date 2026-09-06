@@ -8,6 +8,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
@@ -59,6 +60,11 @@ public class IceCreamVendingMachine extends DirectionalConnectedSideBlock implem
     public IceCreamVendingMachine(Properties properties) {
         super(properties.sound(SoundType.LANTERN).mapColor(MapColor.COLOR_RED).noOcclusion().strength(1f,5f)
                 .instrument(NoteBlockInstrument.BELL));
+    }
+
+    @Override
+    public boolean collisionExtendsVertically(BlockState state, BlockGetter level, BlockPos pos, Entity collidingEntity) {
+        return true;
     }
 
     @Override
