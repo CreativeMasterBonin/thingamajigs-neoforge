@@ -60,7 +60,95 @@ public class Pole extends Block implements SimpleWaterloggedBlock{
     // Plus Pole
     public static final VoxelShape PLUS_NORTHSOUTH = Stream.of(VERTICAL_ALL, HORIZONTAL_NORTHSOUTH).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
     public static final VoxelShape PLUS_EASTWEST = Stream.of(VERTICAL_ALL, HORIZONTAL_EASTWEST).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
-    //
+    // Holder Pole
+    public static final VoxelShape NORTH_HOLDER = Stream.of(
+            Block.box(7, 0, 7, 9, 16, 9),
+            Block.box(-1, 0, 0, 17, 1, 1),
+            Block.box(-1, 15, 0, 17, 16, 1),
+            Block.box(7, 0, 1, 9, 16, 2),
+            Block.box(0, 0, 1, 2, 2, 3),
+            Block.box(2, 0, 3, 4, 2, 5),
+            Block.box(4, 0, 5, 6, 2, 7),
+            Block.box(6, 0, 7, 7, 2, 8),
+            Block.box(4, 14, 5, 6, 16, 7),
+            Block.box(2, 14, 3, 4, 16, 5),
+            Block.box(0, 14, 1, 2, 16, 3),
+            Block.box(6, 14, 7, 7, 16, 8),
+            Block.box(14, 0, 1, 16, 2, 3),
+            Block.box(12, 0, 3, 14, 2, 5),
+            Block.box(10, 0, 5, 12, 2, 7),
+            Block.box(9, 0, 7, 10, 2, 8),
+            Block.box(10, 14, 5, 12, 16, 7),
+            Block.box(12, 14, 3, 14, 16, 5),
+            Block.box(14, 14, 1, 16, 16, 3),
+            Block.box(9, 14, 7, 10, 16, 8)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    public static final VoxelShape EAST_HOLDER = Stream.of(
+            Block.box(7, 0, 7, 9, 16, 9),
+            Block.box(15, 0, -1, 16, 1, 17),
+            Block.box(15, 15, -1, 16, 16, 17),
+            Block.box(14, 0, 7, 15, 16, 9),
+            Block.box(13, 0, 0, 15, 2, 2),
+            Block.box(11, 0, 2, 13, 2, 4),
+            Block.box(9, 0, 4, 11, 2, 6),
+            Block.box(8, 0, 6, 9, 2, 7),
+            Block.box(9, 14, 4, 11, 16, 6),
+            Block.box(11, 14, 2, 13, 16, 4),
+            Block.box(13, 14, 0, 15, 16, 2),
+            Block.box(8, 14, 6, 9, 16, 7),
+            Block.box(13, 0, 14, 15, 2, 16),
+            Block.box(11, 0, 12, 13, 2, 14),
+            Block.box(9, 0, 10, 11, 2, 12),
+            Block.box(8, 0, 9, 9, 2, 10),
+            Block.box(9, 14, 10, 11, 16, 12),
+            Block.box(11, 14, 12, 13, 16, 14),
+            Block.box(13, 14, 14, 15, 16, 16),
+            Block.box(8, 14, 9, 9, 16, 10)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    public static final VoxelShape SOUTH_HOLDER = Stream.of(
+            Block.box(7, 0, 7, 9, 16, 9),
+            Block.box(-1, 0, 15, 17, 1, 16),
+            Block.box(-1, 15, 15, 17, 16, 16),
+            Block.box(7, 0, 14, 9, 16, 15),
+            Block.box(14, 0, 13, 16, 2, 15),
+            Block.box(12, 0, 11, 14, 2, 13),
+            Block.box(10, 0, 9, 12, 2, 11),
+            Block.box(9, 0, 8, 10, 2, 9),
+            Block.box(10, 14, 9, 12, 16, 11),
+            Block.box(12, 14, 11, 14, 16, 13),
+            Block.box(14, 14, 13, 16, 16, 15),
+            Block.box(9, 14, 8, 10, 16, 9),
+            Block.box(0, 0, 13, 2, 2, 15),
+            Block.box(2, 0, 11, 4, 2, 13),
+            Block.box(4, 0, 9, 6, 2, 11),
+            Block.box(6, 0, 8, 7, 2, 9),
+            Block.box(4, 14, 9, 6, 16, 11),
+            Block.box(2, 14, 11, 4, 16, 13),
+            Block.box(0, 14, 13, 2, 16, 15),
+            Block.box(6, 14, 8, 7, 16, 9)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    public static final VoxelShape WEST_HOLDER = Stream.of(
+            Block.box(7, 0, 7, 9, 16, 9),
+            Block.box(0, 0, -1, 1, 1, 17),
+            Block.box(0, 15, -1, 1, 16, 17),
+            Block.box(1, 0, 7, 2, 16, 9),
+            Block.box(1, 0, 14, 3, 2, 16),
+            Block.box(3, 0, 12, 5, 2, 14),
+            Block.box(5, 0, 10, 7, 2, 12),
+            Block.box(7, 0, 9, 8, 2, 10),
+            Block.box(5, 14, 10, 7, 16, 12),
+            Block.box(3, 14, 12, 5, 16, 14),
+            Block.box(1, 14, 14, 3, 16, 16),
+            Block.box(7, 14, 9, 8, 16, 10),
+            Block.box(1, 0, 0, 3, 2, 2),
+            Block.box(3, 0, 2, 5, 2, 4),
+            Block.box(5, 0, 4, 7, 2, 6),
+            Block.box(7, 0, 6, 8, 2, 7),
+            Block.box(5, 14, 4, 7, 16, 6),
+            Block.box(3, 14, 2, 5, 16, 4),
+            Block.box(1, 14, 0, 3, 16, 2),
+            Block.box(7, 14, 6, 8, 16, 7)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
     public Pole(Properties properties) {
         super(properties.strength(0.25F,2F).sound(SoundType.METAL).noOcclusion().noCollission());

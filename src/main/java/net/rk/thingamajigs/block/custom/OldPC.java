@@ -11,18 +11,35 @@ import net.minecraft.world.entity.item.PrimedTnt;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 
 import java.util.Calendar;
 import java.util.Date;
 
 public class OldPC extends ThingamajigsDecorativeBlock{
+    public static final VoxelShape NORTHSOUTH = Block.box(3, 0, 0, 13, 16, 16);
+    public static final VoxelShape EASTWEST = Block.box(0, 0, 3, 16, 16, 13);
+
     public OldPC(Properties properties) {
         super(properties);
         this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, false));
+    }
+
+    @Override
+    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext ctx) {
+        switch(state.getValue(FACING)){
+            case NORTH,SOUTH -> {return NORTHSOUTH;}
+            case EAST,WEST -> {return EASTWEST;}
+            default -> {return Shapes.block();}
+        }
     }
 
     public boolean getDateJoke(){

@@ -264,6 +264,53 @@ public class KitchenAppliance extends ThingamajigsDecorativeBlock{
             Block.box(6, 13, 0, 7, 15, 16),
             Block.box(4, 15, 0, 6, 16, 16)
     ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    public static final VoxelShape NORTHSOUTH_SLOW_COOKER = Stream.of(
+            Block.box(0, 1, 3, 16, 2, 13),
+            Block.box(1, 0, 4, 2, 1, 5),
+            Block.box(14, 0, 4, 15, 1, 5),
+            Block.box(14, 0, 11, 15, 1, 12),
+            Block.box(1, 0, 11, 2, 1, 12),
+            Block.box(0, 2, 3, 16, 10, 4),
+            Block.box(0, 2, 12, 16, 10, 13),
+            Block.box(0, 2, 4, 1, 10, 12),
+            Block.box(15, 2, 4, 16, 10, 12),
+            Block.box(1, 10, 4, 15, 11, 12),
+            Block.box(4, 11, 7, 5, 12, 9),
+            Block.box(11, 11, 7, 12, 12, 9),
+            Block.box(5, 12, 7, 11, 13, 9)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    public static final VoxelShape EASTWEST_SLOW_COOKER = Stream.of(
+            Block.box(3, 1, 0, 13, 2, 16),
+            Block.box(11, 0, 1, 12, 1, 2),
+            Block.box(11, 0, 14, 12, 1, 15),
+            Block.box(4, 0, 14, 5, 1, 15),
+            Block.box(4, 0, 1, 5, 1, 2),
+            Block.box(12, 2, 0, 13, 10, 16),
+            Block.box(3, 2, 0, 4, 10, 16),
+            Block.box(4, 2, 0, 12, 10, 1),
+            Block.box(4, 2, 15, 12, 10, 16),
+            Block.box(4, 10, 1, 12, 11, 15),
+            Block.box(7, 11, 4, 9, 12, 5),
+            Block.box(7, 11, 11, 9, 12, 12),
+            Block.box(7, 12, 5, 9, 13, 11)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+    public static final VoxelShape NORTHSOUTH_WAFFLE_IRON = Stream.of(
+            Block.box(1, 1, 3, 8, 10, 13),
+            Block.box(8, 1, 3, 15, 10, 13),
+            Block.box(2, 0, 3, 3, 1, 4),
+            Block.box(2, 0, 12, 3, 1, 13),
+            Block.box(13, 0, 3, 14, 1, 4),
+            Block.box(13, 0, 12, 14, 1, 13)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    public static final VoxelShape EASTWEST_WAFFLE_IRON = Stream.of(
+            Block.box(3, 1, 1, 13, 10, 8),
+            Block.box(3, 1, 8, 13, 10, 15),
+            Block.box(12, 0, 2, 13, 1, 3),
+            Block.box(3, 0, 2, 4, 1, 3),
+            Block.box(12, 0, 13, 13, 1, 14),
+            Block.box(3, 0, 13, 4, 1, 14)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
     public KitchenAppliance(Properties properties) {
         super(properties);
@@ -316,6 +363,19 @@ public class KitchenAppliance extends ThingamajigsDecorativeBlock{
                 case SOUTH -> {return SOUTH_PANINI_MAKER;}
                 case EAST -> {return EAST_PANINI_MAKER;}
                 case WEST -> {return WEST_PANINI_MAKER;}
+                default -> {return Shapes.block();}
+            }
+        } else if (state.is(TBlocks.SLOW_COOKER.get())) {
+            switch (direction) {
+                case NORTH, SOUTH -> {return NORTHSOUTH_SLOW_COOKER;}
+                case EAST,WEST -> {return EASTWEST_SLOW_COOKER;}
+                default -> {return Shapes.block();}
+            }
+        }
+        else if(state.is(TBlocks.WAFFLE_IRON.get())){
+            switch (direction){
+                case NORTH,SOUTH -> {return NORTHSOUTH_WAFFLE_IRON;}
+                case EAST,WEST -> {return EASTWEST_WAFFLE_IRON;}
                 default -> {return Shapes.block();}
             }
         }

@@ -12,6 +12,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
@@ -21,9 +22,14 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.BooleanOp;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import net.rk.thingamajigs.xtras.TSoundEvent;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 @SuppressWarnings("deprecated")
 public class TV extends Block{
@@ -31,6 +37,39 @@ public class TV extends Block{
     public static final int MIN_TYPES = 0;
     public static final int MAX_TYPES = 8;
     public static final IntegerProperty TYPE = IntegerProperty.create("type", MIN_TYPES, MAX_TYPES);
+
+    public static final VoxelShape NORTH = Stream.of(
+            Block.box(1, 0, 0, 15, 1, 1),
+            Block.box(14, 1, 0, 15, 13, 1),
+            Block.box(1, 1, 0, 2, 13, 1),
+            Block.box(1, 13, 0, 15, 14, 1),
+            Block.box(1, 0, 1, 15, 14, 15),
+            Block.box(4, 14, 5, 12, 15, 12)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    public static final VoxelShape EAST = Stream.of(
+            Block.box(15, 0, 1, 16, 1, 15),
+            Block.box(15, 1, 14, 16, 13, 15),
+            Block.box(15, 1, 1, 16, 13, 2),
+            Block.box(15, 13, 1, 16, 14, 15),
+            Block.box(1, 0, 1, 15, 14, 15),
+            Block.box(4, 14, 4, 11, 15, 12)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    public static final VoxelShape SOUTH = Stream.of(
+            Block.box(1, 0, 15, 15, 1, 16),
+            Block.box(1, 1, 15, 2, 13, 16),
+            Block.box(14, 1, 15, 15, 13, 16),
+            Block.box(1, 13, 15, 15, 14, 16),
+            Block.box(1, 0, 1, 15, 14, 15),
+            Block.box(4, 14, 4, 12, 15, 11)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    public static final VoxelShape WEST = Stream.of(
+            Block.box(0, 0, 1, 1, 1, 15),
+            Block.box(0, 1, 1, 1, 13, 2),
+            Block.box(0, 1, 14, 1, 13, 15),
+            Block.box(0, 13, 1, 1, 14, 15),
+            Block.box(1, 0, 1, 15, 14, 15),
+            Block.box(5, 14, 4, 12, 15, 12)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
     public TV(Properties properties) {
         super(properties);
@@ -89,5 +128,16 @@ public class TV extends Block{
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+    }
+
+    @Override
+    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext ctx) {
+        switch (state.getValue(FACING)){
+            case NORTH -> {return NORTH;}
+            case SOUTH -> {return SOUTH;}
+            case EAST -> {return EAST;}
+            case WEST -> {return WEST;}
+            default -> {return Shapes.block();}
+        }
     }
 }

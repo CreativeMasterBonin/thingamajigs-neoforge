@@ -12,13 +12,14 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 @SuppressWarnings("deprecated")
 public class SaltTank extends ToggledStateBlock{
+    public static final VoxelShape ALL = Block.box(0, 0, 0, 16, 26, 16);
     public SaltTank(Properties p) {
         super(p);
     }
 
     @Override
     public VoxelShape getShape(BlockState bs, BlockGetter bg, BlockPos bp, CollisionContext cc) {
-        return Block.box(0.0D, 0.0D, 0.0D, 16.0D, 32.0D, 16.0D);
+        return ALL;
     }
 
     @Override

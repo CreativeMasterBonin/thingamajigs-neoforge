@@ -273,7 +273,7 @@ public class TBlocks {
     public static final DeferredBlock<Block> RED_VENDING_MACHINE = register("red_vending_machine",
             () -> new SnackVendingMachine(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).lightLevel(s -> 12)));
     public static final DeferredBlock<Block> COFFEE_MACHINE = register("coffee_machine",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.LANTERN)));
+            () -> new CoffeeMachine(BlockBehaviour.Properties.of().sound(SoundType.LANTERN)));
     public static final DeferredBlock<Block> PAYPHONE = register("payphone",
             () -> new Payphone(BlockBehaviour.Properties.of().sound(SoundType.METAL)));
     public static final DeferredBlock<Block> PAYPHONE_SEETHROUGH = register("payphone_seethrough",
@@ -461,9 +461,19 @@ public class TBlocks {
     public static final DeferredBlock<Block> STOVE = register("stove",
             () -> new Stove(BlockBehaviour.Properties.of().sound(SoundType.LANTERN)));
     public static final DeferredBlock<Block> SOLAR_PANEL = register("solar_panel",
-            () -> new DoubleTallDecorationBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL)));
+            () -> new DoubleTallDecorationBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL)){
+                public static final VoxelShape ALL = Stream.of(
+                        Block.box(6, 0, 6, 10, 1, 10),
+                        Block.box(7, 16, 7, 9, 30, 9),
+                        Block.box(7, 1, 7, 9, 16, 9)
+                ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+                @Override
+                public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext ctx) {
+                    return ALL;
+                }
+            });
     public static final DeferredBlock<Block> STORE_STAND = register("store_stand",
-            () -> new DoubleTallDecorationBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL)));
+            () -> new StoreStand(BlockBehaviour.Properties.of().sound(SoundType.METAL)));
     public static final DeferredBlock<Block> OLD_FLAT_COMPUTER = register("old_flat_computer",
             () -> new OldFlatComputer(BlockBehaviour.Properties.of().sound(SoundType.METAL)));
     public static final DeferredBlock<Block> SHOPPING_CART_MOVER = register("shopping_cart_mover",
@@ -490,11 +500,11 @@ public class TBlocks {
     public static final DeferredBlock<Block> RECYCLE_BIN = register("recycle_bin",
             () -> new RecycleBin(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).sound(SoundType.STONE).strength(1F,1F)));
     public static final DeferredBlock<Block> SERVER_RACK = register("server_rack",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL)));
+            () -> new ServerRack(BlockBehaviour.Properties.of()));
     public static final DeferredBlock<Block> MODERN_PC_MONITOR = register("pc_screen",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL)));
+            () -> new ModernPCMonitor(BlockBehaviour.Properties.of()));
     public static final DeferredBlock<Block> OLD_PC_MONITOR = register("pc_monitor",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL)));
+            () -> new OldPCMonitor(BlockBehaviour.Properties.of()));
     public static final DeferredBlock<Block> OLD_PC = register("old_pc",
             () -> new OldPC(BlockBehaviour.Properties.of().sound(SoundType.METAL)));
     public static final DeferredBlock<Block> PAPER_TOWEL = register("paper_towel",
@@ -644,13 +654,13 @@ public class TBlocks {
     public static final DeferredBlock<Block> RICE_COOKER = register("rice_cooker",
             () -> new KitchenAppliance(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).strength(1.05F,1.5F)));
     public static final DeferredBlock<Block> SLOW_COOKER = register("slow_cooker",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).strength(1F,1.25F)));
+            () -> new KitchenAppliance(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).strength(1F,1.25F)));
     public static final DeferredBlock<Block> STAND_MIXER = register("stand_mixer",
             () -> new StandMixer(BlockBehaviour.Properties.of()));
     public static final DeferredBlock<Block> JUICER = register("juicer",
             () -> new StandMixer(BlockBehaviour.Properties.of()));
     public static final DeferredBlock<Block> WAFFLE_IRON = register("waffle_iron",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).strength(1F,1F).noCollission()));
+            () -> new KitchenAppliance(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).strength(1F,1F).noCollission()));
     public static final DeferredBlock<Block> BREAD_MACHINE = register("bread_machine",
             () -> new KitchenAppliance(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).strength(1F,1F)));
     public static final DeferredBlock<Block> ICE_CREAM_MAKER = register("ice_cream_maker",
@@ -666,9 +676,9 @@ public class TBlocks {
     public static final DeferredBlock<Block> KITCHEN_SINK = register("kitchen_sink",
             () -> new KitchenSink(BlockBehaviour.Properties.of()));
     public static final DeferredBlock<Block> GARDEN_GNOME = register("garden_gnome",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).sound(SoundType.STONE).strength(1.25F)));
+            () -> new GardenGnome(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> WATER_SOFTENER = register("water_softener",
-            () -> new DoubleTallDecorationBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(1F,2F)));
+            () -> new WaterSoftener(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(1F,2F)));
     public static final DeferredBlock<Block> SALT_TANK = register("salt_tank",
             () -> new SaltTank(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(1F,2F)));
     public static final DeferredBlock<Block> SEWING_MACHINE = register("sewing_machine",
@@ -676,11 +686,11 @@ public class TBlocks {
     public static final DeferredBlock<Block> AUDIO_CONTROLLER = register("audio_controller",
             () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(1F,2.25F)));
     public static final DeferredBlock<Block> GENERATOR = register("generator",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).strength(1.1F,5.25F)));
+            () -> new Generator(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).strength(1.1F,5.25F)));
     public static final DeferredBlock<Block> IRONING_TABLE = register("ironing_table",
             () -> new OperationTable(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).strength(1F)));
     public static final DeferredBlock<Block> STEAM_CLEANER = register("steam_cleaner",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).strength(1F)));
+            () -> new SteamCleaner(BlockBehaviour.Properties.of()));
     public static final DeferredBlock<Block> HUMIDIFIER = register("humidifier",
             () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).sound(SoundType.DEEPSLATE_TILES).strength(1F)));
     public static final DeferredBlock<Block> DEHUMIDIFIER = register("dehumidifier",
@@ -696,7 +706,7 @@ public class TBlocks {
     public static final DeferredBlock<Block> COTTON_CANDY_MAKER = register("cotton_candy_maker",
             () -> new DoubleTallDecorationBlock(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).strength(1F)));
     public static final DeferredBlock<Block> CARNIVAL_AWNING = register("carnival_awning",
-            () -> new CarnivalAwning(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
+            () -> new Awning(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
     public static final DeferredBlock<Block> PORTA_POTTY = register("porta_potty",
             () -> new PortaPotty(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
     public static final DeferredBlock<Block> WARDEN_TROPHY = register("warden_trophy",
@@ -707,11 +717,11 @@ public class TBlocks {
     public static final DeferredBlock<Block> CLAW_MACHINE = register("claw_machine",
             () -> new DoubleTallDecorationBlock(BlockBehaviour.Properties.of()));
     public static final DeferredBlock<Block> GUMBALL_MACHINE = register("gumball_machine",
-            () -> new DoubleTallDecorationBlock(BlockBehaviour.Properties.of()));
+            () -> new TallEntertainmentMachine(BlockBehaviour.Properties.of()));
     public static final DeferredBlock<Block> HAMMER_MACHINE = register("hammer_machine",
-            () -> new DoubleTallDecorationBlock(BlockBehaviour.Properties.of().sound(SoundType.LANTERN)));
+            () -> new TallEntertainmentMachine(BlockBehaviour.Properties.of().sound(SoundType.LANTERN)));
     public static final DeferredBlock<Block> WACK_MACHINE = register("wack_machine",
-            () -> new DoubleTallDecorationBlock(BlockBehaviour.Properties.of().sound(SoundType.LANTERN)));
+            () -> new TallEntertainmentMachine(BlockBehaviour.Properties.of().sound(SoundType.LANTERN)));
     public static final DeferredBlock<Block> AIR_HOCKEY_TABLE = register("air_hockey_table",
             () -> new AirConditioner(BlockBehaviour.Properties.of().sound(SoundType.LANTERN)));
     public static final DeferredBlock<Block> BUTTER_CHURNER = register("butter_churner",
@@ -786,9 +796,9 @@ public class TBlocks {
     public static final DeferredBlock<Block> DVD_COLLECTION = register("dvd_collection",
             () -> new VHSCollection(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(1F,5F)));
     public static final DeferredBlock<Block> SHOPPING_BASKET = register("shopping_basket",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(1F)));
+            () -> new ShoppingBasket(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(1F)));
     public static final DeferredBlock<Block> SHOPPING_BASKET_PILE = register("shopping_basket_pile",
-            () -> new DoubleTallDecorationBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(1.25F)));
+            () -> new ShoppingBasket(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(1.25F)));
     public static final DeferredBlock<Block> BLUEYSNAP_CONSOLE = register("blueysnap_console",
             () -> new BlueySnapBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(1F)));
     public static final DeferredBlock<Block> BLUEYSNAP_BASE = register("blueysnap_base",
@@ -800,7 +810,7 @@ public class TBlocks {
     public static final DeferredBlock<Block> MICROSCOPE = register("microscope",
             () -> new StandMixer(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(1F)));
     public static final DeferredBlock<Block> OLD_WOODEN_PHONE = register("old_wooden_phone",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(1F,5F)));
+            () -> new OldWoodenPhone(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(1F,5F)));
     public static final DeferredBlock<Block> BATHTUB_NOZZLE = register("bathtub_nozzle",
             () -> new BathTubNozzle(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> GARDEN_HOSE = register("garden_hose",
@@ -862,7 +872,7 @@ public class TBlocks {
             });
 
     public static final DeferredBlock<Block> BABY_CARRIAGE = register("baby_carriage",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).sound(SoundType.CALCITE)));
+            () -> new BabyCarriage(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).sound(SoundType.CALCITE)));
     public static final DeferredBlock<Block> CONVENIENCE_SHELF = register("convenience_shelf",
             () -> new ConvenienceShelf(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).sound(SoundType.DEEPSLATE_BRICKS)));
     public static final DeferredBlock<Block> CREEPER_PLUSHY = register("creeper_plushy",
@@ -1111,7 +1121,18 @@ public class TBlocks {
     public static final DeferredBlock<Block> AXIS_POLE = register("axis_pole",
             () -> new AxisPole(BlockBehaviour.Properties.of()));
     public static final DeferredBlock<Block> HOLDER_POLE = register("holder_pole",
-            () -> new Pole(BlockBehaviour.Properties.of()));
+            () -> new Pole(BlockBehaviour.Properties.of()){
+                @Override
+                protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+                    switch (state.getValue(FACING)){
+                        case NORTH->{return NORTH_HOLDER;}
+                        case SOUTH->{return SOUTH_HOLDER;}
+                        case EAST->{return EAST_HOLDER;}
+                        case WEST->{return WEST_HOLDER;}
+                        default -> {return Shapes.block();}
+                    }
+                }
+            });
     public static final DeferredBlock<Block> PLUS_POLE = register("plus_pole",
             () -> new PlusPole(BlockBehaviour.Properties.of()));
     public static final DeferredBlock<Block> T_POLE = register("t_pole",
@@ -1340,13 +1361,13 @@ public class TBlocks {
     public static final DeferredBlock<Block> NORTH_POLE = register("north_pole",
             () -> new NorthPole(BlockBehaviour.Properties.of().strength(1f,2f).sound(SoundType.STONE).noCollission().noOcclusion()));
     public static final DeferredBlock<Block> LIGHTED_DEER = register("lighted_deer",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().strength(1.5f,2f).sound(SoundType.LADDER).noCollission().lightLevel(s -> 7)));
+            () -> new LightedDeer(BlockBehaviour.Properties.of().strength(1.5f,2f).sound(SoundType.LADDER).noCollission().lightLevel(s -> 7)));
     public static final DeferredBlock<Block> LIGHTED_CHRISTMAS_TREE = register("lighted_christmas_tree",
             () -> new ChristmasTree(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).sound(SoundType.AZALEA_LEAVES).noOcclusion().strength(1.25F,10F).lightLevel(s -> 10)));
     public static final DeferredBlock<Block> SMALL_CHRISTMAS_TREE = register("small_christmas_tree",
             () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).sound(SoundType.AZALEA_LEAVES).noOcclusion().strength(1.15F,8F).lightLevel(s -> 7)));
     public static final DeferredBlock<Block> CHRISTMAS_FIREPLACE = register("christmas_fireplace",
-            () -> new DoubleTallDecorationBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
+            () -> new WideFireplace(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
     public static final DeferredBlock<Block> SLEIGH = register("sleigh",
             () -> new Wheelbarrow(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     public static final DeferredBlock<Block> SNOWMAN_BLUEMAN_STATUE = register("blueman_snowman",
@@ -1359,7 +1380,7 @@ public class TBlocks {
                 }
             });
     public static final DeferredBlock<Block> PRESENT_PILE = register("present_pile",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noCollission().sound(SoundType.WOOL).strength(1.0F,2.0F)));
+            () -> new PresentPile(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     public static final DeferredBlock<Block> NUTCRACKER = register("nutcracker",
             () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
                     .strength(1.0F,15F).sound(SoundType.BAMBOO)){
@@ -1382,7 +1403,7 @@ public class TBlocks {
     public static final DeferredBlock<Block> REINDEER_WALL_HEAD = register("reindeer_wall_head",
             () -> new ReindeerWallHead(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     public static final DeferredBlock<Block> GAS_HEATER = register("gas_heater",
-            () -> new DoubleTallDecorationBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+            () -> new GasHeater(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     public static final DeferredBlock<Block> AC_THERMOSTAT = register("ac_thermostat",
             () -> new AcThermostat(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     public static final DeferredBlock<Block> BLUEY_DESKTOP_COMPUTER = register("bluey_desktop_computer",
@@ -1641,12 +1662,12 @@ public class TBlocks {
             () -> new ComputerControls(BlockBehaviour.Properties.of()));
 
     public static final DeferredBlock<Block> PC_CONTROLS = register("pc_controls",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of()
+            () -> new KeyboardAndScreenBlock(BlockBehaviour.Properties.of()
                     .sound(SoundType.LANTERN)
                     .strength(0.95F,2F)));
 
     public static final DeferredBlock<Block> RGB_PC_CONTROLS = register("rgb_pc_controls",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of()
+            () -> new KeyboardAndScreenBlock(BlockBehaviour.Properties.of()
                     .sound(SoundType.LANTERN)
                     .strength(0.95F,2F)));
 
@@ -2087,7 +2108,7 @@ public class TBlocks {
     public static final DeferredBlock<Block> CINDER_BLOCK_SLAB = register("cinder_block_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of().strength(1.25f,20f).sound(SoundType.DEEPSLATE_TILES)));
     public static final DeferredBlock<Block> I_BEAM = register("i_beam",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of()
+            () -> new IBeam(BlockBehaviour.Properties.of()
                     .strength(1f,12f).sound(SoundType.METAL)
                     .mapColor(MapColor.METAL).pushReaction(PushReaction.BLOCK)));
     public static final DeferredBlock<Block> CONCRETE = register("concrete",

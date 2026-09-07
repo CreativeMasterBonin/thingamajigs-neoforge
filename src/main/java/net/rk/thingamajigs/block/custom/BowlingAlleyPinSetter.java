@@ -32,6 +32,8 @@ public class BowlingAlleyPinSetter extends RedstoneLampBlock{
             Block.box(0, 0, -8, 16, 16, -6),
             Block.box(0, 0, 22, 16, 16, 24)
     ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    public static final VoxelShape NORTHSOUTH_COMBINED = Shapes.join(NORTHSOUTH,BLOCK_SHAPE,BooleanOp.OR);
+    public static final VoxelShape EASTWEST_COMBINED = Shapes.join(EASTWEST,BLOCK_SHAPE,BooleanOp.OR);
 
     public BowlingAlleyPinSetter(Properties p) {
         super(p.strength(2.5F,3.5F).sound(SoundType.METAL).noOcclusion());
@@ -39,9 +41,25 @@ public class BowlingAlleyPinSetter extends RedstoneLampBlock{
     }
 
     @Override
-    public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-        Direction direction = pState.getValue(FACING);
-        switch(direction){
+    public VoxelShape getInteractionShape(BlockState state, BlockGetter level, BlockPos pos) {
+        switch(state.getValue(FACING)){
+            case NORTH,SOUTH -> {return NORTHSOUTH_COMBINED;}
+            case EAST,WEST -> {return EASTWEST_COMBINED;}
+            default -> {return BLOCK_SHAPE;}
+        }
+    }
+
+    @Override
+    public VoxelShape getBlockSupportShape(BlockState state, BlockGetter level, BlockPos pos) {
+        switch(state.getValue(FACING)){
+            case NORTH,SOUTH -> {return NORTHSOUTH_COMBINED;}
+            case EAST,WEST -> {return EASTWEST_COMBINED;}
+            default -> {return BLOCK_SHAPE;}
+        }
+    }
+    @Override
+    public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext ctx) {
+        switch(state.getValue(FACING)){
             case NORTH:
             case SOUTH:
                 return NORTHSOUTH;
@@ -50,6 +68,15 @@ public class BowlingAlleyPinSetter extends RedstoneLampBlock{
                 return EASTWEST;
             default:
                 return BLOCK_SHAPE;
+        }
+    }
+
+    @Override
+    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext ctx) {
+        switch(state.getValue(FACING)){
+            case NORTH,SOUTH -> {return NORTHSOUTH_COMBINED;}
+            case EAST,WEST -> {return EASTWEST_COMBINED;}
+            default -> {return BLOCK_SHAPE;}
         }
     }
 

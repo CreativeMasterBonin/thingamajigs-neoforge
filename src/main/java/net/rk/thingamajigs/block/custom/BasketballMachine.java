@@ -9,6 +9,7 @@ import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.rk.thingamajigs.block.TBlocks;
 
 import java.util.stream.Stream;
 
@@ -75,13 +76,71 @@ public class BasketballMachine extends ThingamajigsDecorativeBlock{
             Block.box(0, 6, 0, 30, 10, 1)
     ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
+    public static final VoxelShape N_PINBALL_MACHINE = Stream.of(
+            Block.box(0, 4, 30, 16, 32, 32),
+            Block.box(0, 0, 0, 2, 4, 2),
+            Block.box(0, 0, 30, 2, 4, 32),
+            Block.box(14, 0, 0, 16, 4, 2),
+            Block.box(14, 0, 30, 16, 4, 32),
+            Block.box(0, 0, 2, 1, 15, 30),
+            Block.box(0, 3, 1, 16, 7, 30),
+            Block.box(15, 0, 2, 16, 15, 30),
+            Block.box(2, 0, 30.9, 14, 8, 31.9),
+            Block.box(1, 5, 2, 15, 7, 30)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    public static final VoxelShape E_PINBALL_MACHINE = Stream.of(
+            Block.box(-16, 4, 0, -14, 32, 16),
+            Block.box(14, 0, 0, 16, 4, 2),
+            Block.box(-16, 0, 0, -14, 4, 2),
+            Block.box(14, 0, 14, 16, 4, 16),
+            Block.box(-16, 0, 14, -14, 4, 16),
+            Block.box(-14, 0, 0, 14, 15, 1),
+            Block.box(-14, 3, 0, 15, 7, 16),
+            Block.box(-14, 0, 15, 14, 15, 16),
+            Block.box(-15.899999999999999, 0, 2, -14.899999999999999, 8, 14),
+            Block.box(-14, 5, 1, 14, 7, 15)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    public static final VoxelShape S_PINBALL_MACHINE = Stream.of(
+            Block.box(0, 4, -16, 16, 32, -14),
+            Block.box(14, 0, 14, 16, 4, 16),
+            Block.box(14, 0, -16, 16, 4, -14),
+            Block.box(0, 0, 14, 2, 4, 16),
+            Block.box(0, 0, -16, 2, 4, -14),
+            Block.box(15, 0, -14, 16, 15, 14),
+            Block.box(0, 3, -14, 16, 7, 15),
+            Block.box(0, 0, -14, 1, 15, 14),
+            Block.box(2, 0, -15.899999999999999, 14, 8, -14.899999999999999),
+            Block.box(1, 5, -14, 15, 7, 14)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    public static final VoxelShape W_PINBALL_MACHINE = Stream.of(
+            Block.box(30, 4, 0, 32, 32, 16),
+            Block.box(0, 0, 14, 2, 4, 16),
+            Block.box(30, 0, 14, 32, 4, 16),
+            Block.box(0, 0, 0, 2, 4, 2),
+            Block.box(30, 0, 0, 32, 4, 2),
+            Block.box(2, 0, 15, 30, 15, 16),
+            Block.box(1, 3, 0, 30, 7, 16),
+            Block.box(2, 0, 0, 30, 15, 1),
+            Block.box(30.9, 0, 2, 31.9, 8, 14),
+            Block.box(2, 5, 1, 30, 7, 15)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
     public BasketballMachine(Properties properties) {
         super(properties.strength(1F,3.2F).noOcclusion());
     }
 
     @Override
-    public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-        Direction direction = pState.getValue(FACING);
+    public VoxelShape getShape(BlockState state, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
+        Direction direction = state.getValue(FACING);
+        if(state.is(TBlocks.PINBALL_MACHINE.get())){
+            switch(direction){
+                case NORTH: return N_PINBALL_MACHINE;
+                case SOUTH: return S_PINBALL_MACHINE;
+                case EAST: return E_PINBALL_MACHINE;
+                case WEST: return W_PINBALL_MACHINE;
+                default: return Shapes.block();
+            }
+        }
         switch(direction){
             case NORTH: return NORTH_NS;
             case SOUTH: return SOUTH_SS;

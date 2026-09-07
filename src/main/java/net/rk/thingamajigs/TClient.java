@@ -240,7 +240,8 @@ public class TClient{
         event.register((blockState,tintGetter,blockPos,i) ->
                         tintGetter != null && blockPos != null ?
                                 customGetColor(tintGetter,blockPos,BiomeColors.WATER_COLOR_RESOLVER) : FoliageColor.getDefaultColor(),
-                TBlocks.COLORED_GLASS.get()
+                TBlocks.COLORED_GLASS.get(),
+                TBlocks.COFFEE_MACHINE.get()
         );
     }
 
@@ -269,6 +270,7 @@ public class TClient{
         event.registerLayerDefinition(AnimatedIceRinkModel.ICE_RINK_ALL,AnimatedIceRinkModel::createBodyLayer);
         event.registerLayerDefinition(AnimatedDeerModel.LAYER_LOCATION,AnimatedDeerModel::createBodyLayer);
         event.registerLayerDefinition(FootballGoalModel.LAYER_LOCATION,FootballGoalModel::createBodyLayer);
+        event.registerLayerDefinition(GateArmModel.GATE_ARM,GateArmModel::createBodyLayer);
     }
 
     public void setupClient(final FMLClientSetupEvent event){
@@ -305,6 +307,8 @@ public class TClient{
             BlockEntityRenderers.register(TBlockEntity.CEILING_FAN_BE.get(),CeilingFanBERenderer::new);
             // 1.8.6
             BlockEntityRenderers.register(TBlockEntity.TUBE_MAN_DECO_BE.get(),TubeManDecoBERenderer::new);
+            // 1.9.0
+            BlockEntityRenderers.register(TBlockEntity.CUSTOMIZABLE_COPYING_DECO_BE.get(),CustomizableCopyingDecoBERenderer::new);
         }
         catch (Exception e){
             LogUtils.getLogger().error(e.getLocalizedMessage());

@@ -10,11 +10,12 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 @SuppressWarnings("deprecated")
 public class ComputerControls extends ThingamajigsDecorativeBlock{
+    public static final VoxelShape CONTROLS_ALL = Block.box(0,0,0,16,1,16);
     public ComputerControls(Properties properties) {
         super(properties.strength(0.5F,1F).sound(SoundType.LANTERN));
     }
     @Override
     public VoxelShape getShape(BlockState bs, BlockGetter bg, BlockPos bp, CollisionContext cc) {
-        return Block.box(0,0,0,16,1,16);
+        return CONTROLS_ALL;
     }
 }
