@@ -18,7 +18,7 @@
 			"faces": {
 				"north": {"uv": [0, 0, 16, 16], "texture": "#5"},
 				"east": {"uv": [0, 0, 1, 16], "texture": "#5", "cullface": "north"},
-				"south": {"uv": [0, 0, 16, 16], "texture": "#5", "cullface": "north"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#5"},
 				"west": {"uv": [0, 0, 1, 16], "texture": "#5"},
 				"up": {"uv": [0, 0, 16, 1], "texture": "#5"},
 				"down": {"uv": [0, 0, 16, 1], "texture": "#5"}

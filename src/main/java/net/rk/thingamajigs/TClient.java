@@ -1,7 +1,6 @@
 package net.rk.thingamajigs;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.GraphicsStatus;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
@@ -46,6 +45,7 @@ import net.rk.thingamajigs.xtras.particletypes.*;
 
 import java.util.logging.Logger;
 
+@SuppressWarnings("deprecated,unused")
 @Mod(value=Thingamajigs.MODID,dist = Dist.CLIENT)
 public class TClient{
     public TClient(IEventBus eventBus, ModContainer container){
@@ -204,7 +204,8 @@ public class TClient{
                 TBlocks.CYAN_GLOW_BLOCK.get().asItem()
         );
         event.register((itemStack,i) -> TColors.getColorFromList(7),
-                TBlocks.LIGHT_BLUE_GLOW_BLOCK.get().asItem()
+                TBlocks.LIGHT_BLUE_GLOW_BLOCK.get().asItem(),
+                TBlocks.COFFEE_MACHINE.get().asItem()
         );
         event.register((itemStack,i) -> TColors.getColorFromList(8),
                 TBlocks.BLUE_GLOW_BLOCK.get().asItem()

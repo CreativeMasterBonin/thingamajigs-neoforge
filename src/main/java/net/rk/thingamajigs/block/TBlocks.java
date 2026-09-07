@@ -1152,7 +1152,7 @@ public class TBlocks {
 
     // Light Source Poles
     public static final DeferredBlock<Block> LIGHT_POLE = register("light_pole",
-            () -> new Pole(BlockBehaviour.Properties.of().lightLevel(s -> 15)));
+            () -> new LightPole(BlockBehaviour.Properties.of().lightLevel(s -> 15)));
 
     public static final DeferredBlock<Block> VERTICAL_AXIS_POLE = register("vertical_axis_pole",
             () -> new VerticalAxisPole(BlockBehaviour.Properties.of()));
@@ -1359,13 +1359,13 @@ public class TBlocks {
             () -> new FlatWallPlaneBlock(BlockBehaviour.Properties.of().instabreak().sound(SoundType.LADDER).noCollission().lightLevel(s -> 4)
                     .hasPostProcess(TBlocks::always).emissiveRendering(TBlocks::always)));
     public static final DeferredBlock<Block> NORTH_POLE = register("north_pole",
-            () -> new NorthPole(BlockBehaviour.Properties.of().strength(1f,2f).sound(SoundType.STONE).noCollission().noOcclusion()));
+            () -> new NorthPole(BlockBehaviour.Properties.of().strength(1f,2f).sound(SoundType.STONE).noOcclusion()));
     public static final DeferredBlock<Block> LIGHTED_DEER = register("lighted_deer",
             () -> new LightedDeer(BlockBehaviour.Properties.of().strength(1.5f,2f).sound(SoundType.LADDER).noCollission().lightLevel(s -> 7)));
     public static final DeferredBlock<Block> LIGHTED_CHRISTMAS_TREE = register("lighted_christmas_tree",
             () -> new ChristmasTree(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).sound(SoundType.AZALEA_LEAVES).noOcclusion().strength(1.25F,10F).lightLevel(s -> 10)));
     public static final DeferredBlock<Block> SMALL_CHRISTMAS_TREE = register("small_christmas_tree",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).sound(SoundType.AZALEA_LEAVES).noOcclusion().strength(1.15F,8F).lightLevel(s -> 7)));
+            () -> new SmallChristmasTree(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).lightLevel(s -> 7)));
     public static final DeferredBlock<Block> CHRISTMAS_FIREPLACE = register("christmas_fireplace",
             () -> new WideFireplace(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
     public static final DeferredBlock<Block> SLEIGH = register("sleigh",

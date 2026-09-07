@@ -35,7 +35,7 @@ public class AlarmedDoor extends DoorBlock{
     public void tick(BlockState bs, ServerLevel slvl, BlockPos bp, RandomSource rs) {
         if(!slvl.isClientSide()){
             if(bs.getValue(OPEN)){
-                slvl.playSound(null,bp,TSoundEvent.BEEP.get(), SoundSource.BLOCKS,1.0F,1.0F);
+                slvl.playSound(null,bp,TSoundEvent.BEEP.get(), SoundSource.BLOCKS,0.5f,1.0f);
                 slvl.scheduleTick(bp,bs.getBlock(),45, TickPriority.VERY_LOW);
             }
         }
@@ -69,10 +69,10 @@ public class AlarmedDoor extends DoorBlock{
             }
             //
             if(state.getValue(OPEN)){
-                level.playSound(null,p_52778_, SoundEvents.IRON_DOOR_CLOSE,SoundSource.BLOCKS,0.5f,1.0F);
+                level.playSound(null,p_52778_, SoundEvents.IRON_DOOR_CLOSE,SoundSource.BLOCKS,0.95f,1.0F);
             }
             else{
-                level.playSound(null,p_52778_,SoundEvents.IRON_DOOR_OPEN,SoundSource.BLOCKS,0.5f,1.0F);
+                level.playSound(null,p_52778_,SoundEvents.IRON_DOOR_OPEN,SoundSource.BLOCKS,0.95f,1.0F);
             }
             level.setBlock(p_52778_, state.setValue(POWERED, flag).setValue(OPEN, flag), 2);
         }

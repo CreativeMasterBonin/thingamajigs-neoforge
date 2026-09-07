@@ -22,13 +22,17 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.rk.thingamajigs.xtras.TCalcStuff;
 
 @SuppressWarnings("deprecated")
 public class Toaster extends Block{
     public static final BooleanProperty POWERED = BlockStateProperties.POWERED;
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final VoxelShape NS = ReindeerPlush.NS;
+    public static final VoxelShape NORTHSOUTH = Block.box(6, 0, 4, 10, 5, 12);
+    public static final VoxelShape EASTWEST = Block.box(4, 0, 6, 12, 5, 10);
 
     public Toaster(BlockBehaviour.Properties p) {
         super(p.noOcclusion().strength(1F));
@@ -36,8 +40,12 @@ public class Toaster extends Block{
     }
 
     @Override
-    public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-        return NS;
+    public VoxelShape getShape(BlockState state, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
+        switch (state.getValue(FACING)){
+            case NORTH,SOUTH ->{return NORTHSOUTH;}
+            case EAST,WEST->{return EASTWEST;}
+            default -> {return Shapes.block();}
+        }
     }
 
     private int getPressDuration() {
@@ -65,14 +73,14 @@ public class Toaster extends Block{
     public void tick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandomSource) {
         if (pState.getValue(POWERED)) {
             pLevel.setBlock(pPos, pState.setValue(POWERED, false), 3);
-            pLevel.playSound(null,pPos, SoundEvents.STONE_BUTTON_CLICK_OFF,SoundSource.BLOCKS,1f,1f);
+            pLevel.playSound(null,pPos, SoundEvents.LANTERN_BREAK,SoundSource.BLOCKS,0.7f,TCalcStuff.nextFloatBetweenInclusive(0.95f,1.0f));
             pLevel.gameEvent(null,GameEvent.BLOCK_DEACTIVATE, pPos);
         }
     }
 
     public void press(BlockState pState, Level pLevel, BlockPos pPos) {
         pLevel.setBlock(pPos, pState.setValue(POWERED, true), 3);
-        pLevel.playSound(null,pPos, SoundEvents.STONE_BUTTON_CLICK_ON,SoundSource.BLOCKS,1f,1f);
+        pLevel.playSound(null,pPos, SoundEvents.LANTERN_HIT,SoundSource.BLOCKS,0.7f,TCalcStuff.nextFloatBetweenInclusive(0.92f,1.0f));
         pLevel.scheduleTick(pPos, this, this.getPressDuration());
     }
 

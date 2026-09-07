@@ -1,11 +1,12 @@
 {
+	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
-    "ambientocclusion": false,
-    "render_type": "cutout",
+	"ambientocclusion": false,
+	"render_type": "cutout",
 	"textures": {
-		"0": "minecraft:block/sweet_berry_bush_stage1",
-		"1": "minecraft:block/red_concrete",
-		"particle": "minecraft:block/sweet_berry_bush_stage1"
+		"0": "block/sweet_berry_bush_stage1",
+		"1": "block/red_concrete",
+		"particle": "block/sweet_berry_bush_stage1"
 	},
 	"elements": [
 		{
@@ -265,5 +266,46 @@
 				"down": {"uv": [7, 4, 9, 7], "rotation": 180, "texture": "#0"}
 			}
 		}
-	]
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, -180, 0],
+			"translation": [0, 1.25, 1.75],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, -180, 0],
+			"translation": [0, 1.25, 1.75],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 135, 0],
+			"translation": [1.5, 1.5, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 135, 0],
+			"translation": [1.5, 1.5, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"ground": {
+			"translation": [0, 2.5, -1.25],
+			"scale": [0.15, 0.15, 0.15]
+		},
+		"gui": {
+			"rotation": [-24, 155, 0],
+			"translation": [-2.25, 2, 0],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"head": {
+			"translation": [0, 0, -1.5],
+			"scale": [1.25, 1.25, 1.25]
+		},
+		"fixed": {
+			"translation": [0, 0, -7]
+		},
+		"on_shelf": {
+			"translation": [0, 0, -10.5]
+		}
+	}
 }

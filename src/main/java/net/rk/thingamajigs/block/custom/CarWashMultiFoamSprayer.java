@@ -29,7 +29,7 @@ public class CarWashMultiFoamSprayer extends RedstoneLampBlock{
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
     public CarWashMultiFoamSprayer(Properties p) {
-        super(p.strength(1F,20F).sound(SoundType.METAL).noOcclusion().noCollission());
+        super(p.strength(1F,20F).sound(SoundType.METAL).noOcclusion());
         this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH).setValue(LIT, false));
     }
 
