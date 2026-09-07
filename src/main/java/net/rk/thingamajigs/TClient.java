@@ -383,6 +383,9 @@ public class TClient{
             event.accept(TItems.MUSIC_COMPONENT);
             // customizable items and blocks
             event.accept(TBlocks.CUSTOMIZABLE_COPYING_DECO.asItem());
+            event.accept(TItems.CUSTOMIZATION_TOOL.asItem());
+            event.accept(TItems.RENDERING_TOOL.asItem());
+            event.accept(TItems.RANDOMIZE_AND_RESET_TOOL.asItem());
             // items continued
             event.accept(TItems.KEY);
             // money system items

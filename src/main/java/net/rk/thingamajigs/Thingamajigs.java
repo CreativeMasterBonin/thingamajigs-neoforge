@@ -1,6 +1,7 @@
 package net.rk.thingamajigs;
 
 import com.mojang.logging.LogUtils;
+import com.mojang.serialization.Codec;
 import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.Registries;
@@ -49,6 +50,21 @@ public class Thingamajigs {
             () -> DataComponentType.<Integer>builder()
                     .persistent(ExtraCodecs.intRange(0,Integer.MAX_VALUE))
                     .networkSynchronized(ByteBufCodecs.VAR_INT).build());
+
+    public static final DeferredHolder<DataComponentType<?>,DataComponentType<Integer>> MODE = DATA_COMPONENTS.register("mode",
+            () -> DataComponentType.<Integer>builder()
+                    .persistent(ExtraCodecs.intRange(0,8))
+                    .networkSynchronized(ByteBufCodecs.VAR_INT).build());
+
+    public static final DeferredHolder<DataComponentType<?>,DataComponentType<Integer>> RENDER_MODE = DATA_COMPONENTS.register("render_mode",
+            () -> DataComponentType.<Integer>builder()
+                    .persistent(ExtraCodecs.intRange(0,3))
+                    .networkSynchronized(ByteBufCodecs.VAR_INT).build());
+
+    public static final DeferredHolder<DataComponentType<?>,DataComponentType<Boolean>> RESET_PARAMETERS_ON_USE = DATA_COMPONENTS.register("reset_parameters_on_use",
+            () -> DataComponentType.<Boolean>builder()
+                    .persistent(Codec.BOOL)
+                    .networkSynchronized(ByteBufCodecs.BOOL).build());
 
     public Thingamajigs(IEventBus modEventBus, ModContainer modContainer){
         modEventBus.addListener(this::commonSetup);

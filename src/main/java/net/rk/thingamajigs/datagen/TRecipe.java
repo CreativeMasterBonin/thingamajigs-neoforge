@@ -4922,7 +4922,7 @@ public class TRecipe extends RecipeProvider {
                 .requires(Items.GLOW_ITEM_FRAME)
                 .unlockedBy("has_thingy",has(TBlocks.NOT_QUITE.get().asItem()))
                 .save(rc);
-        /*ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TItems.CUSTOMIZATION_TOOL.get().asItem(),1)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TItems.CUSTOMIZATION_TOOL.get().asItem(),1)
                 .requires(TItems.THINGAMAJIG.get().asItem())
                 .requires(TItems.THINGAMAJIG.get().asItem())
                 .requires(TItems.THINGAMAJIG.get().asItem())
@@ -4945,8 +4945,7 @@ public class TRecipe extends RecipeProvider {
                 .requires(Tags.Items.DYES_GREEN)
                 .requires(Items.SHORT_GRASS)
                 .unlockedBy("has_thingy",has(TItems.THINGAMAJIG.get().asItem()))
-                .save(rc);*/
-
+                .save(rc);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.FALL_WREATH.get().asItem(),1)
                 .requires(ItemTags.LEAVES)
                 .requires(Tags.Items.DYES_RED)

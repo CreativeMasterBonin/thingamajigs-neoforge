@@ -8,7 +8,10 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.SlotAccess;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.ClickAction;
+import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.context.UseOnContext;
@@ -409,6 +412,31 @@ public class TItems {
             () -> new DebitCard(new Item.Properties()));
 
     // 1.9.0
+    public static final DeferredItem<Item> CUSTOMIZATION_TOOL = ITEMS.register("customization_tool",
+            () -> new CustomizationTool(new Item.Properties()));
+    public static final DeferredItem<Item> RENDERING_TOOL = ITEMS.register("rendering_tool",
+            () -> new CustomizationTool(new Item.Properties()){
+                @Override
+                public void onCraftedPostProcess(ItemStack stack, Level level) {
+                    onCraftedPostProcessRenderingTool(stack,level);
+                }
 
+                @Override
+                public ItemStack getDefaultInstance() {
+                    return getDefaultInstanceRenderingTool();
+                }
+
+                @Override
+                public InteractionResult useOn(UseOnContext context) {
+                    return useOnRenderMode(context);
+                }
+
+                @Override
+                public boolean overrideOtherStackedOnMe(ItemStack stack, ItemStack other, Slot slot, ClickAction action, Player player, SlotAccess access) {
+                    return overrideOtherStackedOnMeRenderMode(stack,other,slot,action,player,access);
+                }
+            });
+    public static final DeferredItem<Item> RANDOMIZE_AND_RESET_TOOL = ITEMS.register("randomize_and_reset_tool",
+            () -> new RandomizeAndResetTool(new Item.Properties()));
 }
 

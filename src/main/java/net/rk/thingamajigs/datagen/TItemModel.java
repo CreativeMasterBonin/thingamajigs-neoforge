@@ -130,6 +130,9 @@ public class TItemModel extends ItemModelProvider {
         fromModelMod(TBlocks.OLD_LEGENDARY_COMPUTER.get(),"block/old_legendary_computer");
         fromModelMod(TBlocks.CUSTOMIZABLE_COPYING_DECO.get(),"block/customizable_copying_deco");
         fromModelMod(TBlocks.FALL_WREATH.get(),"block/fall_wreath");
+        handheld(TItems.CUSTOMIZATION_TOOL);
+        handheld(TItems.RENDERING_TOOL);
+        handheld(TItems.RANDOMIZE_AND_RESET_TOOL);
     }
 
     private ItemModelBuilder fromModelModItem(Item item, String source){
