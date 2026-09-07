@@ -13,6 +13,7 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.client.resources.model.ModelManager;
+import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.LiquidBlock;
@@ -122,23 +123,32 @@ public class CustomizableCopyingDecoBERenderer implements BlockEntityRenderer<Cu
     }
 
     @Override
-    public AABB getRenderBoundingBox(CustomizableCopyingDecoBE blockEntity) {
-        double actualRenderingPosX = blockEntity.getBlockPos().getX() + blockEntity.modelOffsets.x();
-        double actualRenderingPosY = blockEntity.getBlockPos().getY() + blockEntity.modelOffsets.y();
-        double actualRenderingPosZ = blockEntity.getBlockPos().getZ() + blockEntity.modelOffsets.z();
-        return new AABB(actualRenderingPosX - blockEntity.modelScale.x, actualRenderingPosY - blockEntity.modelScale.y, actualRenderingPosZ - blockEntity.modelScale.z,
-                actualRenderingPosX + blockEntity.modelScale.x, actualRenderingPosY + blockEntity.modelScale.y, actualRenderingPosZ + blockEntity.modelScale.z);
+    public AABB getRenderBoundingBox(CustomizableCopyingDecoBE customDeco) {
+        double actualRenderingPosX = customDeco.getBlockPos().getX() - customDeco.modelOffsets.x() + 0.5D;
+        double actualRenderingPosY = customDeco.getBlockPos().getY() + customDeco.modelOffsets.y() + 0.5D;
+        double actualRenderingPosZ = customDeco.getBlockPos().getZ() - customDeco.modelOffsets.z() + 0.5D;
+
+        double scaledY = customDeco.modelScale.y * 3.5D;
+
+        return new AABB(actualRenderingPosX - 32.0D, actualRenderingPosY - scaledY, actualRenderingPosZ - 32.0D,
+                actualRenderingPosX + 32.0D, actualRenderingPosY + scaledY, actualRenderingPosZ + 32.0D);
     }
 
     @Override
     public int getViewDistance() {
-        return 64;
+        return 256;
     }
 
     @Override
     public boolean shouldRender(CustomizableCopyingDecoBE customDeco, Vec3 vec3) {
-        return Vec3.atCenterOf(customDeco.getBlockPos()).multiply(2.0, 2.0, 2.0)
-                .closerThan(vec3.multiply(2.0, 2.0, 2.0), (double)this.getViewDistance());
+        double actualRenderingPosX = customDeco.getBlockPos().getX() + customDeco.modelOffsets.x();
+        double actualRenderingPosY = customDeco.getBlockPos().getY() + customDeco.modelOffsets.y();
+        double actualRenderingPosZ = customDeco.getBlockPos().getZ() + customDeco.modelOffsets.z();
+
+        // rendering condition does not seem to work well with changing scale
+        BlockPos relativeBlockPos = new BlockPos((int)actualRenderingPosX,(int)actualRenderingPosY,(int)actualRenderingPosZ);// of note: precision loss
+        return Vec3.atCenterOf(relativeBlockPos).multiply(3.0D,3.0D,3.0D)
+                .closerThan(vec3.multiply(3.0D,3.0D,3.0D), (double)this.getViewDistance());
     }
 
     @Override

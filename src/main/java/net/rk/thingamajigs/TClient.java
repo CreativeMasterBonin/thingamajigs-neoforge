@@ -382,10 +382,16 @@ public class TClient{
             event.accept(TItems.TOY_COMPONENT);
             event.accept(TItems.MUSIC_COMPONENT);
             // customizable items and blocks
+            ItemStack customizationTool = new ItemStack(TItems.CUSTOMIZATION_TOOL.asItem());
+            customizationTool.set(Thingamajigs.MODE,0);
+            ItemStack renderingTool = new ItemStack(TItems.RENDERING_TOOL.asItem());
+            renderingTool.set(Thingamajigs.RENDER_MODE,0);
+            ItemStack randomizeTool = new ItemStack(TItems.RANDOMIZE_AND_RESET_TOOL.asItem());
+            randomizeTool.set(Thingamajigs.RESET_PARAMETERS_ON_USE,false);
             event.accept(TBlocks.CUSTOMIZABLE_COPYING_DECO.asItem());
-            event.accept(TItems.CUSTOMIZATION_TOOL.asItem());
-            event.accept(TItems.RENDERING_TOOL.asItem());
-            event.accept(TItems.RANDOMIZE_AND_RESET_TOOL.asItem());
+            event.accept(customizationTool);
+            event.accept(renderingTool);
+            event.accept(randomizeTool);
             // items continued
             event.accept(TItems.KEY);
             // money system items

@@ -244,7 +244,7 @@ public class DJLaserLightBERenderer implements BlockEntityRenderer<DJLaserLightB
     @Override
     public AABB getRenderBoundingBox(DJLaserLightBE be) {
         BlockPos bp = be.getBlockPos();
-        return new AABB(bp.getX() - (float)be.height,bp.getY() - getViewDistance(),bp.getZ() - (float)be.height,bp.getX() + (float)be.height,bp.getY() + getViewDistance(),bp.getZ() + (float)be.height);
+        return new AABB(bp.getX() - (double)be.height - 1.25D,bp.getY() - be.height - 1.25D,bp.getZ() - (double)be.height - 1.25D,bp.getX() + (double)be.height + 1.5D,bp.getY() + be.height + 2.0D,bp.getZ() + (double)be.height + 1.5D);
     }
 
     // b
