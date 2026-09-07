@@ -128,6 +128,11 @@ public class TBlockEntity {
                     TBlocks.TUBE_MAN_DECO.get()
             ).build(null));
 
+    public static final Supplier<BlockEntityType<StopGateBE>> STOP_GATE_BE = BLOCK_ENTITIES.register(
+            "stop_gate_be",() -> BlockEntityType.Builder.of(StopGateBE::new,
+                    TBlocks.STOP_GATE.get()
+            ).build(null));
+
     public static final Supplier<BlockEntityType<CustomizableCopyingDecoBE>> CUSTOMIZABLE_COPYING_DECO_BE = BLOCK_ENTITIES.register(
             "customizable_copying_deco_be",() -> BlockEntityType.Builder.of(CustomizableCopyingDecoBE::new,
                     TBlocks.CUSTOMIZABLE_COPYING_DECO.get()

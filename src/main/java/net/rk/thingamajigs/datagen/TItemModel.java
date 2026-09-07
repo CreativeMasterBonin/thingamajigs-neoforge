@@ -126,6 +126,7 @@ public class TItemModel extends ItemModelProvider {
         fromModelMod(TBlocks.CAR_WASH_MIXED_BRUSH.get(),"block/car_wash_brush_mixed");
 
         // 1.9.0
+        fromModelMod(TBlocks.STOP_GATE.get(),"block/stop_gate_off");
         fromModelMod(TBlocks.CHRISTMAS_WREATH.get(),"block/christmas_wreath");
         fromModelMod(TBlocks.OLD_LEGENDARY_COMPUTER.get(),"block/old_legendary_computer");
         fromModelMod(TBlocks.CUSTOMIZABLE_COPYING_DECO.get(),"block/customizable_copying_deco");

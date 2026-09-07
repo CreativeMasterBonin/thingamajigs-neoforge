@@ -4943,7 +4943,7 @@ public class TRecipe extends RecipeProvider {
                 .requires(TItems.THINGAMAJIG.get().asItem())
                 .requires(TItems.THINGAMAJIG.get().asItem())
                 .requires(Tags.Items.DYES_GREEN)
-                .requires(Items.SHORT_GRASS)
+                .requires(TTag.GRASSES_FOR_CRAFTING)
                 .unlockedBy("has_thingy",has(TItems.THINGAMAJIG.get().asItem()))
                 .save(rc);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,TBlocks.FALL_WREATH.get().asItem(),1)

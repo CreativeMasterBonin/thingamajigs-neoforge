@@ -34,7 +34,6 @@ import org.slf4j.Logger;
 @Mod(Thingamajigs.MODID)
 public class Thingamajigs {
     public static final String MODID = "thingamajigs";
-    private static final Logger LOGGER = LogUtils.getLogger();
 
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 

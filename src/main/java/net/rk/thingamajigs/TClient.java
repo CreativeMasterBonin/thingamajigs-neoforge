@@ -309,6 +309,7 @@ public class TClient{
             // 1.8.6
             BlockEntityRenderers.register(TBlockEntity.TUBE_MAN_DECO_BE.get(),TubeManDecoBERenderer::new);
             // 1.9.0
+            BlockEntityRenderers.register(TBlockEntity.STOP_GATE_BE.get(),StopGateBERenderer::new);
             BlockEntityRenderers.register(TBlockEntity.CUSTOMIZABLE_COPYING_DECO_BE.get(),CustomizableCopyingDecoBERenderer::new);
         }
         catch (Exception e){
@@ -382,13 +383,16 @@ public class TClient{
             event.accept(TItems.TOY_COMPONENT);
             event.accept(TItems.MUSIC_COMPONENT);
             // customizable items and blocks
+            // setup stacks with their required components
             ItemStack customizationTool = new ItemStack(TItems.CUSTOMIZATION_TOOL.asItem());
             customizationTool.set(Thingamajigs.MODE,0);
             ItemStack renderingTool = new ItemStack(TItems.RENDERING_TOOL.asItem());
             renderingTool.set(Thingamajigs.RENDER_MODE,0);
             ItemStack randomizeTool = new ItemStack(TItems.RANDOMIZE_AND_RESET_TOOL.asItem());
-            randomizeTool.set(Thingamajigs.RESET_PARAMETERS_ON_USE,false);
+            randomizeTool.set(Thingamajigs.RESET_PARAMETERS_ON_USE,true);
+            // add the block(s) associated with the tools first
             event.accept(TBlocks.CUSTOMIZABLE_COPYING_DECO.asItem());
+            // add configured stacks to the creative contents past the block(s) they are associated with
             event.accept(customizationTool);
             event.accept(renderingTool);
             event.accept(randomizeTool);

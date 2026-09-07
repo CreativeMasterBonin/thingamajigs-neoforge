@@ -6,6 +6,7 @@ import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.rk.thingamajigs.Thingamajigs;
 import net.rk.thingamajigs.block.TBlocks;
@@ -21,6 +22,15 @@ public class TItemTag extends ItemTagsProvider{
 
     @Override
     protected void addTags(HolderLookup.Provider prov) {
+        this.tag(Tags.Items.HIDDEN_FROM_RECIPE_VIEWERS)
+                .add(TItems.ILLUSIONER_SPAWN_EGG.asItem())
+                .add(TItems.GIANT_SPAWN_EGG.asItem())
+                .add(TItems.WATER_SOURCE.asItem())
+                .add(TItems.NP_PLACEABLE.asItem())
+                .add(TItems.EP_PLACEABLE.asItem())
+                .add(TItems.EG_PLACEABLE.asItem())
+                .add(TItems.VOID_AIR_PLACEABLE.asItem())
+        ;
         this.tag(TTag.CHAIRS_ITEM)
                 .add(TBlocks.STONE_CHAIR.get().asItem())
                 .add(TBlocks.GOLD_CHAIR.get().asItem())

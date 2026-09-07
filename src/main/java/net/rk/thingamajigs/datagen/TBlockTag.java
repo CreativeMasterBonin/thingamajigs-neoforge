@@ -195,6 +195,7 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.WHITE_CUBE_SHELF.get())
                 .add(TBlocks.SAFE.get())
                 .add(TBlocks.CUSTOMIZABLE_COPYING_DECO.get())
+                .add(TBlocks.STOP_GATE.get())
         ;
 
         tag(BlockTags.FENCE_GATES)
@@ -1188,6 +1189,7 @@ public class TBlockTag extends BlockTagsProvider {
                 .add(TBlocks.PIZZA_BOX.get())
                 .add(TBlocks.WINE_BOTTLE.get())
                 .add(TBlocks.RUBBER_DUCK.get())
+                .add(TBlocks.HOSPITAL_COVER.get())
         ;
         tag(TTag.PHYSICS_SUPER_LIGHT)
                 .add(TBlocks.NOT_QUITE.get())
