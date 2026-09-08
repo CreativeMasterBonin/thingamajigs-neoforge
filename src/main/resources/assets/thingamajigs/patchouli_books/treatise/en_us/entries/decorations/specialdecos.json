@@ -1,0 +1,15 @@
+{
+    "name": "entry.thingamajigs.specialdecos",
+    "icon": "thingamajigs:old_legendary_computer",
+    "category": "thingamajigs:decorations",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Special decorations are based off of really rare or otherwise underrated real items. Not everything is exactly correct to the real thing and may even be a hybrid design of several kinds of the same rare item."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Names and descriptions usually indicate whether the item may be significant or otherwise is not like other items in the mod. Enjoy them all!"
+        }
+    ]
+}

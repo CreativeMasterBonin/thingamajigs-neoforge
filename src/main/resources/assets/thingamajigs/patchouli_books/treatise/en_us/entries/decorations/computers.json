@@ -1,0 +1,15 @@
+{
+  "name": "entry.thingamajigs.computers",
+  "icon": "thingamajigs:bluey_desktop_computer",
+  "category": "thingamajigs:decorations",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "If you are playing the game and reading this text, chances are you are on some computer. If not, well I cannot say how you are doing that, this text doesn't know much about anything. It is just a collection of words that together have meaning and value."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Thingamajigs adds many types of computers, including old, rare and even modern computers (even if they aren't 'modern' at all). For some models, you may have to wait to get the latest, as technology changes many times in many years (even in one year and/or less), and will do so. When, if, or already happened, it doesn't matter, this mod will be outdated technology wise. Enjoy the features that ARE in the mod anyways!"
+    }
+  ]
+}

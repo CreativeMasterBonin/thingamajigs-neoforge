@@ -1,0 +1,34 @@
+{
+    "name": "entry.thingamajigs.customizable",
+    "icon": "thingamajigs:customizable_copying_deco",
+    "category": "thingamajigs:decorations",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Customizable decorations can be edited dynamically. Rotation, scaling and offsetting is supported on these objects."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "thingamajigs:customizable_copying_deco",
+            "text": "The dynamic customizable block itself"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Use the Customization and Rendering tools to change parameters about customizable blocks. Right click the items in the inventory to change their modes, then either shift-right/right click to change the parameter mode selected."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "thingamajigs:customization_tool",
+            "text": "Translate, scale and rotate with ease"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "thingamajigs:rendering_tool",
+            "text": "Change rendering modes with ease"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Note: Air, liquid blocks and blocks with block entities cannot be used in the Customizable Copying Decoration."
+        }
+    ]
+}
