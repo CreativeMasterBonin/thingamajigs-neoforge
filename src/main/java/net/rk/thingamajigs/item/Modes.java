@@ -8,6 +8,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import net.rk.thingamajigs.blockentity.custom.CustomizableCopyingDecoBE;
+import net.rk.thingamajigs.blockentity.custom.DiscoBallBE;
 
 public class Modes {
     public static final Mode ROTATE_X = new Mode("rotate_x") {

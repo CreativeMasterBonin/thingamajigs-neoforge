@@ -1603,7 +1603,7 @@
   "item.thingamajigs.randomize_and_reset_tool": "Randomize Tool",
   "block.thingamajigs.fall_wreath": "Fall Wreath",
 
-
+  "block.thingamajigs.disco_ball.desc": "Use shears/wrenches to slow down the spin rate or use brushes/axes to speed it up!",
   "item.thingamajigs.randomize_and_reset_tool.rotate_when_resetting": "Rotate When Resetting: %s",
   "item.thingamajigs.randomize_and_reset_tool.desc": "Right click to randomize x and z offset like grass and flowers",
   "mode_change.custom_deco.message": "Changed %s from %s to %s",

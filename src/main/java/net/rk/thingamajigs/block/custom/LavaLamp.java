@@ -26,13 +26,27 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+
+import java.util.stream.Stream;
 
 @SuppressWarnings("deprecated")
 public class LavaLamp extends Block implements SimpleWaterloggedBlock{
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    private static final VoxelShape SHAPE = net.minecraft.world.level.block.Block.box(4, 0, 4, 12, 18, 12);
+    private static final VoxelShape SHAPE = Stream.of(
+            Block.box(5, 5, 5, 11, 7, 11),
+            Block.box(5, 0, 5, 11, 2, 11),
+            Block.box(6, 4, 6, 10, 5, 10),
+            Block.box(6, 2, 6, 10, 3, 10),
+            Block.box(7, 3, 7, 9, 4, 9),
+            Block.box(5, 15, 5, 11, 16, 11),
+            Block.box(6, 16, 6, 10, 17, 10),
+            Block.box(7, 17, 7, 9, 18, 9),
+            Block.box(5, 7, 5, 11, 15, 11)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
     public static final int MIN_TYPES = 0;
     public static final int MAX_TYPES = 5;
     // red = 0, orange = 1, yellow = 2, green = 3, blue = 4, purple = 5
@@ -54,7 +68,7 @@ public class LavaLamp extends Block implements SimpleWaterloggedBlock{
     }
 
     @Override
-    public VoxelShape getShape(BlockState p_60555_, BlockGetter p_60556_, BlockPos p_60557_, CollisionContext p_60558_) {
+    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext ctx) {
         return SHAPE;
     }
 

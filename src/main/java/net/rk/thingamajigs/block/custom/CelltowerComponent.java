@@ -163,6 +163,27 @@ public class CelltowerComponent extends ThingamajigsDecorativeBlock{
             Block.box(6, 0, 11.75, 10, 16, 15.75)
     ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
+    public static final VoxelShape N_MICROWAVE = Stream.of(
+            Block.box(0, 0, 0, 16, 16, 4),
+            Block.box(7, 0, 7, 9, 16, 9),
+            Block.box(7, 7, 4, 9, 9, 7)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    public static final VoxelShape E_MICROWAVE = Stream.of(
+            Block.box(12, 0, 0, 16, 16, 16),
+            Block.box(7, 0, 7, 9, 16, 9),
+            Block.box(9, 7, 7, 12, 9, 9)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    public static final VoxelShape S_MICROWAVE = Stream.of(
+            Block.box(0, 0, 12, 16, 16, 16),
+            Block.box(7, 0, 7, 9, 16, 9),
+            Block.box(7, 7, 9, 9, 9, 12)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    public static final VoxelShape W_MICROWAVE = Stream.of(
+            Block.box(0, 0, 0, 4, 16, 16),
+            Block.box(7, 0, 7, 9, 16, 9),
+            Block.box(4, 7, 7, 7, 9, 9)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
     public CelltowerComponent(Properties p) {
         super(p);
     }

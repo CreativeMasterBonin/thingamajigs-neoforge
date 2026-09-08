@@ -31,8 +31,7 @@ public class DoubleTallDecorationBlock extends Block {
 
     @SuppressWarnings("deprecated")
     @Override
-    public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-        Direction direction = pState.getValue(FACING);
+    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext ctx) {
         return BLOCK_SHAPE;
     }
 

@@ -514,7 +514,28 @@ public class TBlocks {
     public static final DeferredBlock<Block> TRAFFIC_CONTROL_BOX = register("traffic_control_box",
             () -> new TrafficControlBox(BlockBehaviour.Properties.of().sound(SoundType.METAL)));
     public static final DeferredBlock<Block> CELL_MICROWAVE_TRANSMITTER = register("microwave_transmitter",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL)));
+            () -> new CelltowerComponent(BlockBehaviour.Properties.of().sound(SoundType.METAL)){
+                @Override
+                public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+                    switch(state.getValue(FACING)){
+                        case NORTH -> {
+                            return N_MICROWAVE;
+                        }
+                        case SOUTH -> {
+                            return S_MICROWAVE;
+                        }
+                        case EAST -> {
+                            return E_MICROWAVE;
+                        }
+                        case WEST -> {
+                            return W_MICROWAVE;
+                        }
+                        default -> {
+                            return Shapes.block();
+                        }
+                    }
+                }
+            });
     public static final DeferredBlock<Block> CELL_TRANSMITTER = register("cell_transmitter",
             () -> new CelltowerComponent(BlockBehaviour.Properties.of().sound(SoundType.METAL)){
                 @Override
@@ -602,7 +623,7 @@ public class TBlocks {
     public static final DeferredBlock<Block> SHOWER_HANDLES = register("shower_handles",
             () -> new ShowerHandles(BlockBehaviour.Properties.of().sound(SoundType.LANTERN)));
     public static final DeferredBlock<Block> SHOWER_HEAD = register("shower_head",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.LANTERN).noCollission()));
+            () -> new ShowerHead(BlockBehaviour.Properties.of()));
     public static final DeferredBlock<Block> TOILET_PAPER = register("toilet_paper",
             () -> new HazardSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
 
@@ -814,7 +835,7 @@ public class TBlocks {
     public static final DeferredBlock<Block> BATHTUB_NOZZLE = register("bathtub_nozzle",
             () -> new BathTubNozzle(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> GARDEN_HOSE = register("garden_hose",
-            () -> new ThingamajigsDecorativeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).sound(SoundType.CALCITE).noCollission()));
+            () -> new GardenHose(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> WOOD_DUCK = register("wood_duck",
             () -> new ReindeerPlush(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noCollission()){
                 public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
@@ -2819,7 +2840,7 @@ public class TBlocks {
             });
 
     public static final DeferredBlock<Block> STRING_BASS = register("string_bass",
-            () -> new DoubleTallDecorationBlock(BlockBehaviour.Properties.of()));
+            () -> new StringBass(BlockBehaviour.Properties.of()));
 
     public static final DeferredBlock<Block> BASS_DRUM = register("bass_drum",
             () -> new InstrumentDecorativeBlock(BlockBehaviour.Properties.of().sound(SoundType.WOOD),TSoundEvent.KICK_DRUM.get()){

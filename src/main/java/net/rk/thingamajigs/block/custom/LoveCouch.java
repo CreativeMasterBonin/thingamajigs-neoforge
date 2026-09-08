@@ -17,6 +17,7 @@ import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.rk.thingamajigs.block.TBlocks;
 import net.rk.thingamajigs.entity.custom.Chair;
 
 import java.util.List;
@@ -104,14 +105,87 @@ public class LoveCouch extends ThingamajigsDecorativeBlock{
             Block.box(0, 5, -4, 16, 7, 20),
             Block.box(0, 5, 20, 16, 7, 24)
     ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    public static final VoxelShape NORTH_MYSTERIOUS = Stream.of(
+            Block.box(8, 4, 0, 24, 8, 16),
+            Block.box(-8, 4, 0, 8, 8, 16),
+            Block.box(-8, 0, 0, -6, 4, 2),
+            Block.box(22, 0, 0, 24, 4, 2),
+            Block.box(22, 0, 14, 24, 4, 16),
+            Block.box(-8, 0, 14, -6, 4, 16),
+            Block.box(-12, 8, 0, -8, 12, 14),
+            Block.box(24, 8, 0, 28, 12, 14),
+            Block.box(-8, 7, 14, 24, 10, 18),
+            Block.box(-8, 10, 15, 24, 13, 19),
+            Block.box(-8, 13, 16, 24, 16, 20),
+            Block.box(-8, 16, 17, 24, 19, 21),
+            Block.box(-8, 19, 18, 24, 22, 22),
+            Block.box(-8, 22, 19, 24, 23, 23)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    public static final VoxelShape EAST_MYSTERIOUS = Stream.of(
+            Block.box(0, 4, 8, 16, 8, 24),
+            Block.box(0, 4, -8, 16, 8, 8),
+            Block.box(14, 0, -8, 16, 4, -6),
+            Block.box(14, 0, 22, 16, 4, 24),
+            Block.box(0, 0, 22, 2, 4, 24),
+            Block.box(0, 0, -8, 2, 4, -6),
+            Block.box(2, 8, -12, 16, 12, -8),
+            Block.box(2, 8, 24, 16, 12, 28),
+            Block.box(-2, 7, -8, 2, 10, 24),
+            Block.box(-3, 10, -8, 1, 13, 24),
+            Block.box(-4, 13, -8, 0, 16, 24),
+            Block.box(-5, 16, -8, -1, 19, 24),
+            Block.box(-6, 19, -8, -2, 22, 24),
+            Block.box(-7, 22, -8, -3, 23, 24)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    public static final VoxelShape SOUTH_MYSTERIOUS = Stream.of(
+            Block.box(-8, 4, 0, 8, 8, 16),
+            Block.box(8, 4, 0, 24, 8, 16),
+            Block.box(22, 0, 14, 24, 4, 16),
+            Block.box(-8, 0, 14, -6, 4, 16),
+            Block.box(-8, 0, 0, -6, 4, 2),
+            Block.box(22, 0, 0, 24, 4, 2),
+            Block.box(24, 8, 2, 28, 12, 16),
+            Block.box(-12, 8, 2, -8, 12, 16),
+            Block.box(-8, 7, -2, 24, 10, 2),
+            Block.box(-8, 10, -3, 24, 13, 1),
+            Block.box(-8, 13, -4, 24, 16, 0),
+            Block.box(-8, 16, -5, 24, 19, -1),
+            Block.box(-8, 19, -6, 24, 22, -2),
+            Block.box(-8, 22, -7, 24, 23, -3)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    public static final VoxelShape WEST_MYSTERIOUS = Stream.of(
+            Block.box(0, 4, -8, 16, 8, 8),
+            Block.box(0, 4, 8, 16, 8, 24),
+            Block.box(0, 0, 22, 2, 4, 24),
+            Block.box(0, 0, -8, 2, 4, -6),
+            Block.box(14, 0, -8, 16, 4, -6),
+            Block.box(14, 0, 22, 16, 4, 24),
+            Block.box(0, 8, 24, 14, 12, 28),
+            Block.box(0, 8, -12, 14, 12, -8),
+            Block.box(14, 7, -8, 18, 10, 24),
+            Block.box(15, 10, -8, 19, 13, 24),
+            Block.box(16, 13, -8, 20, 16, 24),
+            Block.box(17, 16, -8, 21, 19, 24),
+            Block.box(18, 19, -8, 22, 22, 24),
+            Block.box(19, 22, -8, 23, 23, 24)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
     public LoveCouch(Properties properties) {
         super(properties);
     }
 
     @Override
-    public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-        Direction direction = pState.getValue(FACING);
+    public VoxelShape getShape(BlockState state, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
+        Direction direction = state.getValue(FACING);
+        if(state.is(TBlocks.MYSTERIOUS_ONE_COUCH.get())){
+            switch(direction){
+                case NORTH: return NORTH_MYSTERIOUS;
+                case SOUTH: return SOUTH_MYSTERIOUS;
+                case EAST: return EAST_MYSTERIOUS;
+                case WEST: return WEST_MYSTERIOUS;
+                default: return Shapes.block();
+            }
+        }
         switch(direction){
             case NORTH: return NS;
             case SOUTH: return SS;

@@ -138,6 +138,11 @@ public class TBlockEntity {
                     TBlocks.CUSTOMIZABLE_COPYING_DECO.get()
             ).build(null));
 
+    public static final Supplier<BlockEntityType<DiscoBallBE>> DISCO_BALL_BE = BLOCK_ENTITIES.register(
+            "disco_ball_be",() -> BlockEntityType.Builder.of(DiscoBallBE::new,
+                    TBlocks.DISCO_BALL.get()
+            ).build(null));
+
 
     public static void register(IEventBus eventBus){
         BLOCK_ENTITIES.register(eventBus);

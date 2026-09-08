@@ -311,6 +311,8 @@ public class TClient{
             // 1.9.0
             BlockEntityRenderers.register(TBlockEntity.STOP_GATE_BE.get(),StopGateBERenderer::new);
             BlockEntityRenderers.register(TBlockEntity.CUSTOMIZABLE_COPYING_DECO_BE.get(),CustomizableCopyingDecoBERenderer::new);
+            // 1.9.1
+            BlockEntityRenderers.register(TBlockEntity.DISCO_BALL_BE.get(),DiscoBallBERenderer::new);
         }
         catch (Exception e){
             LogUtils.getLogger().error(e.getLocalizedMessage());
