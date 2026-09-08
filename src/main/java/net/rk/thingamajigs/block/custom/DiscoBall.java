@@ -49,7 +49,8 @@ public class DiscoBall extends BaseEntityBlock implements SimpleWaterloggedBlock
 
     @Override
     public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
-        if(player.getItemInHand(hand).isEmpty()){
+        // if water bucket or empty, pass
+        if(player.getItemInHand(hand).isEmpty() || player.getItemInHand(hand).is(Tags.Items.BUCKETS_WATER)){
             return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
         }
         if(level.isClientSide()){
